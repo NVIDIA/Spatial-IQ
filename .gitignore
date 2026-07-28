@@ -1,0 +1,41 @@
+# Analysis
+difficulty_analysis_output/
+.mplconfig/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.python-version
+
+# Sphinx build output (docs/)
+docs/_build/
+_site/
+public/
+
+# Symlinks / local-only assets (docs project)
+Spatial-IQ
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+.claude/
+
+# User-specific inference secrets and exclusion lists (never commit)
+inference/api_keys.txt
+inference/exclude_list.txt
+
+# Model weights (large; user-supplied per HF instructions in README)
+inference/*/weights/
+inference/*/weights_*/
+
+# Inference/evaluation outputs (produced at runtime)
+evaluation_results/

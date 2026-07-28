@@ -1,0 +1,28 @@
+modality,variant,group,relation,model,joint_integrity,n_child_correct
+text,prespecified_s8,Visible Count Hierarchy,task3&task4->task5,claude,0.20382165605095542,471
+text,prespecified_s8,Visible Count Hierarchy,task3&task4->task5,gemini,0.29135338345864664,532
+text,prespecified_s8,Visible Count Hierarchy,task3&task4->task5,glm,0.1839080459770115,87
+text,prespecified_s8,Visible Count Hierarchy,task3&task4->task5,gpt,0.25769230769230766,260
+text,prespecified_s8,Visible Count Hierarchy,task3&task4->task5,human,0.7057291666666666,2304
+text,prespecified_s8,Visible Count Hierarchy,task3&task4->task5,kimi,0.2703488372093023,344
+text,prespecified_s8,Visible Count Hierarchy,task3&task4->task5,qwen3b,0.0,7
+text,prespecified_s8,Visible Count Hierarchy,task3&task4->task5,qwen,0.5860869565217391,575
+text,prespecified_s8,Visible Count Hierarchy,task3&task4->task5,vla0,0.0,35
+text,prespecified_s8,Hidden Count Hierarchy,task3&task7->task8,claude,0.10700389105058365,1542
+text,prespecified_s8,Hidden Count Hierarchy,task3&task7->task8,gemini,0.12700841622035194,1307
+text,prespecified_s8,Hidden Count Hierarchy,task3&task7->task8,glm,0.0,491
+text,prespecified_s8,Hidden Count Hierarchy,task3&task7->task8,gpt,0.06615059817030261,1421
+text,prespecified_s8,Hidden Count Hierarchy,task3&task7->task8,human,0.6301084236864053,2398
+text,prespecified_s8,Hidden Count Hierarchy,task3&task7->task8,kimi,0.08358509566968782,993
+text,prespecified_s8,Hidden Count Hierarchy,task3&task7->task8,qwen3b,0.0,569
+text,prespecified_s8,Hidden Count Hierarchy,task3&task7->task8,qwen,0.23425863236289776,1477
+text,prespecified_s8,Hidden Count Hierarchy,task3&task7->task8,vla0,0.0,571
+text,submitted_s7,Hidden Count Hierarchy (submitted S7 variant),task3&task6->task8,claude,0.0914396887159533,1542
+text,submitted_s7,Hidden Count Hierarchy (submitted S7 variant),task3&task6->task8,gemini,0.1407804131599082,1307
+text,submitted_s7,Hidden Count Hierarchy (submitted S7 variant),task3&task6->task8,glm,0.0,491
+text,submitted_s7,Hidden Count Hierarchy (submitted S7 variant),task3&task6->task8,gpt,0.0633356790992259,1421
+text,submitted_s7,Hidden Count Hierarchy (submitted S7 variant),task3&task6->task8,human,0.591326105087573,2398
+text,submitted_s7,Hidden Count Hierarchy (submitted S7 variant),task3&task6->task8,kimi,0.07955689828801611,993
+text,submitted_s7,Hidden Count Hierarchy (submitted S7 variant),task3&task6->task8,qwen3b,0.0,569
+text,submitted_s7,Hidden Count Hierarchy (submitted S7 variant),task3&task6->task8,qwen,0.25795531482735273,1477
+text,submitted_s7,Hidden Count Hierarchy (submitted S7 variant),task3&task6->task8,vla0,0.0,571

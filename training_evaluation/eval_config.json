@@ -1,0 +1,72 @@
+{
+    "model": {
+        "Qwen2.5-VL-7B-Instruct": {
+            "class": "Qwen2VLChat",
+            "model_path": "inference/qwen_finetuned/weights/Qwen2.5-VL-7B-Instruct",
+            "min_pixels": 1003520,
+            "max_pixels": 12845056,
+            "use_custom_prompt": false
+        },
+        "sft-7b-plain-100pct": {
+            "class": "Qwen2VLChat",
+            "model_path": "inference/qwen_finetuned/weights/sft-7b-plain-100pct",
+            "min_pixels": 1003520,
+            "max_pixels": 12845056,
+            "use_custom_prompt": false
+        },
+        "sft-7b-cot-100pct": {
+            "class": "Qwen2VLChat",
+            "model_path": "inference/qwen_finetuned/weights/sft-7b-cot-100pct",
+            "min_pixels": 1003520,
+            "max_pixels": 12845056,
+            "use_custom_prompt": false
+        },
+        "dapo-7b-tight": {
+            "class": "Qwen2VLChat",
+            "model_path": "inference/qwen_finetuned/weights/dapo-7b-tight",
+            "min_pixels": 1003520,
+            "max_pixels": 12845056,
+            "use_custom_prompt": false
+        },
+        "Qwen2.5-VL-32B-Instruct": {
+            "class": "Qwen2VLChat",
+            "model_path": "inference/qwen_finetuned/weights/Qwen2.5-VL-32B-Instruct",
+            "min_pixels": 1003520,
+            "max_pixels": 12845056,
+            "use_custom_prompt": false
+        },
+        "sft-32b-plain-100pct": {
+            "class": "Qwen2VLChat",
+            "model_path": "inference/qwen_finetuned/weights/sft-32b-plain-100pct",
+            "min_pixels": 1003520,
+            "max_pixels": 12845056,
+            "use_custom_prompt": false
+        },
+        "sft-32b-cot-100pct": {
+            "class": "Qwen2VLChat",
+            "model_path": "inference/qwen_finetuned/weights/sft-32b-cot-100pct",
+            "min_pixels": 1003520,
+            "max_pixels": 12845056,
+            "use_custom_prompt": false
+        },
+        "dapo-32b-tight": {
+            "class": "Qwen2VLChat",
+            "model_path": "inference/qwen_finetuned/weights/dapo-32b-tight",
+            "min_pixels": 1003520,
+            "max_pixels": 12845056,
+            "use_custom_prompt": false
+        }
+    },
+    "data": {
+        "MMBench_DEV_EN_V11": {},
+        "MME": {},
+        "SEEDBench_IMG": {},
+        "MMMU_DEV_VAL": {},
+        "MathVista_MINI": {},
+        "HallusionBench": {},
+        "AI2D_TEST": {},
+        "OCRBench": {},
+        "RealWorldQA": {},
+        "MMStar": {}
+    }
+}

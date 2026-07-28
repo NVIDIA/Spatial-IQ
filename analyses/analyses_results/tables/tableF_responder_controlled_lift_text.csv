@@ -1,0 +1,5 @@
+modality,subset,relation,group,scene_only_lift,twoway_fe_slope,ci_low,ci_high,p_boot_le0,responders_positive,responders_total,responders_excluded,n
+text,all,task3&task4->task5,Visible Count Hierarchy,0.5603218429848741,0.2016503913997365,0.1825778932747769,0.2225561288616362,0.0,7,7,2.0,26999
+text,all,task3&task7->task8,Hidden Count Hierarchy,0.4972788947619753,0.15653071873041274,0.13425524480810294,0.17792808236888874,0.0,6,6,3.0,27000
+text,models_only,task3&task4->task5,Visible Count Hierarchy,0.35584897811563926,0.1954050971143219,0.17230244109538587,0.21856467101352375,0.0,6,6,,23999
+text,models_only,task3&task7->task8,Hidden Count Hierarchy,0.4238164076732247,0.21022965478394845,0.17960677584394927,0.24000597657921252,0.0,5,5,,24000

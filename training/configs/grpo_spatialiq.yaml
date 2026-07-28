@@ -1,0 +1,185 @@
+# GRPO / RLVR config for SpatialIQ — NeMo RL v0.5.0 format
+grpo:
+  num_prompts_per_step: 8
+  num_generations_per_prompt: 8
+  max_rollout_turns: 1
+  max_num_epochs: 1
+  max_num_steps: 500
+  early_stop_patience: 0       # 0 = disabled; N = stop after N val checks without improvement
+  early_stop_min_delta: 0.001  # minimum improvement to reset patience counter
+  normalize_rewards: true
+  use_leave_one_out_baseline: true
+  val_period: 20
+  val_at_start: false
+  overlong_filtering: false
+  max_val_samples: 64
+  val_batch_size: 64
+  seed: 42
+  use_dynamic_sampling: true
+  batch_multiplier: 2
+  dynamic_sampling_max_gen_batches: 10
+  reward_shaping:
+    enabled: true
+    overlong_buffer_length: 512
+    overlong_buffer_penalty: 1
+    max_response_length: ${policy.max_total_sequence_length}
+  reward_scaling:
+    enabled: false
+    source_min: 0.0
+    source_max: 1.0
+    target_min: 0.0
+    target_max: 1.0
+  async_grpo:
+    enabled: false
+    max_trajectory_age_steps: 1
+
+loss_fn:
+  reference_policy_kl_penalty: 0.05
+  reference_policy_kl_type: "k3"
+  kl_input_clamp_value: 20.0
+  kl_output_clamp_value: 10.0
+  ratio_clip_min: 0.2
+  ratio_clip_max: 0.28
+  ratio_clip_c: null
+  use_on_policy_kl_approximation: false
+  use_importance_sampling_correction: false
+  truncated_importance_sampling_ratio: null
+  token_level_loss: true
+  force_on_policy_ratio: false
+
+policy:
+  model_name: "Qwen/Qwen2.5-VL-7B-Instruct"
+  tokenizer:
+    name: ${policy.model_name}
+  train_global_batch_size: 64
+  train_micro_batch_size: 1
+  generation_batch_size: 32
+  logprob_batch_size: 4
+  max_total_sequence_length: 2048
+  precision: "bfloat16"
+  offload_optimizer_for_logprob: false
+  max_grad_norm: 1.0
+
+  sequence_packing:
+    enabled: false
+    train_mb_tokens: ${mul:${policy.max_total_sequence_length}, ${policy.train_micro_batch_size}}
+    logprob_mb_tokens: ${mul:${policy.max_total_sequence_length}, ${policy.logprob_batch_size}}
+    algorithm: "modified_first_fit_decreasing"
+    sequence_length_round: 64
+
+  dynamic_batching:
+    enabled: true
+    train_mb_tokens: ${mul:${policy.max_total_sequence_length}, ${policy.train_micro_batch_size}}
+    logprob_mb_tokens: ${mul:${policy.max_total_sequence_length}, ${policy.logprob_batch_size}}
+    sequence_length_round: 64
+
+  dtensor_cfg:
+    _v2: true
+    enabled: true
+    cpu_offload: false
+    sequence_parallel: false
+    activation_checkpointing: false
+    tensor_parallel_size: 1
+    context_parallel_size: 1
+    custom_parallel_plan: null
+
+  megatron_cfg:
+    enabled: false
+
+  make_sequence_length_divisible_by: ${policy.dtensor_cfg.tensor_parallel_size}
+
+  optimizer:
+    name: "torch.optim.AdamW"
+    kwargs:
+      lr: 5.0e-7
+      weight_decay: 0.01
+      betas: [0.9, 0.999]
+      eps: 1e-8
+      foreach: false
+      fused: false
+
+  scheduler:
+    - name: "torch.optim.lr_scheduler.LinearLR"
+      kwargs:
+        start_factor: 0.1
+        end_factor: 1.0
+        total_iters: 50
+    - name: "torch.optim.lr_scheduler.ConstantLR"
+      kwargs:
+        factor: 1.0
+        total_iters: 10000000000
+    - milestones: [50]
+
+  generation:
+    backend: "vllm"
+    max_new_tokens: 1024
+    temperature: 1.0
+    top_p: 1.0
+    top_k: null
+    stop_token_ids: null
+    stop_strings: null
+    vllm_cfg:
+      async_engine: false
+      precision: ${policy.precision}
+      kv_cache_dtype: "auto"
+      tensor_parallel_size: 1
+      pipeline_parallel_size: 1
+      expert_parallel_size: 1
+      gpu_memory_utilization: 0.6
+      max_model_len: ${policy.max_total_sequence_length}
+      enforce_eager: false
+      skip_tokenizer_init: false
+    colocated:
+      enabled: true
+
+data:
+  dataset_name: "spatialiq"
+  train_data_path: null  # OVERRIDE: absolute path to train.jsonl
+  val_data_path: null    # OVERRIDE: absolute path to val.jsonl
+  prompt_file: null      # set to prompts/spatialiq_cot.txt for CoT
+  system_prompt_file: null
+  env_name: "spatialiq"
+  max_input_seq_length: ${policy.max_total_sequence_length}
+  shuffle: true
+  num_workers: 1
+
+env:
+  spatialiq:
+    num_workers: 8
+    reward_functions:
+    - name: format
+      weight: 0.1
+    - name: integer_distance
+      weight: 0.9
+
+checkpointing:
+  enabled: true
+  checkpoint_dir: "./results/grpo_spatialiq"
+  metric_name: "val:accuracy"
+  higher_is_better: true
+  keep_top_k: 3
+  save_period: 20
+  checkpoint_must_save_by: null
+
+logger:
+  log_dir: "./logs/grpo_spatialiq"
+  num_val_samples_to_print: 5
+  wandb_enabled: false
+  tensorboard_enabled: true
+  mlflow_enabled: false
+  swanlab_enabled: false
+  monitor_gpus: false
+  wandb:
+    project: "spatialiq"
+    entity: "tom-vita"
+    name: "grpo-spatialiq-${policy.model_name}"
+    group: "spatialiq-training"
+    tags: ["grpo", "rlvr", "spatialiq", "qwen2.5-vl"]
+  tensorboard: {}
+  gpu_monitoring:
+    collection_interval: 10
+    flush_interval: 10
+
+cluster:
+  gpus_per_node: 4
+  num_nodes: 1

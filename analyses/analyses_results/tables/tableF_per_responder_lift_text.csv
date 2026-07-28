@@ -1,0 +1,19 @@
+modality,relation,group,model,n_met,n_unmet,included,marginal_lift
+text,task3&task4->task5,Visible Count Hierarchy,claude,369,2631,True,0.11763124472749861
+text,task3&task4->task5,Visible Count Hierarchy,gemini,348,2651,True,0.30319181224174785
+text,task3&task4->task5,Visible Count Hierarchy,glm,25,2975,True,0.6161344537815127
+text,task3&task4->task5,Visible Count Hierarchy,gpt,194,2806,True,0.2765796415633657
+text,task3&task4->task5,Visible Count Hierarchy,human,1851,1149,True,0.288365755297045
+text,task3&task4->task5,Visible Count Hierarchy,kimi,176,2824,True,0.4395280710790626
+text,task3&task4->task5,Visible Count Hierarchy,qwen3b,0,3000,False,
+text,task3&task4->task5,Visible Count Hierarchy,qwen,682,2318,True,0.391460177774854
+text,task3&task4->task5,Visible Count Hierarchy,vla0,0,3000,False,
+text,task3&task7->task8,Hidden Count Hierarchy,claude,206,2794,True,0.3081290699209818
+text,task3&task7->task8,Hidden Count Hierarchy,gemini,236,2764,True,0.29058230518285955
+text,task3&task7->task8,Hidden Count Hierarchy,glm,5,2995,False,
+text,task3&task7->task8,Hidden Count Hierarchy,gpt,121,2879,True,0.31593557221142554
+text,task3&task7->task8,Hidden Count Hierarchy,human,1683,1317,True,0.22430116520964705
+text,task3&task7->task8,Hidden Count Hierarchy,kimi,102,2898,True,0.49971582836032963
+text,task3&task7->task8,Hidden Count Hierarchy,qwen3b,0,3000,False,
+text,task3&task7->task8,Hidden Count Hierarchy,qwen,437,2563,True,0.3504822634373513
+text,task3&task7->task8,Hidden Count Hierarchy,vla0,0,3000,False,

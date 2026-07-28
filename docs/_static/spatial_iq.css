@@ -1,0 +1,339 @@
+/* Spatial-IQ project page styling. Layered on top of nvidia-sphinx-theme. */
+
+:root {
+  --siq-rank-one: #8cb4ff;
+  --siq-rank-two: #bed7ff;
+  --siq-rank-three: #e6f0ff;
+  --siq-muted: #5a6573;
+  --siq-accent: #76b900; /* NVIDIA green */
+  --siq-divider: #e3e7ed;
+}
+
+/* ---------- Hero ---------- */
+.siq-hero {
+  text-align: center;
+  padding: 2.25rem 1rem 1.25rem 1rem;
+  border-bottom: 1px solid var(--siq-divider);
+  margin-bottom: 1.5rem;
+}
+
+.siq-hero h1.siq-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.01em;
+}
+
+.siq-hero .siq-subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--siq-muted);
+  margin: 0 0 1.25rem 0;
+}
+
+.siq-hero .siq-venue {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--siq-muted);
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Authors ---------- */
+.siq-authors {
+  font-size: 1.0rem;
+  line-height: 1.7;
+  margin: 0.5rem auto 0.25rem auto;
+  max-width: 60rem;
+}
+
+.siq-authors .siq-author {
+  display: inline-block;
+  margin: 0 0.55rem;
+  white-space: nowrap;
+}
+
+.siq-authors sup {
+  font-size: 0.7em;
+  margin-left: 1px;
+  color: var(--siq-muted);
+}
+
+.siq-affiliations {
+  font-size: 0.92rem;
+  color: var(--siq-muted);
+  margin: 0.35rem 0 1.0rem 0;
+}
+
+.siq-affiliations sup {
+  font-size: 0.75em;
+}
+
+.siq-affiliations .siq-affil {
+  display: inline-block;
+  margin: 0 0.7rem;
+}
+
+/* ---------- Action buttons ---------- */
+.siq-buttons {
+  margin: 0.5rem 0 0.25rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.siq-buttons a.siq-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1.0rem;
+  background: #1f2733;
+  color: #ffffff !important;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  border: 1px solid #1f2733;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+
+.siq-buttons a.siq-btn:hover {
+  background: #353f4d;
+  border-color: #353f4d;
+}
+
+.siq-buttons a.siq-btn.siq-btn-muted {
+  background: #ffffff;
+  color: #1f2733 !important;
+  border: 1px solid #c9d0d9;
+}
+
+.siq-buttons a.siq-btn.siq-btn-muted:hover {
+  background: #f2f4f7;
+}
+
+.siq-buttons a.siq-btn.siq-btn-disabled,
+.siq-buttons a.siq-btn.siq-btn-disabled:hover {
+  background: #eef0f3;
+  color: #9aa3b2 !important;
+  border-color: #dde1e7;
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.siq-buttons a.siq-btn .siq-btn-icon {
+  font-size: 1.0em;
+  line-height: 1;
+}
+
+/* ---------- TL;DR / callout ---------- */
+.siq-tldr {
+  background: #f6f9ff;
+  border-left: 3px solid var(--siq-rank-one);
+  border-radius: 4px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.0rem 0 1.5rem 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.siq-tldr strong {
+  color: #1f2733;
+}
+
+/* ---------- Section headings ---------- */
+h2 {
+  margin-top: 2.4rem;
+  border-bottom: 1px solid var(--siq-divider);
+  padding-bottom: 0.35rem;
+}
+
+/* ---------- Figures ---------- */
+img.siq-figure-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+img.siq-figure-img + figcaption {
+  font-size: 0.9rem;
+  color: var(--siq-muted);
+  line-height: 1.45;
+  margin-top: 0.4rem;
+  text-align: left;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.siq-figure-img + figcaption .siq-fig-label {
+  font-weight: 600;
+  color: #1f2733;
+}
+
+/* Demo GIF caption sits very close to the image. */
+img.siq-figure-demo {
+  margin-bottom: 0;
+}
+img.siq-figure-demo + figcaption {
+  margin-top: 0.15rem;
+}
+
+/* ---------- Tables ---------- */
+table.siq-table {
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  margin: 1.0rem auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+table.siq-table th,
+table.siq-table td {
+  padding: 0.42rem 0.6rem;
+  text-align: right;
+  border: none;
+  white-space: nowrap;
+}
+
+table.siq-table thead th {
+  border-bottom: 2px solid #1f2733;
+  font-weight: 600;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+table.siq-table thead th:first-child,
+table.siq-table tbody td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+table.siq-table tbody tr.siq-divider td {
+  border-top: 1px solid #1f2733;
+}
+
+table.siq-table tbody tr td {
+  border-top: 1px solid var(--siq-divider);
+}
+
+table.siq-table tbody tr.siq-human td {
+  font-weight: 600;
+  background: #fafbfd;
+}
+
+table.siq-table .siq-rank-1 {
+  background: var(--siq-rank-one);
+}
+
+table.siq-table .siq-rank-2 {
+  background: var(--siq-rank-two);
+}
+
+table.siq-table .siq-rank-3 {
+  background: var(--siq-rank-three);
+}
+
+.siq-table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.siq-table-caption {
+  font-size: 0.9rem;
+  color: var(--siq-muted);
+  line-height: 1.45;
+  margin: 0 auto 0.5rem auto;
+  text-align: left;
+  max-width: 60rem;
+}
+
+.siq-table-caption .siq-fig-label {
+  font-weight: 600;
+  color: #1f2733;
+}
+
+/* ---------- Two-column MCQ table grouping ---------- */
+table.siq-table thead tr.siq-mcq-group th {
+  text-align: center;
+  border-bottom: 1px solid var(--siq-divider);
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--siq-muted);
+  padding-bottom: 0.15rem;
+}
+
+/* ---------- BibTeX block ---------- */
+pre.siq-bibtex {
+  background: #f6f8fa;
+  border: 1px solid var(--siq-divider);
+  border-radius: 6px;
+  padding: 1rem 1.1rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  overflow-x: auto;
+}
+
+/* ---------- Highlights grid ---------- */
+.siq-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.9rem;
+  margin: 1rem 0 1.25rem 0;
+}
+
+.siq-highlights .siq-card {
+  border: 1px solid var(--siq-divider);
+  border-radius: 8px;
+  padding: 0.9rem 1.0rem;
+  background: #ffffff;
+}
+
+.siq-highlights .siq-card h3 {
+  font-size: 0.95rem;
+  margin: 0 0 0.35rem 0;
+  color: #1f2733;
+}
+
+.siq-highlights .siq-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--siq-muted);
+  line-height: 1.5;
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 720px) {
+  .siq-hero h1.siq-title {
+    font-size: 1.65rem;
+  }
+  .siq-hero .siq-subtitle {
+    font-size: 0.98rem;
+  }
+  .siq-authors .siq-author {
+    margin: 0 0.35rem;
+  }
+  table.siq-table {
+    font-size: 0.78rem;
+  }
+}
+
+/* ---------- Move "On this page" into the left sidebar ---------- */
+/* Page TOC is rendered in the primary (left) sidebar via html_sidebars.
+   The nvidia theme still emits an empty placeholder column on the right
+   (<div class="bd-sidebar-secondary">) which reserves a fixed-width slot —
+   hide it entirely and stop reserving the page-toc column width. */
+.bd-sidebar-secondary {
+  display: none !important;
+}
+:root {
+  --pst-sidebar-secondary: 0rem;
+}
+.bd-content {
+  justify-content: flex-start;
+}

@@ -1,0 +1,407 @@
+[
+  {
+    "paper_id": "Figure 1",
+    "kind": "static",
+    "title": "Motivating hierarchy example",
+    "status": "static",
+    "analysis_csv": null,
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 2",
+    "kind": "static",
+    "title": "Task suite and developmental tags",
+    "status": "static",
+    "analysis_csv": null,
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 3",
+    "kind": "static",
+    "title": "Pre-specified hierarchy relations",
+    "status": "static",
+    "analysis_csv": null,
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 4",
+    "kind": "figure",
+    "title": "Text per-task accuracy",
+    "status": "generated",
+    "analysis_csv": "tables/table_06_text_task_accuracy.csv",
+    "figure_file": "figures/figure_04_text_task_accuracy.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 5",
+    "kind": "figure",
+    "title": "5CQ wrong-answer preferences",
+    "status": "generated",
+    "analysis_csv": "tables/figure_05_mcq5_wrong_answer_preferences.csv",
+    "figure_file": "figures/figure_05_mcq5_wrong_answer_preferences.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 6",
+    "kind": "figure",
+    "title": "Text difficulty controls",
+    "status": "generated",
+    "analysis_csv": "tables/table_09_text_difficulty_bins.csv",
+    "figure_file": "figures/figure_06_text_difficulty_controls.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 7",
+    "kind": "figure",
+    "title": "Text summation mechanism",
+    "status": "generated",
+    "analysis_csv": "tables/figure_07_text_summation_mechanism.csv",
+    "figure_file": "figures/figure_07_text_summation_mechanism.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 8",
+    "kind": "static",
+    "title": "MCQ option-grid examples",
+    "status": "static",
+    "analysis_csv": null,
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 9",
+    "kind": "static",
+    "title": "Text human-study interface",
+    "status": "static",
+    "analysis_csv": null,
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 10",
+    "kind": "static",
+    "title": "MCQ human-study interface",
+    "status": "static",
+    "analysis_csv": null,
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 11",
+    "kind": "static",
+    "title": "Image-editing human-scoring interface",
+    "status": "static",
+    "analysis_csv": null,
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 12",
+    "kind": "static",
+    "title": "Developmental-framework summary",
+    "status": "static",
+    "analysis_csv": null,
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 13",
+    "kind": "figure",
+    "title": "Mental-rotation dependency correlations",
+    "status": "generated",
+    "analysis_csv": "tables/figure_13_text_mental_rotation_correlations.csv",
+    "figure_file": "figures/figure_13_text_mental_rotation_correlations.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 14",
+    "kind": "figure",
+    "title": "Mental-rotation bundle versus counting mechanism",
+    "status": "generated",
+    "analysis_csv": "tables/figure_14_text_bundle_correlations.csv",
+    "figure_file": "figures/figure_14_text_bundle_correlations.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 15",
+    "kind": "figure",
+    "title": "Mixed-CQ chance-adjusted task accuracy",
+    "status": "generated",
+    "analysis_csv": "tables/figure_15_mcq345_task_accuracy.csv",
+    "figure_file": "figures/figure_15_mcq345_task_accuracy.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 16",
+    "kind": "figure",
+    "title": "Mixed-CQ wrong-answer preferences",
+    "status": "generated",
+    "analysis_csv": "tables/figure_16_mcq345_wrong_answer_preferences.csv",
+    "figure_file": "figures/figure_16_mcq345_wrong_answer_preferences.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 17",
+    "kind": "figure",
+    "title": "Image-output per-task accuracy",
+    "status": "generated",
+    "analysis_csv": "tables/table_08_image_task_accuracy.csv",
+    "figure_file": "figures/figure_17_image_task_accuracy.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 18",
+    "kind": "figure",
+    "title": "Text camera-parameter effects",
+    "status": "generated",
+    "analysis_csv": "tables/figure_18_text_camera_effects.csv",
+    "figure_file": "figures/figure_18_text_camera_effects.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 19",
+    "kind": "figure",
+    "title": "Image-output difficulty controls",
+    "status": "generated",
+    "analysis_csv": "tables/figure_19_image_difficulty_bins.csv",
+    "figure_file": "figures/figure_19_image_difficulty_controls.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 20",
+    "kind": "figure",
+    "title": "Text object-conditioned accuracy",
+    "status": "generated",
+    "analysis_csv": "tables/figure_20_text_object_accuracy.csv",
+    "figure_file": "figures/figure_20_text_object_accuracy.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 21",
+    "kind": "figure",
+    "title": "Text object and difficulty slices",
+    "status": "generated",
+    "analysis_csv": "tables/figure_21_text_object_difficulty_slices.csv",
+    "figure_file": "figures/figure_21_text_object_difficulty_slices.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 22",
+    "kind": "figure",
+    "title": "Text composition diagnostics",
+    "status": "generated",
+    "analysis_csv": "tables/figure_22_text_composition_diagnostics.csv",
+    "figure_file": "figures/figure_22_text_composition_diagnostics.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 23",
+    "kind": "figure",
+    "title": "MCQ summation mechanism",
+    "status": "generated",
+    "analysis_csv": "tables/figure_23_mcq345_summation_mechanism.csv",
+    "figure_file": "figures/figure_23_mcq345_summation_mechanism.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 24",
+    "kind": "figure",
+    "title": "Image-output summation mechanism",
+    "status": "generated",
+    "analysis_csv": "tables/figure_24_image_summation_mechanism.csv",
+    "figure_file": "figures/figure_24_image_summation_mechanism.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 25",
+    "kind": "figure",
+    "title": "Trained-text per-task accuracy",
+    "status": "generated",
+    "analysis_csv": "tables/figure_25_trained_text_task_accuracy.csv",
+    "figure_file": "figures/figure_25_trained_text_task_accuracy.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 26",
+    "kind": "figure",
+    "title": "Trained-text object-conditioned accuracy",
+    "status": "generated",
+    "analysis_csv": "tables/figure_26_trained_text_object_accuracy.csv",
+    "figure_file": "figures/figure_26_trained_text_object_accuracy.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 27",
+    "kind": "figure",
+    "title": "Trained-text summation mechanism",
+    "status": "generated",
+    "analysis_csv": "tables/figure_27_trained_text_summation_mechanism.csv",
+    "figure_file": "figures/figure_27_trained_text_summation_mechanism.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 28",
+    "kind": "figure",
+    "title": "Trained-text composition diagnostics",
+    "status": "generated",
+    "analysis_csv": "tables/figure_28_trained_text_composition_diagnostics.csv",
+    "figure_file": "figures/figure_28_trained_text_composition_diagnostics.png",
+    "notes": ""
+  },
+  {
+    "paper_id": "Table 1",
+    "kind": "table",
+    "title": "Text modality evaluative summary",
+    "status": "generated",
+    "analysis_csv": "tables/table_01_text_summary.csv",
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Table 2",
+    "kind": "table",
+    "title": "MCQ modality evaluative summary",
+    "status": "generated",
+    "analysis_csv": "tables/table_02_mcq_summary.csv",
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Table 3",
+    "kind": "table",
+    "title": "Image-editing modality evaluative summary",
+    "status": "generated",
+    "analysis_csv": "tables/table_03_image_summary.csv",
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Table 4",
+    "kind": "table",
+    "title": "Trained-checkpoint evaluative summary",
+    "status": "generated",
+    "analysis_csv": "tables/table_04_trained_text_summary.csv",
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Table 5",
+    "kind": "table",
+    "title": "Task-specific query text",
+    "status": "generated",
+    "analysis_csv": "tables/table_05_task_queries.csv",
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Table 6",
+    "kind": "table",
+    "title": "Text per-task accuracy",
+    "status": "generated",
+    "analysis_csv": "tables/table_06_text_task_accuracy.csv",
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Table 7",
+    "kind": "table",
+    "title": "5CQ per-task accuracy",
+    "status": "generated",
+    "analysis_csv": "tables/table_07_mcq5_task_accuracy.csv",
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Table 8",
+    "kind": "table",
+    "title": "Image-output per-task accuracy",
+    "status": "generated",
+    "analysis_csv": "tables/table_08_image_task_accuracy.csv",
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Table 9",
+    "kind": "table",
+    "title": "Text difficulty-bin accuracy",
+    "status": "generated",
+    "analysis_csv": "tables/table_09_text_difficulty_bins.csv",
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Appendix F",
+    "kind": "table",
+    "title": "Per-edge and joint within-scene lifts",
+    "status": "generated",
+    "analysis_csv": "tables/tableF_within_scene_lift_text.csv",
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Appendix F",
+    "kind": "table",
+    "title": "Joint relation integrity per responder",
+    "status": "generated",
+    "analysis_csv": "tables/tableF_joint_integrity_text.csv",
+    "figure_file": null,
+    "notes": "variant column: prespecified_s8 (Fig. 3) and submitted_s7 (as computed for the submitted appendix)"
+  },
+  {
+    "paper_id": "Appendix F",
+    "kind": "table",
+    "title": "Bundle-to-Object-Counting within-scene coupling",
+    "status": "generated",
+    "analysis_csv": "tables/tableF_bundle_coupling_text.csv",
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Appendix F",
+    "kind": "table",
+    "title": "Responder-controlled lift (two-way scene + responder FE)",
+    "status": "generated",
+    "analysis_csv": "tables/tableF_responder_controlled_lift_text.csv",
+    "figure_file": null,
+    "notes": "subset column: all responders and models-only (human baseline dropped)"
+  },
+  {
+    "paper_id": "Appendix F",
+    "kind": "table",
+    "title": "Per-responder marginal lift with cell sizes and exclusions",
+    "status": "generated",
+    "analysis_csv": "tables/tableF_per_responder_lift_text.csv",
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Appendix F",
+    "kind": "table",
+    "title": "Bundle coupling, scene versus scene+responder demeaned",
+    "status": "generated",
+    "analysis_csv": "tables/tableF_bundle_coupling_twoway_text.csv",
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Table 6",
+    "kind": "table",
+    "title": "All-pairs McNemar significance on Object Counting",
+    "status": "generated",
+    "analysis_csv": "tables/table6_mcnemar_object_counting_text.csv",
+    "figure_file": null,
+    "notes": ""
+  },
+  {
+    "paper_id": "Figure 18",
+    "kind": "table",
+    "title": "Within-structure paired camera effects per task",
+    "status": "generated",
+    "analysis_csv": "tables/figF18_camera_within_structure_text.csv",
+    "figure_file": null,
+    "notes": "paired within-structure test with BH-FDR; supersedes the unpaired camera_effect_table variant"
+  }
+]

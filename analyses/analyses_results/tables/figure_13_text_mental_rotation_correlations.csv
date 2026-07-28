@@ -1,0 +1,429 @@
+group,model,display_name,correlation_type,focus_task,source_focus_task,focus_name,task,source_task,task_name,pearson_r,p_value,n
+text,claude,Claude,naive,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,claude,Claude,within_scene,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,claude,Claude,naive,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,-0.15458513261595952,1.6705631052583018e-17,3000
+text,claude,Claude,within_scene,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,-0.168964278058349,2.5823239853002967e-20,2947
+text,claude,Claude,naive,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,0.16879421123892324,1.2995624820685159e-20,3000
+text,claude,Claude,within_scene,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,0.13762397634559667,4.431062345010503e-13,2745
+text,claude,Claude,naive,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,0.018424969547573535,0.31305031682005297,3000
+text,claude,Claude,within_scene,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,0.018501741711245405,0.3112801995111981,2997
+text,claude,Claude,naive,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,0.14014224596863661,1.2504328185825549e-14,3000
+text,claude,Claude,within_scene,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,0.12253210802313602,5.956131550705273e-11,2834
+text,claude,Claude,naive,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.026731561357851444,0.14324879443151534,3000
+text,claude,Claude,within_scene,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.025933815083735916,0.1559236484227615,2995
+text,claude,Claude,naive,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,-0.001129315243445228,0.9506987022965987,3000
+text,claude,Claude,within_scene,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,-0.005277872895036841,0.7736084026250853,2973
+text,claude,Claude,naive,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.06427055873141985,0.00042762859634028617,3000
+text,claude,Claude,within_scene,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.05583945565619363,0.0024097052626905007,2951
+text,claude,Claude,naive,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.27639990911929846,9.611648844501254e-54,3000
+text,claude,Claude,within_scene,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.2619073843011889,3.5604793449099066e-47,2931
+text,claude,Claude,naive,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,0.14598669528264452,9.299035095767167e-16,3000
+text,claude,Claude,within_scene,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,0.13432677753430616,4.624097107071859e-13,2878
+text,claude,Claude,naive,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,3000
+text,claude,Claude,within_scene,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,2509
+text,claude,Claude,naive,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.2760365111423888,1.3330667678569062e-53,3000
+text,claude,Claude,within_scene,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.23404338547192138,1.3215627608818203e-35,2756
+text,claude,Claude,naive,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,claude,Claude,within_scene,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,claude,Claude,naive,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,-0.160801307832119,7.8943047186047e-19,3000
+text,claude,Claude,within_scene,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,-0.17862208271801103,1.975408512170317e-22,2930
+text,claude,Claude,naive,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.16353939939177026,1.9787764736501128e-19,3000
+text,claude,Claude,within_scene,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.12650305269156112,4.716398271567523e-11,2686
+text,claude,Claude,naive,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,0.023024067808104492,0.20740913659276272,3000
+text,claude,Claude,within_scene,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,0.022900829771002305,0.21000437850340772,2998
+text,claude,Claude,naive,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,0.11880332312935704,6.68572410629797e-11,3000
+text,claude,Claude,within_scene,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,0.09710923818736947,2.745532895772325e-07,2791
+text,claude,Claude,naive,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,0.01526016743931265,0.40341704944238616,3000
+text,claude,Claude,within_scene,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,0.014363386625336236,0.4320782406573224,2994
+text,claude,Claude,naive,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.01256720682052916,0.49140582053089416,3000
+text,claude,Claude,within_scene,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.005770632759303997,0.7537335276029847,2958
+text,claude,Claude,naive,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.11000041246634878,1.5335309651279126e-09,3000
+text,claude,Claude,within_scene,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.10165515784671451,3.228114768796835e-08,2945
+text,claude,Claude,naive,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.33287736524519684,1.530584373495047e-78,3000
+text,claude,Claude,within_scene,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.31470377922424475,1.1579092795808117e-67,2899
+text,claude,Claude,naive,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,0.16187084793588982,4.611373340267708e-19,3000
+text,claude,Claude,within_scene,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,0.14788082696930008,2.3050660762536314e-15,2842
+text,claude,Claude,naive,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.2760365111423888,1.3330667678569062e-53,3000
+text,claude,Claude,within_scene,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.23404338547192133,1.3215627608818203e-35,2756
+text,claude,Claude,naive,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,3000
+text,claude,Claude,within_scene,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,2385
+text,gemini,Gemini,naive,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,gemini,Gemini,within_scene,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,gemini,Gemini,naive,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,-0.14723618219587453,5.320086474721825e-16,2999
+text,gemini,Gemini,within_scene,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,-0.1625429364746657,6.825242854597087e-19,2946
+text,gemini,Gemini,naive,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,0.16659929398037654,4.097022094033068e-20,3000
+text,gemini,Gemini,within_scene,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,0.1419925568831742,7.785893123118329e-14,2745
+text,gemini,Gemini,naive,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,0.10800969882480488,3.0141356516146507e-09,3000
+text,gemini,Gemini,within_scene,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,0.10803944507857338,3.0385841516750285e-09,2997
+text,gemini,Gemini,naive,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,0.18691408730689965,5.55590032917125e-25,2999
+text,gemini,Gemini,within_scene,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,0.16980557418370226,9.013846624772063e-20,2833
+text,gemini,Gemini,naive,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.06877064326432716,0.00016349839010959316,3000
+text,gemini,Gemini,within_scene,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.06767613396856934,0.00021023627073561149,2995
+text,gemini,Gemini,naive,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,0.12107834403473475,2.8627985137345892e-11,3000
+text,gemini,Gemini,within_scene,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,0.11564312487487471,2.548073880835961e-10,2973
+text,gemini,Gemini,naive,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.13719225765854262,4.457158828699542e-14,3000
+text,gemini,Gemini,within_scene,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.1283718148470365,2.5673249705167813e-12,2951
+text,gemini,Gemini,naive,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.2627053162429587,1.5410323378449137e-48,3000
+text,gemini,Gemini,within_scene,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.250642648958084,3.1690354682244627e-43,2931
+text,gemini,Gemini,naive,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,0.2139573239515018,2.112818082849951e-32,3000
+text,gemini,Gemini,within_scene,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,0.20354191979220987,2.728658949004237e-28,2878
+text,gemini,Gemini,naive,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,3000
+text,gemini,Gemini,within_scene,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,2509
+text,gemini,Gemini,naive,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.24903523738315,1.2537757319621042e-43,2999
+text,gemini,Gemini,within_scene,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.20886514328359043,1.562067124191876e-28,2755
+text,gemini,Gemini,naive,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,gemini,Gemini,within_scene,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,gemini,Gemini,naive,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,-0.13625045268574767,6.777616981409603e-14,2998
+text,gemini,Gemini,within_scene,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,-0.1553350137902385,2.8366950685882164e-17,2928
+text,gemini,Gemini,naive,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.1970307021474325,1.2521324280317557e-27,2999
+text,gemini,Gemini,within_scene,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.16875681137182946,1.324874066559286e-18,2685
+text,gemini,Gemini,naive,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,0.07067081438063168,0.00010733415709185547,2999
+text,gemini,Gemini,within_scene,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,0.07049929156424124,0.00011215417556245155,2997
+text,gemini,Gemini,naive,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,0.20730507256460093,1.8478439046704105e-30,2998
+text,gemini,Gemini,within_scene,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,0.18702808762093404,2.2640969870669222e-23,2789
+text,gemini,Gemini,naive,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,0.09250204280803548,3.885737599976275e-07,2999
+text,gemini,Gemini,within_scene,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,0.09129629934794897,5.643574931387131e-07,2993
+text,gemini,Gemini,naive,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.11944267807864417,5.3151372665116326e-11,2999
+text,gemini,Gemini,within_scene,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.11061616066338556,1.6285560140125384e-09,2957
+text,gemini,Gemini,naive,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.18169123202837506,1.1318220292513355e-23,2999
+text,gemini,Gemini,within_scene,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.1728182534403076,3.586707851718969e-21,2944
+text,gemini,Gemini,naive,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.23888207176171328,3.5008489939542512e-40,2999
+text,gemini,Gemini,within_scene,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.22143378818797538,1.60885824946257e-33,2898
+text,gemini,Gemini,naive,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,0.1944004071724363,6.311299099059533e-27,2999
+text,gemini,Gemini,within_scene,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,0.18094124325857527,2.4669451059161346e-22,2841
+text,gemini,Gemini,naive,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.24903523738315003,1.2537757319622157e-43,2999
+text,gemini,Gemini,within_scene,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.2088651432835904,1.562067124191876e-28,2755
+text,gemini,Gemini,naive,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,2999
+text,gemini,Gemini,within_scene,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,2384
+text,glm,GLM,naive,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,glm,GLM,within_scene,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,glm,GLM,naive,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,-0.0312563957337462,0.08695417526930534,3000
+text,glm,GLM,within_scene,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,-0.033110360489553126,0.07230888656025998,2947
+text,glm,GLM,naive,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,-0.02789257868955646,0.12666159464778115,3000
+text,glm,GLM,within_scene,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,-0.03056564565530734,0.109363004551673,2745
+text,glm,GLM,naive,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,-0.04462335043100046,0.01451252642599147,3000
+text,glm,GLM,within_scene,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,-0.044468043781783574,0.014908849650229417,2997
+text,glm,GLM,naive,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,-0.032912414924012645,0.07147868736987578,3000
+text,glm,GLM,within_scene,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,-0.03490785620325929,0.06315800055193263,2834
+text,glm,GLM,naive,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.006884873778667477,0.7062127103493279,3000
+text,glm,GLM,within_scene,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.006707378877437929,0.7136765362673748,2995
+text,glm,GLM,naive,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,-0.017814707683662855,0.3293507350072328,3000
+text,glm,GLM,within_scene,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,-0.018456167975263407,0.31442077972120597,2973
+text,glm,GLM,naive,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.03939771798691492,0.03094024812612318,3000
+text,glm,GLM,within_scene,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.038155879045284655,0.03820742817365851,2951
+text,glm,GLM,naive,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.04321490484563735,0.017928224622448814,3000
+text,glm,GLM,within_scene,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.04134453903333164,0.025198741754002996,2931
+text,glm,GLM,naive,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,-0.03626943005181349,0.04699068695921215,3000
+text,glm,GLM,within_scene,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,-0.037865128020194705,0.042235090824004236,2878
+text,glm,GLM,naive,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,3000
+text,glm,GLM,within_scene,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,2509
+text,glm,GLM,naive,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.15586914050137082,8.983549445089635e-18,3000
+text,glm,GLM,within_scene,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.15346469756306033,5.455111582234567e-16,2756
+text,glm,GLM,naive,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,glm,GLM,within_scene,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,glm,GLM,naive,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,-0.02197889313343242,0.22879169825545365,3000
+text,glm,GLM,within_scene,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,-0.024139373968400053,0.19145585857619482,2930
+text,glm,GLM,naive,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,-0.024705243178572426,0.17611811541615302,3000
+text,glm,GLM,within_scene,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,-0.027674073596286142,0.15161191111066943,2686
+text,glm,GLM,naive,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,-0.06191933647426513,0.0006905481147528935,3000
+text,glm,GLM,within_scene,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,-0.06188129767776297,0.000698711011168301,2998
+text,glm,GLM,naive,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,-0.029151453630074507,0.11040739203420818,3000
+text,glm,GLM,within_scene,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,-0.031402989852389894,0.09717964822866086,2791
+text,glm,GLM,naive,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,0.00921783574744883,0.6137822263629904,3000
+text,glm,GLM,within_scene,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,0.009030146241275256,0.621369480801281,2994
+text,glm,GLM,naive,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.02731222551503797,0.13475590196659354,3000
+text,glm,GLM,within_scene,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.026277776279171355,0.1530544894405962,2958
+text,glm,GLM,naive,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,-0.01794582741672096,0.3258028984029975,3000
+text,glm,GLM,within_scene,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,-0.019284307782512736,0.2954820891546227,2945
+text,glm,GLM,naive,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.06270818000209119,0.0005890223810895888,3000
+text,glm,GLM,within_scene,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.06034429280460868,0.0011514533984897696,2899
+text,glm,GLM,naive,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,-0.032124856555976036,0.07853138513153693,3000
+text,glm,GLM,within_scene,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,-0.033971947697172086,0.07017422536874211,2842
+text,glm,GLM,naive,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.1558691405013708,8.983549445089635e-18,3000
+text,glm,GLM,within_scene,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.15346469756306033,5.455111582234567e-16,2756
+text,glm,GLM,naive,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,3000
+text,glm,GLM,within_scene,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,2385
+text,gpt,GPT,naive,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,gpt,GPT,within_scene,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,gpt,GPT,naive,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,-0.08278302345514994,5.622288063827799e-06,3000
+text,gpt,GPT,within_scene,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,-0.09535479268632695,2.1476527253529675e-07,2947
+text,gpt,GPT,naive,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,0.09165300332577199,4.942381983489754e-07,3000
+text,gpt,GPT,within_scene,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,0.07174086452803768,0.00016867011087809677,2745
+text,gpt,GPT,naive,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,0.10572931147463566,6.44059914473697e-09,3000
+text,gpt,GPT,within_scene,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,0.10583244588621593,6.334371115680403e-09,2997
+text,gpt,GPT,naive,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,0.1758546093321899,2.908995322170507e-22,3000
+text,gpt,GPT,within_scene,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,0.16569035428246714,6.800031943152805e-19,2834
+text,gpt,GPT,naive,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.06811057545044194,0.00018894902737336296,3000
+text,gpt,GPT,within_scene,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.06724114581515783,0.0002309480694240462,2995
+text,gpt,GPT,naive,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,0.12958937698065012,1.0407582150200571e-12,3000
+text,gpt,GPT,within_scene,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,0.12603067561614947,5.330870537943153e-12,2973
+text,gpt,GPT,naive,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.14093518041377298,8.844416135698215e-15,3000
+text,gpt,GPT,within_scene,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.13369753543437124,3.0414342810266023e-13,2951
+text,gpt,GPT,naive,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.20524321681387442,6.762190248060781e-30,3000
+text,gpt,GPT,within_scene,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.19208913628736213,9.314518058339228e-26,2931
+text,gpt,GPT,naive,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,0.1828188768062859,5.847892705232409e-24,3000
+text,gpt,GPT,within_scene,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,0.17578514731081027,2.092587784780015e-21,2878
+text,gpt,GPT,naive,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,3000
+text,gpt,GPT,within_scene,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,2509
+text,gpt,GPT,naive,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.21003631983805063,2.9241638018871264e-31,3000
+text,gpt,GPT,within_scene,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.17345177028043454,4.674696250421464e-20,2756
+text,gpt,GPT,naive,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,gpt,GPT,within_scene,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,gpt,GPT,naive,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,-0.08522012254779922,2.9501820625021246e-06,3000
+text,gpt,GPT,within_scene,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,-0.10079104940783763,4.5677276441813584e-08,2930
+text,gpt,GPT,naive,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.0760419291784471,3.0555038895629666e-05,3000
+text,gpt,GPT,within_scene,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.052047988078591664,0.006974797514990499,2686
+text,gpt,GPT,naive,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,0.13930247532958012,1.8005349779223772e-14,3000
+text,gpt,GPT,within_scene,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,0.13923495339749165,1.8911840387287685e-14,2998
+text,gpt,GPT,naive,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,0.1672497732311609,2.920035298877694e-20,3000
+text,gpt,GPT,within_scene,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,0.15479770296248727,1.969863050226593e-16,2791
+text,gpt,GPT,naive,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,0.042098103422662445,0.02111793365174781,3000
+text,gpt,GPT,within_scene,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,0.04110444078299791,0.02450347869108162,2994
+text,gpt,GPT,naive,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.1145231560609594,3.1586600670118296e-10,3000
+text,gpt,GPT,within_scene,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.10844379627174715,3.3605755283526542e-09,2958
+text,gpt,GPT,naive,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.1393028016444951,1.80028068187514e-14,3000
+text,gpt,GPT,within_scene,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.13174205548315965,7.09316419581487e-13,2945
+text,gpt,GPT,naive,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.2282112569715714,9.617305812297945e-37,3000
+text,gpt,GPT,within_scene,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.21072298146392898,1.867635758686904e-30,2899
+text,gpt,GPT,naive,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,0.16031303256249213,1.0078044176789033e-18,3000
+text,gpt,GPT,within_scene,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,0.15124075038478912,5.23879947541454e-16,2842
+text,gpt,GPT,naive,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.21003631983805063,2.9241638018871264e-31,3000
+text,gpt,GPT,within_scene,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.17345177028043454,4.674696250421464e-20,2756
+text,gpt,GPT,naive,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,3000
+text,gpt,GPT,within_scene,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,2385
+text,human,Human,naive,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,0.14828527569606226,3.249052786102765e-16,3000
+text,human,Human,within_scene,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,0.1256776292418813,7.54996424748433e-12,2947
+text,human,Human,naive,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,0.3577488575552776,2.850374267215034e-91,3000
+text,human,Human,within_scene,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,0.2776946240585112,8.663868697132398e-50,2745
+text,human,Human,naive,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,0.047285936298834846,0.009588480449787917,3000
+text,human,Human,within_scene,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,0.04605571008626948,0.01168225474706338,2997
+text,human,Human,naive,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,0.2441229868544815,5.915463229589077e-42,3000
+text,human,Human,within_scene,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,0.16564925390042246,6.937884688038777e-19,2834
+text,human,Human,naive,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.0312949885237641,0.08656500098765138,3000
+text,human,Human,within_scene,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.023772432571879006,0.19338686239905953,2995
+text,human,Human,naive,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,0.18748737831302503,3.8980537054823493e-25,3000
+text,human,Human,within_scene,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,0.17512336132117734,6.644360413156857e-22,2973
+text,human,Human,naive,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.19419198825919648,7.029649563239928e-27,3000
+text,human,Human,within_scene,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.16777826301517262,4.49538786257803e-20,2951
+text,human,Human,naive,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.242864184457809,1.5792211605212705e-41,3000
+text,human,Human,within_scene,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.21133544402587928,6.0258064823126825e-31,2931
+text,human,Human,naive,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,0.2039318800215461,1.5754208232878598e-29,3000
+text,human,Human,within_scene,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,0.1354811976790209,2.9061365785237986e-13,2878
+text,human,Human,naive,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,3000
+text,human,Human,within_scene,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,2509
+text,human,Human,naive,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.43400021507999686,4.615672238096119e-138,3000
+text,human,Human,within_scene,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.3875657209075128,1.806178501647317e-99,2756
+text,human,Human,naive,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,0.18813101485154163,2.668352851466042e-25,3000
+text,human,Human,within_scene,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,0.15986407571085057,3.155932462413598e-18,2930
+text,human,Human,naive,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.37254310271926755,2.094796904175659e-99,3000
+text,human,Human,within_scene,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.2725131486511677,5.973858581147072e-47,2686
+text,human,Human,naive,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,-0.0007320476855846129,0.9680299855897825,3000
+text,human,Human,within_scene,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,-0.0022323924717858705,0.9027552100719857,2998
+text,human,Human,naive,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,0.24724183838049743,5.067336329820343e-43,3000
+text,human,Human,within_scene,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,0.1452536880171754,1.2460980949555746e-14,2791
+text,human,Human,naive,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,0.054259161430945065,0.0029505039188413343,3000
+text,human,Human,within_scene,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,0.04597463984676546,0.011873049506852376,2994
+text,human,Human,naive,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.2318537580723421,6.673494492593898e-38,3000
+text,human,Human,within_scene,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.21310461875460213,1.0043109094041372e-31,2958
+text,human,Human,naive,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.17099702212410284,4.041377784865499e-21,3000
+text,human,Human,within_scene,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.14019896903524315,2.124780458286768e-14,2945
+text,human,Human,naive,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.2504207461710046,3.9939217914065483e-44,3000
+text,human,Human,within_scene,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.2039494648573847,1.3539318786512843e-28,2899
+text,human,Human,naive,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,0.22819456092521415,9.73460038312234e-37,3000
+text,human,Human,within_scene,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,0.1407487658934944,4.7861375051912774e-14,2842
+text,human,Human,naive,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.4340002150799969,4.615672238096119e-138,3000
+text,human,Human,within_scene,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.38756572090751285,1.806178501647317e-99,2756
+text,human,Human,naive,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,3000
+text,human,Human,within_scene,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,2385
+text,kimi,Kimi,naive,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,kimi,Kimi,within_scene,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,kimi,Kimi,naive,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,-0.007991302580246204,0.6617297479040343,3000
+text,kimi,Kimi,within_scene,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,-0.01511696328636249,0.4120209455312915,2947
+text,kimi,Kimi,naive,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,0.06839576710842869,0.00017752705916627084,3000
+text,kimi,Kimi,within_scene,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,0.05615272833673552,0.003250716865315321,2745
+text,kimi,Kimi,naive,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,0.005758239896560276,0.7525620032213713,3000
+text,kimi,Kimi,within_scene,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,0.005762133652452371,0.7525200370958351,2997
+text,kimi,Kimi,naive,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,0.08813912524856699,1.3315996017004078e-06,3000
+text,kimi,Kimi,within_scene,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,0.07879983243227086,2.6736862330494886e-05,2834
+text,kimi,Kimi,naive,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.061508136722043694,0.0007497008675353611,3000
+text,kimi,Kimi,within_scene,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.0610357111419164,0.00083177609165692,2995
+text,kimi,Kimi,naive,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,0.09275346546619517,3.596283679653872e-07,3000
+text,kimi,Kimi,within_scene,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,0.0907518982570383,7.180513546509441e-07,2973
+text,kimi,Kimi,naive,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.06742983673627281,0.00021906438403184668,3000
+text,kimi,Kimi,within_scene,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.06313685644873192,0.0005996753418953493,2951
+text,kimi,Kimi,naive,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.08381216088868407,4.291170054757491e-06,3000
+text,kimi,Kimi,within_scene,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.07647384471196657,3.405568837633974e-05,2931
+text,kimi,Kimi,naive,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,0.05188095353136887,0.004477993561324877,3000
+text,kimi,Kimi,within_scene,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,0.044127205103711674,0.017912752624772554,2878
+text,kimi,Kimi,naive,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,3000
+text,kimi,Kimi,within_scene,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,2509
+text,kimi,Kimi,naive,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.08989384309994865,8.154898783207867e-07,3000
+text,kimi,Kimi,within_scene,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.07155604990109758,0.00017015937004359754,2756
+text,kimi,Kimi,naive,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,kimi,Kimi,within_scene,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,kimi,Kimi,naive,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,-0.002163600925589701,0.9057063127510178,3000
+text,kimi,Kimi,within_scene,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,-0.011188505399644423,0.5449209304666742,2930
+text,kimi,Kimi,naive,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.1128434731558781,5.721396679257454e-10,3000
+text,kimi,Kimi,within_scene,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.0988201749843377,2.8714045017460764e-07,2686
+text,kimi,Kimi,naive,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,0.028171757562169965,0.12290508066154315,3000
+text,kimi,Kimi,within_scene,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,0.02807668868884422,0.12429997990715656,2998
+text,kimi,Kimi,naive,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,0.10015112202232404,3.862149487128483e-08,3000
+text,kimi,Kimi,within_scene,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,0.08883781900828008,2.5954044449660417e-06,2791
+text,kimi,Kimi,naive,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,0.10795257342378123,3.072607908525757e-09,3000
+text,kimi,Kimi,within_scene,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,0.10743823098740236,3.78428446205982e-09,2994
+text,kimi,Kimi,naive,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.11006369348139558,1.5006451495104492e-09,3000
+text,kimi,Kimi,within_scene,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.10653451663543992,6.3135792203040715e-09,2958
+text,kimi,Kimi,naive,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.07870344617982698,1.5912375919494016e-05,3000
+text,kimi,Kimi,within_scene,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.07413912357519548,5.644354096000099e-05,2945
+text,kimi,Kimi,naive,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.08041500200232432,1.0345739599505803e-05,3000
+text,kimi,Kimi,within_scene,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.0699532940237535,0.00016361134675305878,2899
+text,kimi,Kimi,naive,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,0.0745411915042406,4.37412775753951e-05,3000
+text,kimi,Kimi,within_scene,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,0.06501793645416054,0.0005238047821413473,2842
+text,kimi,Kimi,naive,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.08989384309994863,8.154898783207877e-07,3000
+text,kimi,Kimi,within_scene,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.07155604990109758,0.00017015937004359754,2756
+text,kimi,Kimi,naive,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,3000
+text,kimi,Kimi,within_scene,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,2385
+text,qwen3b,Qwen3B,naive,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,qwen3b,Qwen3B,within_scene,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,qwen3b,Qwen3B,naive,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,0.04068569852034597,0.025851091118796656,3000
+text,qwen3b,Qwen3B,within_scene,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,0.03512388344284593,0.05658222553734931,2947
+text,qwen3b,Qwen3B,naive,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,-0.021470987654087073,0.2397308308765264,3000
+text,qwen3b,Qwen3B,within_scene,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,-0.023852685966814648,0.21154941318519133,2745
+text,qwen3b,Qwen3B,naive,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,0.04245427262857722,0.020050816859339158,3000
+text,qwen3b,Qwen3B,within_scene,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,0.04372206971544297,0.016679165239420604,2997
+text,qwen3b,Qwen3B,naive,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,-0.012600788681933154,0.49024866049647875,3000
+text,qwen3b,Qwen3B,within_scene,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,-0.014412811814716747,0.44309811116648395,2834
+text,qwen3b,Qwen3B,naive,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.03485262195940976,0.05629550697776788,3000
+text,qwen3b,Qwen3B,within_scene,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.03437970481712162,0.05993726524484102,2995
+text,qwen3b,Qwen3B,naive,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,-0.020738809772842842,0.2561407051763559,3000
+text,qwen3b,Qwen3B,within_scene,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,-0.02450583782324827,0.18160648963270382,2973
+text,qwen3b,Qwen3B,naive,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.04578929299735653,0.012132967363744081,3000
+text,qwen3b,Qwen3B,within_scene,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.042196413116733736,0.02188891042548552,2951
+text,qwen3b,Qwen3B,naive,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.06415317094483625,0.00043814788546974836,3000
+text,qwen3b,Qwen3B,within_scene,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.05785523544219087,0.0017273694625608267,2931
+text,qwen3b,Qwen3B,naive,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,0.013591002539203534,0.4567954100984413,3000
+text,qwen3b,Qwen3B,within_scene,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,0.009991297264770127,0.5921081238712529,2878
+text,qwen3b,Qwen3B,naive,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,3000
+text,qwen3b,Qwen3B,within_scene,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,2509
+text,qwen3b,Qwen3B,naive,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.28090553203910784,1.5978076600185302e-55,3000
+text,qwen3b,Qwen3B,within_scene,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.2591956677974401,1.500489295943868e-43,2756
+text,qwen3b,Qwen3B,naive,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,qwen3b,Qwen3B,within_scene,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,qwen3b,Qwen3B,naive,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,0.01518701424856166,0.4056752370817326,3000
+text,qwen3b,Qwen3B,within_scene,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,0.007901312326055884,0.6690020358199481,2930
+text,qwen3b,Qwen3B,naive,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.022127352069727012,0.22566238018287074,3000
+text,qwen3b,Qwen3B,within_scene,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.020098470094020215,0.2977565809389838,2686
+text,qwen3b,Qwen3B,naive,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,0.06591768407702739,0.00030280864600076043,3000
+text,qwen3b,Qwen3B,within_scene,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,0.06653637185843114,0.00026671350828767434,2998
+text,qwen3b,Qwen3B,naive,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,0.005056063851517819,0.7819195664306337,3000
+text,qwen3b,Qwen3B,within_scene,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,0.003052176695054069,0.8719560581806529,2791
+text,qwen3b,Qwen3B,naive,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,-0.0065489413850555785,0.7199282778532186,3000
+text,qwen3b,Qwen3B,within_scene,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,-0.007117017731288507,0.6970783361338763,2994
+text,qwen3b,Qwen3B,naive,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,-0.027192717695271203,0.13647127495110348,3000
+text,qwen3b,Qwen3B,within_scene,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,-0.03350751099254279,0.06843509909201372,2958
+text,qwen3b,Qwen3B,naive,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.019142512585803722,0.29457517957921603,3000
+text,qwen3b,Qwen3B,within_scene,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.015146545645839365,0.4112654723415233,2945
+text,qwen3b,Qwen3B,naive,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.047456159709065554,0.009331552790959043,3000
+text,qwen3b,Qwen3B,within_scene,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.03832662961336056,0.03906852309628917,2899
+text,qwen3b,Qwen3B,naive,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,0.02468246864209144,0.17651708289802542,3000
+text,qwen3b,Qwen3B,within_scene,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,0.0202489295744377,0.28053667944835037,2842
+text,qwen3b,Qwen3B,naive,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.28090553203910795,1.5978076600178345e-55,3000
+text,qwen3b,Qwen3B,within_scene,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.25919566779744,1.500489295943868e-43,2756
+text,qwen3b,Qwen3B,naive,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,3000
+text,qwen3b,Qwen3B,within_scene,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,2385
+text,qwen,Qwen,naive,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,qwen,Qwen,within_scene,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,qwen,Qwen,naive,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,0.060758320308988,0.0008698344281831145,3000
+text,qwen,Qwen,within_scene,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,0.05406923388068056,0.003323456833322695,2947
+text,qwen,Qwen,naive,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,0.07930702064068479,1.368438642246096e-05,3000
+text,qwen,Qwen,within_scene,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,0.056703457658589834,0.002959746358348339,2745
+text,qwen,Qwen,naive,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,0.011030550240082211,0.5458870537417679,3000
+text,qwen,Qwen,within_scene,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,0.010932161795535966,0.5496745286458902,2997
+text,qwen,Qwen,naive,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,0.11658209845652066,1.507118239007305e-10,3000
+text,qwen,Qwen,within_scene,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,0.10548292410093921,1.8162637511382783e-08,2834
+text,qwen,Qwen,naive,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.06465782749164242,0.00039457260166627555,3000
+text,qwen,Qwen,within_scene,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.06430615637642792,0.0004292214376042224,2995
+text,qwen,Qwen,naive,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,0.1198578884097041,4.554796095305326e-11,2999
+text,qwen,Qwen,within_scene,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,0.11677342768285676,1.7116985651450674e-10,2972
+text,qwen,Qwen,naive,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.11393431138990538,3.893809960159368e-10,3000
+text,qwen,Qwen,within_scene,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.10859775302989998,3.3315508088487844e-09,2951
+text,qwen,Qwen,naive,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.028537486812063532,0.11811626162429274,3000
+text,qwen,Qwen,within_scene,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.01870060057719966,0.3114983501546187,2931
+text,qwen,Qwen,naive,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,0.10309520972418024,1.518240475295304e-08,3000
+text,qwen,Qwen,within_scene,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,0.09534558279054903,2.9839231621710354e-07,2878
+text,qwen,Qwen,naive,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,3000
+text,qwen,Qwen,within_scene,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,2509
+text,qwen,Qwen,naive,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.22140529462181063,1.2423126677386689e-34,3000
+text,qwen,Qwen,within_scene,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.2090627327066025,1.3548575866349774e-28,2756
+text,qwen,Qwen,naive,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,qwen,Qwen,within_scene,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,qwen,Qwen,naive,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,0.0430773055614185,0.018296959121048187,3000
+text,qwen,Qwen,within_scene,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,0.034603428716066705,0.061092277679849906,2930
+text,qwen,Qwen,naive,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.08635598013468704,2.1712870016704397e-06,3000
+text,qwen,Qwen,within_scene,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.06002772751320682,0.001855768069149404,2686
+text,qwen,Qwen,naive,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,0.05557559427123059,0.002326141159438922,3000
+text,qwen,Qwen,within_scene,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,0.055439178918363516,0.0023927379795958023,2998
+text,qwen,Qwen,naive,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,0.12391820264053215,9.711446538535026e-12,3000
+text,qwen,Qwen,within_scene,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,0.11081011331079196,4.36979756770321e-09,2791
+text,qwen,Qwen,naive,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,0.07415004150163715,4.797697681513241e-05,3000
+text,qwen,Qwen,within_scene,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,0.07376168811783554,5.348073054569947e-05,2994
+text,qwen,Qwen,naive,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.10110626179376093,2.876200693897255e-08,2999
+text,qwen,Qwen,within_scene,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.09606866613429439,1.6592382583643307e-07,2957
+text,qwen,Qwen,naive,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.09295695671516205,3.389602950122254e-07,3000
+text,qwen,Qwen,within_scene,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.08723219193273618,2.1273573470177387e-06,2945
+text,qwen,Qwen,naive,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.05698209776802781,0.0017945964840767779,3000
+text,qwen,Qwen,within_scene,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.043954373398834276,0.017945997170621977,2899
+text,qwen,Qwen,naive,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,0.10529085600112273,7.439562342225951e-09,3000
+text,qwen,Qwen,within_scene,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,0.09584504206429763,3.0703104385589e-07,2842
+text,qwen,Qwen,naive,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.22140529462181058,1.2423126677386689e-34,3000
+text,qwen,Qwen,within_scene,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.2090627327066025,1.3548575866349774e-28,2756
+text,qwen,Qwen,naive,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,3000
+text,qwen,Qwen,within_scene,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,2385
+text,vla0,vla0,naive,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,vla0,vla0,within_scene,Target2a,task10,Mental Rotation 90,Task1,task1,Object Categorization,,,0
+text,vla0,vla0,naive,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,0.02522037856296063,0.16727250594699736,3000
+text,vla0,vla0,within_scene,Target2a,task10,Mental Rotation 90,Task2,task9,Cluster Count,0.020105123794399708,0.275237865005204,2947
+text,vla0,vla0,naive,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,-0.013730450993760903,0.4521895094135245,3000
+text,vla0,vla0,within_scene,Target2a,task10,Mental Rotation 90,Task3,task3,Column Count,-0.015207364883024219,0.4257770432073687,2745
+text,vla0,vla0,naive,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,-0.02182813948112094,0.23200085965048017,3000
+text,vla0,vla0,within_scene,Target2a,task10,Mental Rotation 90,Task4,task4,Layer Count,-0.021179356617188703,0.2464124543747927,2997
+text,vla0,vla0,naive,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,-0.01281971104268362,0.482741087431032,3000
+text,vla0,vla0,within_scene,Target2a,task10,Mental Rotation 90,Task5,task5,Visible Object Count,-0.01634425960481345,0.38442816491993675,2834
+text,vla0,vla0,naive,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.02292372499267929,0.20939680148488815,3000
+text,vla0,vla0,within_scene,Target2a,task10,Mental Rotation 90,Task6,task2,Top Layer,0.02255192455544087,0.21726562321630583,2995
+text,vla0,vla0,naive,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,0.002773301812101379,0.879315511067755,3000
+text,vla0,vla0,within_scene,Target2a,task10,Mental Rotation 90,Task7,task6,Direct Support,-0.0005803501545121334,0.9747667859761138,2973
+text,vla0,vla0,naive,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.04150428927076465,0.023007162697609742,3000
+text,vla0,vla0,within_scene,Target2a,task10,Mental Rotation 90,Task8,task7,Support Column,0.03791255956792654,0.039456333361587666,2951
+text,vla0,vla0,naive,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.1335526048105224,2.0598516744248729e-13,3000
+text,vla0,vla0,within_scene,Target2a,task10,Mental Rotation 90,Task9,task8,Hidden Object Count,0.1282665192133588,3.1687398974226296e-12,2931
+text,vla0,vla0,naive,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,-0.0424268474541098,0.02013128047921437,3000
+text,vla0,vla0,within_scene,Target2a,task10,Mental Rotation 90,Target1,main,Object Counting,-0.047454273078151823,0.010893161318045977,2878
+text,vla0,vla0,naive,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,3000
+text,vla0,vla0,within_scene,Target2a,task10,Mental Rotation 90,Target2a,task10,Mental Rotation 90,,,2509
+text,vla0,vla0,naive,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.22910262839371917,5.027668353562022e-37,3000
+text,vla0,vla0,within_scene,Target2a,task10,Mental Rotation 90,Target2b,task11,Mental Rotation 180,0.20971511035656162,9.113592362777377e-29,2756
+text,vla0,vla0,naive,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,vla0,vla0,within_scene,Target2b,task11,Mental Rotation 180,Task1,task1,Object Categorization,,,0
+text,vla0,vla0,naive,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,0.007315290121997525,0.6887784747542668,3000
+text,vla0,vla0,within_scene,Target2b,task11,Mental Rotation 180,Task2,task9,Cluster Count,0.0005188819740314082,0.9776024723813126,2930
+text,vla0,vla0,naive,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.018042610019650705,0.32320014803540215,3000
+text,vla0,vla0,within_scene,Target2b,task11,Mental Rotation 180,Task3,task3,Column Count,0.016737291628226948,0.38589026085385375,2686
+text,vla0,vla0,naive,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,0.011070113353569163,0.5444477122628175,3000
+text,vla0,vla0,within_scene,Target2b,task11,Mental Rotation 180,Task4,task4,Layer Count,0.011376292732571514,0.5335093785564559,2998
+text,vla0,vla0,naive,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,-0.01876902084444044,0.30409863564910916,3000
+text,vla0,vla0,within_scene,Target2b,task11,Mental Rotation 180,Task5,task5,Visible Object Count,-0.023258086358615954,0.2193199356324309,2791
+text,vla0,vla0,naive,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,-0.016992269392956016,0.3521721840215192,3000
+text,vla0,vla0,within_scene,Target2b,task11,Mental Rotation 180,Task6,task2,Top Layer,-0.017448210605882114,0.3398833969232918,2994
+text,vla0,vla0,naive,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.01197617722719041,0.512009198174655,3000
+text,vla0,vla0,within_scene,Target2b,task11,Mental Rotation 180,Task7,task6,Direct Support,0.006310353192201107,0.731551306228017,2958
+text,vla0,vla0,naive,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.008081875211185805,0.6581380771666099,3000
+text,vla0,vla0,within_scene,Target2b,task11,Mental Rotation 180,Task8,task7,Support Column,0.003977019954621703,0.8291954338052276,2945
+text,vla0,vla0,naive,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.0579959429149952,0.0014833580112869988,3000
+text,vla0,vla0,within_scene,Target2b,task11,Mental Rotation 180,Task9,task8,Hidden Object Count,0.049628828899463254,0.007525967793883586,2899
+text,vla0,vla0,naive,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,-0.04357889561975003,0.01698401194902544,3000
+text,vla0,vla0,within_scene,Target2b,task11,Mental Rotation 180,Target1,main,Object Counting,-0.05006128312169526,0.007601241562492773,2842
+text,vla0,vla0,naive,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.22910262839371925,5.027668353562022e-37,3000
+text,vla0,vla0,within_scene,Target2b,task11,Mental Rotation 180,Target2a,task10,Mental Rotation 90,0.20971511035656165,9.113592362776142e-29,2756
+text,vla0,vla0,naive,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,3000
+text,vla0,vla0,within_scene,Target2b,task11,Mental Rotation 180,Target2b,task11,Mental Rotation 180,,,2385

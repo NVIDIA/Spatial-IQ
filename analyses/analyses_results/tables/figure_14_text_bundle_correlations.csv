@@ -1,0 +1,51 @@
+group,level,model,display_name,bundle,pearson_r_with_object_count,p_value,n,n_varying_scenes,n_tasks
+text,aggregate,aggregate,Aggregate,Mental Rotation 90,0.14825656004753626,1.6541919936198607e-132,27000,2509,1
+text,per_model,claude,Claude,Mental Rotation 90,0.11459594108419408,8.602208119529632e-09,2509,2509,1
+text,per_model,gemini,Gemini,Mental Rotation 90,0.1840429453872984,1.4916365550131827e-20,2509,2509,1
+text,per_model,glm,GLM,Mental Rotation 90,-0.04324124789456443,0.030320028956997237,2509,2509,1
+text,per_model,gpt,GPT,Mental Rotation 90,0.16014766321377422,7.034242126232067e-16,2509,2509,1
+text,per_model,human,Human,Mental Rotation 90,0.20141145313082992,2.237907784288928e-24,2509,2509,1
+text,per_model,kimi,Kimi,Mental Rotation 90,0.02285672094629811,0.25242865428558303,2509,2509,1
+text,per_model,qwen3b,Qwen3B,Mental Rotation 90,-0.0035150497146716857,0.860308585677379,2509,2509,1
+text,per_model,qwen,Qwen,Mental Rotation 90,0.06928818019223372,0.0005145137524563112,2509,2509,1
+text,per_model,vla0,vla0,Mental Rotation 90,-0.06455204566472722,0.0012157036595387516,2509,2509,1
+text,aggregate,aggregate,Aggregate,Mental Rotation 180,0.15694078798344574,1.9520806167058244e-148,26999,2385,1
+text,per_model,claude,Claude,Mental Rotation 180,0.10844169660133522,1.1035284029495639e-07,2385,2385,1
+text,per_model,gemini,Gemini,Mental Rotation 180,0.14336444067072845,2.0267736972339956e-12,2384,2385,1
+text,per_model,glm,GLM,Mental Rotation 180,-0.040341048233079324,0.04885176826543904,2385,2385,1
+text,per_model,gpt,GPT,Mental Rotation 180,0.12788885398160033,3.654358562131651e-10,2385,2385,1
+text,per_model,human,Human,Mental Rotation 180,0.2293357661502126,7.797440153117277e-30,2385,2385,1
+text,per_model,kimi,Kimi,Mental Rotation 180,0.03682057229689568,0.07220023874978387,2385,2385,1
+text,per_model,qwen3b,Qwen3B,Mental Rotation 180,0.005130437125173894,0.8022604796922264,2385,2385,1
+text,per_model,qwen,Qwen,Mental Rotation 180,0.06328348832780023,0.001987988173036427,2385,2385,1
+text,per_model,vla0,vla0,Mental Rotation 180,-0.07294774303853781,0.000363311619160692,2385,2385,1
+text,aggregate,aggregate,Aggregate,Mental Rotation bundle,0.1904417950149674,6.783134010080581e-219,27000,2755,2
+text,per_model,claude,Claude,Mental Rotation bundle,0.16951469922690202,3.295112650988524e-19,2755,2755,2
+text,per_model,gemini,Gemini,Mental Rotation bundle,0.24333135502443276,2.0226780601631587e-38,2755,2755,2
+text,per_model,glm,GLM,Mental Rotation bundle,-0.04913607975144549,0.009895869399159507,2755,2755,2
+text,per_model,gpt,GPT,Mental Rotation bundle,0.21146550771696707,3.19746203364843e-29,2755,2755,2
+text,per_model,human,Human,Mental Rotation bundle,0.26444111326726083,2.6299453849360422e-45,2755,2755,2
+text,per_model,kimi,Kimi,Mental Rotation bundle,0.0693117174742635,0.00027182612456437945,2755,2755,2
+text,per_model,qwen3b,Qwen3B,Mental Rotation bundle,0.014830496440623609,0.43650179939406414,2755,2755,2
+text,per_model,qwen,Qwen,Mental Rotation bundle,0.11353832075691733,2.286293087387659e-09,2755,2755,2
+text,per_model,vla0,vla0,Mental Rotation bundle,-0.06871013266269815,0.0003072695164064971,2755,2755,2
+text,aggregate,aggregate,Aggregate,Referential chain,0.43632070857204835,0.0,27000,2999,3
+text,per_model,claude,Claude,Referential chain,0.05036163062294113,0.0058056458280510955,2999,2999,3
+text,per_model,gemini,Gemini,Referential chain,0.17030503740468145,5.9303245686218165e-21,2999,2999,3
+text,per_model,glm,GLM,Referential chain,0.008444340462479712,0.6438992258700762,2999,2999,3
+text,per_model,gpt,GPT,Referential chain,0.11218648703175953,7.248004735116474e-10,2999,2999,3
+text,per_model,human,Human,Referential chain,0.17031438798487142,5.900929982923591e-21,2999,2999,3
+text,per_model,kimi,Kimi,Referential chain,0.14007746117728215,1.2992216126280581e-14,2999,2999,3
+text,per_model,qwen3b,Qwen3B,Referential chain,-0.03194123992624321,0.08030499339487028,2999,2999,3
+text,per_model,qwen,Qwen,Referential chain,0.3194353295360053,4.1142380215721023e-72,2999,2999,3
+text,per_model,vla0,vla0,Referential chain,-0.06593833979262462,0.0003021880912210829,2999,2999,3
+text,aggregate,aggregate,Aggregate,Visible + hidden mechanism,0.5449689730121642,0.0,27000,2918,2
+text,per_model,claude,Claude,Visible + hidden mechanism,0.41225912609473836,3.9978761896824216e-120,2918,2918,2
+text,per_model,gemini,Gemini,Visible + hidden mechanism,0.31378705796022743,1.0915023024307593e-67,2918,2918,2
+text,per_model,glm,GLM,Visible + hidden mechanism,0.27055819685240856,3.979433878707601e-50,2918,2918,2
+text,per_model,gpt,GPT,Visible + hidden mechanism,0.3774589129391719,1.842458438026681e-99,2918,2918,2
+text,per_model,human,Human,Visible + hidden mechanism,0.29696723579739565,1.7224187248734264e-60,2918,2918,2
+text,per_model,kimi,Kimi,Visible + hidden mechanism,0.3759732310304865,1.2390981011869565e-98,2918,2918,2
+text,per_model,qwen3b,Qwen3B,Visible + hidden mechanism,-0.038909581553058924,0.035576659591480805,2918,2918,2
+text,per_model,qwen,Qwen,Visible + hidden mechanism,0.6521151633173521,0.0,2918,2918,2
+text,per_model,vla0,vla0,Visible + hidden mechanism,0.004278978532347995,0.8172789965775255,2918,2918,2

@@ -1,0 +1,13 @@
+task,source_task,task_name,query_text
+Task1,task1,Object Categorization,What object category composes the stacked structure?
+Task2,task9,Cluster Count,How many non-laterally-adjacent clusters of objects are present?
+Task3,task3,Column Count,How many columns are in the stacked structure?
+Task4,task4,Layer Count,How many horizontal layers are in the stacked structure?
+Task5,task5,Visible Object Count,How many visible objects are present?
+Task6,task2,Top Layer,How many objects are in the top-most layer?
+Task7,task6,Direct Support,How many visible objects directly support the top-most object(s)?
+Task8,task7,Support Column,How many visible objects are in columns supporting the top-most object(s)?
+Task9,task8,Hidden Object Count,How many hidden objects must exist to support the visible structure?
+Target1,main,Object Counting,How many objects are in the stacked structure in total?
+Target2a,task10,Mental Rotation 90,Which objects are visible in the adjacent view but not the reference view?
+Target2b,task11,Mental Rotation 180,Which objects are visible in the opposite view but not the reference view?

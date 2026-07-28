@@ -1,0 +1,22 @@
+# Qwen-Image-Edit (Diffusers). Requires Python >= 3.10 (current diffusers drops 3.8/3.9).
+#
+# uv pip only installs into an active venv or a path you pass with --python.
+# From inference/qwen, either:
+#
+#   uv venv --python 3.12 .venv-image-edit
+#   source .venv-image-edit/bin/activate
+#   uv pip install -r requirements_image_edit.txt
+#
+# Or one chain without activating (targets the new venv explicitly):
+#
+#   uv venv --python 3.12 .venv-image-edit && \
+#     uv pip install --python .venv-image-edit/bin/python -r requirements_image_edit.txt
+#
+# Optional bleeding edge diffusers (same --python ... if not activated):
+#   uv pip install --python .venv-image-edit/bin/python git+https://github.com/huggingface/diffusers
+diffusers>=0.36.0
+accelerate>=0.33.0
+transformers>=4.51.0
+pillow>=10.0.0
+torch
+torchvision

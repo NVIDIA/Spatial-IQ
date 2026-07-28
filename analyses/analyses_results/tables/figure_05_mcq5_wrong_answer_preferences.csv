@@ -1,0 +1,965 @@
+group,model,display_name,task,source_task,task_name,raw_label,reason,n_error,n_total,raw_proportion,chance_level,chance_adjusted_preference,above_chance_p,displayed_in_figure
+mcq5,qwen,Qwen,Task1,task1,Object Categorization,drop_one_column_highlight,Drop One Column Highlight,597,3000,0.199,0.2,-0.0012500000000000011,0.5617060110518274,False
+mcq5,vla0,vla0,Task1,task1,Object Categorization,drop_one_column_highlight,Drop One Column Highlight,565,3000,0.18833333333333332,0.2,-0.014583333333333358,0.9482412304088387,False
+mcq5,qwen3b,Qwen3B,Task1,task1,Object Categorization,drop_one_column_highlight,Drop One Column Highlight,545,3000,0.18166666666666667,0.2,-0.022916666666666675,0.9947540477532641,False
+mcq5,glm,GLM,Task1,task1,Object Categorization,drop_one_column_highlight,Drop One Column Highlight,540,3000,0.18,0.2,-0.025000000000000022,0.9973914539353594,False
+mcq5,claude,Claude,Task1,task1,Object Categorization,drop_one_column_highlight,Drop One Column Highlight,210,3000,0.07,0.2,-0.1625,1.0,False
+mcq5,claude,Claude,Task1,task1,Object Categorization,drop_one_column_highlight_fallback_unique_0,Drop One Column Highlight,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,gemini,Gemini,Task1,task1,Object Categorization,drop_one_column_highlight,Drop One Column Highlight,280,3000,0.09333333333333334,0.2,-0.13333333333333333,1.0,False
+mcq5,gemini,Gemini,Task1,task1,Object Categorization,drop_one_column_highlight_fallback_unique_0,Drop One Column Highlight,32,3000,0.010666666666666666,0.2,-0.2366666666666667,1.0,False
+mcq5,glm,GLM,Task1,task1,Object Categorization,drop_one_column_highlight_fallback_unique_0,Drop One Column Highlight,62,3000,0.020666666666666667,0.2,-0.22416666666666668,1.0,False
+mcq5,gpt,GPT,Task1,task1,Object Categorization,drop_one_column_highlight,Drop One Column Highlight,236,3000,0.07866666666666666,0.2,-0.15166666666666667,1.0,False
+mcq5,gpt,GPT,Task1,task1,Object Categorization,drop_one_column_highlight_fallback_unique_0,Drop One Column Highlight,17,3000,0.005666666666666667,0.2,-0.2429166666666667,1.0,False
+mcq5,human,Human,Task1,task1,Object Categorization,drop_one_column_highlight,Drop One Column Highlight,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,kimi,Kimi,Task1,task1,Object Categorization,drop_one_column_highlight,Drop One Column Highlight,110,3000,0.03666666666666667,0.2,-0.20416666666666666,1.0,False
+mcq5,kimi,Kimi,Task1,task1,Object Categorization,drop_one_column_highlight_fallback_unique_0,Drop One Column Highlight,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,qwen,Qwen,Task1,task1,Object Categorization,drop_one_column_highlight_fallback_unique_0,Drop One Column Highlight,33,3000,0.011,0.2,-0.23625,1.0,False
+mcq5,qwen3b,Qwen3B,Task1,task1,Object Categorization,drop_one_column_highlight_fallback_unique_0,Drop One Column Highlight,47,3000,0.015666666666666666,0.2,-0.2304166666666667,1.0,False
+mcq5,vla0,vla0,Task1,task1,Object Categorization,drop_one_column_highlight_fallback_unique_0,Drop One Column Highlight,51,3000,0.017,0.2,-0.22874999999999998,1.0,False
+mcq5,qwen3b,Qwen3B,Task1,task1,Object Categorization,omit_one_block,Omit One Block,551,3000,0.18366666666666667,0.2,-0.020416666666666673,0.9886647028624174,False
+mcq5,vla0,vla0,Task1,task1,Object Categorization,omit_one_block,Omit One Block,542,3000,0.18066666666666667,0.2,-0.024166666666666677,0.9965288067715049,False
+mcq5,glm,GLM,Task1,task1,Object Categorization,omit_one_block,Omit One Block,520,3000,0.17333333333333334,0.2,-0.03333333333333334,0.9999063096317262,False
+mcq5,claude,Claude,Task1,task1,Object Categorization,omit_one_block,Omit One Block,260,3000,0.08666666666666667,0.2,-0.14166666666666666,1.0,False
+mcq5,claude,Claude,Task1,task1,Object Categorization,omit_one_block_fallback_unique_0,Omit One Block,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,gemini,Gemini,Task1,task1,Object Categorization,omit_one_block,Omit One Block,277,3000,0.09233333333333334,0.2,-0.13458333333333333,1.0,False
+mcq5,gemini,Gemini,Task1,task1,Object Categorization,omit_one_block_fallback_unique_0,Omit One Block,25,3000,0.008333333333333333,0.2,-0.23958333333333334,1.0,False
+mcq5,glm,GLM,Task1,task1,Object Categorization,omit_one_block_fallback_unique_0,Omit One Block,55,3000,0.018333333333333333,0.2,-0.22708333333333333,1.0,False
+mcq5,gpt,GPT,Task1,task1,Object Categorization,omit_one_block,Omit One Block,293,3000,0.09766666666666667,0.2,-0.12791666666666668,1.0,False
+mcq5,gpt,GPT,Task1,task1,Object Categorization,omit_one_block_fallback_unique_0,Omit One Block,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,human,Human,Task1,task1,Object Categorization,omit_one_block,Omit One Block,17,3000,0.005666666666666667,0.2,-0.2429166666666667,1.0,False
+mcq5,kimi,Kimi,Task1,task1,Object Categorization,omit_one_block,Omit One Block,130,3000,0.043333333333333335,0.2,-0.19583333333333333,1.0,False
+mcq5,kimi,Kimi,Task1,task1,Object Categorization,omit_one_block_fallback_unique_0,Omit One Block,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,qwen,Qwen,Task1,task1,Object Categorization,omit_one_block,Omit One Block,356,3000,0.11866666666666667,0.2,-0.10166666666666667,1.0,False
+mcq5,qwen,Qwen,Task1,task1,Object Categorization,omit_one_block_fallback_unique_0,Omit One Block,35,3000,0.011666666666666667,0.2,-0.2354166666666667,1.0,False
+mcq5,qwen3b,Qwen3B,Task1,task1,Object Categorization,omit_one_block_fallback_unique_0,Omit One Block,27,3000,0.009,0.2,-0.23875,1.0,False
+mcq5,vla0,vla0,Task1,task1,Object Categorization,omit_one_block_fallback_unique_0,Omit One Block,54,3000,0.018,0.2,-0.2275,1.0,False
+mcq5,qwen,Qwen,Task1,task1,Object Categorization,omit_two_blocks,Omit Two Blocks,590,3000,0.19666666666666666,0.2,-0.0041666666666666935,0.6828650473273535,False
+mcq5,vla0,vla0,Task1,task1,Object Categorization,omit_two_blocks,Omit Two Blocks,574,3000,0.19133333333333333,0.2,-0.010833333333333355,0.8871961863743801,False
+mcq5,qwen3b,Qwen3B,Task1,task1,Object Categorization,omit_two_blocks,Omit Two Blocks,569,3000,0.18966666666666668,0.2,-0.012916666666666667,0.9254636460251149,False
+mcq5,glm,GLM,Task1,task1,Object Categorization,omit_two_blocks,Omit Two Blocks,555,3000,0.185,0.2,-0.018750000000000017,0.9818050676732466,False
+mcq5,claude,Claude,Task1,task1,Object Categorization,omit_two_blocks,Omit Two Blocks,184,3000,0.06133333333333333,0.2,-0.17333333333333334,1.0,False
+mcq5,claude,Claude,Task1,task1,Object Categorization,omit_two_blocks_fallback_unique_0,Omit Two Blocks,10,3000,0.0033333333333333335,0.2,-0.24583333333333335,1.0,False
+mcq5,gemini,Gemini,Task1,task1,Object Categorization,omit_two_blocks,Omit Two Blocks,241,3000,0.08033333333333334,0.2,-0.14958333333333332,1.0,False
+mcq5,gemini,Gemini,Task1,task1,Object Categorization,omit_two_blocks_fallback_unique_0,Omit Two Blocks,18,3000,0.006,0.2,-0.2425,1.0,False
+mcq5,glm,GLM,Task1,task1,Object Categorization,omit_two_blocks_fallback_unique_0,Omit Two Blocks,52,3000,0.017333333333333333,0.2,-0.22833333333333333,1.0,False
+mcq5,gpt,GPT,Task1,task1,Object Categorization,omit_two_blocks,Omit Two Blocks,223,3000,0.07433333333333333,0.2,-0.15708333333333332,1.0,False
+mcq5,gpt,GPT,Task1,task1,Object Categorization,omit_two_blocks_fallback_unique_0,Omit Two Blocks,11,3000,0.0036666666666666666,0.2,-0.24541666666666664,1.0,False
+mcq5,human,Human,Task1,task1,Object Categorization,omit_two_blocks,Omit Two Blocks,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,kimi,Kimi,Task1,task1,Object Categorization,omit_two_blocks,Omit Two Blocks,97,3000,0.03233333333333333,0.2,-0.20958333333333334,1.0,False
+mcq5,kimi,Kimi,Task1,task1,Object Categorization,omit_two_blocks_fallback_unique_0,Omit Two Blocks,9,3000,0.003,0.2,-0.24625,1.0,False
+mcq5,qwen,Qwen,Task1,task1,Object Categorization,omit_two_blocks_fallback_unique_0,Omit Two Blocks,48,3000,0.016,0.2,-0.22999999999999998,1.0,False
+mcq5,qwen3b,Qwen3B,Task1,task1,Object Categorization,omit_two_blocks_fallback_unique_0,Omit Two Blocks,23,3000,0.007666666666666666,0.2,-0.2404166666666667,1.0,False
+mcq5,vla0,vla0,Task1,task1,Object Categorization,omit_two_blocks_fallback_unique_0,Omit Two Blocks,49,3000,0.01633333333333333,0.2,-0.22958333333333333,1.0,False
+mcq5,claude,Claude,Task1,task1,Object Categorization,phantom_block_above_top,Phantom Block Above Top,1034,3000,0.3446666666666667,0.2,0.18083333333333332,2.3381272316039935e-76,True
+mcq5,gemini,Gemini,Task1,task1,Object Categorization,phantom_block_above_top,Phantom Block Above Top,1008,3000,0.336,0.2,0.17,3.694858763494427e-68,True
+mcq5,gpt,GPT,Task1,task1,Object Categorization,phantom_block_above_top,Phantom Block Above Top,974,3000,0.32466666666666666,0.2,0.1558333333333333,4.253268124927441e-58,True
+mcq5,kimi,Kimi,Task1,task1,Object Categorization,phantom_block_above_top,Phantom Block Above Top,966,3000,0.322,0.2,0.1525,7.692803583691135e-56,True
+mcq5,qwen,Qwen,Task1,task1,Object Categorization,phantom_block_above_top,Phantom Block Above Top,656,3000,0.21866666666666668,0.2,0.02333333333333333,0.006043234067536448,True
+mcq5,qwen3b,Qwen3B,Task1,task1,Object Categorization,phantom_block_above_top,Phantom Block Above Top,619,3000,0.20633333333333334,0.2,0.007916666666666662,0.19885357911392784,False
+mcq5,glm,GLM,Task1,task1,Object Categorization,phantom_block_above_top,Phantom Block Above Top,596,3000,0.19866666666666666,0.2,-0.0016666666666666913,0.5796560860914981,False
+mcq5,vla0,vla0,Task1,task1,Object Categorization,phantom_block_above_top,Phantom Block Above Top,578,3000,0.19266666666666668,0.2,-0.009166666666666663,0.8478523676628156,False
+mcq5,human,Human,Task1,task1,Object Categorization,phantom_block_above_top,Phantom Block Above Top,42,3000,0.014,0.2,-0.23249999999999998,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,collapse_to_one_cluster_color_fallback_unique_0,Collapse To One Cluster Color,40,3000,0.013333333333333334,0.2,-0.23333333333333334,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,collapse_to_one_cluster_color_fallback_unique_0,Collapse To One Cluster Color,44,3000,0.014666666666666666,0.2,-0.2316666666666667,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,collapse_to_one_cluster_color_fallback_unique_0,Collapse To One Cluster Color,206,3000,0.06866666666666667,0.2,-0.16416666666666668,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,collapse_to_one_cluster_color_fallback_unique_0,Collapse To One Cluster Color,80,3000,0.02666666666666667,0.2,-0.21666666666666667,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,collapse_to_one_cluster_color_fallback_unique_0,Collapse To One Cluster Color,254,3000,0.08466666666666667,0.2,-0.14416666666666667,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,collapse_to_one_cluster_color_fallback_unique_0,Collapse To One Cluster Color,315,3000,0.105,0.2,-0.11875000000000001,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,collapse_to_one_cluster_color_fallback_unique_0,Collapse To One Cluster Color,171,3000,0.057,0.2,-0.17875000000000002,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,collapse_to_one_cluster_color_fallback_unique_0,Collapse To One Cluster Color,178,3000,0.059333333333333335,0.2,-0.1758333333333333,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,fake_split_into_two_colors,Fake Split Into Two Colors,281,3000,0.09366666666666666,0.2,-0.13291666666666668,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,fake_split_into_two_colors,Fake Split Into Two Colors,101,3000,0.033666666666666664,0.2,-0.20791666666666667,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,fake_split_into_two_colors,Fake Split Into Two Colors,153,3000,0.051,0.2,-0.18625000000000003,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,fake_split_into_two_colors,Fake Split Into Two Colors,80,3000,0.02666666666666667,0.2,-0.21666666666666667,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,fake_split_into_two_colors,Fake Split Into Two Colors,249,3000,0.083,0.2,-0.14625,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,fake_split_into_two_colors,Fake Split Into Two Colors,150,3000,0.05,0.2,-0.18750000000000003,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,fake_split_into_two_colors,Fake Split Into Two Colors,130,3000,0.043333333333333335,0.2,-0.19583333333333333,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,fake_split_into_two_colors,Fake Split Into Two Colors,131,3000,0.043666666666666666,0.2,-0.19541666666666668,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,fake_split_largest_cluster,Fake Split Largest Cluster,179,3000,0.059666666666666666,0.2,-0.17541666666666667,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,fake_split_largest_cluster_fallback_unique_0,Fake Split Largest Cluster,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,fake_split_largest_cluster,Fake Split Largest Cluster,109,3000,0.036333333333333336,0.2,-0.20458333333333334,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,fake_split_largest_cluster_fallback_unique_0,Fake Split Largest Cluster,8,3000,0.0026666666666666666,0.2,-0.24666666666666665,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,fake_split_largest_cluster,Fake Split Largest Cluster,255,3000,0.085,0.2,-0.14375,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,fake_split_largest_cluster_fallback_unique_0,Fake Split Largest Cluster,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,fake_split_largest_cluster,Fake Split Largest Cluster,222,3000,0.074,0.2,-0.1575,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,fake_split_largest_cluster_fallback_unique_0,Fake Split Largest Cluster,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,human,Human,Task2,task9,Cluster Count,fake_split_largest_cluster,Fake Split Largest Cluster,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,fake_split_largest_cluster,Fake Split Largest Cluster,166,3000,0.05533333333333333,0.2,-0.18083333333333332,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,fake_split_largest_cluster_fallback_unique_0,Fake Split Largest Cluster,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,fake_split_largest_cluster,Fake Split Largest Cluster,237,3000,0.079,0.2,-0.15125,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,fake_split_largest_cluster_fallback_unique_0,Fake Split Largest Cluster,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,fake_split_largest_cluster,Fake Split Largest Cluster,252,3000,0.084,0.2,-0.145,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,fake_split_largest_cluster_fallback_unique_0,Fake Split Largest Cluster,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,fake_split_largest_cluster,Fake Split Largest Cluster,254,3000,0.08466666666666667,0.2,-0.14416666666666667,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,fake_split_largest_cluster_fallback_unique_0,Fake Split Largest Cluster,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,fake_split_one_cluster,Fake Split One Cluster,263,3000,0.08766666666666667,0.2,-0.14041666666666666,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,fake_split_one_cluster,Fake Split One Cluster,132,3000,0.044,0.2,-0.19500000000000003,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,fake_split_one_cluster,Fake Split One Cluster,205,3000,0.06833333333333333,0.2,-0.16458333333333333,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,fake_split_one_cluster,Fake Split One Cluster,125,3000,0.041666666666666664,0.2,-0.19791666666666669,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,fake_split_one_cluster,Fake Split One Cluster,189,3000,0.063,0.2,-0.17125,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,fake_split_one_cluster,Fake Split One Cluster,186,3000,0.062,0.2,-0.17250000000000001,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,fake_split_one_cluster,Fake Split One Cluster,200,3000,0.06666666666666667,0.2,-0.16666666666666669,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,fake_split_one_cluster,Fake Split One Cluster,206,3000,0.06866666666666667,0.2,-0.16416666666666668,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,merge_c0_to_c1,Merge C0 To C1,92,3000,0.030666666666666665,0.2,-0.21166666666666667,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,merge_c0_to_c1_fallback_unique_0,Merge C0 To C1,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,merge_c0_to_c1,Merge C0 To C1,190,3000,0.06333333333333334,0.2,-0.1708333333333333,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,merge_c0_to_c1_fallback_unique_0,Merge C0 To C1,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,merge_c0_to_c1,Merge C0 To C1,157,3000,0.052333333333333336,0.2,-0.18458333333333332,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,merge_c0_to_c1_fallback_unique_0,Merge C0 To C1,36,3000,0.012,0.2,-0.235,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,merge_c0_to_c1,Merge C0 To C1,207,3000,0.069,0.2,-0.16375,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,merge_c0_to_c1_fallback_unique_0,Merge C0 To C1,18,3000,0.006,0.2,-0.2425,1.0,False
+mcq5,human,Human,Task2,task9,Cluster Count,merge_c0_to_c1,Merge C0 To C1,37,3000,0.012333333333333333,0.2,-0.23458333333333334,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,merge_c0_to_c1,Merge C0 To C1,95,3000,0.03166666666666667,0.2,-0.21041666666666667,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,merge_c0_to_c1_fallback_unique_0,Merge C0 To C1,24,3000,0.008,0.2,-0.24,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,merge_c0_to_c1,Merge C0 To C1,141,3000,0.047,0.2,-0.19125000000000003,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,merge_c0_to_c1_fallback_unique_0,Merge C0 To C1,35,3000,0.011666666666666667,0.2,-0.2354166666666667,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,merge_c0_to_c1,Merge C0 To C1,170,3000,0.056666666666666664,0.2,-0.17916666666666667,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,merge_c0_to_c1_fallback_unique_0,Merge C0 To C1,40,3000,0.013333333333333334,0.2,-0.23333333333333334,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,merge_c0_to_c1,Merge C0 To C1,174,3000,0.058,0.2,-0.17750000000000002,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,merge_c0_to_c1_fallback_unique_0,Merge C0 To C1,39,3000,0.013,0.2,-0.23374999999999999,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,merge_c1_to_c0,Merge C1 To C0,171,3000,0.057,0.2,-0.17875000000000002,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,merge_c1_to_c0,Merge C1 To C0,360,3000,0.12,0.2,-0.10000000000000002,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,merge_c1_to_c0,Merge C1 To C0,223,3000,0.07433333333333333,0.2,-0.15708333333333332,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,merge_c1_to_c0,Merge C1 To C0,313,3000,0.10433333333333333,0.2,-0.11958333333333335,1.0,False
+mcq5,human,Human,Task2,task9,Cluster Count,merge_c1_to_c0,Merge C1 To C0,102,3000,0.034,0.2,-0.2075,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,merge_c1_to_c0,Merge C1 To C0,112,3000,0.037333333333333336,0.2,-0.20333333333333334,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,merge_c1_to_c0,Merge C1 To C0,210,3000,0.07,0.2,-0.1625,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,merge_c1_to_c0,Merge C1 To C0,212,3000,0.07066666666666667,0.2,-0.16166666666666668,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,merge_c1_to_c0,Merge C1 To C0,199,3000,0.06633333333333333,0.2,-0.16708333333333333,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,merge_clusters_color0_to_1,Merge Clusters Color0 To 1,249,3000,0.083,0.2,-0.14625,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,merge_clusters_color0_to_1,Merge Clusters Color0 To 1,321,3000,0.107,0.2,-0.11625,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,merge_clusters_color0_to_1,Merge Clusters Color0 To 1,246,3000,0.082,0.2,-0.1475,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,merge_clusters_color0_to_1,Merge Clusters Color0 To 1,292,3000,0.09733333333333333,0.2,-0.12833333333333335,1.0,False
+mcq5,human,Human,Task2,task9,Cluster Count,merge_clusters_color0_to_1,Merge Clusters Color0 To 1,34,3000,0.011333333333333334,0.2,-0.23583333333333334,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,merge_clusters_color0_to_1,Merge Clusters Color0 To 1,198,3000,0.066,0.2,-0.1675,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,merge_clusters_color0_to_1,Merge Clusters Color0 To 1,285,3000,0.095,0.2,-0.13125,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,merge_clusters_color0_to_1,Merge Clusters Color0 To 1,279,3000,0.093,0.2,-0.13375,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,merge_clusters_color0_to_1,Merge Clusters Color0 To 1,268,3000,0.08933333333333333,0.2,-0.13833333333333334,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,merge_clusters_color0_to_2,Merge Clusters Color0 To 2,239,3000,0.07966666666666666,0.2,-0.15041666666666667,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,merge_clusters_color0_to_2_fallback_unique_0,Merge Clusters Color0 To 2,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,merge_clusters_color0_to_2,Merge Clusters Color0 To 2,253,3000,0.08433333333333333,0.2,-0.14458333333333334,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,merge_clusters_color0_to_2,Merge Clusters Color0 To 2,283,3000,0.09433333333333334,0.2,-0.13208333333333333,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,merge_clusters_color0_to_2_fallback_unique_0,Merge Clusters Color0 To 2,9,3000,0.003,0.2,-0.24625,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,merge_clusters_color0_to_2,Merge Clusters Color0 To 2,204,3000,0.068,0.2,-0.165,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,merge_clusters_color0_to_2_fallback_unique_0,Merge Clusters Color0 To 2,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,human,Human,Task2,task9,Cluster Count,merge_clusters_color0_to_2,Merge Clusters Color0 To 2,61,3000,0.02033333333333333,0.2,-0.22458333333333333,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,merge_clusters_color0_to_2,Merge Clusters Color0 To 2,227,3000,0.07566666666666666,0.2,-0.15541666666666668,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,merge_clusters_color0_to_2_fallback_unique_0,Merge Clusters Color0 To 2,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,merge_clusters_color0_to_2,Merge Clusters Color0 To 2,232,3000,0.07733333333333334,0.2,-0.15333333333333332,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,merge_clusters_color0_to_2_fallback_unique_0,Merge Clusters Color0 To 2,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,merge_clusters_color0_to_2,Merge Clusters Color0 To 2,255,3000,0.085,0.2,-0.14375,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,merge_clusters_color0_to_2_fallback_unique_0,Merge Clusters Color0 To 2,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,merge_clusters_color0_to_2,Merge Clusters Color0 To 2,261,3000,0.087,0.2,-0.14125000000000001,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,merge_clusters_color0_to_2_fallback_unique_0,Merge Clusters Color0 To 2,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,merge_clusters_color1_to_0,Merge Clusters Color1 To 0,195,3000,0.065,0.2,-0.16875,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,merge_clusters_color1_to_0_fallback_unique_0,Merge Clusters Color1 To 0,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,merge_clusters_color1_to_0,Merge Clusters Color1 To 0,266,3000,0.08866666666666667,0.2,-0.13916666666666666,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,merge_clusters_color1_to_0_fallback_unique_0,Merge Clusters Color1 To 0,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,merge_clusters_color1_to_0,Merge Clusters Color1 To 0,240,3000,0.08,0.2,-0.15,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,merge_clusters_color1_to_0_fallback_unique_0,Merge Clusters Color1 To 0,7,3000,0.0023333333333333335,0.2,-0.24708333333333335,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,merge_clusters_color1_to_0,Merge Clusters Color1 To 0,296,3000,0.09866666666666667,0.2,-0.12666666666666668,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,merge_clusters_color1_to_0_fallback_unique_0,Merge Clusters Color1 To 0,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,human,Human,Task2,task9,Cluster Count,merge_clusters_color1_to_0,Merge Clusters Color1 To 0,27,3000,0.009,0.2,-0.23875,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,merge_clusters_color1_to_0,Merge Clusters Color1 To 0,169,3000,0.05633333333333333,0.2,-0.17958333333333332,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,merge_clusters_color1_to_0_fallback_unique_0,Merge Clusters Color1 To 0,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,merge_clusters_color1_to_0,Merge Clusters Color1 To 0,279,3000,0.093,0.2,-0.13375,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,merge_clusters_color1_to_0_fallback_unique_0,Merge Clusters Color1 To 0,13,3000,0.004333333333333333,0.2,-0.24458333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,merge_clusters_color1_to_0,Merge Clusters Color1 To 0,245,3000,0.08166666666666667,0.2,-0.14791666666666667,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,merge_clusters_color1_to_0_fallback_unique_0,Merge Clusters Color1 To 0,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,merge_clusters_color1_to_0,Merge Clusters Color1 To 0,244,3000,0.08133333333333333,0.2,-0.14833333333333334,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,merge_clusters_color1_to_0_fallback_unique_0,Merge Clusters Color1 To 0,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,multicolor_single_cluster,Multicolor Single Cluster,29,3000,0.009666666666666667,0.2,-0.2379166666666667,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,multicolor_single_cluster,Multicolor Single Cluster,23,3000,0.007666666666666666,0.2,-0.2404166666666667,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,multicolor_single_cluster,Multicolor Single Cluster,139,3000,0.04633333333333333,0.2,-0.19208333333333333,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,multicolor_single_cluster,Multicolor Single Cluster,30,3000,0.01,0.2,-0.2375,1.0,False
+mcq5,human,Human,Task2,task9,Cluster Count,multicolor_single_cluster,Multicolor Single Cluster,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,multicolor_single_cluster,Multicolor Single Cluster,76,3000,0.025333333333333333,0.2,-0.21833333333333335,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,multicolor_single_cluster,Multicolor Single Cluster,114,3000,0.038,0.2,-0.20249999999999999,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,multicolor_single_cluster,Multicolor Single Cluster,138,3000,0.046,0.2,-0.19250000000000003,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,multicolor_single_cluster,Multicolor Single Cluster,138,3000,0.046,0.2,-0.19250000000000003,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,single_cluster_one_color_a_fallback_unique_0,Single Cluster One Color A,22,3000,0.007333333333333333,0.2,-0.24083333333333334,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,single_cluster_one_color_a_fallback_unique_0,Single Cluster One Color A,21,3000,0.007,0.2,-0.24125,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,single_cluster_one_color_a_fallback_unique_0,Single Cluster One Color A,143,3000,0.04766666666666667,0.2,-0.19041666666666668,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,single_cluster_one_color_a_fallback_unique_0,Single Cluster One Color A,34,3000,0.011333333333333334,0.2,-0.23583333333333334,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,single_cluster_one_color_a_fallback_unique_0,Single Cluster One Color A,103,3000,0.034333333333333334,0.2,-0.20708333333333334,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,single_cluster_one_color_a_fallback_unique_0,Single Cluster One Color A,102,3000,0.034,0.2,-0.2075,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,single_cluster_one_color_a_fallback_unique_0,Single Cluster One Color A,136,3000,0.04533333333333334,0.2,-0.19333333333333333,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,single_cluster_one_color_a_fallback_unique_0,Single Cluster One Color A,138,3000,0.046,0.2,-0.19250000000000003,1.0,False
+mcq5,claude,Claude,Task2,task9,Cluster Count,single_cluster_one_color_b_fallback_unique_0,Single Cluster One Color B,33,3000,0.011,0.2,-0.23625,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,single_cluster_one_color_b_fallback_unique_0,Single Cluster One Color B,23,3000,0.007666666666666666,0.2,-0.2404166666666667,1.0,False
+mcq5,gemini,Gemini,Task2,task9,Cluster Count,single_cluster_one_color_b,Single Cluster One Color B,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,glm,GLM,Task2,task9,Cluster Count,single_cluster_one_color_b_fallback_unique_0,Single Cluster One Color B,126,3000,0.042,0.2,-0.19749999999999998,1.0,False
+mcq5,gpt,GPT,Task2,task9,Cluster Count,single_cluster_one_color_b_fallback_unique_0,Single Cluster One Color B,39,3000,0.013,0.2,-0.23374999999999999,1.0,False
+mcq5,human,Human,Task2,task9,Cluster Count,single_cluster_one_color_b,Single Cluster One Color B,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,kimi,Kimi,Task2,task9,Cluster Count,single_cluster_one_color_b_fallback_unique_0,Single Cluster One Color B,82,3000,0.027333333333333334,0.2,-0.21583333333333335,1.0,False
+mcq5,qwen,Qwen,Task2,task9,Cluster Count,single_cluster_one_color_b_fallback_unique_0,Single Cluster One Color B,94,3000,0.03133333333333333,0.2,-0.21083333333333334,1.0,False
+mcq5,qwen3b,Qwen3B,Task2,task9,Cluster Count,single_cluster_one_color_b_fallback_unique_0,Single Cluster One Color B,141,3000,0.047,0.2,-0.19125000000000003,1.0,False
+mcq5,vla0,vla0,Task2,task9,Cluster Count,single_cluster_one_color_b_fallback_unique_0,Single Cluster One Color B,143,3000,0.04766666666666667,0.2,-0.19041666666666668,1.0,False
+mcq5,claude,Claude,Task3,task3,Column Count,merge_two_columns,Merge Two Columns,1382,3000,0.46066666666666667,0.2,0.3258333333333333,3.911233321175302e-226,True
+mcq5,gemini,Gemini,Task3,task3,Column Count,merge_two_columns,Merge Two Columns,1218,3000,0.406,0.2,0.2575,1.808165481221725e-146,True
+mcq5,qwen,Qwen,Task3,task3,Column Count,merge_two_columns,Merge Two Columns,1216,3000,0.4053333333333333,0.2,0.2566666666666666,1.350332774518433e-145,True
+mcq5,qwen3b,Qwen3B,Task3,task3,Column Count,merge_two_columns,Merge Two Columns,1194,3000,0.398,0.2,0.2475,3.776736904532326e-136,True
+mcq5,vla0,vla0,Task3,task3,Column Count,merge_two_columns,Merge Two Columns,1190,3000,0.39666666666666667,0.2,0.24583333333333332,1.833943033869031e-134,True
+mcq5,glm,GLM,Task3,task3,Column Count,merge_two_columns,Merge Two Columns,1147,3000,0.38233333333333336,0.2,0.22791666666666668,6.002967422058093e-117,True
+mcq5,gpt,GPT,Task3,task3,Column Count,merge_two_columns,Merge Two Columns,1136,3000,0.37866666666666665,0.2,0.2233333333333333,1.196411015271247e-112,True
+mcq5,kimi,Kimi,Task3,task3,Column Count,merge_two_columns,Merge Two Columns,1080,3000,0.36,0.2,0.19999999999999996,6.434885423483976e-92,True
+mcq5,claude,Claude,Task3,task3,Column Count,merge_two_columns_fallback_unique_0,Merge Two Columns,16,3000,0.005333333333333333,0.2,-0.24333333333333335,1.0,False
+mcq5,gemini,Gemini,Task3,task3,Column Count,merge_two_columns_fallback_unique_0,Merge Two Columns,16,3000,0.005333333333333333,0.2,-0.24333333333333335,1.0,False
+mcq5,glm,GLM,Task3,task3,Column Count,merge_two_columns_fallback_unique_0,Merge Two Columns,41,3000,0.013666666666666667,0.2,-0.2329166666666667,1.0,False
+mcq5,gpt,GPT,Task3,task3,Column Count,merge_two_columns_fallback_unique_0,Merge Two Columns,34,3000,0.011333333333333334,0.2,-0.23583333333333334,1.0,False
+mcq5,human,Human,Task3,task3,Column Count,merge_two_columns,Merge Two Columns,85,3000,0.028333333333333332,0.2,-0.21458333333333335,1.0,False
+mcq5,human,Human,Task3,task3,Column Count,merge_two_columns_fallback_unique_0,Merge Two Columns,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,kimi,Kimi,Task3,task3,Column Count,merge_two_columns_fallback_unique_0,Merge Two Columns,10,3000,0.0033333333333333335,0.2,-0.24583333333333335,1.0,False
+mcq5,qwen,Qwen,Task3,task3,Column Count,merge_two_columns_fallback_unique_0,Merge Two Columns,41,3000,0.013666666666666667,0.2,-0.2329166666666667,1.0,False
+mcq5,qwen3b,Qwen3B,Task3,task3,Column Count,merge_two_columns_fallback_unique_0,Merge Two Columns,34,3000,0.011333333333333334,0.2,-0.23583333333333334,1.0,False
+mcq5,vla0,vla0,Task3,task3,Column Count,merge_two_columns_fallback_unique_0,Merge Two Columns,35,3000,0.011666666666666667,0.2,-0.2354166666666667,1.0,False
+mcq5,glm,GLM,Task3,task3,Column Count,same_column_two_colors,Same Column Two Colors,915,3000,0.305,0.2,0.13124999999999998,1.8878237317746982e-42,True
+mcq5,vla0,vla0,Task3,task3,Column Count,same_column_two_colors,Same Column Two Colors,912,3000,0.304,0.2,0.12999999999999998,1.0211862874571634e-41,True
+mcq5,qwen3b,Qwen3B,Task3,task3,Column Count,same_column_two_colors,Same Column Two Colors,899,3000,0.2996666666666667,0.2,0.12458333333333335,1.3037516261815846e-38,True
+mcq5,gpt,GPT,Task3,task3,Column Count,same_column_two_colors,Same Column Two Colors,880,3000,0.29333333333333333,0.2,0.11666666666666665,2.794330575077184e-34,True
+mcq5,qwen,Qwen,Task3,task3,Column Count,same_column_two_colors,Same Column Two Colors,795,3000,0.265,0.2,0.08125,5.179648666131031e-18,True
+mcq5,gemini,Gemini,Task3,task3,Column Count,same_column_two_colors,Same Column Two Colors,738,3000,0.246,0.2,0.05749999999999998,4.734914489824979e-10,True
+mcq5,kimi,Kimi,Task3,task3,Column Count,same_column_two_colors,Same Column Two Colors,576,3000,0.192,0.2,-0.010000000000000009,0.8685297756391016,False
+mcq5,claude,Claude,Task3,task3,Column Count,same_column_two_colors,Same Column Two Colors,504,3000,0.168,0.2,-0.04,0.9999965352993417,False
+mcq5,claude,Claude,Task3,task3,Column Count,same_column_two_colors_fallback_unique_0,Same Column Two Colors,153,3000,0.051,0.2,-0.18625000000000003,1.0,False
+mcq5,gemini,Gemini,Task3,task3,Column Count,same_column_two_colors_fallback_unique_0,Same Column Two Colors,183,3000,0.061,0.2,-0.17375000000000002,1.0,False
+mcq5,glm,GLM,Task3,task3,Column Count,same_column_two_colors_fallback_unique_0,Same Column Two Colors,286,3000,0.09533333333333334,0.2,-0.13083333333333333,1.0,False
+mcq5,gpt,GPT,Task3,task3,Column Count,same_column_two_colors_fallback_unique_0,Same Column Two Colors,237,3000,0.079,0.2,-0.15125,1.0,False
+mcq5,human,Human,Task3,task3,Column Count,same_column_two_colors,Same Column Two Colors,87,3000,0.029,0.2,-0.21375,1.0,False
+mcq5,human,Human,Task3,task3,Column Count,same_column_two_colors_fallback_unique_0,Same Column Two Colors,18,3000,0.006,0.2,-0.2425,1.0,False
+mcq5,kimi,Kimi,Task3,task3,Column Count,same_column_two_colors_fallback_unique_0,Same Column Two Colors,134,3000,0.04466666666666667,0.2,-0.19416666666666668,1.0,False
+mcq5,qwen,Qwen,Task3,task3,Column Count,same_column_two_colors_fallback_unique_0,Same Column Two Colors,264,3000,0.088,0.2,-0.14,1.0,False
+mcq5,qwen3b,Qwen3B,Task3,task3,Column Count,same_column_two_colors_fallback_unique_0,Same Column Two Colors,269,3000,0.08966666666666667,0.2,-0.13791666666666666,1.0,False
+mcq5,vla0,vla0,Task3,task3,Column Count,same_column_two_colors_fallback_unique_0,Same Column Two Colors,267,3000,0.089,0.2,-0.13875,1.0,False
+mcq5,qwen,Qwen,Task4,task4,Layer Count,far_layer_confusion,Far Layer Confusion,679,3000,0.22633333333333333,0.2,0.03291666666666665,0.00020601670805715046,True
+mcq5,qwen3b,Qwen3B,Task4,task4,Layer Count,far_layer_confusion,Far Layer Confusion,593,3000,0.19766666666666666,0.2,-0.0029166666666666924,0.6324248545829523,False
+mcq5,vla0,vla0,Task4,task4,Layer Count,far_layer_confusion,Far Layer Confusion,590,3000,0.19666666666666666,0.2,-0.0041666666666666935,0.6828650473273535,False
+mcq5,glm,GLM,Task4,task4,Layer Count,far_layer_confusion,Far Layer Confusion,544,3000,0.18133333333333335,0.2,-0.02333333333333333,0.9954191953932017,False
+mcq5,claude,Claude,Task4,task4,Layer Count,far_layer_confusion,Far Layer Confusion,411,3000,0.137,0.2,-0.07875,1.0,False
+mcq5,claude,Claude,Task4,task4,Layer Count,far_layer_confusion_fallback_unique_0,Far Layer Confusion,35,3000,0.011666666666666667,0.2,-0.2354166666666667,1.0,False
+mcq5,gemini,Gemini,Task4,task4,Layer Count,far_layer_confusion,Far Layer Confusion,231,3000,0.077,0.2,-0.15375,1.0,False
+mcq5,gemini,Gemini,Task4,task4,Layer Count,far_layer_confusion_fallback_unique_0,Far Layer Confusion,31,3000,0.010333333333333333,0.2,-0.23708333333333334,1.0,False
+mcq5,glm,GLM,Task4,task4,Layer Count,far_layer_confusion_fallback_unique_0,Far Layer Confusion,44,3000,0.014666666666666666,0.2,-0.2316666666666667,1.0,False
+mcq5,gpt,GPT,Task4,task4,Layer Count,far_layer_confusion,Far Layer Confusion,360,3000,0.12,0.2,-0.10000000000000002,1.0,False
+mcq5,gpt,GPT,Task4,task4,Layer Count,far_layer_confusion_fallback_unique_0,Far Layer Confusion,41,3000,0.013666666666666667,0.2,-0.2329166666666667,1.0,False
+mcq5,human,Human,Task4,task4,Layer Count,far_layer_confusion,Far Layer Confusion,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,human,Human,Task4,task4,Layer Count,far_layer_confusion_fallback_unique_0,Far Layer Confusion,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,kimi,Kimi,Task4,task4,Layer Count,far_layer_confusion,Far Layer Confusion,253,3000,0.08433333333333333,0.2,-0.14458333333333334,1.0,False
+mcq5,kimi,Kimi,Task4,task4,Layer Count,far_layer_confusion_fallback_unique_0,Far Layer Confusion,31,3000,0.010333333333333333,0.2,-0.23708333333333334,1.0,False
+mcq5,qwen,Qwen,Task4,task4,Layer Count,far_layer_confusion_fallback_unique_0,Far Layer Confusion,29,3000,0.009666666666666667,0.2,-0.2379166666666667,1.0,False
+mcq5,qwen3b,Qwen3B,Task4,task4,Layer Count,far_layer_confusion_fallback_unique_0,Far Layer Confusion,41,3000,0.013666666666666667,0.2,-0.2329166666666667,1.0,False
+mcq5,vla0,vla0,Task4,task4,Layer Count,far_layer_confusion_fallback_unique_0,Far Layer Confusion,46,3000,0.015333333333333332,0.2,-0.23083333333333333,1.0,False
+mcq5,glm,GLM,Task4,task4,Layer Count,merge_two_layers,Merge Two Layers,584,3000,0.19466666666666665,0.2,-0.006666666666666696,0.7737156506024573,False
+mcq5,vla0,vla0,Task4,task4,Layer Count,merge_two_layers,Merge Two Layers,524,3000,0.17466666666666666,0.2,-0.03166666666666668,0.9998046533548417,False
+mcq5,qwen3b,Qwen3B,Task4,task4,Layer Count,merge_two_layers,Merge Two Layers,521,3000,0.17366666666666666,0.2,-0.032916666666666684,0.9998870435429049,False
+mcq5,qwen,Qwen,Task4,task4,Layer Count,merge_two_layers,Merge Two Layers,430,3000,0.14333333333333334,0.2,-0.07083333333333333,0.9999999999999997,False
+mcq5,claude,Claude,Task4,task4,Layer Count,merge_two_layers,Merge Two Layers,394,3000,0.13133333333333333,0.2,-0.08583333333333334,1.0,False
+mcq5,claude,Claude,Task4,task4,Layer Count,merge_two_layers_fallback_unique_0,Merge Two Layers,46,3000,0.015333333333333332,0.2,-0.23083333333333333,1.0,False
+mcq5,gemini,Gemini,Task4,task4,Layer Count,merge_two_layers,Merge Two Layers,221,3000,0.07366666666666667,0.2,-0.15791666666666668,1.0,False
+mcq5,gemini,Gemini,Task4,task4,Layer Count,merge_two_layers_fallback_unique_0,Merge Two Layers,40,3000,0.013333333333333334,0.2,-0.23333333333333334,1.0,False
+mcq5,glm,GLM,Task4,task4,Layer Count,merge_two_layers_fallback_unique_0,Merge Two Layers,53,3000,0.017666666666666667,0.2,-0.22791666666666668,1.0,False
+mcq5,gpt,GPT,Task4,task4,Layer Count,merge_two_layers,Merge Two Layers,298,3000,0.09933333333333333,0.2,-0.12583333333333335,1.0,False
+mcq5,gpt,GPT,Task4,task4,Layer Count,merge_two_layers_fallback_unique_0,Merge Two Layers,37,3000,0.012333333333333333,0.2,-0.23458333333333334,1.0,False
+mcq5,human,Human,Task4,task4,Layer Count,merge_two_layers,Merge Two Layers,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,kimi,Kimi,Task4,task4,Layer Count,merge_two_layers,Merge Two Layers,205,3000,0.06833333333333333,0.2,-0.16458333333333333,1.0,False
+mcq5,kimi,Kimi,Task4,task4,Layer Count,merge_two_layers_fallback_unique_0,Merge Two Layers,30,3000,0.01,0.2,-0.2375,1.0,False
+mcq5,qwen,Qwen,Task4,task4,Layer Count,merge_two_layers_fallback_unique_0,Merge Two Layers,32,3000,0.010666666666666666,0.2,-0.2366666666666667,1.0,False
+mcq5,qwen3b,Qwen3B,Task4,task4,Layer Count,merge_two_layers_fallback_unique_0,Merge Two Layers,53,3000,0.017666666666666667,0.2,-0.22791666666666668,1.0,False
+mcq5,vla0,vla0,Task4,task4,Layer Count,merge_two_layers_fallback_unique_0,Merge Two Layers,51,3000,0.017,0.2,-0.22874999999999998,1.0,False
+mcq5,qwen,Qwen,Task4,task4,Layer Count,missing_one_layer,Missing One Layer,1077,3000,0.359,0.2,0.19874999999999995,7.311885297984285e-91,True
+mcq5,gpt,GPT,Task4,task4,Layer Count,missing_one_layer,Missing One Layer,756,3000,0.252,0.2,0.06499999999999999,2.6553976195882924e-12,True
+mcq5,vla0,vla0,Task4,task4,Layer Count,missing_one_layer,Missing One Layer,613,3000,0.20433333333333334,0.2,0.00541666666666666,0.2831155016451497,False
+mcq5,qwen3b,Qwen3B,Task4,task4,Layer Count,missing_one_layer,Missing One Layer,603,3000,0.201,0.2,0.0012500000000000011,0.45279238818323453,False
+mcq5,glm,GLM,Task4,task4,Layer Count,missing_one_layer,Missing One Layer,586,3000,0.19533333333333333,0.2,-0.00583333333333335,0.7451343732390081,False
+mcq5,claude,Claude,Task4,task4,Layer Count,missing_one_layer,Missing One Layer,351,3000,0.117,0.2,-0.10375,1.0,False
+mcq5,gemini,Gemini,Task4,task4,Layer Count,missing_one_layer,Missing One Layer,281,3000,0.09366666666666666,0.2,-0.13291666666666668,1.0,False
+mcq5,human,Human,Task4,task4,Layer Count,missing_one_layer,Missing One Layer,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,kimi,Kimi,Task4,task4,Layer Count,missing_one_layer,Missing One Layer,375,3000,0.125,0.2,-0.09375000000000001,1.0,False
+mcq5,gemini,Gemini,Task4,task4,Layer Count,same_layer_two_colors,Same Layer Two Colors,695,3000,0.23166666666666666,0.2,0.03958333333333331,1.1242053892023289e-05,True
+mcq5,claude,Claude,Task4,task4,Layer Count,same_layer_two_colors,Same Layer Two Colors,584,3000,0.19466666666666665,0.2,-0.006666666666666696,0.7737156506024573,False
+mcq5,vla0,vla0,Task4,task4,Layer Count,same_layer_two_colors,Same Layer Two Colors,530,3000,0.17666666666666667,0.2,-0.02916666666666668,0.9994492824440305,False
+mcq5,qwen3b,Qwen3B,Task4,task4,Layer Count,same_layer_two_colors,Same Layer Two Colors,517,3000,0.17233333333333334,0.2,-0.03458333333333334,0.9999472455434809,False
+mcq5,gpt,GPT,Task4,task4,Layer Count,same_layer_two_colors,Same Layer Two Colors,515,3000,0.17166666666666666,0.2,-0.03541666666666669,0.9999644268908761,False
+mcq5,glm,GLM,Task4,task4,Layer Count,same_layer_two_colors,Same Layer Two Colors,509,3000,0.16966666666666666,0.2,-0.03791666666666669,0.9999896667201872,False
+mcq5,claude,Claude,Task4,task4,Layer Count,same_layer_two_colors_fallback_unique_0,Same Layer Two Colors,44,3000,0.014666666666666666,0.2,-0.2316666666666667,1.0,False
+mcq5,gemini,Gemini,Task4,task4,Layer Count,same_layer_two_colors_fallback_unique_0,Same Layer Two Colors,60,3000,0.02,0.2,-0.225,1.0,False
+mcq5,glm,GLM,Task4,task4,Layer Count,same_layer_two_colors_fallback_unique_0,Same Layer Two Colors,71,3000,0.023666666666666666,0.2,-0.22041666666666668,1.0,False
+mcq5,gpt,GPT,Task4,task4,Layer Count,same_layer_two_colors_fallback_unique_0,Same Layer Two Colors,45,3000,0.015,0.2,-0.23124999999999998,1.0,False
+mcq5,human,Human,Task4,task4,Layer Count,same_layer_two_colors,Same Layer Two Colors,9,3000,0.003,0.2,-0.24625,1.0,False
+mcq5,kimi,Kimi,Task4,task4,Layer Count,same_layer_two_colors,Same Layer Two Colors,409,3000,0.13633333333333333,0.2,-0.07958333333333334,1.0,False
+mcq5,kimi,Kimi,Task4,task4,Layer Count,same_layer_two_colors_fallback_unique_0,Same Layer Two Colors,36,3000,0.012,0.2,-0.235,1.0,False
+mcq5,qwen,Qwen,Task4,task4,Layer Count,same_layer_two_colors,Same Layer Two Colors,243,3000,0.081,0.2,-0.14875,1.0,False
+mcq5,qwen,Qwen,Task4,task4,Layer Count,same_layer_two_colors_fallback_unique_0,Same Layer Two Colors,41,3000,0.013666666666666667,0.2,-0.2329166666666667,1.0,False
+mcq5,qwen3b,Qwen3B,Task4,task4,Layer Count,same_layer_two_colors_fallback_unique_0,Same Layer Two Colors,59,3000,0.019666666666666666,0.2,-0.22541666666666668,1.0,False
+mcq5,vla0,vla0,Task4,task4,Layer Count,same_layer_two_colors_fallback_unique_0,Same Layer Two Colors,60,3000,0.02,0.2,-0.225,1.0,False
+mcq5,qwen3b,Qwen3B,Task5,task5,Visible Object Count,drop_half_visible_blocks,Drop Half Visible Blocks,1160,3000,0.38666666666666666,0.2,0.2333333333333333,3.9968717973545964e-122,True
+mcq5,glm,GLM,Task5,task5,Visible Object Count,drop_half_visible_blocks,Drop Half Visible Blocks,1138,3000,0.37933333333333336,0.2,0.22416666666666668,2.002938607493029e-113,True
+mcq5,vla0,vla0,Task5,task5,Visible Object Count,drop_half_visible_blocks,Drop Half Visible Blocks,1135,3000,0.37833333333333335,0.2,0.22291666666666668,2.917870667872599e-112,True
+mcq5,qwen,Qwen,Task5,task5,Visible Object Count,drop_half_visible_blocks,Drop Half Visible Blocks,1071,3000,0.357,0.2,0.19624999999999995,9.079497462264039e-89,True
+mcq5,gpt,GPT,Task5,task5,Visible Object Count,drop_half_visible_blocks,Drop Half Visible Blocks,860,3000,0.2866666666666667,0.2,0.10833333333333334,5.4309623154390195e-30,True
+mcq5,kimi,Kimi,Task5,task5,Visible Object Count,drop_half_visible_blocks,Drop Half Visible Blocks,513,3000,0.171,0.2,-0.03625,0.9999762269456379,False
+mcq5,claude,Claude,Task5,task5,Visible Object Count,drop_half_visible_blocks,Drop Half Visible Blocks,272,3000,0.09066666666666667,0.2,-0.13666666666666666,1.0,False
+mcq5,claude,Claude,Task5,task5,Visible Object Count,drop_half_visible_blocks_fallback_unique_0,Drop Half Visible Blocks,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gemini,Gemini,Task5,task5,Visible Object Count,drop_half_visible_blocks,Drop Half Visible Blocks,405,3000,0.135,0.2,-0.08125,1.0,False
+mcq5,gemini,Gemini,Task5,task5,Visible Object Count,drop_half_visible_blocks_fallback_unique_0,Drop Half Visible Blocks,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,glm,GLM,Task5,task5,Visible Object Count,drop_half_visible_blocks_fallback_unique_0,Drop Half Visible Blocks,10,3000,0.0033333333333333335,0.2,-0.24583333333333335,1.0,False
+mcq5,gpt,GPT,Task5,task5,Visible Object Count,drop_half_visible_blocks_fallback_unique_0,Drop Half Visible Blocks,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,human,Human,Task5,task5,Visible Object Count,drop_half_visible_blocks_fallback_unique_0,Drop Half Visible Blocks,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,kimi,Kimi,Task5,task5,Visible Object Count,drop_half_visible_blocks_fallback_unique_0,Drop Half Visible Blocks,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,qwen,Qwen,Task5,task5,Visible Object Count,drop_half_visible_blocks_fallback_unique_0,Drop Half Visible Blocks,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,qwen3b,Qwen3B,Task5,task5,Visible Object Count,drop_half_visible_blocks_fallback_unique_0,Drop Half Visible Blocks,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,vla0,vla0,Task5,task5,Visible Object Count,drop_half_visible_blocks_fallback_unique_0,Drop Half Visible Blocks,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,glm,GLM,Task5,task5,Visible Object Count,merge_adjacent_same_color,Merge Adjacent Same Color,1183,3000,0.3943333333333333,0.2,0.24291666666666661,1.5527659905641312e-131,True
+mcq5,vla0,vla0,Task5,task5,Visible Object Count,merge_adjacent_same_color,Merge Adjacent Same Color,1174,3000,0.3913333333333333,0.2,0.2391666666666666,8.161171130644797e-128,True
+mcq5,gemini,Gemini,Task5,task5,Visible Object Count,merge_adjacent_same_color,Merge Adjacent Same Color,1170,3000,0.39,0.2,0.2375,3.544953563557659e-126,True
+mcq5,qwen3b,Qwen3B,Task5,task5,Visible Object Count,merge_adjacent_same_color,Merge Adjacent Same Color,1161,3000,0.387,0.2,0.23374999999999999,1.5821487016406836e-122,True
+mcq5,claude,Claude,Task5,task5,Visible Object Count,merge_adjacent_same_color,Merge Adjacent Same Color,1114,3000,0.37133333333333335,0.2,0.21416666666666667,2.8430280527725045e-104,True
+mcq5,qwen,Qwen,Task5,task5,Visible Object Count,merge_adjacent_same_color,Merge Adjacent Same Color,1070,3000,0.3566666666666667,0.2,0.19583333333333333,2.017751850185812e-88,True
+mcq5,kimi,Kimi,Task5,task5,Visible Object Count,merge_adjacent_same_color,Merge Adjacent Same Color,1045,3000,0.34833333333333333,0.2,0.18541666666666665,5.886874665814049e-80,True
+mcq5,gpt,GPT,Task5,task5,Visible Object Count,merge_adjacent_same_color,Merge Adjacent Same Color,906,3000,0.302,0.2,0.12749999999999997,2.8643065176156174e-40,True
+mcq5,claude,Claude,Task5,task5,Visible Object Count,merge_adjacent_same_color_fallback_unique_0,Merge Adjacent Same Color,36,3000,0.012,0.2,-0.235,1.0,False
+mcq5,gemini,Gemini,Task5,task5,Visible Object Count,merge_adjacent_same_color_fallback_unique_0,Merge Adjacent Same Color,37,3000,0.012333333333333333,0.2,-0.23458333333333334,1.0,False
+mcq5,glm,GLM,Task5,task5,Visible Object Count,merge_adjacent_same_color_fallback_unique_0,Merge Adjacent Same Color,59,3000,0.019666666666666666,0.2,-0.22541666666666668,1.0,False
+mcq5,gpt,GPT,Task5,task5,Visible Object Count,merge_adjacent_same_color_fallback_unique_0,Merge Adjacent Same Color,51,3000,0.017,0.2,-0.22874999999999998,1.0,False
+mcq5,human,Human,Task5,task5,Visible Object Count,merge_adjacent_same_color_fallback_unique_0,Merge Adjacent Same Color,7,3000,0.0023333333333333335,0.2,-0.24708333333333335,1.0,False
+mcq5,human,Human,Task5,task5,Visible Object Count,merge_adjacent_same_color,Merge Adjacent Same Color,7,3000,0.0023333333333333335,0.2,-0.24708333333333335,1.0,False
+mcq5,kimi,Kimi,Task5,task5,Visible Object Count,merge_adjacent_same_color_fallback_unique_0,Merge Adjacent Same Color,40,3000,0.013333333333333334,0.2,-0.23333333333333334,1.0,False
+mcq5,qwen,Qwen,Task5,task5,Visible Object Count,merge_adjacent_same_color_fallback_unique_0,Merge Adjacent Same Color,63,3000,0.021,0.2,-0.22375,1.0,False
+mcq5,qwen3b,Qwen3B,Task5,task5,Visible Object Count,merge_adjacent_same_color_fallback_unique_0,Merge Adjacent Same Color,49,3000,0.01633333333333333,0.2,-0.22958333333333333,1.0,False
+mcq5,vla0,vla0,Task5,task5,Visible Object Count,merge_adjacent_same_color_fallback_unique_0,Merge Adjacent Same Color,52,3000,0.017333333333333333,0.2,-0.22833333333333333,1.0,False
+mcq5,kimi,Kimi,Task6,task2,Top Layer,missing_one_top_block,Missing One Top Block,449,3000,0.14966666666666667,0.2,-0.06291666666666668,0.9999999999995938,False
+mcq5,claude,Claude,Task6,task2,Top Layer,missing_one_top_block,Missing One Top Block,402,3000,0.134,0.2,-0.0825,1.0,False
+mcq5,claude,Claude,Task6,task2,Top Layer,missing_one_top_block_fallback_unique_0,Missing One Top Block,85,3000,0.028333333333333332,0.2,-0.21458333333333335,1.0,False
+mcq5,gemini,Gemini,Task6,task2,Top Layer,missing_one_top_block,Missing One Top Block,373,3000,0.12433333333333334,0.2,-0.09458333333333334,1.0,False
+mcq5,gemini,Gemini,Task6,task2,Top Layer,missing_one_top_block_fallback_unique_0,Missing One Top Block,113,3000,0.03766666666666667,0.2,-0.20291666666666666,1.0,False
+mcq5,glm,GLM,Task6,task2,Top Layer,missing_one_top_block,Missing One Top Block,385,3000,0.12833333333333333,0.2,-0.08958333333333335,1.0,False
+mcq5,glm,GLM,Task6,task2,Top Layer,missing_one_top_block_fallback_unique_0,Missing One Top Block,145,3000,0.04833333333333333,0.2,-0.18958333333333333,1.0,False
+mcq5,gpt,GPT,Task6,task2,Top Layer,missing_one_top_block,Missing One Top Block,313,3000,0.10433333333333333,0.2,-0.11958333333333335,1.0,False
+mcq5,gpt,GPT,Task6,task2,Top Layer,missing_one_top_block_fallback_unique_0,Missing One Top Block,41,3000,0.013666666666666667,0.2,-0.2329166666666667,1.0,False
+mcq5,human,Human,Task6,task2,Top Layer,missing_one_top_block,Missing One Top Block,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,kimi,Kimi,Task6,task2,Top Layer,missing_one_top_block_fallback_unique_0,Missing One Top Block,28,3000,0.009333333333333334,0.2,-0.23833333333333334,1.0,False
+mcq5,qwen,Qwen,Task6,task2,Top Layer,missing_one_top_block,Missing One Top Block,420,3000,0.14,0.2,-0.075,1.0,False
+mcq5,qwen,Qwen,Task6,task2,Top Layer,missing_one_top_block_fallback_unique_0,Missing One Top Block,154,3000,0.051333333333333335,0.2,-0.18583333333333332,1.0,False
+mcq5,qwen3b,Qwen3B,Task6,task2,Top Layer,missing_one_top_block,Missing One Top Block,382,3000,0.12733333333333333,0.2,-0.09083333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Task6,task2,Top Layer,missing_one_top_block_fallback_unique_0,Missing One Top Block,226,3000,0.07533333333333334,0.2,-0.15583333333333332,1.0,False
+mcq5,vla0,vla0,Task6,task2,Top Layer,missing_one_top_block,Missing One Top Block,367,3000,0.12233333333333334,0.2,-0.09708333333333334,1.0,False
+mcq5,vla0,vla0,Task6,task2,Top Layer,missing_one_top_block_fallback_unique_0,Missing One Top Block,282,3000,0.094,0.2,-0.1325,1.0,False
+mcq5,glm,GLM,Task6,task2,Top Layer,one_below_top,One Below Top,613,3000,0.20433333333333334,0.2,0.00541666666666666,0.2831155016451497,False
+mcq5,qwen3b,Qwen3B,Task6,task2,Top Layer,one_below_top,One Below Top,547,3000,0.18233333333333332,0.2,-0.022083333333333365,0.9931623461203494,False
+mcq5,vla0,vla0,Task6,task2,Top Layer,one_below_top,One Below Top,546,3000,0.182,0.2,-0.02250000000000002,0.9940046887607473,False
+mcq5,claude,Claude,Task6,task2,Top Layer,one_below_top,One Below Top,184,3000,0.06133333333333333,0.2,-0.17333333333333334,1.0,False
+mcq5,claude,Claude,Task6,task2,Top Layer,one_below_top_fallback_unique_0,One Below Top,10,3000,0.0033333333333333335,0.2,-0.24583333333333335,1.0,False
+mcq5,gemini,Gemini,Task6,task2,Top Layer,one_below_top,One Below Top,228,3000,0.076,0.2,-0.155,1.0,False
+mcq5,gemini,Gemini,Task6,task2,Top Layer,one_below_top_fallback_unique_0,One Below Top,20,3000,0.006666666666666667,0.2,-0.2416666666666667,1.0,False
+mcq5,glm,GLM,Task6,task2,Top Layer,one_below_top_fallback_unique_0,One Below Top,43,3000,0.014333333333333333,0.2,-0.23208333333333334,1.0,False
+mcq5,gpt,GPT,Task6,task2,Top Layer,one_below_top,One Below Top,157,3000,0.052333333333333336,0.2,-0.18458333333333332,1.0,False
+mcq5,gpt,GPT,Task6,task2,Top Layer,one_below_top_fallback_unique_0,One Below Top,15,3000,0.005,0.2,-0.24375,1.0,False
+mcq5,kimi,Kimi,Task6,task2,Top Layer,one_below_top,One Below Top,155,3000,0.051666666666666666,0.2,-0.18541666666666667,1.0,False
+mcq5,kimi,Kimi,Task6,task2,Top Layer,one_below_top_fallback_unique_0,One Below Top,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,qwen,Qwen,Task6,task2,Top Layer,one_below_top,One Below Top,330,3000,0.11,0.2,-0.1125,1.0,False
+mcq5,qwen,Qwen,Task6,task2,Top Layer,one_below_top_fallback_unique_0,One Below Top,31,3000,0.010333333333333333,0.2,-0.23708333333333334,1.0,False
+mcq5,qwen3b,Qwen3B,Task6,task2,Top Layer,one_below_top_fallback_unique_0,One Below Top,41,3000,0.013666666666666667,0.2,-0.2329166666666667,1.0,False
+mcq5,vla0,vla0,Task6,task2,Top Layer,one_below_top_fallback_unique_0,One Below Top,51,3000,0.017,0.2,-0.22874999999999998,1.0,False
+mcq5,glm,GLM,Task6,task2,Top Layer,other_column_top,Other Column Top,626,3000,0.20866666666666667,0.2,0.01083333333333332,0.12254464569803927,False
+mcq5,qwen3b,Qwen3B,Task6,task2,Top Layer,other_column_top,Other Column Top,593,3000,0.19766666666666666,0.2,-0.0029166666666666924,0.6324248545829523,False
+mcq5,vla0,vla0,Task6,task2,Top Layer,other_column_top,Other Column Top,590,3000,0.19666666666666666,0.2,-0.0041666666666666935,0.6828650473273535,False
+mcq5,qwen,Qwen,Task6,task2,Top Layer,other_column_top,Other Column Top,439,3000,0.14633333333333334,0.2,-0.06708333333333333,0.9999999999999901,False
+mcq5,claude,Claude,Task6,task2,Top Layer,other_column_top,Other Column Top,247,3000,0.08233333333333333,0.2,-0.14708333333333334,1.0,False
+mcq5,gemini,Gemini,Task6,task2,Top Layer,other_column_top,Other Column Top,286,3000,0.09533333333333334,0.2,-0.13083333333333333,1.0,False
+mcq5,gpt,GPT,Task6,task2,Top Layer,other_column_top,Other Column Top,252,3000,0.084,0.2,-0.145,1.0,False
+mcq5,human,Human,Task6,task2,Top Layer,other_column_top,Other Column Top,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,kimi,Kimi,Task6,task2,Top Layer,other_column_top,Other Column Top,232,3000,0.07733333333333334,0.2,-0.15333333333333332,1.0,False
+mcq5,gpt,GPT,Task6,task2,Top Layer,phantom_block_above_top,Phantom Block Above Top,1555,3000,0.5183333333333333,0.2,0.3979166666666666,0.0,True
+mcq5,gemini,Gemini,Task6,task2,Top Layer,phantom_block_above_top,Phantom Block Above Top,1047,3000,0.349,0.2,0.18624999999999994,1.2801151929020207e-80,True
+mcq5,claude,Claude,Task6,task2,Top Layer,phantom_block_above_top,Phantom Block Above Top,1000,3000,0.3333333333333333,0.2,0.16666666666666663,1.0060280462093036e-65,True
+mcq5,kimi,Kimi,Task6,task2,Top Layer,phantom_block_above_top,Phantom Block Above Top,983,3000,0.32766666666666666,0.2,0.1595833333333333,1.0937280976553772e-60,True
+mcq5,qwen,Qwen,Task6,task2,Top Layer,phantom_block_above_top,Phantom Block Above Top,793,3000,0.2643333333333333,0.2,0.08041666666666662,1.0826313718742249e-17,True
+mcq5,glm,GLM,Task6,task2,Top Layer,phantom_block_above_top,Phantom Block Above Top,618,3000,0.206,0.2,0.007499999999999972,0.211734628669215,False
+mcq5,qwen3b,Qwen3B,Task6,task2,Top Layer,phantom_block_above_top,Phantom Block Above Top,591,3000,0.197,0.2,-0.0037500000000000033,0.6663628168370263,False
+mcq5,vla0,vla0,Task6,task2,Top Layer,phantom_block_above_top,Phantom Block Above Top,563,3000,0.18766666666666668,0.2,-0.015416666666666669,0.9573536186088837,False
+mcq5,human,Human,Task6,task2,Top Layer,phantom_block_above_top,Phantom Block Above Top,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,glm,GLM,Task7,task6,Direct Support,empty_support,Empty Support,683,3000,0.22766666666666666,0.2,0.034583333333333306,0.00010394306791824503,True
+mcq5,vla0,vla0,Task7,task6,Direct Support,empty_support,Empty Support,530,3000,0.17666666666666667,0.2,-0.02916666666666668,0.9994492824440305,False
+mcq5,qwen3b,Qwen3B,Task7,task6,Direct Support,empty_support,Empty Support,525,3000,0.175,0.2,-0.03125000000000003,0.9997665495883629,False
+mcq5,claude,Claude,Task7,task6,Direct Support,empty_support,Empty Support,260,3000,0.08666666666666667,0.2,-0.14166666666666666,1.0,False
+mcq5,claude,Claude,Task7,task6,Direct Support,empty_support_fallback_unique_0,Empty Support,77,3000,0.025666666666666667,0.2,-0.21791666666666668,1.0,False
+mcq5,claude,Claude,Task7,task6,Direct Support,empty_support_fallback_unique_1,Empty Support,7,3000,0.0023333333333333335,0.2,-0.24708333333333335,1.0,False
+mcq5,claude,Claude,Task7,task6,Direct Support,empty_support_fallback_unique_3,Empty Support,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gemini,Gemini,Task7,task6,Direct Support,empty_support,Empty Support,295,3000,0.09833333333333333,0.2,-0.12708333333333335,1.0,False
+mcq5,gemini,Gemini,Task7,task6,Direct Support,empty_support_fallback_unique_0,Empty Support,64,3000,0.021333333333333333,0.2,-0.22333333333333333,1.0,False
+mcq5,gemini,Gemini,Task7,task6,Direct Support,empty_support_fallback_unique_1,Empty Support,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,glm,GLM,Task7,task6,Direct Support,empty_support_fallback_unique_0,Empty Support,55,3000,0.018333333333333333,0.2,-0.22708333333333333,1.0,False
+mcq5,glm,GLM,Task7,task6,Direct Support,empty_support_fallback_unique_1,Empty Support,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,glm,GLM,Task7,task6,Direct Support,empty_support_fallback_unique_2,Empty Support,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gpt,GPT,Task7,task6,Direct Support,empty_support,Empty Support,311,3000,0.10366666666666667,0.2,-0.12041666666666667,1.0,False
+mcq5,gpt,GPT,Task7,task6,Direct Support,empty_support_fallback_unique_0,Empty Support,79,3000,0.026333333333333334,0.2,-0.21708333333333335,1.0,False
+mcq5,gpt,GPT,Task7,task6,Direct Support,empty_support_fallback_unique_1,Empty Support,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,gpt,GPT,Task7,task6,Direct Support,empty_support_fallback_unique_3,Empty Support,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,human,Human,Task7,task6,Direct Support,empty_support,Empty Support,9,3000,0.003,0.2,-0.24625,1.0,False
+mcq5,human,Human,Task7,task6,Direct Support,empty_support_fallback_unique_0,Empty Support,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,human,Human,Task7,task6,Direct Support,empty_support_fallback_unique_1,Empty Support,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,kimi,Kimi,Task7,task6,Direct Support,empty_support,Empty Support,219,3000,0.073,0.2,-0.15875,1.0,False
+mcq5,kimi,Kimi,Task7,task6,Direct Support,empty_support_fallback_unique_0,Empty Support,49,3000,0.01633333333333333,0.2,-0.22958333333333333,1.0,False
+mcq5,kimi,Kimi,Task7,task6,Direct Support,empty_support_fallback_unique_3,Empty Support,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,kimi,Kimi,Task7,task6,Direct Support,empty_support_fallback_unique_1,Empty Support,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen,Qwen,Task7,task6,Direct Support,empty_support,Empty Support,195,3000,0.065,0.2,-0.16875,1.0,False
+mcq5,qwen,Qwen,Task7,task6,Direct Support,empty_support_fallback_unique_0,Empty Support,66,3000,0.022,0.2,-0.2225,1.0,False
+mcq5,qwen,Qwen,Task7,task6,Direct Support,empty_support_fallback_unique_1,Empty Support,8,3000,0.0026666666666666666,0.2,-0.24666666666666665,1.0,False
+mcq5,qwen,Qwen,Task7,task6,Direct Support,empty_support_fallback_unique_2,Empty Support,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Task7,task6,Direct Support,empty_support_fallback_unique_0,Empty Support,71,3000,0.023666666666666666,0.2,-0.22041666666666668,1.0,False
+mcq5,qwen3b,Qwen3B,Task7,task6,Direct Support,empty_support_fallback_unique_1,Empty Support,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,vla0,vla0,Task7,task6,Direct Support,empty_support_fallback_unique_0,Empty Support,69,3000,0.023,0.2,-0.22125,1.0,False
+mcq5,vla0,vla0,Task7,task6,Direct Support,empty_support_fallback_unique_1,Empty Support,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,claude,Claude,Task7,task6,Direct Support,miss_one_support,Miss One Support,351,3000,0.117,0.2,-0.10375,1.0,False
+mcq5,claude,Claude,Task7,task6,Direct Support,miss_one_support_fallback_unique_0,Miss One Support,300,3000,0.1,0.2,-0.125,1.0,False
+mcq5,claude,Claude,Task7,task6,Direct Support,miss_one_support_fallback_unique_1,Miss One Support,11,3000,0.0036666666666666666,0.2,-0.24541666666666664,1.0,False
+mcq5,gemini,Gemini,Task7,task6,Direct Support,miss_one_support,Miss One Support,339,3000,0.113,0.2,-0.10875,1.0,False
+mcq5,gemini,Gemini,Task7,task6,Direct Support,miss_one_support_fallback_unique_0,Miss One Support,220,3000,0.07333333333333333,0.2,-0.15833333333333333,1.0,False
+mcq5,gemini,Gemini,Task7,task6,Direct Support,miss_one_support_fallback_unique_1,Miss One Support,7,3000,0.0023333333333333335,0.2,-0.24708333333333335,1.0,False
+mcq5,glm,GLM,Task7,task6,Direct Support,miss_one_support,Miss One Support,272,3000,0.09066666666666667,0.2,-0.13666666666666666,1.0,False
+mcq5,glm,GLM,Task7,task6,Direct Support,miss_one_support_fallback_unique_0,Miss One Support,237,3000,0.079,0.2,-0.15125,1.0,False
+mcq5,glm,GLM,Task7,task6,Direct Support,miss_one_support_fallback_unique_1,Miss One Support,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,gpt,GPT,Task7,task6,Direct Support,miss_one_support,Miss One Support,386,3000,0.12866666666666668,0.2,-0.08916666666666666,1.0,False
+mcq5,gpt,GPT,Task7,task6,Direct Support,miss_one_support_fallback_unique_0,Miss One Support,143,3000,0.04766666666666667,0.2,-0.19041666666666668,1.0,False
+mcq5,gpt,GPT,Task7,task6,Direct Support,miss_one_support_fallback_unique_1,Miss One Support,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,human,Human,Task7,task6,Direct Support,miss_one_support,Miss One Support,29,3000,0.009666666666666667,0.2,-0.2379166666666667,1.0,False
+mcq5,human,Human,Task7,task6,Direct Support,miss_one_support_fallback_unique_0,Miss One Support,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,kimi,Kimi,Task7,task6,Direct Support,miss_one_support,Miss One Support,357,3000,0.119,0.2,-0.10125000000000002,1.0,False
+mcq5,kimi,Kimi,Task7,task6,Direct Support,miss_one_support_fallback_unique_0,Miss One Support,156,3000,0.052,0.2,-0.18500000000000003,1.0,False
+mcq5,kimi,Kimi,Task7,task6,Direct Support,miss_one_support_fallback_unique_1,Miss One Support,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,qwen,Qwen,Task7,task6,Direct Support,miss_one_support_fallback_unique_0,Miss One Support,328,3000,0.10933333333333334,0.2,-0.11333333333333334,1.0,False
+mcq5,qwen,Qwen,Task7,task6,Direct Support,miss_one_support,Miss One Support,327,3000,0.109,0.2,-0.11375,1.0,False
+mcq5,qwen,Qwen,Task7,task6,Direct Support,miss_one_support_fallback_unique_1,Miss One Support,8,3000,0.0026666666666666666,0.2,-0.24666666666666665,1.0,False
+mcq5,qwen3b,Qwen3B,Task7,task6,Direct Support,miss_one_support_fallback_unique_0,Miss One Support,320,3000,0.10666666666666667,0.2,-0.11666666666666667,1.0,False
+mcq5,qwen3b,Qwen3B,Task7,task6,Direct Support,miss_one_support,Miss One Support,268,3000,0.08933333333333333,0.2,-0.13833333333333334,1.0,False
+mcq5,qwen3b,Qwen3B,Task7,task6,Direct Support,miss_one_support_fallback_unique_1,Miss One Support,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,vla0,vla0,Task7,task6,Direct Support,miss_one_support_fallback_unique_0,Miss One Support,321,3000,0.107,0.2,-0.11625,1.0,False
+mcq5,vla0,vla0,Task7,task6,Direct Support,miss_one_support,Miss One Support,278,3000,0.09266666666666666,0.2,-0.13416666666666668,1.0,False
+mcq5,vla0,vla0,Task7,task6,Direct Support,miss_one_support_fallback_unique_1,Miss One Support,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,qwen3b,Qwen3B,Task7,task6,Direct Support,non_support_highlight,Non Support Highlight,558,3000,0.186,0.2,-0.017500000000000016,0.974588447545619,False
+mcq5,vla0,vla0,Task7,task6,Direct Support,non_support_highlight,Non Support Highlight,548,3000,0.18266666666666667,0.2,-0.021666666666666674,0.9922175980218411,False
+mcq5,glm,GLM,Task7,task6,Direct Support,non_support_highlight,Non Support Highlight,540,3000,0.18,0.2,-0.025000000000000022,0.9973914539353594,False
+mcq5,qwen,Qwen,Task7,task6,Direct Support,non_support_highlight,Non Support Highlight,478,3000,0.15933333333333333,0.2,-0.050833333333333355,0.9999999954013695,False
+mcq5,claude,Claude,Task7,task6,Direct Support,non_support_highlight,Non Support Highlight,301,3000,0.10033333333333333,0.2,-0.12458333333333335,1.0,False
+mcq5,claude,Claude,Task7,task6,Direct Support,non_support_highlight_fallback_unique_0,Non Support Highlight,55,3000,0.018333333333333333,0.2,-0.22708333333333333,1.0,False
+mcq5,claude,Claude,Task7,task6,Direct Support,non_support_highlight_fallback_unique_1,Non Support Highlight,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,gemini,Gemini,Task7,task6,Direct Support,non_support_highlight,Non Support Highlight,413,3000,0.13766666666666666,0.2,-0.07791666666666669,1.0,False
+mcq5,gemini,Gemini,Task7,task6,Direct Support,non_support_highlight_fallback_unique_0,Non Support Highlight,56,3000,0.018666666666666668,0.2,-0.22666666666666668,1.0,False
+mcq5,gemini,Gemini,Task7,task6,Direct Support,non_support_highlight_fallback_unique_1,Non Support Highlight,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,glm,GLM,Task7,task6,Direct Support,non_support_highlight_fallback_unique_0,Non Support Highlight,57,3000,0.019,0.2,-0.22625,1.0,False
+mcq5,glm,GLM,Task7,task6,Direct Support,non_support_highlight_fallback_unique_1,Non Support Highlight,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,glm,GLM,Task7,task6,Direct Support,non_support_highlight_fallback_unique_2,Non Support Highlight,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gpt,GPT,Task7,task6,Direct Support,non_support_highlight,Non Support Highlight,332,3000,0.11066666666666666,0.2,-0.11166666666666668,1.0,False
+mcq5,gpt,GPT,Task7,task6,Direct Support,non_support_highlight_fallback_unique_0,Non Support Highlight,40,3000,0.013333333333333334,0.2,-0.23333333333333334,1.0,False
+mcq5,gpt,GPT,Task7,task6,Direct Support,non_support_highlight_fallback_unique_1,Non Support Highlight,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,human,Human,Task7,task6,Direct Support,non_support_highlight,Non Support Highlight,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,human,Human,Task7,task6,Direct Support,non_support_highlight_fallback_unique_0,Non Support Highlight,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,kimi,Kimi,Task7,task6,Direct Support,non_support_highlight,Non Support Highlight,244,3000,0.08133333333333333,0.2,-0.14833333333333334,1.0,False
+mcq5,kimi,Kimi,Task7,task6,Direct Support,non_support_highlight_fallback_unique_0,Non Support Highlight,45,3000,0.015,0.2,-0.23124999999999998,1.0,False
+mcq5,kimi,Kimi,Task7,task6,Direct Support,non_support_highlight_fallback_unique_1,Non Support Highlight,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,kimi,Kimi,Task7,task6,Direct Support,non_support_highlight_fallback_unique_2,Non Support Highlight,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen,Qwen,Task7,task6,Direct Support,non_support_highlight_fallback_unique_0,Non Support Highlight,64,3000,0.021333333333333333,0.2,-0.22333333333333333,1.0,False
+mcq5,qwen,Qwen,Task7,task6,Direct Support,non_support_highlight_fallback_unique_1,Non Support Highlight,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Task7,task6,Direct Support,non_support_highlight_fallback_unique_0,Non Support Highlight,63,3000,0.021,0.2,-0.22375,1.0,False
+mcq5,qwen3b,Qwen3B,Task7,task6,Direct Support,non_support_highlight_fallback_unique_1,Non Support Highlight,10,3000,0.0033333333333333335,0.2,-0.24583333333333335,1.0,False
+mcq5,vla0,vla0,Task7,task6,Direct Support,non_support_highlight_fallback_unique_0,Non Support Highlight,66,3000,0.022,0.2,-0.2225,1.0,False
+mcq5,vla0,vla0,Task7,task6,Direct Support,non_support_highlight_fallback_unique_1,Non Support Highlight,10,3000,0.0033333333333333335,0.2,-0.24583333333333335,1.0,False
+mcq5,qwen,Qwen,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_0,Wrong Support Subset,462,3000,0.154,0.2,-0.057500000000000016,0.9999999999653746,False
+mcq5,claude,Claude,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_0,Wrong Support Subset,348,3000,0.116,0.2,-0.105,1.0,False
+mcq5,claude,Claude,Task7,task6,Direct Support,wrong_support_subset,Wrong Support Subset,192,3000,0.064,0.2,-0.17,1.0,False
+mcq5,claude,Claude,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_1,Wrong Support Subset,12,3000,0.004,0.2,-0.245,1.0,False
+mcq5,gemini,Gemini,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_0,Wrong Support Subset,327,3000,0.109,0.2,-0.11375,1.0,False
+mcq5,gemini,Gemini,Task7,task6,Direct Support,wrong_support_subset,Wrong Support Subset,165,3000,0.055,0.2,-0.18125000000000002,1.0,False
+mcq5,gemini,Gemini,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_1,Wrong Support Subset,12,3000,0.004,0.2,-0.245,1.0,False
+mcq5,glm,GLM,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_0,Wrong Support Subset,335,3000,0.11166666666666666,0.2,-0.11041666666666668,1.0,False
+mcq5,glm,GLM,Task7,task6,Direct Support,wrong_support_subset,Wrong Support Subset,177,3000,0.059,0.2,-0.17625000000000002,1.0,False
+mcq5,glm,GLM,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_1,Wrong Support Subset,11,3000,0.0036666666666666666,0.2,-0.24541666666666664,1.0,False
+mcq5,glm,GLM,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_2,Wrong Support Subset,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gpt,GPT,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_0,Wrong Support Subset,224,3000,0.07466666666666667,0.2,-0.15666666666666668,1.0,False
+mcq5,gpt,GPT,Task7,task6,Direct Support,wrong_support_subset,Wrong Support Subset,207,3000,0.069,0.2,-0.16375,1.0,False
+mcq5,gpt,GPT,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_1,Wrong Support Subset,7,3000,0.0023333333333333335,0.2,-0.24708333333333335,1.0,False
+mcq5,human,Human,Task7,task6,Direct Support,wrong_support_subset,Wrong Support Subset,15,3000,0.005,0.2,-0.24375,1.0,False
+mcq5,human,Human,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_0,Wrong Support Subset,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,kimi,Kimi,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_0,Wrong Support Subset,209,3000,0.06966666666666667,0.2,-0.16291666666666668,1.0,False
+mcq5,kimi,Kimi,Task7,task6,Direct Support,wrong_support_subset,Wrong Support Subset,203,3000,0.06766666666666667,0.2,-0.16541666666666668,1.0,False
+mcq5,kimi,Kimi,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_1,Wrong Support Subset,10,3000,0.0033333333333333335,0.2,-0.24583333333333335,1.0,False
+mcq5,qwen,Qwen,Task7,task6,Direct Support,wrong_support_subset,Wrong Support Subset,175,3000,0.058333333333333334,0.2,-0.17708333333333331,1.0,False
+mcq5,qwen,Qwen,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_1,Wrong Support Subset,11,3000,0.0036666666666666666,0.2,-0.24541666666666664,1.0,False
+mcq5,qwen3b,Qwen3B,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_0,Wrong Support Subset,400,3000,0.13333333333333333,0.2,-0.08333333333333334,1.0,False
+mcq5,qwen3b,Qwen3B,Task7,task6,Direct Support,wrong_support_subset,Wrong Support Subset,168,3000,0.056,0.2,-0.18000000000000002,1.0,False
+mcq5,qwen3b,Qwen3B,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_1,Wrong Support Subset,18,3000,0.006,0.2,-0.2425,1.0,False
+mcq5,vla0,vla0,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_0,Wrong Support Subset,397,3000,0.13233333333333333,0.2,-0.08458333333333334,1.0,False
+mcq5,vla0,vla0,Task7,task6,Direct Support,wrong_support_subset,Wrong Support Subset,174,3000,0.058,0.2,-0.17750000000000002,1.0,False
+mcq5,vla0,vla0,Task7,task6,Direct Support,wrong_support_subset_fallback_unique_1,Wrong Support Subset,18,3000,0.006,0.2,-0.2425,1.0,False
+mcq5,gpt,GPT,Task8,task7,Support Column,remove_support_column_blocks,Remove Support Column Blocks,553,3000,0.18433333333333332,0.2,-0.019583333333333362,0.9855812064431189,False
+mcq5,claude,Claude,Task8,task7,Support Column,remove_support_column_blocks,Remove Support Column Blocks,501,3000,0.167,0.2,-0.04125,0.9999982503973167,False
+mcq5,gemini,Gemini,Task8,task7,Support Column,remove_support_column_blocks,Remove Support Column Blocks,454,3000,0.15133333333333332,0.2,-0.060833333333333364,0.9999999999976369,False
+mcq5,kimi,Kimi,Task8,task7,Support Column,remove_support_column_blocks,Remove Support Column Blocks,452,3000,0.15066666666666667,0.2,-0.061666666666666675,0.9999999999988225,False
+mcq5,qwen,Qwen,Task8,task7,Support Column,remove_support_column_blocks,Remove Support Column Blocks,449,3000,0.14966666666666667,0.2,-0.06291666666666668,0.9999999999995938,False
+mcq5,claude,Claude,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_0,Remove Support Column Blocks,123,3000,0.041,0.2,-0.19874999999999998,1.0,False
+mcq5,claude,Claude,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_3,Remove Support Column Blocks,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gemini,Gemini,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_0,Remove Support Column Blocks,143,3000,0.04766666666666667,0.2,-0.19041666666666668,1.0,False
+mcq5,gemini,Gemini,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_1,Remove Support Column Blocks,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,gemini,Gemini,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_3,Remove Support Column Blocks,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,glm,GLM,Task8,task7,Support Column,remove_support_column_blocks,Remove Support Column Blocks,396,3000,0.132,0.2,-0.085,1.0,False
+mcq5,glm,GLM,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_0,Remove Support Column Blocks,202,3000,0.06733333333333333,0.2,-0.16583333333333333,1.0,False
+mcq5,glm,GLM,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_1,Remove Support Column Blocks,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,gpt,GPT,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_0,Remove Support Column Blocks,112,3000,0.037333333333333336,0.2,-0.20333333333333334,1.0,False
+mcq5,gpt,GPT,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_1,Remove Support Column Blocks,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,human,Human,Task8,task7,Support Column,remove_support_column_blocks,Remove Support Column Blocks,35,3000,0.011666666666666667,0.2,-0.2354166666666667,1.0,False
+mcq5,human,Human,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_0,Remove Support Column Blocks,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,kimi,Kimi,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_0,Remove Support Column Blocks,108,3000,0.036,0.2,-0.205,1.0,False
+mcq5,kimi,Kimi,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_1,Remove Support Column Blocks,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,qwen,Qwen,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_0,Remove Support Column Blocks,169,3000,0.05633333333333333,0.2,-0.17958333333333332,1.0,False
+mcq5,qwen,Qwen,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_1,Remove Support Column Blocks,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,qwen,Qwen,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_2,Remove Support Column Blocks,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Task8,task7,Support Column,remove_support_column_blocks,Remove Support Column Blocks,416,3000,0.13866666666666666,0.2,-0.07666666666666669,1.0,False
+mcq5,qwen3b,Qwen3B,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_0,Remove Support Column Blocks,197,3000,0.06566666666666666,0.2,-0.1679166666666667,1.0,False
+mcq5,qwen3b,Qwen3B,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_1,Remove Support Column Blocks,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,vla0,vla0,Task8,task7,Support Column,remove_support_column_blocks,Remove Support Column Blocks,416,3000,0.13866666666666666,0.2,-0.07666666666666669,1.0,False
+mcq5,vla0,vla0,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_0,Remove Support Column Blocks,197,3000,0.06566666666666666,0.2,-0.1679166666666667,1.0,False
+mcq5,vla0,vla0,Task8,task7,Support Column,remove_support_column_blocks_fallback_unique_1,Remove Support Column Blocks,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,claude,Claude,Task8,task7,Support Column,remove_two_column_blocks,Remove Two Column Blocks,259,3000,0.08633333333333333,0.2,-0.14208333333333334,1.0,False
+mcq5,claude,Claude,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_0,Remove Two Column Blocks,257,3000,0.08566666666666667,0.2,-0.14291666666666666,1.0,False
+mcq5,claude,Claude,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_1,Remove Two Column Blocks,9,3000,0.003,0.2,-0.24625,1.0,False
+mcq5,claude,Claude,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_2,Remove Two Column Blocks,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gemini,Gemini,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_0,Remove Two Column Blocks,280,3000,0.09333333333333334,0.2,-0.13333333333333333,1.0,False
+mcq5,gemini,Gemini,Task8,task7,Support Column,remove_two_column_blocks,Remove Two Column Blocks,254,3000,0.08466666666666667,0.2,-0.14416666666666667,1.0,False
+mcq5,gemini,Gemini,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_1,Remove Two Column Blocks,8,3000,0.0026666666666666666,0.2,-0.24666666666666665,1.0,False
+mcq5,gemini,Gemini,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_2,Remove Two Column Blocks,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,glm,GLM,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_0,Remove Two Column Blocks,297,3000,0.099,0.2,-0.12625,1.0,False
+mcq5,glm,GLM,Task8,task7,Support Column,remove_two_column_blocks,Remove Two Column Blocks,274,3000,0.09133333333333334,0.2,-0.13583333333333333,1.0,False
+mcq5,glm,GLM,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_1,Remove Two Column Blocks,14,3000,0.004666666666666667,0.2,-0.24416666666666664,1.0,False
+mcq5,gpt,GPT,Task8,task7,Support Column,remove_two_column_blocks,Remove Two Column Blocks,285,3000,0.095,0.2,-0.13125,1.0,False
+mcq5,gpt,GPT,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_0,Remove Two Column Blocks,150,3000,0.05,0.2,-0.18750000000000003,1.0,False
+mcq5,gpt,GPT,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_1,Remove Two Column Blocks,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,human,Human,Task8,task7,Support Column,remove_two_column_blocks,Remove Two Column Blocks,14,3000,0.004666666666666667,0.2,-0.24416666666666664,1.0,False
+mcq5,human,Human,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_0,Remove Two Column Blocks,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,kimi,Kimi,Task8,task7,Support Column,remove_two_column_blocks,Remove Two Column Blocks,255,3000,0.085,0.2,-0.14375,1.0,False
+mcq5,kimi,Kimi,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_0,Remove Two Column Blocks,158,3000,0.05266666666666667,0.2,-0.18416666666666667,1.0,False
+mcq5,kimi,Kimi,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_1,Remove Two Column Blocks,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,kimi,Kimi,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_2,Remove Two Column Blocks,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen,Qwen,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_0,Remove Two Column Blocks,318,3000,0.106,0.2,-0.11750000000000001,1.0,False
+mcq5,qwen,Qwen,Task8,task7,Support Column,remove_two_column_blocks,Remove Two Column Blocks,294,3000,0.098,0.2,-0.1275,1.0,False
+mcq5,qwen,Qwen,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_1,Remove Two Column Blocks,10,3000,0.0033333333333333335,0.2,-0.24583333333333335,1.0,False
+mcq5,qwen,Qwen,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_2,Remove Two Column Blocks,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_0,Remove Two Column Blocks,354,3000,0.118,0.2,-0.10250000000000002,1.0,False
+mcq5,qwen3b,Qwen3B,Task8,task7,Support Column,remove_two_column_blocks,Remove Two Column Blocks,256,3000,0.08533333333333333,0.2,-0.14333333333333334,1.0,False
+mcq5,qwen3b,Qwen3B,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_1,Remove Two Column Blocks,16,3000,0.005333333333333333,0.2,-0.24333333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_2,Remove Two Column Blocks,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,vla0,vla0,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_0,Remove Two Column Blocks,354,3000,0.118,0.2,-0.10250000000000002,1.0,False
+mcq5,vla0,vla0,Task8,task7,Support Column,remove_two_column_blocks,Remove Two Column Blocks,256,3000,0.08533333333333333,0.2,-0.14333333333333334,1.0,False
+mcq5,vla0,vla0,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_1,Remove Two Column Blocks,16,3000,0.005333333333333333,0.2,-0.24333333333333335,1.0,False
+mcq5,vla0,vla0,Task8,task7,Support Column,remove_two_column_blocks_fallback_unique_2,Remove Two Column Blocks,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,qwen,Qwen,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_0,Support Blocks Not Column,587,3000,0.19566666666666666,0.2,-0.005416666666666695,0.7301755907852969,False
+mcq5,glm,GLM,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_0,Support Blocks Not Column,557,3000,0.18566666666666667,0.2,-0.01791666666666667,0.9772214427835466,False
+mcq5,qwen3b,Qwen3B,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_0,Support Blocks Not Column,553,3000,0.18433333333333332,0.2,-0.019583333333333362,0.9855812064431189,False
+mcq5,vla0,vla0,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_0,Support Blocks Not Column,553,3000,0.18433333333333332,0.2,-0.019583333333333362,0.9855812064431189,False
+mcq5,gemini,Gemini,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_0,Support Blocks Not Column,454,3000,0.15133333333333332,0.2,-0.060833333333333364,0.9999999999976369,False
+mcq5,claude,Claude,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_0,Support Blocks Not Column,341,3000,0.11366666666666667,0.2,-0.10791666666666667,1.0,False
+mcq5,claude,Claude,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_1,Support Blocks Not Column,18,3000,0.006,0.2,-0.2425,1.0,False
+mcq5,claude,Claude,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_2,Support Blocks Not Column,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,gemini,Gemini,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_1,Support Blocks Not Column,14,3000,0.004666666666666667,0.2,-0.24416666666666664,1.0,False
+mcq5,gemini,Gemini,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_2,Support Blocks Not Column,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,glm,GLM,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_1,Support Blocks Not Column,26,3000,0.008666666666666666,0.2,-0.2391666666666667,1.0,False
+mcq5,glm,GLM,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_2,Support Blocks Not Column,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,gpt,GPT,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_0,Support Blocks Not Column,269,3000,0.08966666666666667,0.2,-0.13791666666666666,1.0,False
+mcq5,gpt,GPT,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_1,Support Blocks Not Column,10,3000,0.0033333333333333335,0.2,-0.24583333333333335,1.0,False
+mcq5,human,Human,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_0,Support Blocks Not Column,7,3000,0.0023333333333333335,0.2,-0.24708333333333335,1.0,False
+mcq5,kimi,Kimi,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_0,Support Blocks Not Column,284,3000,0.09466666666666666,0.2,-0.13166666666666668,1.0,False
+mcq5,kimi,Kimi,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_1,Support Blocks Not Column,9,3000,0.003,0.2,-0.24625,1.0,False
+mcq5,kimi,Kimi,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_2,Support Blocks Not Column,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen,Qwen,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_1,Support Blocks Not Column,24,3000,0.008,0.2,-0.24,1.0,False
+mcq5,qwen,Qwen,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_2,Support Blocks Not Column,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_1,Support Blocks Not Column,21,3000,0.007,0.2,-0.24125,1.0,False
+mcq5,qwen3b,Qwen3B,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_2,Support Blocks Not Column,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,vla0,vla0,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_1,Support Blocks Not Column,21,3000,0.007,0.2,-0.24125,1.0,False
+mcq5,vla0,vla0,Task8,task7,Support Column,support_blocks_not_column_fallback_unique_2,Support Blocks Not Column,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,glm,GLM,Task8,task7,Support Column,wrong_column_empty,Wrong Column Empty,566,3000,0.18866666666666668,0.2,-0.014166666666666668,0.9431408093198164,False
+mcq5,qwen3b,Qwen3B,Task8,task7,Support Column,wrong_column_empty,Wrong Column Empty,511,3000,0.17033333333333334,0.2,-0.03708333333333334,0.9999842554613082,False
+mcq5,vla0,vla0,Task8,task7,Support Column,wrong_column_empty,Wrong Column Empty,511,3000,0.17033333333333334,0.2,-0.03708333333333334,0.9999842554613082,False
+mcq5,claude,Claude,Task8,task7,Support Column,wrong_column_empty,Wrong Column Empty,247,3000,0.08233333333333333,0.2,-0.14708333333333334,1.0,False
+mcq5,claude,Claude,Task8,task7,Support Column,wrong_column_empty_fallback_unique_0,Wrong Column Empty,69,3000,0.023,0.2,-0.22125,1.0,False
+mcq5,gemini,Gemini,Task8,task7,Support Column,wrong_column_empty,Wrong Column Empty,309,3000,0.103,0.2,-0.12125000000000001,1.0,False
+mcq5,gemini,Gemini,Task8,task7,Support Column,wrong_column_empty_fallback_unique_0,Wrong Column Empty,78,3000,0.026,0.2,-0.2175,1.0,False
+mcq5,gemini,Gemini,Task8,task7,Support Column,wrong_column_empty_fallback_unique_1,Wrong Column Empty,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,glm,GLM,Task8,task7,Support Column,wrong_column_empty_fallback_unique_0,Wrong Column Empty,72,3000,0.024,0.2,-0.22,1.0,False
+mcq5,gpt,GPT,Task8,task7,Support Column,wrong_column_empty,Wrong Column Empty,256,3000,0.08533333333333333,0.2,-0.14333333333333334,1.0,False
+mcq5,gpt,GPT,Task8,task7,Support Column,wrong_column_empty_fallback_unique_0,Wrong Column Empty,46,3000,0.015333333333333332,0.2,-0.23083333333333333,1.0,False
+mcq5,gpt,GPT,Task8,task7,Support Column,wrong_column_empty_fallback_unique_1,Wrong Column Empty,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,human,Human,Task8,task7,Support Column,wrong_column_empty,Wrong Column Empty,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,human,Human,Task8,task7,Support Column,wrong_column_empty_fallback_unique_0,Wrong Column Empty,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,kimi,Kimi,Task8,task7,Support Column,wrong_column_empty,Wrong Column Empty,165,3000,0.055,0.2,-0.18125000000000002,1.0,False
+mcq5,kimi,Kimi,Task8,task7,Support Column,wrong_column_empty_fallback_unique_0,Wrong Column Empty,47,3000,0.015666666666666666,0.2,-0.2304166666666667,1.0,False
+mcq5,kimi,Kimi,Task8,task7,Support Column,wrong_column_empty_fallback_unique_1,Wrong Column Empty,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen,Qwen,Task8,task7,Support Column,wrong_column_empty,Wrong Column Empty,278,3000,0.09266666666666666,0.2,-0.13416666666666668,1.0,False
+mcq5,qwen,Qwen,Task8,task7,Support Column,wrong_column_empty_fallback_unique_0,Wrong Column Empty,71,3000,0.023666666666666666,0.2,-0.22041666666666668,1.0,False
+mcq5,qwen,Qwen,Task8,task7,Support Column,wrong_column_empty_fallback_unique_1,Wrong Column Empty,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Task8,task7,Support Column,wrong_column_empty_fallback_unique_0,Wrong Column Empty,73,3000,0.024333333333333332,0.2,-0.21958333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Task8,task7,Support Column,wrong_column_empty_fallback_unique_1,Wrong Column Empty,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,vla0,vla0,Task8,task7,Support Column,wrong_column_empty_fallback_unique_0,Wrong Column Empty,73,3000,0.024333333333333332,0.2,-0.21958333333333335,1.0,False
+mcq5,vla0,vla0,Task8,task7,Support Column,wrong_column_empty_fallback_unique_1,Wrong Column Empty,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen,Qwen,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_0,Alt Incomplete Subset,631,3000,0.21033333333333334,0.2,0.012916666666666667,0.08256989073925608,False
+mcq5,glm,GLM,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_0,Alt Incomplete Subset,555,3000,0.185,0.2,-0.018750000000000017,0.9818050676732466,False
+mcq5,qwen3b,Qwen3B,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_0,Alt Incomplete Subset,553,3000,0.18433333333333332,0.2,-0.019583333333333362,0.9855812064431189,False
+mcq5,vla0,vla0,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_0,Alt Incomplete Subset,553,3000,0.18433333333333332,0.2,-0.019583333333333362,0.9855812064431189,False
+mcq5,gemini,Gemini,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_0,Alt Incomplete Subset,467,3000,0.15566666666666668,0.2,-0.05541666666666667,0.9999999998291884,False
+mcq5,kimi,Kimi,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_0,Alt Incomplete Subset,451,3000,0.15033333333333335,0.2,-0.06208333333333333,0.999999999999172,False
+mcq5,claude,Claude,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_0,Alt Incomplete Subset,369,3000,0.123,0.2,-0.09625000000000002,1.0,False
+mcq5,claude,Claude,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_1,Alt Incomplete Subset,11,3000,0.0036666666666666666,0.2,-0.24541666666666664,1.0,False
+mcq5,claude,Claude,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_2,Alt Incomplete Subset,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gemini,Gemini,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_1,Alt Incomplete Subset,24,3000,0.008,0.2,-0.24,1.0,False
+mcq5,gemini,Gemini,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_2,Alt Incomplete Subset,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,gemini,Gemini,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_4,Alt Incomplete Subset,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,glm,GLM,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_1,Alt Incomplete Subset,28,3000,0.009333333333333334,0.2,-0.23833333333333334,1.0,False
+mcq5,glm,GLM,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_2,Alt Incomplete Subset,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,gpt,GPT,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_0,Alt Incomplete Subset,382,3000,0.12733333333333333,0.2,-0.09083333333333335,1.0,False
+mcq5,gpt,GPT,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_1,Alt Incomplete Subset,16,3000,0.005333333333333333,0.2,-0.24333333333333335,1.0,False
+mcq5,gpt,GPT,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_2,Alt Incomplete Subset,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,human,Human,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_0,Alt Incomplete Subset,21,3000,0.007,0.2,-0.24125,1.0,False
+mcq5,human,Human,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_1,Alt Incomplete Subset,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,kimi,Kimi,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_1,Alt Incomplete Subset,23,3000,0.007666666666666666,0.2,-0.2404166666666667,1.0,False
+mcq5,kimi,Kimi,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_2,Alt Incomplete Subset,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen,Qwen,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_1,Alt Incomplete Subset,35,3000,0.011666666666666667,0.2,-0.2354166666666667,1.0,False
+mcq5,qwen,Qwen,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_2,Alt Incomplete Subset,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,qwen3b,Qwen3B,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_1,Alt Incomplete Subset,29,3000,0.009666666666666667,0.2,-0.2379166666666667,1.0,False
+mcq5,qwen3b,Qwen3B,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_2,Alt Incomplete Subset,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,qwen3b,Qwen3B,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_3,Alt Incomplete Subset,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,vla0,vla0,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_1,Alt Incomplete Subset,29,3000,0.009666666666666667,0.2,-0.2379166666666667,1.0,False
+mcq5,vla0,vla0,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_2,Alt Incomplete Subset,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,vla0,vla0,Task9,task8,Hidden Object Count,alt_incomplete_subset_fallback_unique_3,Alt Incomplete Subset,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gpt,GPT,Task9,task8,Hidden Object Count,empty_t8,Empty T8,529,3000,0.17633333333333334,0.2,-0.029583333333333336,0.999534126381384,False
+mcq5,claude,Claude,Task9,task8,Hidden Object Count,empty_t8,Empty T8,438,3000,0.146,0.2,-0.06750000000000002,0.9999999999999932,False
+mcq5,claude,Claude,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_0,Empty T8,189,3000,0.063,0.2,-0.17125,1.0,False
+mcq5,claude,Claude,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_1,Empty T8,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,gemini,Gemini,Task9,task8,Hidden Object Count,empty_t8,Empty T8,426,3000,0.142,0.2,-0.07250000000000002,1.0,False
+mcq5,gemini,Gemini,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_0,Empty T8,214,3000,0.07133333333333333,0.2,-0.16083333333333333,1.0,False
+mcq5,gemini,Gemini,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_1,Empty T8,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,glm,GLM,Task9,task8,Hidden Object Count,empty_t8,Empty T8,346,3000,0.11533333333333333,0.2,-0.10583333333333335,1.0,False
+mcq5,glm,GLM,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_0,Empty T8,273,3000,0.091,0.2,-0.13625,1.0,False
+mcq5,glm,GLM,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_1,Empty T8,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,glm,GLM,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_2,Empty T8,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gpt,GPT,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_0,Empty T8,178,3000,0.059333333333333335,0.2,-0.1758333333333333,1.0,False
+mcq5,gpt,GPT,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_1,Empty T8,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,human,Human,Task9,task8,Hidden Object Count,empty_t8,Empty T8,52,3000,0.017333333333333333,0.2,-0.22833333333333333,1.0,False
+mcq5,human,Human,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_0,Empty T8,21,3000,0.007,0.2,-0.24125,1.0,False
+mcq5,kimi,Kimi,Task9,task8,Hidden Object Count,empty_t8,Empty T8,239,3000,0.07966666666666666,0.2,-0.15041666666666667,1.0,False
+mcq5,kimi,Kimi,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_0,Empty T8,226,3000,0.07533333333333334,0.2,-0.15583333333333332,1.0,False
+mcq5,kimi,Kimi,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_1,Empty T8,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,qwen,Qwen,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_0,Empty T8,293,3000,0.09766666666666667,0.2,-0.12791666666666668,1.0,False
+mcq5,qwen,Qwen,Task9,task8,Hidden Object Count,empty_t8,Empty T8,247,3000,0.08233333333333333,0.2,-0.14708333333333334,1.0,False
+mcq5,qwen,Qwen,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_1,Empty T8,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,qwen3b,Qwen3B,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_0,Empty T8,301,3000,0.10033333333333333,0.2,-0.12458333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Task9,task8,Hidden Object Count,empty_t8,Empty T8,294,3000,0.098,0.2,-0.1275,1.0,False
+mcq5,qwen3b,Qwen3B,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_1,Empty T8,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,vla0,vla0,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_0,Empty T8,301,3000,0.10033333333333333,0.2,-0.12458333333333335,1.0,False
+mcq5,vla0,vla0,Task9,task8,Hidden Object Count,empty_t8,Empty T8,294,3000,0.098,0.2,-0.1275,1.0,False
+mcq5,vla0,vla0,Task9,task8,Hidden Object Count,empty_t8_fallback_unique_1,Empty T8,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,qwen,Qwen,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_0,Miss One Supported,449,3000,0.14966666666666667,0.2,-0.06291666666666668,0.9999999999995938,False
+mcq5,claude,Claude,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_0,Miss One Supported,267,3000,0.089,0.2,-0.13875,1.0,False
+mcq5,claude,Claude,Task9,task8,Hidden Object Count,miss_one_supported,Miss One Supported,233,3000,0.07766666666666666,0.2,-0.15291666666666667,1.0,False
+mcq5,claude,Claude,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_1,Miss One Supported,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,gemini,Gemini,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_0,Miss One Supported,280,3000,0.09333333333333334,0.2,-0.13333333333333333,1.0,False
+mcq5,gemini,Gemini,Task9,task8,Hidden Object Count,miss_one_supported,Miss One Supported,186,3000,0.062,0.2,-0.17250000000000001,1.0,False
+mcq5,gemini,Gemini,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_1,Miss One Supported,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,glm,GLM,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_0,Miss One Supported,386,3000,0.12866666666666668,0.2,-0.08916666666666666,1.0,False
+mcq5,glm,GLM,Task9,task8,Hidden Object Count,miss_one_supported,Miss One Supported,174,3000,0.058,0.2,-0.17750000000000002,1.0,False
+mcq5,glm,GLM,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_1,Miss One Supported,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,gpt,GPT,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_0,Miss One Supported,232,3000,0.07733333333333334,0.2,-0.15333333333333332,1.0,False
+mcq5,gpt,GPT,Task9,task8,Hidden Object Count,miss_one_supported,Miss One Supported,153,3000,0.051,0.2,-0.18625000000000003,1.0,False
+mcq5,gpt,GPT,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_1,Miss One Supported,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,human,Human,Task9,task8,Hidden Object Count,miss_one_supported,Miss One Supported,95,3000,0.03166666666666667,0.2,-0.21041666666666667,1.0,False
+mcq5,human,Human,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_0,Miss One Supported,17,3000,0.005666666666666667,0.2,-0.2429166666666667,1.0,False
+mcq5,kimi,Kimi,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_0,Miss One Supported,341,3000,0.11366666666666667,0.2,-0.10791666666666667,1.0,False
+mcq5,kimi,Kimi,Task9,task8,Hidden Object Count,miss_one_supported,Miss One Supported,256,3000,0.08533333333333333,0.2,-0.14333333333333334,1.0,False
+mcq5,kimi,Kimi,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_1,Miss One Supported,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,qwen,Qwen,Task9,task8,Hidden Object Count,miss_one_supported,Miss One Supported,145,3000,0.04833333333333333,0.2,-0.18958333333333333,1.0,False
+mcq5,qwen,Qwen,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_1,Miss One Supported,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False
+mcq5,qwen3b,Qwen3B,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_0,Miss One Supported,403,3000,0.13433333333333333,0.2,-0.08208333333333334,1.0,False
+mcq5,qwen3b,Qwen3B,Task9,task8,Hidden Object Count,miss_one_supported,Miss One Supported,199,3000,0.06633333333333333,0.2,-0.16708333333333333,1.0,False
+mcq5,qwen3b,Qwen3B,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_1,Miss One Supported,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,vla0,vla0,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_0,Miss One Supported,404,3000,0.13466666666666666,0.2,-0.08166666666666669,1.0,False
+mcq5,vla0,vla0,Task9,task8,Hidden Object Count,miss_one_supported,Miss One Supported,198,3000,0.066,0.2,-0.1675,1.0,False
+mcq5,vla0,vla0,Task9,task8,Hidden Object Count,miss_one_supported_fallback_unique_1,Miss One Supported,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,qwen,Qwen,Task9,task8,Hidden Object Count,wrong_visible_block,Wrong Visible Block,611,3000,0.20366666666666666,0.2,0.004583333333333314,0.3146331344706577,False
+mcq5,gpt,GPT,Task9,task8,Hidden Object Count,wrong_visible_block,Wrong Visible Block,589,3000,0.19633333333333333,0.2,-0.004583333333333349,0.6990182053353045,False
+mcq5,claude,Claude,Task9,task8,Hidden Object Count,wrong_visible_block,Wrong Visible Block,588,3000,0.196,0.2,-0.0050000000000000044,0.7147963314823911,False
+mcq5,glm,GLM,Task9,task8,Hidden Object Count,wrong_visible_block,Wrong Visible Block,588,3000,0.196,0.2,-0.0050000000000000044,0.7147963314823911,False
+mcq5,vla0,vla0,Task9,task8,Hidden Object Count,wrong_visible_block,Wrong Visible Block,565,3000,0.18833333333333332,0.2,-0.014583333333333358,0.9482412304088387,False
+mcq5,qwen3b,Qwen3B,Task9,task8,Hidden Object Count,wrong_visible_block,Wrong Visible Block,564,3000,0.188,0.2,-0.015000000000000013,0.9529731481679486,False
+mcq5,kimi,Kimi,Task9,task8,Hidden Object Count,wrong_visible_block,Wrong Visible Block,552,3000,0.184,0.2,-0.020000000000000018,0.9872027402053823,False
+mcq5,gemini,Gemini,Task9,task8,Hidden Object Count,wrong_visible_block,Wrong Visible Block,428,3000,0.14266666666666666,0.2,-0.07166666666666668,0.9999999999999999,False
+mcq5,claude,Claude,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_0,Wrong Visible Block,14,3000,0.004666666666666667,0.2,-0.24416666666666664,1.0,False
+mcq5,claude,Claude,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_1,Wrong Visible Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gemini,Gemini,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_0,Wrong Visible Block,18,3000,0.006,0.2,-0.2425,1.0,False
+mcq5,gemini,Gemini,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_1,Wrong Visible Block,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,glm,GLM,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_0,Wrong Visible Block,15,3000,0.005,0.2,-0.24375,1.0,False
+mcq5,glm,GLM,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_1,Wrong Visible Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gpt,GPT,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_0,Wrong Visible Block,9,3000,0.003,0.2,-0.24625,1.0,False
+mcq5,gpt,GPT,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_1,Wrong Visible Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,human,Human,Task9,task8,Hidden Object Count,wrong_visible_block,Wrong Visible Block,47,3000,0.015666666666666666,0.2,-0.2304166666666667,1.0,False
+mcq5,human,Human,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_0,Wrong Visible Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,kimi,Kimi,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_0,Wrong Visible Block,11,3000,0.0036666666666666666,0.2,-0.24541666666666664,1.0,False
+mcq5,kimi,Kimi,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_1,Wrong Visible Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen,Qwen,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_0,Wrong Visible Block,24,3000,0.008,0.2,-0.24,1.0,False
+mcq5,qwen,Qwen,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_1,Wrong Visible Block,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,qwen3b,Qwen3B,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_0,Wrong Visible Block,30,3000,0.01,0.2,-0.2375,1.0,False
+mcq5,qwen3b,Qwen3B,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_1,Wrong Visible Block,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,vla0,vla0,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_0,Wrong Visible Block,30,3000,0.01,0.2,-0.2375,1.0,False
+mcq5,vla0,vla0,Task9,task8,Hidden Object Count,wrong_visible_block_fallback_unique_1,Wrong Visible Block,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,claude,Claude,Target1,main,Object Counting,high_by_1,High By 1,391,3000,0.13033333333333333,0.2,-0.08708333333333335,1.0,False
+mcq5,gemini,Gemini,Target1,main,Object Counting,high_by_1,High By 1,369,3000,0.123,0.2,-0.09625000000000002,1.0,False
+mcq5,glm,GLM,Target1,main,Object Counting,high_by_1,High By 1,389,3000,0.12966666666666668,0.2,-0.08791666666666666,1.0,False
+mcq5,gpt,GPT,Target1,main,Object Counting,high_by_1,High By 1,395,3000,0.13166666666666665,0.2,-0.0854166666666667,1.0,False
+mcq5,human,Human,Target1,main,Object Counting,high_by_1,High By 1,93,3000,0.031,0.2,-0.21125,1.0,False
+mcq5,kimi,Kimi,Target1,main,Object Counting,high_by_1,High By 1,420,3000,0.14,0.2,-0.075,1.0,False
+mcq5,qwen,Qwen,Target1,main,Object Counting,high_by_1,High By 1,407,3000,0.13566666666666666,0.2,-0.08041666666666669,1.0,False
+mcq5,qwen3b,Qwen3B,Target1,main,Object Counting,high_by_1,High By 1,390,3000,0.13,0.2,-0.08750000000000001,1.0,False
+mcq5,vla0,vla0,Target1,main,Object Counting,high_by_1,High By 1,387,3000,0.129,0.2,-0.08875000000000001,1.0,False
+mcq5,claude,Claude,Target1,main,Object Counting,high_by_2,High By 2,354,3000,0.118,0.2,-0.10250000000000002,1.0,False
+mcq5,gemini,Gemini,Target1,main,Object Counting,high_by_2,High By 2,334,3000,0.11133333333333334,0.2,-0.11083333333333334,1.0,False
+mcq5,glm,GLM,Target1,main,Object Counting,high_by_2,High By 2,341,3000,0.11366666666666667,0.2,-0.10791666666666667,1.0,False
+mcq5,gpt,GPT,Target1,main,Object Counting,high_by_2,High By 2,349,3000,0.11633333333333333,0.2,-0.10458333333333335,1.0,False
+mcq5,human,Human,Target1,main,Object Counting,high_by_2,High By 2,41,3000,0.013666666666666667,0.2,-0.2329166666666667,1.0,False
+mcq5,kimi,Kimi,Target1,main,Object Counting,high_by_2,High By 2,320,3000,0.10666666666666667,0.2,-0.11666666666666667,1.0,False
+mcq5,qwen,Qwen,Target1,main,Object Counting,high_by_2,High By 2,335,3000,0.11166666666666666,0.2,-0.11041666666666668,1.0,False
+mcq5,qwen3b,Qwen3B,Target1,main,Object Counting,high_by_2,High By 2,358,3000,0.11933333333333333,0.2,-0.10083333333333334,1.0,False
+mcq5,vla0,vla0,Target1,main,Object Counting,high_by_2,High By 2,356,3000,0.11866666666666667,0.2,-0.10166666666666667,1.0,False
+mcq5,claude,Claude,Target1,main,Object Counting,high_by_3,High By 3,226,3000,0.07533333333333334,0.2,-0.15583333333333332,1.0,False
+mcq5,gemini,Gemini,Target1,main,Object Counting,high_by_3,High By 3,247,3000,0.08233333333333333,0.2,-0.14708333333333334,1.0,False
+mcq5,glm,GLM,Target1,main,Object Counting,high_by_3,High By 3,273,3000,0.091,0.2,-0.13625,1.0,False
+mcq5,gpt,GPT,Target1,main,Object Counting,high_by_3,High By 3,227,3000,0.07566666666666666,0.2,-0.15541666666666668,1.0,False
+mcq5,human,Human,Target1,main,Object Counting,high_by_3,High By 3,15,3000,0.005,0.2,-0.24375,1.0,False
+mcq5,kimi,Kimi,Target1,main,Object Counting,high_by_3,High By 3,217,3000,0.07233333333333333,0.2,-0.15958333333333333,1.0,False
+mcq5,qwen,Qwen,Target1,main,Object Counting,high_by_3,High By 3,256,3000,0.08533333333333333,0.2,-0.14333333333333334,1.0,False
+mcq5,qwen3b,Qwen3B,Target1,main,Object Counting,high_by_3,High By 3,222,3000,0.074,0.2,-0.1575,1.0,False
+mcq5,vla0,vla0,Target1,main,Object Counting,high_by_3,High By 3,227,3000,0.07566666666666666,0.2,-0.15541666666666668,1.0,False
+mcq5,claude,Claude,Target1,main,Object Counting,high_by_4,High By 4,143,3000,0.04766666666666667,0.2,-0.19041666666666668,1.0,False
+mcq5,gemini,Gemini,Target1,main,Object Counting,high_by_4,High By 4,129,3000,0.043,0.2,-0.19625000000000004,1.0,False
+mcq5,glm,GLM,Target1,main,Object Counting,high_by_4,High By 4,129,3000,0.043,0.2,-0.19625000000000004,1.0,False
+mcq5,gpt,GPT,Target1,main,Object Counting,high_by_4,High By 4,131,3000,0.043666666666666666,0.2,-0.19541666666666668,1.0,False
+mcq5,human,Human,Target1,main,Object Counting,high_by_4,High By 4,7,3000,0.0023333333333333335,0.2,-0.24708333333333335,1.0,False
+mcq5,kimi,Kimi,Target1,main,Object Counting,high_by_4,High By 4,106,3000,0.035333333333333335,0.2,-0.20583333333333334,1.0,False
+mcq5,qwen,Qwen,Target1,main,Object Counting,high_by_4,High By 4,135,3000,0.045,0.2,-0.19375000000000003,1.0,False
+mcq5,qwen3b,Qwen3B,Target1,main,Object Counting,high_by_4,High By 4,141,3000,0.047,0.2,-0.19125000000000003,1.0,False
+mcq5,vla0,vla0,Target1,main,Object Counting,high_by_4,High By 4,133,3000,0.044333333333333336,0.2,-0.19458333333333333,1.0,False
+mcq5,claude,Claude,Target1,main,Object Counting,high_by_5,High By 5,27,3000,0.009,0.2,-0.23875,1.0,False
+mcq5,gemini,Gemini,Target1,main,Object Counting,high_by_5,High By 5,42,3000,0.014,0.2,-0.23249999999999998,1.0,False
+mcq5,glm,GLM,Target1,main,Object Counting,high_by_5,High By 5,34,3000,0.011333333333333334,0.2,-0.23583333333333334,1.0,False
+mcq5,gpt,GPT,Target1,main,Object Counting,high_by_5,High By 5,34,3000,0.011333333333333334,0.2,-0.23583333333333334,1.0,False
+mcq5,kimi,Kimi,Target1,main,Object Counting,high_by_5,High By 5,35,3000,0.011666666666666667,0.2,-0.2354166666666667,1.0,False
+mcq5,qwen,Qwen,Target1,main,Object Counting,high_by_5,High By 5,33,3000,0.011,0.2,-0.23625,1.0,False
+mcq5,qwen3b,Qwen3B,Target1,main,Object Counting,high_by_5,High By 5,27,3000,0.009,0.2,-0.23875,1.0,False
+mcq5,vla0,vla0,Target1,main,Object Counting,high_by_5,High By 5,28,3000,0.009333333333333334,0.2,-0.23833333333333334,1.0,False
+mcq5,claude,Claude,Target1,main,Object Counting,high_by_6,High By 6,31,3000,0.010333333333333333,0.2,-0.23708333333333334,1.0,False
+mcq5,gemini,Gemini,Target1,main,Object Counting,high_by_6,High By 6,33,3000,0.011,0.2,-0.23625,1.0,False
+mcq5,glm,GLM,Target1,main,Object Counting,high_by_6,High By 6,24,3000,0.008,0.2,-0.24,1.0,False
+mcq5,gpt,GPT,Target1,main,Object Counting,high_by_6,High By 6,30,3000,0.01,0.2,-0.2375,1.0,False
+mcq5,kimi,Kimi,Target1,main,Object Counting,high_by_6,High By 6,23,3000,0.007666666666666666,0.2,-0.2404166666666667,1.0,False
+mcq5,qwen,Qwen,Target1,main,Object Counting,high_by_6,High By 6,30,3000,0.01,0.2,-0.2375,1.0,False
+mcq5,qwen3b,Qwen3B,Target1,main,Object Counting,high_by_6,High By 6,31,3000,0.010333333333333333,0.2,-0.23708333333333334,1.0,False
+mcq5,vla0,vla0,Target1,main,Object Counting,high_by_6,High By 6,32,3000,0.010666666666666666,0.2,-0.2366666666666667,1.0,False
+mcq5,claude,Claude,Target1,main,Object Counting,low_by_1,Low By 1,373,3000,0.12433333333333334,0.2,-0.09458333333333334,1.0,False
+mcq5,gemini,Gemini,Target1,main,Object Counting,low_by_1,Low By 1,363,3000,0.121,0.2,-0.09875000000000002,1.0,False
+mcq5,glm,GLM,Target1,main,Object Counting,low_by_1,Low By 1,355,3000,0.11833333333333333,0.2,-0.10208333333333335,1.0,False
+mcq5,gpt,GPT,Target1,main,Object Counting,low_by_1,Low By 1,361,3000,0.12033333333333333,0.2,-0.09958333333333334,1.0,False
+mcq5,human,Human,Target1,main,Object Counting,low_by_1,Low By 1,147,3000,0.049,0.2,-0.18875000000000003,1.0,False
+mcq5,kimi,Kimi,Target1,main,Object Counting,low_by_1,Low By 1,389,3000,0.12966666666666668,0.2,-0.08791666666666666,1.0,False
+mcq5,qwen,Qwen,Target1,main,Object Counting,low_by_1,Low By 1,338,3000,0.11266666666666666,0.2,-0.10916666666666668,1.0,False
+mcq5,qwen3b,Qwen3B,Target1,main,Object Counting,low_by_1,Low By 1,368,3000,0.12266666666666666,0.2,-0.09666666666666668,1.0,False
+mcq5,vla0,vla0,Target1,main,Object Counting,low_by_1,Low By 1,361,3000,0.12033333333333333,0.2,-0.09958333333333334,1.0,False
+mcq5,claude,Claude,Target1,main,Object Counting,low_by_2,Low By 2,357,3000,0.119,0.2,-0.10125000000000002,1.0,False
+mcq5,gemini,Gemini,Target1,main,Object Counting,low_by_2,Low By 2,379,3000,0.12633333333333333,0.2,-0.09208333333333335,1.0,False
+mcq5,glm,GLM,Target1,main,Object Counting,low_by_2,Low By 2,339,3000,0.113,0.2,-0.10875,1.0,False
+mcq5,gpt,GPT,Target1,main,Object Counting,low_by_2,Low By 2,334,3000,0.11133333333333334,0.2,-0.11083333333333334,1.0,False
+mcq5,human,Human,Target1,main,Object Counting,low_by_2,Low By 2,73,3000,0.024333333333333332,0.2,-0.21958333333333335,1.0,False
+mcq5,kimi,Kimi,Target1,main,Object Counting,low_by_2,Low By 2,384,3000,0.128,0.2,-0.09000000000000001,1.0,False
+mcq5,qwen,Qwen,Target1,main,Object Counting,low_by_2,Low By 2,337,3000,0.11233333333333333,0.2,-0.10958333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Target1,main,Object Counting,low_by_2,Low By 2,365,3000,0.12166666666666667,0.2,-0.09791666666666667,1.0,False
+mcq5,vla0,vla0,Target1,main,Object Counting,low_by_2,Low By 2,373,3000,0.12433333333333334,0.2,-0.09458333333333334,1.0,False
+mcq5,claude,Claude,Target1,main,Object Counting,low_by_3,Low By 3,247,3000,0.08233333333333333,0.2,-0.14708333333333334,1.0,False
+mcq5,gemini,Gemini,Target1,main,Object Counting,low_by_3,Low By 3,264,3000,0.088,0.2,-0.14,1.0,False
+mcq5,glm,GLM,Target1,main,Object Counting,low_by_3,Low By 3,259,3000,0.08633333333333333,0.2,-0.14208333333333334,1.0,False
+mcq5,gpt,GPT,Target1,main,Object Counting,low_by_3,Low By 3,258,3000,0.086,0.2,-0.14250000000000002,1.0,False
+mcq5,human,Human,Target1,main,Object Counting,low_by_3,Low By 3,22,3000,0.007333333333333333,0.2,-0.24083333333333334,1.0,False
+mcq5,kimi,Kimi,Target1,main,Object Counting,low_by_3,Low By 3,264,3000,0.088,0.2,-0.14,1.0,False
+mcq5,qwen,Qwen,Target1,main,Object Counting,low_by_3,Low By 3,266,3000,0.08866666666666667,0.2,-0.13916666666666666,1.0,False
+mcq5,qwen3b,Qwen3B,Target1,main,Object Counting,low_by_3,Low By 3,250,3000,0.08333333333333333,0.2,-0.14583333333333334,1.0,False
+mcq5,vla0,vla0,Target1,main,Object Counting,low_by_3,Low By 3,251,3000,0.08366666666666667,0.2,-0.14541666666666667,1.0,False
+mcq5,claude,Claude,Target1,main,Object Counting,low_by_4,Low By 4,132,3000,0.044,0.2,-0.19500000000000003,1.0,False
+mcq5,gemini,Gemini,Target1,main,Object Counting,low_by_4,Low By 4,145,3000,0.04833333333333333,0.2,-0.18958333333333333,1.0,False
+mcq5,glm,GLM,Target1,main,Object Counting,low_by_4,Low By 4,139,3000,0.04633333333333333,0.2,-0.19208333333333333,1.0,False
+mcq5,gpt,GPT,Target1,main,Object Counting,low_by_4,Low By 4,140,3000,0.04666666666666667,0.2,-0.19166666666666668,1.0,False
+mcq5,human,Human,Target1,main,Object Counting,low_by_4,Low By 4,12,3000,0.004,0.2,-0.245,1.0,False
+mcq5,kimi,Kimi,Target1,main,Object Counting,low_by_4,Low By 4,133,3000,0.044333333333333336,0.2,-0.19458333333333333,1.0,False
+mcq5,qwen,Qwen,Target1,main,Object Counting,low_by_4,Low By 4,132,3000,0.044,0.2,-0.19500000000000003,1.0,False
+mcq5,qwen3b,Qwen3B,Target1,main,Object Counting,low_by_4,Low By 4,126,3000,0.042,0.2,-0.19749999999999998,1.0,False
+mcq5,vla0,vla0,Target1,main,Object Counting,low_by_4,Low By 4,125,3000,0.041666666666666664,0.2,-0.19791666666666669,1.0,False
+mcq5,claude,Claude,Target1,main,Object Counting,low_by_5,Low By 5,81,3000,0.027,0.2,-0.21625,1.0,False
+mcq5,gemini,Gemini,Target1,main,Object Counting,low_by_5,Low By 5,76,3000,0.025333333333333333,0.2,-0.21833333333333335,1.0,False
+mcq5,glm,GLM,Target1,main,Object Counting,low_by_5,Low By 5,83,3000,0.027666666666666666,0.2,-0.21541666666666667,1.0,False
+mcq5,gpt,GPT,Target1,main,Object Counting,low_by_5,Low By 5,82,3000,0.027333333333333334,0.2,-0.21583333333333335,1.0,False
+mcq5,human,Human,Target1,main,Object Counting,low_by_5,Low By 5,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,kimi,Kimi,Target1,main,Object Counting,low_by_5,Low By 5,76,3000,0.025333333333333333,0.2,-0.21833333333333335,1.0,False
+mcq5,qwen,Qwen,Target1,main,Object Counting,low_by_5,Low By 5,87,3000,0.029,0.2,-0.21375,1.0,False
+mcq5,qwen3b,Qwen3B,Target1,main,Object Counting,low_by_5,Low By 5,79,3000,0.026333333333333334,0.2,-0.21708333333333335,1.0,False
+mcq5,vla0,vla0,Target1,main,Object Counting,low_by_5,Low By 5,80,3000,0.02666666666666667,0.2,-0.21666666666666667,1.0,False
+mcq5,claude,Claude,Target1,main,Object Counting,low_by_6,Low By 6,38,3000,0.012666666666666666,0.2,-0.2341666666666667,1.0,False
+mcq5,gemini,Gemini,Target1,main,Object Counting,low_by_6,Low By 6,33,3000,0.011,0.2,-0.23625,1.0,False
+mcq5,glm,GLM,Target1,main,Object Counting,low_by_6,Low By 6,25,3000,0.008333333333333333,0.2,-0.23958333333333334,1.0,False
+mcq5,gpt,GPT,Target1,main,Object Counting,low_by_6,Low By 6,38,3000,0.012666666666666666,0.2,-0.2341666666666667,1.0,False
+mcq5,human,Human,Target1,main,Object Counting,low_by_6,Low By 6,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,kimi,Kimi,Target1,main,Object Counting,low_by_6,Low By 6,19,3000,0.006333333333333333,0.2,-0.24208333333333334,1.0,False
+mcq5,qwen,Qwen,Target1,main,Object Counting,low_by_6,Low By 6,39,3000,0.013,0.2,-0.23374999999999999,1.0,False
+mcq5,qwen3b,Qwen3B,Target1,main,Object Counting,low_by_6,Low By 6,38,3000,0.012666666666666666,0.2,-0.2341666666666667,1.0,False
+mcq5,vla0,vla0,Target1,main,Object Counting,low_by_6,Low By 6,38,3000,0.012666666666666666,0.2,-0.2341666666666667,1.0,False
+mcq5,qwen,Qwen,Target2a,task10,Mental Rotation 90,both_views_blocks,Both Views Blocks,674,3000,0.22466666666666665,0.2,0.030833333333333303,0.0004653650431266702,True
+mcq5,qwen3b,Qwen3B,Target2a,task10,Mental Rotation 90,both_views_blocks,Both Views Blocks,669,3000,0.223,0.2,0.02874999999999999,0.001005226149921567,True
+mcq5,vla0,vla0,Target2a,task10,Mental Rotation 90,both_views_blocks,Both Views Blocks,613,3000,0.20433333333333334,0.2,0.00541666666666666,0.2831155016451497,False
+mcq5,glm,GLM,Target2a,task10,Mental Rotation 90,both_views_blocks,Both Views Blocks,561,3000,0.187,0.2,-0.016250000000000014,0.965129302419774,False
+mcq5,gemini,Gemini,Target2a,task10,Mental Rotation 90,both_views_blocks,Both Views Blocks,439,3000,0.14633333333333334,0.2,-0.06708333333333333,0.9999999999999901,False
+mcq5,claude,Claude,Target2a,task10,Mental Rotation 90,both_views_blocks,Both Views Blocks,108,3000,0.036,0.2,-0.205,1.0,False
+mcq5,gpt,GPT,Target2a,task10,Mental Rotation 90,both_views_blocks,Both Views Blocks,310,3000,0.10333333333333333,0.2,-0.12083333333333335,1.0,False
+mcq5,human,Human,Target2a,task10,Mental Rotation 90,both_views_blocks,Both Views Blocks,8,3000,0.0026666666666666666,0.2,-0.24666666666666665,1.0,False
+mcq5,kimi,Kimi,Target2a,task10,Mental Rotation 90,both_views_blocks,Both Views Blocks,284,3000,0.09466666666666666,0.2,-0.13166666666666668,1.0,False
+mcq5,kimi,Kimi,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_0,Missing Nonmatch,460,3000,0.15333333333333332,0.2,-0.05833333333333336,0.9999999999820314,False
+mcq5,claude,Claude,Target2a,task10,Mental Rotation 90,missing_nonmatch,Missing Nonmatch,339,3000,0.113,0.2,-0.10875,1.0,False
+mcq5,claude,Claude,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_0,Missing Nonmatch,219,3000,0.073,0.2,-0.15875,1.0,False
+mcq5,claude,Claude,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_1,Missing Nonmatch,9,3000,0.003,0.2,-0.24625,1.0,False
+mcq5,claude,Claude,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_2,Missing Nonmatch,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gemini,Gemini,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_0,Missing Nonmatch,334,3000,0.11133333333333334,0.2,-0.11083333333333334,1.0,False
+mcq5,gemini,Gemini,Target2a,task10,Mental Rotation 90,missing_nonmatch,Missing Nonmatch,201,3000,0.067,0.2,-0.16625,1.0,False
+mcq5,gemini,Gemini,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_1,Missing Nonmatch,21,3000,0.007,0.2,-0.24125,1.0,False
+mcq5,gemini,Gemini,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_2,Missing Nonmatch,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,glm,GLM,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_0,Missing Nonmatch,385,3000,0.12833333333333333,0.2,-0.08958333333333335,1.0,False
+mcq5,glm,GLM,Target2a,task10,Mental Rotation 90,missing_nonmatch,Missing Nonmatch,214,3000,0.07133333333333333,0.2,-0.16083333333333333,1.0,False
+mcq5,glm,GLM,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_1,Missing Nonmatch,20,3000,0.006666666666666667,0.2,-0.2416666666666667,1.0,False
+mcq5,glm,GLM,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_2,Missing Nonmatch,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,glm,GLM,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_3,Missing Nonmatch,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gpt,GPT,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_0,Missing Nonmatch,407,3000,0.13566666666666666,0.2,-0.08041666666666669,1.0,False
+mcq5,gpt,GPT,Target2a,task10,Mental Rotation 90,missing_nonmatch,Missing Nonmatch,234,3000,0.078,0.2,-0.1525,1.0,False
+mcq5,gpt,GPT,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_1,Missing Nonmatch,16,3000,0.005333333333333333,0.2,-0.24333333333333335,1.0,False
+mcq5,gpt,GPT,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_2,Missing Nonmatch,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,human,Human,Target2a,task10,Mental Rotation 90,missing_nonmatch,Missing Nonmatch,45,3000,0.015,0.2,-0.23124999999999998,1.0,False
+mcq5,human,Human,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_0,Missing Nonmatch,10,3000,0.0033333333333333335,0.2,-0.24583333333333335,1.0,False
+mcq5,kimi,Kimi,Target2a,task10,Mental Rotation 90,missing_nonmatch,Missing Nonmatch,250,3000,0.08333333333333333,0.2,-0.14583333333333334,1.0,False
+mcq5,kimi,Kimi,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_1,Missing Nonmatch,24,3000,0.008,0.2,-0.24,1.0,False
+mcq5,kimi,Kimi,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_2,Missing Nonmatch,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,qwen,Qwen,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_0,Missing Nonmatch,406,3000,0.13533333333333333,0.2,-0.08083333333333334,1.0,False
+mcq5,qwen,Qwen,Target2a,task10,Mental Rotation 90,missing_nonmatch,Missing Nonmatch,172,3000,0.05733333333333333,0.2,-0.17833333333333332,1.0,False
+mcq5,qwen,Qwen,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_1,Missing Nonmatch,16,3000,0.005333333333333333,0.2,-0.24333333333333335,1.0,False
+mcq5,qwen,Qwen,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_2,Missing Nonmatch,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_0,Missing Nonmatch,376,3000,0.12533333333333332,0.2,-0.09333333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Target2a,task10,Mental Rotation 90,missing_nonmatch,Missing Nonmatch,192,3000,0.064,0.2,-0.17,1.0,False
+mcq5,qwen3b,Qwen3B,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_1,Missing Nonmatch,27,3000,0.009,0.2,-0.23875,1.0,False
+mcq5,qwen3b,Qwen3B,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_2,Missing Nonmatch,4,3000,0.0013333333333333333,0.2,-0.24833333333333335,1.0,False
+mcq5,vla0,vla0,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_0,Missing Nonmatch,391,3000,0.13033333333333333,0.2,-0.08708333333333335,1.0,False
+mcq5,vla0,vla0,Target2a,task10,Mental Rotation 90,missing_nonmatch,Missing Nonmatch,190,3000,0.06333333333333334,0.2,-0.1708333333333333,1.0,False
+mcq5,vla0,vla0,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_1,Missing Nonmatch,22,3000,0.007333333333333333,0.2,-0.24083333333333334,1.0,False
+mcq5,vla0,vla0,Target2a,task10,Mental Rotation 90,missing_nonmatch_fallback_unique_2,Missing Nonmatch,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,gpt,GPT,Target2a,task10,Mental Rotation 90,random_single_block,Random Single Block,729,3000,0.243,0.2,0.05374999999999998,5.11252839386272e-09,True
+mcq5,claude,Claude,Target2a,task10,Mental Rotation 90,random_single_block,Random Single Block,703,3000,0.23433333333333334,0.2,0.04291666666666666,2.211910244683417e-06,True
+mcq5,kimi,Kimi,Target2a,task10,Mental Rotation 90,random_single_block,Random Single Block,620,3000,0.20666666666666667,0.2,0.008333333333333318,0.18646155163382896,False
+mcq5,vla0,vla0,Target2a,task10,Mental Rotation 90,random_single_block,Random Single Block,593,3000,0.19766666666666666,0.2,-0.0029166666666666924,0.6324248545829523,False
+mcq5,qwen,Qwen,Target2a,task10,Mental Rotation 90,random_single_block,Random Single Block,591,3000,0.197,0.2,-0.0037500000000000033,0.6663628168370263,False
+mcq5,glm,GLM,Target2a,task10,Mental Rotation 90,random_single_block,Random Single Block,590,3000,0.19666666666666666,0.2,-0.0041666666666666935,0.6828650473273535,False
+mcq5,gemini,Gemini,Target2a,task10,Mental Rotation 90,random_single_block,Random Single Block,572,3000,0.19066666666666668,0.2,-0.011666666666666665,0.9039028742967353,False
+mcq5,qwen3b,Qwen3B,Target2a,task10,Mental Rotation 90,random_single_block,Random Single Block,571,3000,0.19033333333333333,0.2,-0.012083333333333356,0.9115446006215552,False
+mcq5,claude,Claude,Target2a,task10,Mental Rotation 90,random_single_block_fallback_unique_0,Random Single Block,14,3000,0.004666666666666667,0.2,-0.24416666666666664,1.0,False
+mcq5,gemini,Gemini,Target2a,task10,Mental Rotation 90,random_single_block_fallback_unique_0,Random Single Block,30,3000,0.01,0.2,-0.2375,1.0,False
+mcq5,glm,GLM,Target2a,task10,Mental Rotation 90,random_single_block_fallback_unique_0,Random Single Block,26,3000,0.008666666666666666,0.2,-0.2391666666666667,1.0,False
+mcq5,glm,GLM,Target2a,task10,Mental Rotation 90,random_single_block_fallback_unique_1,Random Single Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gpt,GPT,Target2a,task10,Mental Rotation 90,random_single_block_fallback_unique_0,Random Single Block,15,3000,0.005,0.2,-0.24375,1.0,False
+mcq5,gpt,GPT,Target2a,task10,Mental Rotation 90,random_single_block_fallback_unique_1,Random Single Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,human,Human,Target2a,task10,Mental Rotation 90,random_single_block,Random Single Block,31,3000,0.010333333333333333,0.2,-0.23708333333333334,1.0,False
+mcq5,kimi,Kimi,Target2a,task10,Mental Rotation 90,random_single_block_fallback_unique_0,Random Single Block,29,3000,0.009666666666666667,0.2,-0.2379166666666667,1.0,False
+mcq5,kimi,Kimi,Target2a,task10,Mental Rotation 90,random_single_block_fallback_unique_1,Random Single Block,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,qwen,Qwen,Target2a,task10,Mental Rotation 90,random_single_block_fallback_unique_0,Random Single Block,27,3000,0.009,0.2,-0.23875,1.0,False
+mcq5,qwen,Qwen,Target2a,task10,Mental Rotation 90,random_single_block_fallback_unique_1,Random Single Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Target2a,task10,Mental Rotation 90,random_single_block_fallback_unique_0,Random Single Block,22,3000,0.007333333333333333,0.2,-0.24083333333333334,1.0,False
+mcq5,qwen3b,Qwen3B,Target2a,task10,Mental Rotation 90,random_single_block_fallback_unique_1,Random Single Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,vla0,vla0,Target2a,task10,Mental Rotation 90,random_single_block_fallback_unique_0,Random Single Block,25,3000,0.008333333333333333,0.2,-0.23958333333333334,1.0,False
+mcq5,vla0,vla0,Target2a,task10,Mental Rotation 90,random_single_block_fallback_unique_1,Random Single Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,kimi,Kimi,Target2a,task10,Mental Rotation 90,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,649,3000,0.21633333333333332,0.2,0.02041666666666664,0.014023245627264978,True
+mcq5,qwen,Qwen,Target2a,task10,Mental Rotation 90,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,644,3000,0.21466666666666667,0.2,0.018333333333333326,0.024272074631850788,True
+mcq5,glm,GLM,Target2a,task10,Mental Rotation 90,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,618,3000,0.206,0.2,0.007499999999999972,0.211734628669215,False
+mcq5,gpt,GPT,Target2a,task10,Mental Rotation 90,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,617,3000,0.20566666666666666,0.2,0.0070833333333333165,0.22509675812817373,False
+mcq5,vla0,vla0,Target2a,task10,Mental Rotation 90,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,571,3000,0.19033333333333333,0.2,-0.012083333333333356,0.9115446006215552,False
+mcq5,qwen3b,Qwen3B,Target2a,task10,Mental Rotation 90,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,560,3000,0.18666666666666668,0.2,-0.01666666666666667,0.9685591353980002,False
+mcq5,gemini,Gemini,Target2a,task10,Mental Rotation 90,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,505,3000,0.16833333333333333,0.2,-0.039583333333333345,0.9999956691678575,False
+mcq5,claude,Claude,Target2a,task10,Mental Rotation 90,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,356,3000,0.11866666666666667,0.2,-0.10166666666666667,1.0,False
+mcq5,human,Human,Target2a,task10,Mental Rotation 90,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,12,3000,0.004,0.2,-0.245,1.0,False
+mcq5,vla0,vla0,Target2b,task11,Mental Rotation 180,both_views_blocks,Both Views Blocks,678,3000,0.226,0.2,0.032499999999999994,0.00024335223150504296,True
+mcq5,qwen3b,Qwen3B,Target2b,task11,Mental Rotation 180,both_views_blocks,Both Views Blocks,674,3000,0.22466666666666665,0.2,0.030833333333333303,0.0004653650431266702,True
+mcq5,glm,GLM,Target2b,task11,Mental Rotation 180,both_views_blocks,Both Views Blocks,596,3000,0.19866666666666666,0.2,-0.0016666666666666913,0.5796560860914981,False
+mcq5,qwen,Qwen,Target2b,task11,Mental Rotation 180,both_views_blocks,Both Views Blocks,587,3000,0.19566666666666666,0.2,-0.005416666666666695,0.7301755907852969,False
+mcq5,gemini,Gemini,Target2b,task11,Mental Rotation 180,both_views_blocks,Both Views Blocks,448,3000,0.14933333333333335,0.2,-0.06333333333333332,0.9999999999997166,False
+mcq5,claude,Claude,Target2b,task11,Mental Rotation 180,both_views_blocks,Both Views Blocks,101,3000,0.033666666666666664,0.2,-0.20791666666666667,1.0,False
+mcq5,gpt,GPT,Target2b,task11,Mental Rotation 180,both_views_blocks,Both Views Blocks,330,3000,0.11,0.2,-0.1125,1.0,False
+mcq5,human,Human,Target2b,task11,Mental Rotation 180,both_views_blocks,Both Views Blocks,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,kimi,Kimi,Target2b,task11,Mental Rotation 180,both_views_blocks,Both Views Blocks,270,3000,0.09,0.2,-0.1375,1.0,False
+mcq5,claude,Claude,Target2b,task11,Mental Rotation 180,missing_nonmatch,Missing Nonmatch,383,3000,0.12766666666666668,0.2,-0.09041666666666666,1.0,False
+mcq5,claude,Claude,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_0,Missing Nonmatch,167,3000,0.05566666666666667,0.2,-0.18041666666666667,1.0,False
+mcq5,claude,Claude,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_1,Missing Nonmatch,7,3000,0.0023333333333333335,0.2,-0.24708333333333335,1.0,False
+mcq5,gemini,Gemini,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_0,Missing Nonmatch,288,3000,0.096,0.2,-0.13,1.0,False
+mcq5,gemini,Gemini,Target2b,task11,Mental Rotation 180,missing_nonmatch,Missing Nonmatch,236,3000,0.07866666666666666,0.2,-0.15166666666666667,1.0,False
+mcq5,gemini,Gemini,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_1,Missing Nonmatch,16,3000,0.005333333333333333,0.2,-0.24333333333333335,1.0,False
+mcq5,gemini,Gemini,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_2,Missing Nonmatch,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,glm,GLM,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_0,Missing Nonmatch,344,3000,0.11466666666666667,0.2,-0.10666666666666667,1.0,False
+mcq5,glm,GLM,Target2b,task11,Mental Rotation 180,missing_nonmatch,Missing Nonmatch,215,3000,0.07166666666666667,0.2,-0.16041666666666668,1.0,False
+mcq5,glm,GLM,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_1,Missing Nonmatch,19,3000,0.006333333333333333,0.2,-0.24208333333333334,1.0,False
+mcq5,glm,GLM,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_2,Missing Nonmatch,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,gpt,GPT,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_0,Missing Nonmatch,378,3000,0.126,0.2,-0.09250000000000001,1.0,False
+mcq5,gpt,GPT,Target2b,task11,Mental Rotation 180,missing_nonmatch,Missing Nonmatch,227,3000,0.07566666666666666,0.2,-0.15541666666666668,1.0,False
+mcq5,gpt,GPT,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_1,Missing Nonmatch,22,3000,0.007333333333333333,0.2,-0.24083333333333334,1.0,False
+mcq5,gpt,GPT,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_2,Missing Nonmatch,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,human,Human,Target2b,task11,Mental Rotation 180,missing_nonmatch,Missing Nonmatch,49,3000,0.01633333333333333,0.2,-0.22958333333333333,1.0,False
+mcq5,human,Human,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_0,Missing Nonmatch,6,3000,0.002,0.2,-0.2475,1.0,False
+mcq5,kimi,Kimi,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_0,Missing Nonmatch,408,3000,0.136,0.2,-0.08,1.0,False
+mcq5,kimi,Kimi,Target2b,task11,Mental Rotation 180,missing_nonmatch,Missing Nonmatch,289,3000,0.09633333333333334,0.2,-0.12958333333333333,1.0,False
+mcq5,kimi,Kimi,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_1,Missing Nonmatch,23,3000,0.007666666666666666,0.2,-0.2404166666666667,1.0,False
+mcq5,kimi,Kimi,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_2,Missing Nonmatch,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,qwen,Qwen,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_0,Missing Nonmatch,413,3000,0.13766666666666666,0.2,-0.07791666666666669,1.0,False
+mcq5,qwen,Qwen,Target2b,task11,Mental Rotation 180,missing_nonmatch,Missing Nonmatch,224,3000,0.07466666666666667,0.2,-0.15666666666666668,1.0,False
+mcq5,qwen,Qwen,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_1,Missing Nonmatch,30,3000,0.01,0.2,-0.2375,1.0,False
+mcq5,qwen,Qwen,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_2,Missing Nonmatch,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_0,Missing Nonmatch,340,3000,0.11333333333333333,0.2,-0.10833333333333335,1.0,False
+mcq5,qwen3b,Qwen3B,Target2b,task11,Mental Rotation 180,missing_nonmatch,Missing Nonmatch,214,3000,0.07133333333333333,0.2,-0.16083333333333333,1.0,False
+mcq5,qwen3b,Qwen3B,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_1,Missing Nonmatch,25,3000,0.008333333333333333,0.2,-0.23958333333333334,1.0,False
+mcq5,qwen3b,Qwen3B,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_2,Missing Nonmatch,2,3000,0.0006666666666666666,0.2,-0.24916666666666665,1.0,False
+mcq5,vla0,vla0,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_0,Missing Nonmatch,339,3000,0.113,0.2,-0.10875,1.0,False
+mcq5,vla0,vla0,Target2b,task11,Mental Rotation 180,missing_nonmatch,Missing Nonmatch,243,3000,0.081,0.2,-0.14875,1.0,False
+mcq5,vla0,vla0,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_1,Missing Nonmatch,22,3000,0.007333333333333333,0.2,-0.24083333333333334,1.0,False
+mcq5,vla0,vla0,Target2b,task11,Mental Rotation 180,missing_nonmatch_fallback_unique_2,Missing Nonmatch,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,claude,Claude,Target2b,task11,Mental Rotation 180,random_single_block,Random Single Block,749,3000,0.24966666666666668,0.2,0.06208333333333333,2.1316031426813894e-11,True
+mcq5,gpt,GPT,Target2b,task11,Mental Rotation 180,random_single_block,Random Single Block,745,3000,0.24833333333333332,0.2,0.06041666666666664,6.745180745676731e-11,True
+mcq5,kimi,Kimi,Target2b,task11,Mental Rotation 180,random_single_block,Random Single Block,634,3000,0.21133333333333335,0.2,0.014166666666666668,0.06385972145572055,False
+mcq5,glm,GLM,Target2b,task11,Mental Rotation 180,random_single_block,Random Single Block,599,3000,0.19966666666666666,0.2,-0.00041666666666669017,0.5254822245475986,False
+mcq5,gemini,Gemini,Target2b,task11,Mental Rotation 180,random_single_block,Random Single Block,598,3000,0.19933333333333333,0.2,-0.0008333333333333456,0.5436356675027023,False
+mcq5,qwen,Qwen,Target2b,task11,Mental Rotation 180,random_single_block,Random Single Block,597,3000,0.199,0.2,-0.0012500000000000011,0.5617060110518274,False
+mcq5,vla0,vla0,Target2b,task11,Mental Rotation 180,random_single_block,Random Single Block,527,3000,0.17566666666666667,0.2,-0.030416666666666682,0.9996687754132666,False
+mcq5,qwen3b,Qwen3B,Target2b,task11,Mental Rotation 180,random_single_block,Random Single Block,522,3000,0.174,0.2,-0.03250000000000003,0.9998641165274169,False
+mcq5,claude,Claude,Target2b,task11,Mental Rotation 180,random_single_block_fallback_unique_0,Random Single Block,16,3000,0.005333333333333333,0.2,-0.24333333333333335,1.0,False
+mcq5,gemini,Gemini,Target2b,task11,Mental Rotation 180,random_single_block_fallback_unique_0,Random Single Block,25,3000,0.008333333333333333,0.2,-0.23958333333333334,1.0,False
+mcq5,gemini,Gemini,Target2b,task11,Mental Rotation 180,random_single_block_fallback_unique_1,Random Single Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,glm,GLM,Target2b,task11,Mental Rotation 180,random_single_block_fallback_unique_0,Random Single Block,19,3000,0.006333333333333333,0.2,-0.24208333333333334,1.0,False
+mcq5,glm,GLM,Target2b,task11,Mental Rotation 180,random_single_block_fallback_unique_1,Random Single Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gpt,GPT,Target2b,task11,Mental Rotation 180,random_single_block_fallback_unique_0,Random Single Block,23,3000,0.007666666666666666,0.2,-0.2404166666666667,1.0,False
+mcq5,human,Human,Target2b,task11,Mental Rotation 180,random_single_block,Random Single Block,21,3000,0.007,0.2,-0.24125,1.0,False
+mcq5,human,Human,Target2b,task11,Mental Rotation 180,random_single_block_fallback_unique_0,Random Single Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,kimi,Kimi,Target2b,task11,Mental Rotation 180,random_single_block_fallback_unique_0,Random Single Block,28,3000,0.009333333333333334,0.2,-0.23833333333333334,1.0,False
+mcq5,qwen,Qwen,Target2b,task11,Mental Rotation 180,random_single_block_fallback_unique_0,Random Single Block,23,3000,0.007666666666666666,0.2,-0.2404166666666667,1.0,False
+mcq5,qwen,Qwen,Target2b,task11,Mental Rotation 180,random_single_block_fallback_unique_1,Random Single Block,3,3000,0.001,0.2,-0.24875,1.0,False
+mcq5,qwen3b,Qwen3B,Target2b,task11,Mental Rotation 180,random_single_block_fallback_unique_0,Random Single Block,24,3000,0.008,0.2,-0.24,1.0,False
+mcq5,qwen3b,Qwen3B,Target2b,task11,Mental Rotation 180,random_single_block_fallback_unique_1,Random Single Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,vla0,vla0,Target2b,task11,Mental Rotation 180,random_single_block_fallback_unique_0,Random Single Block,21,3000,0.007,0.2,-0.24125,1.0,False
+mcq5,vla0,vla0,Target2b,task11,Mental Rotation 180,random_single_block_fallback_unique_1,Random Single Block,1,3000,0.0003333333333333333,0.2,-0.24958333333333335,1.0,False
+mcq5,gpt,GPT,Target2b,task11,Mental Rotation 180,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,652,3000,0.21733333333333332,0.2,0.02166666666666664,0.009880150051348398,True
+mcq5,kimi,Kimi,Target2b,task11,Mental Rotation 180,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,649,3000,0.21633333333333332,0.2,0.02041666666666664,0.014023245627264978,True
+mcq5,qwen,Qwen,Target2b,task11,Mental Rotation 180,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,624,3000,0.208,0.2,0.009999999999999974,0.14186395587503955,False
+mcq5,glm,GLM,Target2b,task11,Mental Rotation 180,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,604,3000,0.20133333333333334,0.2,0.0016666666666666566,0.43478923687346716,False
+mcq5,qwen3b,Qwen3B,Target2b,task11,Mental Rotation 180,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,599,3000,0.19966666666666666,0.2,-0.00041666666666669017,0.5254822245475986,False
+mcq5,vla0,vla0,Target2b,task11,Mental Rotation 180,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,598,3000,0.19933333333333333,0.2,-0.0008333333333333456,0.5436356675027023,False
+mcq5,gemini,Gemini,Target2b,task11,Mental Rotation 180,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,572,3000,0.19066666666666668,0.2,-0.011666666666666665,0.9039028742967353,False
+mcq5,claude,Claude,Target2b,task11,Mental Rotation 180,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,370,3000,0.12333333333333334,0.2,-0.09583333333333334,1.0,False
+mcq5,human,Human,Target2b,task11,Mental Rotation 180,random_wrong_highlight_blocks,Random Wrong Highlight Blocks,5,3000,0.0016666666666666668,0.2,-0.24791666666666665,1.0,False

@@ -1,0 +1,115 @@
+group,slice_type,slice_value,task,source_task,task_name,accuracy,n_correct,n
+text,object,cube,Task6,task2,Top Layer,0.34364123159303883,5134,14940
+text,object,factory_box,Task6,task2,Top Layer,0.3569069069069069,2377,6660
+text,object,soup_can,Task6,task2,Top Layer,0.4048148148148148,1093,2700
+text,object,spam,Task6,task2,Top Layer,0.29444444444444445,795,2700
+text,object,cube,Task5,task5,Visible Object Count,0.18634538152610441,2784,14940
+text,object,factory_box,Task5,task5,Visible Object Count,0.13363363363363365,890,6660
+text,object,soup_can,Task5,task5,Visible Object Count,0.16925925925925925,457,2700
+text,object,spam,Task5,task5,Visible Object Count,0.1793256761763616,484,2699
+text,object,cube,Task7,task6,Direct Support,0.4068942436412316,6079,14940
+text,object,factory_box,Task7,task6,Direct Support,0.40997146718726535,2730,6659
+text,object,soup_can,Task7,task6,Direct Support,0.38407407407407407,1037,2700
+text,object,spam,Task7,task6,Direct Support,0.3337037037037037,901,2700
+text,object,cube,Task8,task7,Support Column,0.3386211512717537,5059,14940
+text,object,factory_box,Task8,task7,Support Column,0.3343843843843844,2227,6660
+text,object,soup_can,Task8,task7,Support Column,0.2840740740740741,767,2700
+text,object,spam,Task8,task7,Support Column,0.2737037037037037,739,2700
+text,object,cube,Task9,task8,Hidden Object Count,0.4004016064257028,5982,14940
+text,object,factory_box,Task9,task8,Hidden Object Count,0.3855855855855856,2568,6660
+text,object,soup_can,Task9,task8,Hidden Object Count,0.42407407407407405,1145,2700
+text,object,spam,Task9,task8,Hidden Object Count,0.3977777777777778,1074,2700
+text,object,cube,Target1,main,Object Counting,0.18741633199464525,2800,14940
+text,object,factory_box,Target1,main,Object Counting,0.1397897897897898,931,6660
+text,object,soup_can,Target1,main,Object Counting,0.18703703703703703,505,2700
+text,object,spam,Target1,main,Object Counting,0.21444444444444444,579,2700
+text,difficulty,4-8,Task6,task2,Top Layer,0.375,1809,4824
+text,difficulty,9-12,Task6,task2,Top Layer,0.37149270482603813,2979,8019
+text,difficulty,13-18,Task6,task2,Top Layer,0.3482938308959489,2072,5949
+text,difficulty,19-25,Task6,task2,Top Layer,0.31527287004318805,1606,5094
+text,difficulty,26+,Task6,task2,Top Layer,0.2996146435452794,933,3114
+text,difficulty,4-8,Task5,task5,Visible Object Count,0.3509535655058043,1693,4824
+text,difficulty,9-12,Task5,task5,Visible Object Count,0.19977553310886645,1602,8019
+text,difficulty,13-18,Task5,task5,Visible Object Count,0.11129791526563551,662,5948
+text,difficulty,19-25,Task5,task5,Visible Object Count,0.08205732234000786,418,5094
+text,difficulty,26+,Task5,task5,Visible Object Count,0.07707129094412331,240,3114
+text,difficulty,4-8,Task7,task6,Direct Support,0.5192786069651741,2505,4824
+text,difficulty,9-12,Task7,task6,Direct Support,0.43726615115989026,3506,8018
+text,difficulty,13-18,Task7,task6,Direct Support,0.36359051941502774,2163,5949
+text,difficulty,19-25,Task7,task6,Direct Support,0.3299960738123282,1681,5094
+text,difficulty,26+,Task7,task6,Direct Support,0.28644829800899163,892,3114
+text,difficulty,4-8,Task8,task7,Support Column,0.47077114427860695,2271,4824
+text,difficulty,9-12,Task8,task7,Support Column,0.3926923556553186,3149,8019
+text,difficulty,13-18,Task8,task7,Support Column,0.2765170616910405,1645,5949
+text,difficulty,19-25,Task8,task7,Support Column,0.22025912838633688,1122,5094
+text,difficulty,26+,Task8,task7,Support Column,0.19428387925497753,605,3114
+text,difficulty,4-8,Task9,task8,Hidden Object Count,0.5903814262023217,2848,4824
+text,difficulty,9-12,Task9,task8,Hidden Object Count,0.5110362888140666,4098,8019
+text,difficulty,13-18,Task9,task8,Hidden Object Count,0.39283913262733233,2337,5949
+text,difficulty,19-25,Task9,task8,Hidden Object Count,0.2137809187279152,1089,5094
+text,difficulty,26+,Task9,task8,Hidden Object Count,0.12748876043673732,397,3114
+text,difficulty,4-8,Target1,main,Object Counting,0.38598673300165837,1862,4824
+text,difficulty,9-12,Target1,main,Object Counting,0.20052375607931164,1608,8019
+text,difficulty,13-18,Target1,main,Object Counting,0.10909396537233149,649,5949
+text,difficulty,19-25,Target1,main,Object Counting,0.08421672555948174,429,5094
+text,difficulty,26+,Target1,main,Object Counting,0.08574181117533719,267,3114
+text,object_difficulty,cube|4-8,Target1,main,Object Counting,0.39963570127504555,1097,2745
+text,object_difficulty,cube|9-12,Target1,main,Object Counting,0.20566935650734533,994,4833
+text,object_difficulty,cube|13-18,Target1,main,Object Counting,0.10664112388250319,334,3132
+text,object_difficulty,cube|19-25,Target1,main,Object Counting,0.09025270758122744,225,2493
+text,object_difficulty,cube|26+,Target1,main,Object Counting,0.08635578583765112,150,1737
+text,object_difficulty,factory_box|4-8,Target1,main,Object Counting,0.27521367521367524,322,1170
+text,object_difficulty,factory_box|9-12,Target1,main,Object Counting,0.16990291262135923,315,1854
+text,object_difficulty,factory_box|13-18,Target1,main,Object Counting,0.09652777777777778,139,1440
+text,object_difficulty,factory_box|19-25,Target1,main,Object Counting,0.06790123456790123,110,1620
+text,object_difficulty,factory_box|26+,Target1,main,Object Counting,0.078125,45,576
+text,object_difficulty,soup_can|4-8,Target1,main,Object Counting,0.44907407407407407,194,432
+text,object_difficulty,soup_can|9-12,Target1,main,Object Counting,0.2077922077922078,144,693
+text,object_difficulty,soup_can|13-18,Target1,main,Object Counting,0.1168091168091168,82,702
+text,object_difficulty,soup_can|19-25,Target1,main,Object Counting,0.10185185185185185,44,432
+text,object_difficulty,soup_can|26+,Target1,main,Object Counting,0.09297052154195011,41,441
+text,object_difficulty,spam|4-8,Target1,main,Object Counting,0.5220125786163522,249,477
+text,object_difficulty,spam|9-12,Target1,main,Object Counting,0.24256651017214398,155,639
+text,object_difficulty,spam|13-18,Target1,main,Object Counting,0.13925925925925925,94,675
+text,object_difficulty,spam|19-25,Target1,main,Object Counting,0.09107468123861566,50,549
+text,object_difficulty,spam|26+,Target1,main,Object Counting,0.08611111111111111,31,360
+text,object_difficulty,cube|4-8,Task5,task5,Visible Object Count,0.37122040072859747,1019,2745
+text,object_difficulty,cube|9-12,Task5,task5,Visible Object Count,0.21394578936478378,1034,4833
+text,object_difficulty,cube|13-18,Task5,task5,Visible Object Count,0.11845466155810984,371,3132
+text,object_difficulty,cube|19-25,Task5,task5,Visible Object Count,0.08503810669875651,212,2493
+text,object_difficulty,cube|26+,Task5,task5,Visible Object Count,0.08520437535981577,148,1737
+text,object_difficulty,factory_box|4-8,Task5,task5,Visible Object Count,0.24102564102564103,282,1170
+text,object_difficulty,factory_box|9-12,Task5,task5,Visible Object Count,0.15156418554476808,281,1854
+text,object_difficulty,factory_box|13-18,Task5,task5,Visible Object Count,0.1,144,1440
+text,object_difficulty,factory_box|19-25,Task5,task5,Visible Object Count,0.08703703703703704,141,1620
+text,object_difficulty,factory_box|26+,Task5,task5,Visible Object Count,0.07291666666666667,42,576
+text,object_difficulty,soup_can|4-8,Task5,task5,Visible Object Count,0.44675925925925924,193,432
+text,object_difficulty,soup_can|9-12,Task5,task5,Visible Object Count,0.19336219336219337,134,693
+text,object_difficulty,soup_can|13-18,Task5,task5,Visible Object Count,0.10113960113960115,71,702
+text,object_difficulty,soup_can|19-25,Task5,task5,Visible Object Count,0.06481481481481481,28,432
+text,object_difficulty,soup_can|26+,Task5,task5,Visible Object Count,0.07029478458049887,31,441
+text,object_difficulty,spam|4-8,Task5,task5,Visible Object Count,0.4171907756813417,199,477
+text,object_difficulty,spam|9-12,Task5,task5,Visible Object Count,0.23943661971830985,153,639
+text,object_difficulty,spam|13-18,Task5,task5,Visible Object Count,0.11275964391691394,76,674
+text,object_difficulty,spam|19-25,Task5,task5,Visible Object Count,0.06739526411657559,37,549
+text,object_difficulty,spam|26+,Task5,task5,Visible Object Count,0.05277777777777778,19,360
+text,object_difficulty,cube|4-8,Task9,task8,Hidden Object Count,0.5843351548269581,1604,2745
+text,object_difficulty,cube|9-12,Task9,task8,Hidden Object Count,0.5058969584109249,2445,4833
+text,object_difficulty,cube|13-18,Task9,task8,Hidden Object Count,0.3722860791826309,1166,3132
+text,object_difficulty,cube|19-25,Task9,task8,Hidden Object Count,0.21580425190533495,538,2493
+text,object_difficulty,cube|26+,Task9,task8,Hidden Object Count,0.1318364997121474,229,1737
+text,object_difficulty,factory_box|4-8,Task9,task8,Hidden Object Count,0.6068376068376068,710,1170
+text,object_difficulty,factory_box|9-12,Task9,task8,Hidden Object Count,0.5070118662351673,940,1854
+text,object_difficulty,factory_box|13-18,Task9,task8,Hidden Object Count,0.39375,567,1440
+text,object_difficulty,factory_box|19-25,Task9,task8,Hidden Object Count,0.17592592592592593,285,1620
+text,object_difficulty,factory_box|26+,Task9,task8,Hidden Object Count,0.11458333333333333,66,576
+text,object_difficulty,soup_can|4-8,Task9,task8,Hidden Object Count,0.6180555555555556,267,432
+text,object_difficulty,soup_can|9-12,Task9,task8,Hidden Object Count,0.5945165945165946,412,693
+text,object_difficulty,soup_can|13-18,Task9,task8,Hidden Object Count,0.48005698005698005,337,702
+text,object_difficulty,soup_can|19-25,Task9,task8,Hidden Object Count,0.1736111111111111,75,432
+text,object_difficulty,soup_can|26+,Task9,task8,Hidden Object Count,0.12244897959183673,54,441
+text,object_difficulty,spam|4-8,Task9,task8,Hidden Object Count,0.559748427672956,267,477
+text,object_difficulty,spam|9-12,Task9,task8,Hidden Object Count,0.47104851330203446,301,639
+text,object_difficulty,spam|13-18,Task9,task8,Hidden Object Count,0.39555555555555555,267,675
+text,object_difficulty,spam|19-25,Task9,task8,Hidden Object Count,0.34790528233151186,191,549
+text,object_difficulty,spam|26+,Task9,task8,Hidden Object Count,0.13333333333333333,48,360

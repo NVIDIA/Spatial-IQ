@@ -1,0 +1,101 @@
+# SFT config for SpatialIQ — NeMo RL main (transformers 5.x) format.
+# Defaults target google/gemma-4-31B-it on GB200 (4 GPUs/node).
+sft:
+  max_num_epochs: 1
+  max_num_steps: 1000000
+  val_period: 20
+  val_batches: 4
+  val_global_batch_size: 256
+  val_micro_batch_size: 2
+  val_at_start: true
+  val_at_end: true
+  seed: 42
+
+policy:
+  model_name: "google/gemma-4-31B-it"
+  tokenizer:
+    name: ${policy.model_name}
+  train_global_batch_size: 256
+  train_micro_batch_size: 2
+  max_total_sequence_length: 2048
+  precision: "bfloat16"
+  max_grad_norm: 1.0
+
+  sequence_packing:
+    enabled: false
+
+  dynamic_batching:
+    enabled: false
+
+  dtensor_cfg:
+    _v2: true
+    enabled: true
+    cpu_offload: false
+    sequence_parallel: false
+    activation_checkpointing: true
+    tensor_parallel_size: 1
+    context_parallel_size: 1
+    custom_parallel_plan: null
+
+  megatron_cfg:
+    enabled: false
+
+  make_sequence_length_divisible_by: ${policy.dtensor_cfg.tensor_parallel_size}
+
+  optimizer:
+    name: "torch.optim.AdamW"
+    kwargs:
+      lr: 1.0e-5
+      weight_decay: 0.01
+      betas: [0.9, 0.98]
+      eps: 1e-8
+      foreach: false
+      fused: false
+
+checkpointing:
+  enabled: true
+  checkpoint_dir: "./results/sft_spatialiq_main"
+  metric_name: "val:val_loss"
+  higher_is_better: false
+  keep_top_k: 5
+  save_period: 20
+  save_optimizer: true
+  checkpoint_must_save_by: null
+
+data:
+  max_input_seq_length: ${policy.max_total_sequence_length}
+  add_bos: true
+  add_eos: true
+  add_generation_prompt: false
+  shuffle: true
+  num_workers: 1
+  train:
+    dataset_name: "spatialiq"
+    data_path: null   # OVERRIDE: data.train.data_path=/abs/path/train.jsonl
+    prompt_file: null
+    system_prompt_file: null
+  validation:
+    dataset_name: "spatialiq"
+    data_path: null   # OVERRIDE: data.validation.data_path=/abs/path/val.jsonl
+
+logger:
+  log_dir: "logs/sft_spatialiq_main"
+  wandb_enabled: false
+  tensorboard_enabled: true
+  mlflow_enabled: false
+  swanlab_enabled: false
+  monitor_gpus: true
+  wandb:
+    project: "spatialiq"
+    entity: "tom-vita"
+    name: "sft-spatialiq-${policy.model_name}"
+    group: "spatialiq-training"
+    tags: ["sft", "spatialiq", "gemma-4"]
+  tensorboard: {}
+  gpu_monitoring:
+    collection_interval: 10
+    flush_interval: 10
+
+cluster:
+  gpus_per_node: 4
+  num_nodes: 1
