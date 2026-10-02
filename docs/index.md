@@ -1,13 +1,13 @@
-<!--
-SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
-SPDX-License-Identifier: BSD-3-Clause
--->
-
 ---
 myst:
   html_meta:
     description lang=en: "Spatial-IQ: Deconstructing Spatial Intelligence via Hierarchical Capability Tests."
 ---
+
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+SPDX-License-Identifier: BSD-3-Clause
+-->
 
 # Spatial-IQ
 
@@ -38,6 +38,8 @@ myst:
     <span class="siq-affil"><sup>1</sup>NVIDIA Research</span>
     <span class="siq-affil"><sup>2</sup>Yale University</span>
   </div>
+
+  <div class="siq-venue"><strong>NeurIPS 2026</strong></div>
 
   <div class="siq-buttons">
     <a class="siq-btn" href="https://arxiv.org/abs/2607.22864"><span class="siq-btn-icon">&#128196;</span>Paper (arXiv)</a>
