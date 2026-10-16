@@ -129,7 +129,7 @@ PAPER_OUTPUTS: list[PaperOutput] = [
     PaperOutput("Figure 3", "static", "Pre-specified hierarchy relations", "static"),
     PaperOutput("Figure 4", "figure", "Text per-task accuracy", "generated", "tables/table_06_text_task_accuracy.csv", "figures/figure_04_text_task_accuracy.png"),
     PaperOutput("Figure 5", "figure", "5CQ wrong-answer preferences", "generated", "tables/figure_05_mcq5_wrong_answer_preferences.csv", "figures/figure_05_mcq5_wrong_answer_preferences.png"),
-    PaperOutput("Figure 6", "figure", "Text difficulty controls", "generated", "tables/table_09_text_difficulty_bins.csv", "figures/figure_06_text_difficulty_controls.png"),
+    PaperOutput("Figure 6", "figure", "Text difficulty controls", "generated", "tables/figure_06_text_difficulty_bins.csv", "figures/figure_06_text_difficulty_controls.png"),
     PaperOutput("Figure 7", "figure", "Text summation mechanism", "generated", "tables/figure_07_text_summation_mechanism.csv", "figures/figure_07_text_summation_mechanism.png"),
     PaperOutput("Figure 8", "static", "MCQ option-grid examples", "static"),
     PaperOutput("Figure 9", "static", "Text human-study interface", "static"),
@@ -161,7 +161,8 @@ PAPER_OUTPUTS: list[PaperOutput] = [
     PaperOutput("Table 6", "table", "Text per-task accuracy", "generated", "tables/table_06_text_task_accuracy.csv"),
     PaperOutput("Table 7", "table", "5CQ per-task accuracy", "generated", "tables/table_07_mcq5_task_accuracy.csv"),
     PaperOutput("Table 8", "table", "Image-output per-task accuracy", "generated", "tables/table_08_image_task_accuracy.csv"),
-    PaperOutput("Table 9", "table", "Text difficulty-bin accuracy", "generated", "tables/table_09_text_difficulty_bins.csv"),
+    PaperOutput("Table 9", "table", "Text difficulty-bin accuracy", "generated", "tables/table_09_text_difficulty_bins.csv",
+                notes="pooled over responders; subset column: models (no human) and models_and_human"),
     # Appendix F ("Full Hierarchy Dependency Analysis") is reported in prose in the
     # paper; these tables carry the underlying numbers. Computed by
     # hierarchy_dependency.py, which the analysis stage calls directly.
@@ -1052,6 +1053,54 @@ def difficulty_bin_table(data: ModelResults, group: str) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def pooled_difficulty_bin_table(data: ModelResults, group: str) -> pd.DataFrame:
+    """Pool Object Counting accuracy over responders within each difficulty bin (Table 9).
+
+    Two pools are exported, distinguished by ``subset``: ``models`` (every model
+    responder, no human baseline) and ``models_and_human``. Each pooled row counts
+    every responder-scene pair in the bin, so with every responder answering
+    every scene it equals the mean of the per-responder accuracies.
+    """
+
+    pools = [("models", {m: df for m, df in data.items() if m != "human"})]
+    if "human" in data:
+        pools.append(("models_and_human", data))
+    rows = []
+    for subset, pool in pools:
+        frames = [df.assign(_model=m) for m, df in pool.items() if "main" in df.columns]
+        if not frames:
+            continue
+        full = pd.concat(frames, ignore_index=True)
+        for factor in DIFFICULTY_FACTORS:
+            if factor not in full.columns:
+                continue
+            bins, order = difficulty_bins(full, factor)
+            work = full.assign(_bin=bins)
+            for bin_label in order:
+                vals = work.loc[work["_bin"] == bin_label, "main"].dropna().astype(float)
+                n = int(vals.size)
+                if n == 0:
+                    continue
+                k = int(vals.sum())
+                acc = k / n
+                lo, hi = wilson_ci(k, n)
+                rows.append({
+                    "group": group,
+                    "subset": subset,
+                    "n_responders": len(frames),
+                    "factor": factor,
+                    "factor_name": factor_display(factor),
+                    "bin": bin_label,
+                    "accuracy": acc,
+                    "n_correct": k,
+                    "n": n,
+                    "binom_se": binom_se(acc, n),
+                    "ci_low_wilson": lo,
+                    "ci_high_wilson": hi,
+                })
+    return pd.DataFrame(rows)
+
+
 def difficulty_bins(df: pd.DataFrame, factor: str) -> tuple[pd.Series, list[str]]:
     """Return paper-style bin labels and their display order for one factor."""
 
@@ -1560,7 +1609,8 @@ def run_analysis(input_dir: Path, output_dir: Path, groups: list[str]) -> None:
         text_acc = task_accuracy_table(loaded["text"], "text")
         text_acc.to_csv(table_dir / "table_06_text_task_accuracy.csv", index=False)
         summary_table(loaded["text"], text_acc, "text").to_csv(table_dir / "table_01_text_summary.csv", index=False)
-        difficulty_bin_table(loaded["text"], "text").to_csv(table_dir / "table_09_text_difficulty_bins.csv", index=False)
+        difficulty_bin_table(loaded["text"], "text").to_csv(table_dir / "figure_06_text_difficulty_bins.csv", index=False)
+        pooled_difficulty_bin_table(loaded["text"], "text").to_csv(table_dir / "table_09_text_difficulty_bins.csv", index=False)
         e1a_table(loaded["text"], "text").to_csv(table_dir / "figure_07_text_summation_mechanism.csv", index=False)
         composition_table(loaded["text"], "text").to_csv(table_dir / "figure_22_text_composition_diagnostics.csv", index=False)
         object_accuracy_table(loaded["text"], "text").to_csv(table_dir / "figure_20_text_object_accuracy.csv", index=False)
@@ -1696,7 +1746,7 @@ def render_all_figures(output_dir: Path) -> None:
     table_dir, figure_dir = ensure_dirs(output_dir)
     render_paper_task_accuracy(table_dir / "table_06_text_task_accuracy.csv", figure_dir / "figure_04_text_task_accuracy.png", value_col="accuracy")
     render_wrong_answer_heatmap(table_dir / "figure_05_mcq5_wrong_answer_preferences.csv", figure_dir / "figure_05_mcq5_wrong_answer_preferences.png")
-    render_paper_difficulty(table_dir / "table_09_text_difficulty_bins.csv", figure_dir / "figure_06_text_difficulty_controls.png", value_col="accuracy")
+    render_paper_difficulty(table_dir / "figure_06_text_difficulty_bins.csv", figure_dir / "figure_06_text_difficulty_controls.png", value_col="accuracy")
     render_paper_e1a(table_dir / "figure_07_text_summation_mechanism.csv", figure_dir / "figure_07_text_summation_mechanism.png")
     render_correlation_heatmap(table_dir / "figure_13_text_mental_rotation_correlations.csv", figure_dir / "figure_13_text_mental_rotation_correlations.png")
     render_bundle_bars(table_dir / "figure_14_text_bundle_correlations.csv", figure_dir / "figure_14_text_bundle_correlations.png")
