@@ -21,6 +21,8 @@ Method (matches the reference analysis):
     responder's marginal accuracy), with Benjamini-Hochberg FDR across relations.
   - joint relation integrity I(P1 & P2 -> C) = P(P1=1 & P2=1 | C=1), the stricter
     conjunction variant of the per-edge integrity averaged in Table 1.
+  - per-edge integrity I(P -> C) = P(P=1 | C=1), the Internal Referential Chain
+    edge-pass rate, and the perfect-chain rate, per responder.
   - bundle-to-Main coupling r_ws = within-``view`` demeaned (fixed-effect)
     Pearson correlation between the bundle score (fraction of bundle tasks
     correct) and Object Counting.
@@ -399,6 +401,52 @@ def joint_integrity_table(data: dict[str, pd.DataFrame], modality: str = "text")
     return pd.DataFrame(rows)
 
 
+def edge_pass_table(data: dict[str, pd.DataFrame], modality: str = "text") -> pd.DataFrame:
+    """Per-responder edge integrity, chain edge-pass rate, and perfect-chain rate.
+
+    One row per (responder, measure, relation), long format:
+      - ``edge_integrity``: I(P -> C) = P(P=1 | C=1) for every pre-specified edge,
+        the per-edge quantity averaged in the summary tables' support columns.
+      - ``chain_edge_pass``: the Internal Referential Chain pooled over its two
+        edges (one minus violations / testable edges), the summary tables' Chain
+        column before any chance adjustment.
+      - ``perfect_chain``: among rows where at least one chain edge is testable
+        (its dependent task correct), the share with no violated chain edge.
+    Values are raw proportions (no MCQ chance adjustment). ``n`` is the
+    conditioning count; a measure with n = 0 is undefined and reported as NaN.
+    """
+    chain = [(p, c) for p, c, g in UNARY_EDGES if g == "Internal Referential Chain"]
+    rows = []
+    for name, df in data.items():
+        def add(measure, relation, group, value, n):
+            rows.append({"modality": modality, "model": name, "measure": measure,
+                         "relation": relation, "group": group, "value": value, "n": int(n)})
+
+        for p, c, grp in UNARY_EDGES:
+            if p not in df.columns or c not in df.columns:
+                continue
+            sub = df[[p, c]].dropna()
+            sub = sub[sub[c] == 1]
+            add("edge_integrity", f"{p}->{c}", grp,
+                float(sub[p].mean()) if len(sub) else np.nan, len(sub))
+        if not all(p in df.columns and c in df.columns for p, c in chain):
+            continue
+        d = df[sorted({t for e in chain for t in e})].dropna()
+        testable = np.zeros(len(d), dtype=int)
+        violated = np.zeros(len(d), dtype=int)
+        for p, c in chain:
+            t = (d[c] == 1).to_numpy()
+            testable += t
+            violated += t & (d[p] == 0).to_numpy()
+        n_edges, n_rows = int(testable.sum()), int((testable > 0).sum())
+        relation = "->".join([chain[0][0]] + [c for _, c in chain])
+        add("chain_edge_pass", relation, "Internal Referential Chain",
+            1.0 - violated.sum() / n_edges if n_edges else np.nan, n_edges)
+        add("perfect_chain", relation, "Internal Referential Chain",
+            float((violated[testable > 0] == 0).mean()) if n_rows else np.nan, n_rows)
+    return pd.DataFrame(rows)
+
+
 # ---------------------------------------------------------------------------
 # Responder-controlled robustness (two-way scene + responder fixed effects)
 # ---------------------------------------------------------------------------
@@ -702,6 +750,7 @@ def main() -> None:
     lift = within_scene_lift_table(data, args.group, n_perm=args.n_perm, n_boot=args.n_boot)
     bundle = bundle_coupling_table(data, args.group)
     integrity = joint_integrity_table(data, args.group)
+    edge_pass = edge_pass_table(data, args.group)
     resp = responder_controlled_lift_table(data, args.group, n_boot=args.n_boot_fe)
     per_resp = per_responder_lift_table(data, args.group)
     coup2 = bundle_coupling_twoway_table(data, args.group)
@@ -712,6 +761,7 @@ def main() -> None:
     lift.to_csv(args.output_dir / f"tableF_within_scene_lift_{args.group}.csv", index=False)
     bundle.to_csv(args.output_dir / f"tableF_bundle_coupling_{args.group}.csv", index=False)
     integrity.to_csv(args.output_dir / f"tableF_joint_integrity_{args.group}.csv", index=False)
+    edge_pass.to_csv(args.output_dir / f"tableF_edge_pass_{args.group}.csv", index=False)
     resp.to_csv(args.output_dir / f"tableF_responder_controlled_lift_{args.group}.csv", index=False)
     per_resp.to_csv(args.output_dir / f"tableF_per_responder_lift_{args.group}.csv", index=False)
     coup2.to_csv(args.output_dir / f"tableF_bundle_coupling_twoway_{args.group}.csv", index=False)

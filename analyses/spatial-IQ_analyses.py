@@ -166,14 +166,26 @@ PAPER_OUTPUTS: list[PaperOutput] = [
     # Appendix F ("Full Hierarchy Dependency Analysis") is reported in prose in the
     # paper; these tables carry the underlying numbers. Computed by
     # hierarchy_dependency.py, which the analysis stage calls directly.
-    PaperOutput("Appendix F", "table", "Per-edge and joint within-scene lifts", "generated", "tables/tableF_within_scene_lift_text.csv"),
-    PaperOutput("Appendix F", "table", "Joint relation integrity per responder", "generated", "tables/tableF_joint_integrity_text.csv",
-                notes="Hidden-Count Hierarchy uses Support Column (S8), as pre-specified in Fig. 3"),
-    PaperOutput("Appendix F", "table", "Bundle-to-Object-Counting within-scene coupling", "generated", "tables/tableF_bundle_coupling_text.csv"),
-    PaperOutput("Appendix F", "table", "Responder-controlled lift (two-way scene + responder FE)", "generated", "tables/tableF_responder_controlled_lift_text.csv",
+    # The Hidden-Count Hierarchy uses Support Column (S8), as pre-specified in Fig. 3.
+    PaperOutput("Appendix F.1", "table", "Text: per-edge and joint within-scene lifts", "generated", "tables/tableF_within_scene_lift_text.csv"),
+    PaperOutput("Appendix F.1", "table", "Text: joint relation integrity per responder", "generated", "tables/tableF_joint_integrity_text.csv"),
+    PaperOutput("Appendix F.1", "table", "Text: edge integrity, chain edge-pass and perfect-chain rates", "generated", "tables/tableF_edge_pass_text.csv"),
+    PaperOutput("Appendix F.1", "table", "Text: bundle-to-Object-Counting within-scene coupling", "generated", "tables/tableF_bundle_coupling_text.csv"),
+    PaperOutput("Appendix F.1", "table", "Text: responder-controlled lift (two-way scene + responder FE)", "generated", "tables/tableF_responder_controlled_lift_text.csv",
                 notes="subset column: all responders and models-only (human baseline dropped)"),
-    PaperOutput("Appendix F", "table", "Per-responder marginal lift with cell sizes and exclusions", "generated", "tables/tableF_per_responder_lift_text.csv"),
-    PaperOutput("Appendix F", "table", "Bundle coupling, scene versus scene+responder demeaned", "generated", "tables/tableF_bundle_coupling_twoway_text.csv"),
+    PaperOutput("Appendix F.1", "table", "Text: per-responder marginal lift with cell sizes and exclusions", "generated", "tables/tableF_per_responder_lift_text.csv"),
+    PaperOutput("Appendix F.1", "table", "Text: bundle coupling, scene versus scene+responder demeaned", "generated", "tables/tableF_bundle_coupling_twoway_text.csv"),
+    PaperOutput("Appendix F.2", "table", "MCQ: per-edge and joint within-scene lifts", "generated", "tables/tableF_within_scene_lift_mcq345.csv",
+                notes="answer_set column: all (pooled, as in F.2), 3CQ, 4CQ, 5CQ"),
+    PaperOutput("Appendix F.2", "table", "MCQ: joint relation integrity per responder", "generated", "tables/tableF_joint_integrity_mcq345.csv"),
+    PaperOutput("Appendix F.2", "table", "MCQ: edge integrity, chain edge-pass and perfect-chain rates", "generated", "tables/tableF_edge_pass_mcq345.csv",
+                notes="raw proportions, not chance-adjusted"),
+    PaperOutput("Appendix F.2", "table", "MCQ: bundle-to-Object-Counting within-scene coupling", "generated", "tables/tableF_bundle_coupling_mcq345.csv",
+                notes="answer_set column: all (pooled, as in F.2), 3CQ, 4CQ, 5CQ"),
+    PaperOutput("Appendix F.3", "table", "Image: per-edge and joint within-scene lifts", "generated", "tables/tableF_within_scene_lift_image.csv"),
+    PaperOutput("Appendix F.3", "table", "Image: joint relation integrity per responder", "generated", "tables/tableF_joint_integrity_image.csv"),
+    PaperOutput("Appendix F.3", "table", "Image: edge integrity, chain edge-pass and perfect-chain rates", "generated", "tables/tableF_edge_pass_image.csv"),
+    PaperOutput("Appendix F.3", "table", "Image: bundle-to-Object-Counting within-scene coupling", "generated", "tables/tableF_bundle_coupling_image.csv"),
     PaperOutput("Table 6", "table", "All-pairs McNemar significance on Object Counting", "generated", "tables/table6_mcnemar_object_counting_text.csv"),
 ]
 
@@ -1606,14 +1618,32 @@ def export_hierarchy_dependency_tables(data: ModelResults, table_dir: Path, grou
     exporters = {
         f"tableF_within_scene_lift_{group}.csv": hdep.within_scene_lift_table,
         f"tableF_joint_integrity_{group}.csv": hdep.joint_integrity_table,
+        f"tableF_edge_pass_{group}.csv": hdep.edge_pass_table,
         f"tableF_bundle_coupling_{group}.csv": hdep.bundle_coupling_table,
-        f"tableF_responder_controlled_lift_{group}.csv": hdep.responder_controlled_lift_table,
-        f"tableF_per_responder_lift_{group}.csv": hdep.per_responder_lift_table,
-        f"tableF_bundle_coupling_twoway_{group}.csv": hdep.bundle_coupling_twoway_table,
-        f"table6_mcnemar_object_counting_{group}.csv": hdep.mcnemar_main_table,
     }
+    if group == "text":
+        # Responder-controlled robustness and the Table 6 McNemar tests are
+        # reported for the text modality only.
+        exporters.update({
+            f"tableF_responder_controlled_lift_{group}.csv": hdep.responder_controlled_lift_table,
+            f"tableF_per_responder_lift_{group}.csv": hdep.per_responder_lift_table,
+            f"tableF_bundle_coupling_twoway_{group}.csv": hdep.bundle_coupling_twoway_table,
+            f"table6_mcnemar_object_counting_{group}.csv": hdep.mcnemar_main_table,
+        })
+    # Appendix F.2 pools every mixed-CQ responder (and the 5CQ human baseline);
+    # the per-answer-set pools let the 3/4/5-choice conditions be read separately.
+    subsets = [("all", data)]
+    if group == "mcq345":
+        for k in (3, 4, 5):
+            subsets.append((f"{k}CQ", {m: df for m, df in data.items() if choice_count(m) == k}))
     for filename, exporter in exporters.items():
-        exporter(data, group).to_csv(table_dir / filename, index=False)
+        frames = []
+        for subset_name, subset in subsets:
+            out = exporter(subset, group)
+            if len(subsets) > 1 and not out.empty:
+                out.insert(1, "answer_set", subset_name)
+            frames.append(out)
+        pd.concat(frames, ignore_index=True).to_csv(table_dir / filename, index=False)
 
 
 def run_analysis(input_dir: Path, output_dir: Path, groups: list[str]) -> None:
@@ -1651,6 +1681,7 @@ def run_analysis(input_dir: Path, output_dir: Path, groups: list[str]) -> None:
         summary_table(loaded["mcq345"], mcq345_acc, "mcq345").to_csv(table_dir / "table_02_mcq_summary.csv", index=False)
         wrong_answer_table(loaded["mcq345"], "mcq345").to_csv(table_dir / "figure_16_mcq345_wrong_answer_preferences.csv", index=False)
         e1a_table(loaded["mcq345"], "mcq345").to_csv(table_dir / "figure_23_mcq345_summation_mechanism.csv", index=False)
+        export_hierarchy_dependency_tables(loaded["mcq345"], table_dir, "mcq345")
 
     if "image" in loaded:
         image_acc = task_accuracy_table(loaded["image"], "image")
@@ -1658,6 +1689,7 @@ def run_analysis(input_dir: Path, output_dir: Path, groups: list[str]) -> None:
         summary_table(loaded["image"], image_acc, "image").to_csv(table_dir / "table_03_image_summary.csv", index=False)
         difficulty_bin_table(loaded["image"], "image").to_csv(table_dir / "figure_19_image_difficulty_bins.csv", index=False)
         e1a_table(loaded["image"], "image").to_csv(table_dir / "figure_24_image_summation_mechanism.csv", index=False)
+        export_hierarchy_dependency_tables(loaded["image"], table_dir, "image")
 
     if "trained_text" in loaded:
         trained_acc = task_accuracy_table(loaded["trained_text"], "trained_text")
