@@ -231,19 +231,38 @@ TASK_LONG_NAME = {
     "task11": "Mental Rotation 180",
 }
 
+# Table 5: condensed query text per task, as printed in the paper. The full
+# prompts (with definitions and answer-format instructions) are the
+# inference/prompt_*_Type1.json files. Hidden Object Count (S9) counts the
+# visible objects resting directly on a hidden object, in every modality.
 TASK_QUERY_TEXT = {
-    "task1": "What object category composes the stacked structure?",
-    "task9": "How many non-laterally-adjacent clusters of objects are present?",
-    "task3": "How many columns are in the stacked structure?",
-    "task4": "How many horizontal layers are in the stacked structure?",
-    "task5": "How many visible objects are present?",
-    "task2": "How many objects are in the top-most layer?",
-    "task6": "How many visible objects directly support the top-most object(s)?",
-    "task7": "How many visible objects are in columns supporting the top-most object(s)?",
-    "task8": "How many hidden objects must exist to support the visible structure?",
-    "main": "How many objects are in the stacked structure in total?",
-    "task10": "Which objects are visible in the adjacent view but not the reference view?",
-    "task11": "Which objects are visible in the opposite view but not the reference view?",
+    "task1": "What type of object(s) make up the structure at the center of the image? Give the object type name only.",
+    "task9": "How many distinct clusters are there in the object structure?",
+    "task3": "How many columns are in the object structure?",
+    "task4": "How many layers are in the object structure?",
+    "task5": "How many VISIBLE objects are there in the object structure?",
+    "task2": "How many objects are in the top-most layer of the whole structure?",
+    "task6": "How many VISIBLE OBJECTS are directly supporting the top-most object(s)? Answer 0 if all columns have height 1.",
+    "task7": "How many VISIBLE OBJECTS are in the column(s) that contain the top-most object(s), excluding the top-most object(s) themselves?",
+    "task8": "For each inferred HIDDEN OBJECT, identify the single VISIBLE OBJECT in immediate contact directly above it. How many such visible objects are there?",
+    "main": "How many TOTAL objects are present in the object structure?",
+    "task10": "Given two views of the same structure, how many objects are visible in the second view but not the first?",
+    "task11": "Given two views of the same structure, how many objects are visible in the second view but not the first?",
+}
+
+TASK_IMAGE_INSTRUCTION = {
+    "task1": "Color the structure with a unique color.",
+    "task9": "Color each distinct cluster with a unique color.",
+    "task3": "Color all objects within each column with a new unique color.",
+    "task4": "Color all objects within each layer with a new unique color.",
+    "task5": "Color each object with a new unique color.",
+    "task2": "Color the top-most object(s) with a unique color.",
+    "task6": "Color the object(s) directly supporting the top-most object(s).",
+    "task7": "Color all objects in the column(s) that contain the top-most object(s), excluding the top-most object(s) themselves.",
+    "task8": "Color each VISIBLE OBJECT in immediate contact directly above a HIDDEN OBJECT.",
+    "main": "Generate an image with the integer answer in black on a white background.",
+    "task10": "Color all objects visible in the second view but not the first.",
+    "task11": "Color all objects visible in the second view but not the first.",
 }
 
 # Public task IDs in the paper are not the same as the raw CSV column numbers.
@@ -845,6 +864,7 @@ def export_task_query_table(table_dir: Path) -> None:
             "source_task": task,
             "task_name": TASK_LONG_NAME[task],
             "query_text": TASK_QUERY_TEXT[task],
+            "image_editing_instruction": TASK_IMAGE_INSTRUCTION[task],
         })
     pd.DataFrame(rows).to_csv(table_dir / "table_05_task_queries.csv", index=False)
 
@@ -859,13 +879,13 @@ def paper_task_id(task: str) -> str:
     """Convert an internal raw task column into the paper-facing task ID."""
 
     if task in PAPER_SUBTASK_NUMBER:
-        return f"Task{PAPER_SUBTASK_NUMBER[task]}"
+        return f"S{PAPER_SUBTASK_NUMBER[task]}"
     if task == "main":
-        return "Target1"
+        return "T1"
     if task == "task10":
-        return "Target2a"
+        return "T2-90"
     if task == "task11":
-        return "Target2b"
+        return "T2-180"
     return task
 
 
