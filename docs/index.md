@@ -142,7 +142,7 @@ We evaluate frontier proprietary text-output models (Gemini 3 Pro, GPT 5.4, Clau
 **Figure 4.** Per-task accuracy in the text free-response modality, ordered according to our task taxonomy. Humans (black) perform well above all current models on *Object Counting*, while model performance varies by an order of magnitude. Models are shown in order of *Object Counting* performance.
 ```
 
-**The target task is solvable by humans and meaningfully ranks models.** Humans reach **82.1%** on *Object Counting*, demonstrating that the task is solvable yet not at ceiling. The performance spread distinguishes humans from models without saturating: humans sit well above the best model (Qwen, **17.7%**), which in turn outperforms the worst model by an order of magnitude (Qwen2.5-3B, 2.1%). All consecutive differences between adjacent models are statistically significant under paired McNemar tests with multiple-comparisons correction.
+**The target task is solvable by humans and meaningfully ranks models.** Humans reach **82.1%** on *Object Counting*, demonstrating that the task is solvable yet not at ceiling. The performance spread distinguishes humans from models without saturating: humans sit well above the best model (Qwen, **17.7%**), which in turn outperforms the worst model by an order of magnitude (Qwen2.5-3B, 2.1%). Paired McNemar tests with multiple-comparisons correction separate most adjacent models; near-tied models (Gemini, Claude and Kimi; VLA-0 and GLM) are not statistically distinguishable.
 
 ```{figure} _static/figures/wrong_answer_mcp.png
 :class: siq-figure-img
@@ -206,7 +206,7 @@ Three observations emerge:
 
 1. **The human baseline shows the empirical signature of the Summation Mechanism.** *Object Counting* accuracy is concentrated in the both-correct cell (90.6%) and decays monotonically as either component count is missed, with a Summation Mechanism exact-match rate of 69.1%.
 2. **Model recovery of the Summation Mechanism is uneven and partially independent of headline accuracy.** Qwen most closely approximates the human signature (88.9% in both-correct, 64.2% exact match). Gemini reaches comparable headline accuracy through a markedly weaker mechanism (48.0% / 18.6%). *Object Counting* accuracy and Summation Mechanism strength are not the same property.
-3. **The pre-specified hierarchy is largely preserved.** Model rows preserve the qualitative ordering observed in humans: the *Internal Referential Chain* is consistently cleaner than the *Visible* and *Hidden Support Hierarchies*. VLA-0 outperforms its Qwen3B backbone across the support relations despite being trained only on robot trajectories — hinting that action-grounded training transfers positively to spatial reasoning.
+3. **The pre-specified hierarchy is largely preserved.** Model rows largely preserve the qualitative ordering observed in humans: the *Internal Referential Chain* is cleaner than the *Hidden Support Hierarchy* for every model, and cleaner than the *Visible Support Hierarchy* for most. VLA-0 outperforms its Qwen3B backbone across the support relations despite being trained only on robot trajectories — hinting that action-grounded training transfers positively to spatial reasoning.
 
 ### Multiple-choice modality
 
@@ -240,47 +240,47 @@ Under five-choice MCQ, every model collapses to chance on *Object Counting* whil
   <tbody>
     <tr class="siq-human"><td>Human</td>
       <td>&mdash;</td><td>&mdash;</td><td>82.7</td>
-      <td>&mdash;</td><td>&mdash;</td><td>97.0</td>
+      <td>&mdash;</td><td>&mdash;</td><td>98.2</td>
       <td>&mdash;</td><td>&mdash;</td><td>99.3</td>
-      <td>&mdash;</td><td>&mdash;</td><td>99.3</td>
+      <td>&mdash;</td><td>&mdash;</td><td>95.6</td>
       <td>&mdash;</td><td>&mdash;</td><td>89.3</td>
-      <td>&mdash;</td><td>&mdash;</td><td>89.6</td>
+      <td>&mdash;</td><td>&mdash;</td><td>94.8</td>
       <td>&mdash;</td><td>&mdash;</td><td>83.6</td>
     </tr>
     <tr class="siq-divider"><td>Claude</td>
       <td class="siq-rank-1">23.7</td><td class="siq-rank-1">17.8</td><td>0.0</td>
-      <td class="siq-rank-1">40.7</td><td class="siq-rank-2">33.3</td><td class="siq-rank-2">25.0</td>
+      <td class="siq-rank-1">30.4</td><td class="siq-rank-1">28.0</td><td class="siq-rank-1">22.8</td>
       <td class="siq-rank-2">44.6</td><td class="siq-rank-1">43.6</td><td class="siq-rank-1">40.7</td>
-      <td class="siq-rank-2">44.7</td><td class="siq-rank-1">43.8</td><td class="siq-rank-1">40.4</td>
+      <td class="siq-rank-2">16.2</td><td class="siq-rank-2">19.2</td><td class="siq-rank-2">18.1</td>
       <td>8.0</td><td class="siq-rank-2">10.7</td><td>11.7</td>
-      <td>5.3</td><td>10.6</td><td class="siq-rank-2">12.7</td>
+      <td class="siq-rank-2">20.3</td><td class="siq-rank-1">23.8</td><td class="siq-rank-1">20.4</td>
       <td class="siq-rank-1">26.8</td><td class="siq-rank-1">26.1</td><td>&minus;2.2</td>
     </tr>
     <tr><td>Gemini</td>
       <td>14.0</td><td>12.8</td><td>&minus;0.6</td>
-      <td class="siq-rank-2">38.0</td><td>24.2</td><td>21.3</td>
+      <td class="siq-rank-2">29.1</td><td class="siq-rank-2">21.0</td><td>19.8</td>
       <td class="siq-rank-1">45.9</td><td class="siq-rank-2">35.6</td><td class="siq-rank-2">32.6</td>
-      <td class="siq-rank-1">47.3</td><td class="siq-rank-2">36.6</td><td class="siq-rank-2">37.8</td>
+      <td class="siq-rank-1">32.3</td><td class="siq-rank-1">21.8</td><td class="siq-rank-1">26.2</td>
       <td class="siq-rank-1">21.9</td><td class="siq-rank-1">17.7</td><td class="siq-rank-1">14.1</td>
-      <td class="siq-rank-1">22.9</td><td class="siq-rank-1">18.8</td><td class="siq-rank-1">17.0</td>
+      <td class="siq-rank-1">26.3</td><td>16.8</td><td>16.1</td>
       <td class="siq-rank-2">21.4</td><td class="siq-rank-2">20.0</td><td>&minus;2.9</td>
     </tr>
     <tr><td>GPT</td>
       <td>7.9</td><td>5.9</td><td class="siq-rank-1">0.9</td>
-      <td>36.7</td><td class="siq-rank-1">34.6</td><td class="siq-rank-1">35.4</td>
+      <td>17.3</td><td>19.8</td><td class="siq-rank-2">21.1</td>
       <td>42.1</td><td>24.3</td><td>24.0</td>
-      <td>42.0</td><td>25.0</td><td>23.6</td>
+      <td>12.3</td><td>7.7</td><td>9.2</td>
       <td class="siq-rank-2">15.0</td><td>10.4</td><td class="siq-rank-2">12.6</td>
-      <td class="siq-rank-2">13.9</td><td class="siq-rank-2">11.1</td><td>12.3</td>
+      <td>16.6</td><td class="siq-rank-2">19.0</td><td class="siq-rank-2">17.5</td>
       <td>12.9</td><td>16.9</td><td class="siq-rank-1">2.2</td>
     </tr>
     <tr><td>Qwen</td>
       <td class="siq-rank-2">20.5</td><td class="siq-rank-2">14.8</td><td class="siq-rank-2">0.2</td>
-      <td>32.0</td><td>21.6</td><td>10.2</td>
+      <td>23.7</td><td>16.4</td><td>11.1</td>
       <td>36.5</td><td>17.3</td><td>8.0</td>
-      <td>34.4</td><td>16.7</td><td>7.3</td>
+      <td>1.5</td><td>&minus;2.5</td><td>&minus;1.5</td>
       <td>&minus;20.9</td><td>&minus;12.6</td><td>&minus;2.0</td>
-      <td>&minus;20.6</td><td>&minus;13.1</td><td>&minus;1.6</td>
+      <td>14.8</td><td>8.7</td><td>6.4</td>
       <td>7.4</td><td>5.7</td><td class="siq-rank-2">1.0</td>
     </tr>
   </tbody>
@@ -326,7 +326,7 @@ The structure of the benchmark suggests a natural training signal: a model train
 - **DAPO-tight** — brief SFT warmup on 10% of the training data, followed by RL with verifiable rewards (GRPO under the DAPO recipe) on the remaining 90%.
 
 ```{raw} html
-<div class="siq-table-caption"><span class="siq-fig-label">Table 4.</span> Trained Qwen2.5-VL checkpoints, text modality (% accuracy). Values in parentheses are absolute point gains over the corresponding zero-shot backbone. Per-column rankings within each scale group (humans excluded; zero-shot baselines included): <span style="background:#8cb4ff;padding:0 4px;">first</span>, <span style="background:#bed7ff;padding:0 4px;">second</span>.</div>
+<div class="siq-table-caption"><span class="siq-fig-label">Table 4.</span> Trained Qwen2.5-VL checkpoints, text modality (% accuracy). Values in parentheses are absolute point gains over the corresponding zero-shot backbone. n/a: undefined, because the relation's dependent sub-task is never answered correctly (SFT-plain never answers Direct Support, Support Column or Hidden Object Count correctly). Per-column rankings within each scale group (humans excluded; zero-shot baselines included): <span style="background:#8cb4ff;padding:0 4px;">first</span>, <span style="background:#bed7ff;padding:0 4px;">second</span>.</div>
 <div class="siq-table-wrap">
 <table class="siq-table">
   <thead>
@@ -345,66 +345,66 @@ The structure of the benchmark suggests a natural training signal: a model train
     <tr class="siq-human"><td>Human</td><td>82.1</td><td>90.1</td><td>76.8</td><td>84.5</td><td>79.9</td><td>78.5</td><td>69.1</td></tr>
     <tr class="siq-divider"><td>DAPO-tight 7B</td>
       <td class="siq-rank-1">50.7 <small>(+46.4)</small></td>
-      <td class="siq-rank-1">93.7 <small>(+45.6)</small></td>
+      <td class="siq-rank-1">98.8 <small>(+50.7)</small></td>
       <td class="siq-rank-1">51.7 <small>(+48.3)</small></td>
-      <td class="siq-rank-2">66.9 <small>(+65.6)</small></td>
+      <td class="siq-rank-1">87.5 <small>(+79.2)</small></td>
       <td class="siq-rank-2">76.0 <small>(+30.7)</small></td>
-      <td class="siq-rank-1">85.5 <small>(+28.9)</small></td>
+      <td class="siq-rank-1">74.9 <small>(+55.5)</small></td>
       <td class="siq-rank-1">90.0 <small>(+45.3)</small></td>
     </tr>
     <tr><td>SFT-CoT 7B</td>
       <td class="siq-rank-2">40.8 <small>(+36.5)</small></td>
-      <td class="siq-rank-1">93.7 <small>(+45.6)</small></td>
+      <td class="siq-rank-2">97.8 <small>(+49.7)</small></td>
       <td class="siq-rank-2">41.9 <small>(+38.5)</small></td>
-      <td>60.5 <small>(+59.2)</small></td>
+      <td class="siq-rank-2">85.0 <small>(+76.7)</small></td>
       <td class="siq-rank-1">76.7 <small>(+31.4)</small></td>
-      <td class="siq-rank-2">85.2 <small>(+28.6)</small></td>
+      <td class="siq-rank-2">68.3 <small>(+48.9)</small></td>
       <td class="siq-rank-2">89.6 <small>(+44.9)</small></td>
     </tr>
     <tr><td>SFT-plain 7B</td>
       <td>39.7 <small>(+35.4)</small></td>
-      <td>0.0 <small>(&minus;48.1)</small></td>
+      <td>n/a</td>
       <td>29.2 <small>(+25.8)</small></td>
-      <td class="siq-rank-1">80.3 <small>(+79.0)</small></td>
+      <td>7.9 <small>(&minus;0.4)</small></td>
       <td>0.0 <small>(&minus;45.3)</small></td>
-      <td>0.0 <small>(&minus;56.6)</small></td>
+      <td>n/a</td>
       <td>0.0 <small>(&minus;44.7)</small></td>
     </tr>
-    <tr><td>Qwen2.5-VL-7B (zero-shot)</td><td>4.3</td><td>48.1</td><td>3.4</td><td>1.3</td><td>45.3</td><td>56.6</td><td>44.7</td></tr>
+    <tr><td>Qwen2.5-VL-7B (zero-shot)</td><td>4.3</td><td>48.1</td><td>3.4</td><td>8.3</td><td>45.3</td><td>19.4</td><td>44.7</td></tr>
     <tr class="siq-divider"><td>DAPO-tight 32B</td>
       <td class="siq-rank-1">62.6 <small>(+59.7)</small></td>
-      <td class="siq-rank-2">95.0 <small>(+53.9)</small></td>
+      <td class="siq-rank-1">99.3 <small>(+60.5)</small></td>
       <td class="siq-rank-1">64.5 <small>(+62.6)</small></td>
-      <td class="siq-rank-2">73.7 <small>(+62.3)</small></td>
+      <td class="siq-rank-2">88.4 <small>(+67.7)</small></td>
       <td class="siq-rank-2">78.2 <small>(+27.8)</small></td>
-      <td class="siq-rank-1">86.1 <small>(+5.8)</small></td>
+      <td class="siq-rank-1">82.1 <small>(+61.5)</small></td>
       <td class="siq-rank-1">93.3 <small>(+42.3)</small></td>
     </tr>
     <tr><td>SFT-CoT 32B</td>
       <td class="siq-rank-2">46.7 <small>(+43.8)</small></td>
-      <td class="siq-rank-1">95.5 <small>(+54.4)</small></td>
+      <td class="siq-rank-2">99.2 <small>(+60.4)</small></td>
       <td class="siq-rank-2">48.9 <small>(+47.0)</small></td>
-      <td>61.3 <small>(+49.9)</small></td>
+      <td class="siq-rank-1">89.7 <small>(+69.0)</small></td>
       <td class="siq-rank-1">79.2 <small>(+28.8)</small></td>
-      <td class="siq-rank-2">85.7 <small>(+5.4)</small></td>
+      <td class="siq-rank-2">77.2 <small>(+56.6)</small></td>
       <td class="siq-rank-2">92.9 <small>(+41.9)</small></td>
     </tr>
     <tr><td>SFT-plain 32B</td>
       <td>40.1 <small>(+37.2)</small></td>
-      <td>0.0 <small>(&minus;41.1)</small></td>
+      <td>n/a</td>
       <td>30.9 <small>(+29.0)</small></td>
-      <td class="siq-rank-1">85.0 <small>(+73.6)</small></td>
+      <td>9.8 <small>(&minus;10.9)</small></td>
       <td>0.0 <small>(&minus;50.4)</small></td>
-      <td>0.0 <small>(&minus;80.3)</small></td>
+      <td>n/a</td>
       <td>0.0 <small>(&minus;51.0)</small></td>
     </tr>
-    <tr><td>Qwen2.5-VL-32B (zero-shot)</td><td>2.9</td><td>41.1</td><td>1.9</td><td>11.4</td><td>50.4</td><td>80.3</td><td>51.0</td></tr>
+    <tr><td>Qwen2.5-VL-32B (zero-shot)</td><td>2.9</td><td>38.8</td><td>1.9</td><td>20.7</td><td>50.4</td><td>20.6</td><td>51.0</td></tr>
   </tbody>
 </table>
 </div>
 ```
 
-**Sub-task decomposition is a real training signal, and the gain compounds with scale.** At 7B, SFT-CoT and SFT-plain are nearly tied on *Object Counting* (1.1-pt gap), but at 32B the decomposition produces a 6.6-pt gap in its favor. More importantly, the two diverge sharply on the hierarchy columns: **SFT-plain collapses to zero** on *Internal Referential Chain*, *Hidden Support Hierarchy*, and *Summation Mechanism* — indicating it has learned a route to the right total that *bypasses the decomposition entirely*. SFT-CoT preserves all four hierarchy relations.
+**Sub-task decomposition is a real training signal, and the gain compounds with scale.** At 7B, SFT-CoT and SFT-plain are nearly tied on *Object Counting* (1.1-pt gap), but at 32B the decomposition produces a 6.6-pt gap in its favor. More importantly, the two diverge sharply on the hierarchy columns: **SFT-plain never answers** *Layer Count*, *Direct Support*, *Support Column* or *Hidden Object Count* correctly, so its *Internal Referential Chain* and *Hidden Support Hierarchy* are undefined, its *Visible Support Hierarchy* stays at or below the zero-shot backbone (7.9 vs 8.3 at 7B, 9.8 vs 20.7 at 32B), and its *Summation Mechanism* is 0 — it has learned a route to the right total that *bypasses the decomposition entirely*. SFT-CoT preserves all four hierarchy relations.
 
 **RL with verifiable rewards adds substantial gain on top of SFT-CoT.** DAPO-tight beats SFT-CoT by 9.9 absolute points at 7B and 15.9 at 32B, with the 32B DAPO-tight model reaching **62.6%** *Object Counting* accuracy where the zero-shot backbone achieved 2.9%. The reward signal is on the integer total only, so these gains come from sharpening the policy onto chain-of-thought trajectories that lead to correct totals — not from new sub-task supervision.
 
@@ -420,7 +420,7 @@ The motivation, benchmark design, evaluation results, and training results above
 
 2. **Current MLLMs do *not* automatically inherit this structure — target-task performance and hierarchy adherence dissociate.** Qwen and Gemini sit within a few points of each other on raw *Object Counting* (17.7% vs 14.8%), yet their Summation Mechanism exact-match rates differ by more than 3× (64.2% vs 18.6%). A model can hit the integer by shortcut.
 
-3. **Forcing the hierarchy during training installs the missing structure; bypassing it caps the gain.** At 32B, **SFT-plain** reaches 40.1% but collapses to **0%** on the Internal Referential Chain / Hidden Support / Summation Mechanism. **SFT-CoT** preserves all four hierarchy relations and reaches 46.7%; **DAPO-tight** reaches **62.6%** with the chain intact (Internal Referential Chain 95.0%, Summation Mechanism 93.3%). The reward never names the sub-tasks — RL sharpens the policy onto chain-of-thought trajectories that lead to correct totals.
+3. **Forcing the hierarchy during training installs the missing structure; bypassing it caps the gain.** At 32B, **SFT-plain** reaches 40.1% without ever answering *Hidden Object Count* correctly: its Internal Referential Chain and Hidden Support relations are undefined and its Summation Mechanism is **0%**. **SFT-CoT** preserves all four hierarchy relations and reaches 46.7%; **DAPO-tight** reaches **62.6%** with the chain intact (Internal Referential Chain 99.3%, Summation Mechanism 93.3%). The reward never names the sub-tasks — RL sharpens the policy onto chain-of-thought trajectories that lead to correct totals.
 
 In humans, headline accuracy *implies* hierarchy adherence; in current MLLMs by default, it does not. The diagnostic dissociation (#2) and the causal training result (#3) tell the same story: teach a model the composition and the final integer follows; let it skip the composition and target-task accuracy caps at the level of a shortcut.
 
