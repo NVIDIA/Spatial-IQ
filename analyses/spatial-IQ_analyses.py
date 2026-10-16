@@ -456,9 +456,14 @@ def mean_ignore_nan(values: Iterable[float]) -> float:
 def relation_integrity(df: pd.DataFrame, parent: str, child: str, group: str, model: str) -> float:
     """Compute appendix-style relation integrity for one hierarchy edge.
 
-    Appendix F defines relation integrity as ``I(P -> C) = P(P=1 | C=1)``.
+    Appendix F defines relation integrity as ``I(P -> C) = P(P=1 | C=1)``: given
+    that the dependent (higher-level) task is answered correctly, how often is its
+    prerequisite also correct. Every summary table (1-4) uses this direction.
     MCQ summary tables place every column on a chance-adjusted scale, so for
     MCQ groups we apply the same chance adjustment to the conditional score.
+
+    The score is undefined (NaN) when the dependent task is never answered
+    correctly; summary tables report such cells as n/a rather than as 0.
     """
 
     if parent not in df.columns or child not in df.columns:
@@ -471,52 +476,26 @@ def relation_integrity(df: pd.DataFrame, parent: str, child: str, group: str, mo
     return chance_adjust(score, group, model) if group.startswith("mcq") else score
 
 
-# Two of the manuscript's summary tables take the relation conditional in the
-# other direction. Table 1 (text) and Table 3 (image) score a relation as
-# P(prerequisite correct | dependent correct), the definition given in Section 5
-# and Appendix F. Table 2 (multiple choice) and the trained-checkpoint rows of
-# Table 4 instead score P(dependent correct | prerequisite correct). Each table
-# is reproduced here as published; the revision unifies them on the Section 5
-# definition. Table 4's human row is the text-modality reference row, carried
-# over from Table 1, and so follows the text rule.
-def relation_direction(group: str, model: str) -> str:
-    """Which way round the relation conditional is taken for a summary row."""
-
-    if group == "mcq345":
-        return "dependent_given_prerequisite"
-    if group == "trained_text" and model != "human":
-        return "dependent_given_prerequisite"
-    return "prerequisite_given_dependent"
-
-
-def _edge_score(df: pd.DataFrame, parent: str, child: str, group: str, model: str, direction: str) -> float:
-    given, scored = (parent, child) if direction == "dependent_given_prerequisite" else (child, parent)
-    return relation_integrity(df, scored, given, group, model)
-
-
 def chain_integrity(df: pd.DataFrame, edges: list[tuple[str, str]], group: str, model: str) -> float:
     """Referential-chain integrity across the chain's edges.
 
-    Under the Section 5 definition the chain's edges have different numbers of
-    testable rows, so the score is pooled across them -- one minus the share of
-    violations among all rows where an edge's dependent task is correct -- rather
-    than averaged per edge. The dependent-conditioned tables average instead.
+    The chain's edges have different numbers of testable rows, so the score is
+    pooled across them -- one minus the share of violations among all rows where
+    an edge's dependent task is correct -- rather than averaged per edge. As in
+    ``support_integrity``, the relation is undefined if any edge is undefined, so
+    a chain score is never carried by a single edge.
     """
 
-    direction = relation_direction(group, model)
-    if direction == "dependent_given_prerequisite":
-        scores = [_edge_score(df, parent, child, group, model, direction) for parent, child in edges]
-        return mean_ignore_nan(scores)
     testable = violations = 0
     for parent, child in edges:
         if parent not in df.columns or child not in df.columns:
-            continue
+            return np.nan
         sub = df[[parent, child]].dropna()
         sub = sub[sub[child] == 1]
+        if sub.empty:
+            return np.nan
         testable += len(sub)
         violations += int((sub[parent] == 0).sum())
-    if testable == 0:
-        return np.nan
     score = 1.0 - violations / testable
     return chance_adjust(score, group, model) if group.startswith("mcq") else score
 
@@ -524,18 +503,13 @@ def chain_integrity(df: pd.DataFrame, edges: list[tuple[str, str]], group: str, 
 def support_integrity(df: pd.DataFrame, edges: list[tuple[str, str]], group: str, model: str) -> float:
     """Support-hierarchy integrity: the mean of the relation's per-edge scores.
 
-    Under the Section 5 definition both edges of a support relation condition on
-    the same dependent task, so they are estimable together or not at all, and a
-    relation with an undefined edge is reported as undefined rather than as a
-    score derived from the remaining edge. The dependent-conditioned tables
-    condition on the prerequisites, which are estimable separately, so there an
-    undefined edge is dropped and the remaining edge carries the relation.
+    Both edges of a support relation condition on the same dependent task, so
+    they are estimable together or not at all, and a relation with an undefined
+    edge is reported as undefined rather than as a score derived from the
+    remaining edge.
     """
 
-    direction = relation_direction(group, model)
-    scores = [_edge_score(df, parent, child, group, model, direction) for parent, child in edges]
-    if direction == "dependent_given_prerequisite":
-        return mean_ignore_nan(scores)
+    scores = [relation_integrity(df, parent, child, group, model) for parent, child in edges]
     if not scores or any(pd.isna(s) for s in scores):
         return np.nan
     return float(np.mean(scores))
