@@ -2012,9 +2012,15 @@ def render_paper_e1a(csv_path: Path, out_path: Path) -> None:
             for c_idx in range(2):
                 val = mat[r_idx, c_idx]
                 count = nmat[r_idx, c_idx]
-                val_for_color = 0.0 if not np.isfinite(val) else val
-                color = cmap(np.clip(val_for_color, 0, 1))
-                text_color = "white" if val_for_color > 0.6 else "black"
+                if not np.isfinite(val):
+                    # An empty cell has no conditional accuracy; draw it as n/a
+                    # rather than in the colour of a 0% cell.
+                    ax.add_patch(Rectangle((c_idx, 1 - r_idx), 1, 1, facecolor="white", edgecolor="black", lw=1, hatch="///"))
+                    ax.text(c_idx + 0.5, 1 - r_idx + 0.5, f"n/a\nn={count}", ha="center", va="center",
+                            fontsize=n_font_size, color="black", bbox=dict(facecolor="white", edgecolor="none", pad=1.0))
+                    continue
+                color = cmap(np.clip(val, 0, 1))
+                text_color = "white" if val > 0.6 else "black"
                 ax.add_patch(Rectangle((c_idx, 1 - r_idx), 1, 1, facecolor=color, edgecolor="black", lw=1))
                 if np.isfinite(val):
                     ax.text(
@@ -2199,6 +2205,11 @@ def render_e1a(csv_path: Path, out_path: Path) -> None:
             for c in range(2):
                 if np.isfinite(mat[r, c]):
                     ax.text(c, r, f"{mat[r,c]:.0%}\nn={nmat[r,c]}", ha="center", va="center", fontsize=5.0)
+                else:
+                    # Empty cell: no conditional accuracy to show.
+                    ax.add_patch(Rectangle((c - 0.5, r - 0.5), 1, 1, facecolor="white", edgecolor="0.55", linewidth=0, hatch="///", zorder=2))
+                    ax.text(c, r, f"n/a\nn={nmat[r,c]}", ha="center", va="center", fontsize=5.0, zorder=3,
+                            bbox=dict(facecolor="white", edgecolor="none", pad=0.6))
         for spine in ax.spines.values():
             spine.set_edgecolor(model_color(model))
             spine.set_linewidth(1.2)
