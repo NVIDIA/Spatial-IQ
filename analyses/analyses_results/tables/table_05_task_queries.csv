@@ -1,13 +1,13 @@
-task,source_task,task_name,query_text
-Task1,task1,Object Categorization,What object category composes the stacked structure?
-Task2,task9,Cluster Count,How many non-laterally-adjacent clusters of objects are present?
-Task3,task3,Column Count,How many columns are in the stacked structure?
-Task4,task4,Layer Count,How many horizontal layers are in the stacked structure?
-Task5,task5,Visible Object Count,How many visible objects are present?
-Task6,task2,Top Layer,How many objects are in the top-most layer?
-Task7,task6,Direct Support,How many visible objects directly support the top-most object(s)?
-Task8,task7,Support Column,How many visible objects are in columns supporting the top-most object(s)?
-Task9,task8,Hidden Object Count,How many hidden objects must exist to support the visible structure?
-Target1,main,Object Counting,How many objects are in the stacked structure in total?
-Target2a,task10,Mental Rotation 90,Which objects are visible in the adjacent view but not the reference view?
-Target2b,task11,Mental Rotation 180,Which objects are visible in the opposite view but not the reference view?
+task,source_task,task_name,query_text,image_editing_instruction
+S1,task1,Object Categorization,What type of object(s) make up the structure at the center of the image? Give the object type name only.,Color the structure with a unique color.
+S2,task9,Cluster Count,How many distinct clusters are there in the object structure?,Color each distinct cluster with a unique color.
+S3,task3,Column Count,How many columns are in the object structure?,Color all objects within each column with a new unique color.
+S4,task4,Layer Count,How many layers are in the object structure?,Color all objects within each layer with a new unique color.
+S5,task5,Visible Object Count,How many VISIBLE objects are there in the object structure?,Color each object with a new unique color.
+S6,task2,Top Layer,How many objects are in the top-most layer of the whole structure?,Color the top-most object(s) with a unique color.
+S7,task6,Direct Support,How many VISIBLE OBJECTS are directly supporting the top-most object(s)? Answer 0 if all columns have height 1.,Color the object(s) directly supporting the top-most object(s).
+S8,task7,Support Column,"How many VISIBLE OBJECTS are in the column(s) that contain the top-most object(s), excluding the top-most object(s) themselves?","Color all objects in the column(s) that contain the top-most object(s), excluding the top-most object(s) themselves."
+S9,task8,Hidden Object Count,"For each inferred HIDDEN OBJECT, identify the single VISIBLE OBJECT in immediate contact directly above it. How many such visible objects are there?",Color each VISIBLE OBJECT in immediate contact directly above a HIDDEN OBJECT.
+T1,main,Object Counting,How many TOTAL objects are present in the object structure?,Generate an image with the integer answer in black on a white background.
+T2-90,task10,Mental Rotation 90,"Given two views of the same structure, how many objects are visible in the second view but not the first?",Color all objects visible in the second view but not the first.
+T2-180,task11,Mental Rotation 180,"Given two views of the same structure, how many objects are visible in the second view but not the first?",Color all objects visible in the second view but not the first.

@@ -1,0 +1,7 @@
+modality,group,relation,model,joint_integrity,n_child_correct
+image,Visible Count Hierarchy,task3&task4->task5,gemini-image,0.2077562326869806,1083
+image,Visible Count Hierarchy,task3&task4->task5,hunyuan,0.27076923076923076,325
+image,Visible Count Hierarchy,task3&task4->task5,qwen-image-edit,0.42857142857142855,98
+image,Hidden Count Hierarchy,task3&task7->task8,gemini-image,0.18077474892395984,1394
+image,Hidden Count Hierarchy,task3&task7->task8,hunyuan,0.09497816593886463,916
+image,Hidden Count Hierarchy,task3&task7->task8,qwen-image-edit,0.02239448751076658,1161

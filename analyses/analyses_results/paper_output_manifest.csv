@@ -4,7 +4,7 @@ Figure 2,static,Task suite and developmental tags,static,,,
 Figure 3,static,Pre-specified hierarchy relations,static,,,
 Figure 4,figure,Text per-task accuracy,generated,tables/table_06_text_task_accuracy.csv,figures/figure_04_text_task_accuracy.png,
 Figure 5,figure,5CQ wrong-answer preferences,generated,tables/figure_05_mcq5_wrong_answer_preferences.csv,figures/figure_05_mcq5_wrong_answer_preferences.png,
-Figure 6,figure,Text difficulty controls,generated,tables/table_09_text_difficulty_bins.csv,figures/figure_06_text_difficulty_controls.png,
+Figure 6,figure,Text difficulty controls,generated,tables/figure_06_text_difficulty_bins.csv,figures/figure_06_text_difficulty_controls.png,
 Figure 7,figure,Text summation mechanism,generated,tables/figure_07_text_summation_mechanism.csv,figures/figure_07_text_summation_mechanism.png,
 Figure 8,static,MCQ option-grid examples,static,,,
 Figure 9,static,Text human-study interface,static,,,
@@ -16,7 +16,7 @@ Figure 14,figure,Mental-rotation bundle versus counting mechanism,generated,tabl
 Figure 15,figure,Mixed-CQ chance-adjusted task accuracy,generated,tables/figure_15_mcq345_task_accuracy.csv,figures/figure_15_mcq345_task_accuracy.png,
 Figure 16,figure,Mixed-CQ wrong-answer preferences,generated,tables/figure_16_mcq345_wrong_answer_preferences.csv,figures/figure_16_mcq345_wrong_answer_preferences.png,
 Figure 17,figure,Image-output per-task accuracy,generated,tables/table_08_image_task_accuracy.csv,figures/figure_17_image_task_accuracy.png,
-Figure 18,figure,Text camera-parameter effects,generated,tables/figure_18_text_camera_effects.csv,figures/figure_18_text_camera_effects.png,
+Figure 18,figure,Text camera-parameter effects,generated,tables/figure_18_text_camera_effects.csv,figures/figure_18_text_camera_effects.png,within-structure paired test; stars use BH-FDR across tasks within each model and factor
 Figure 19,figure,Image-output difficulty controls,generated,tables/figure_19_image_difficulty_bins.csv,figures/figure_19_image_difficulty_controls.png,
 Figure 20,figure,Text object-conditioned accuracy,generated,tables/figure_20_text_object_accuracy.csv,figures/figure_20_text_object_accuracy.png,
 Figure 21,figure,Text object and difficulty slices,generated,tables/figure_21_text_object_difficulty_slices.csv,figures/figure_21_text_object_difficulty_slices.png,
@@ -35,12 +35,20 @@ Table 5,table,Task-specific query text,generated,tables/table_05_task_queries.cs
 Table 6,table,Text per-task accuracy,generated,tables/table_06_text_task_accuracy.csv,,
 Table 7,table,5CQ per-task accuracy,generated,tables/table_07_mcq5_task_accuracy.csv,,
 Table 8,table,Image-output per-task accuracy,generated,tables/table_08_image_task_accuracy.csv,,
-Table 9,table,Text difficulty-bin accuracy,generated,tables/table_09_text_difficulty_bins.csv,,
-Appendix F,table,Per-edge and joint within-scene lifts,generated,tables/tableF_within_scene_lift_text.csv,,
-Appendix F,table,Joint relation integrity per responder,generated,tables/tableF_joint_integrity_text.csv,,variant column: prespecified_s8 (Fig. 3) and submitted_s7 (as computed for the submitted appendix)
-Appendix F,table,Bundle-to-Object-Counting within-scene coupling,generated,tables/tableF_bundle_coupling_text.csv,,
-Appendix F,table,Responder-controlled lift (two-way scene + responder FE),generated,tables/tableF_responder_controlled_lift_text.csv,,subset column: all responders and models-only (human baseline dropped)
-Appendix F,table,Per-responder marginal lift with cell sizes and exclusions,generated,tables/tableF_per_responder_lift_text.csv,,
-Appendix F,table,"Bundle coupling, scene versus scene+responder demeaned",generated,tables/tableF_bundle_coupling_twoway_text.csv,,
+Table 9,table,Text difficulty-bin accuracy,generated,tables/table_09_text_difficulty_bins.csv,,pooled over responders; subset column: models (no human) and models_and_human
+Appendix F.1,table,Text: per-edge and joint within-scene lifts,generated,tables/tableF_within_scene_lift_text.csv,,
+Appendix F.1,table,Text: joint relation integrity per responder,generated,tables/tableF_joint_integrity_text.csv,,
+Appendix F.1,table,"Text: edge integrity, chain edge-pass and perfect-chain rates",generated,tables/tableF_edge_pass_text.csv,,
+Appendix F.1,table,Text: bundle-to-Object-Counting within-scene coupling,generated,tables/tableF_bundle_coupling_text.csv,,
+Appendix F.1,table,Text: responder-controlled lift (two-way scene + responder FE),generated,tables/tableF_responder_controlled_lift_text.csv,,subset column: all responders and models-only (human baseline dropped)
+Appendix F.1,table,Text: per-responder marginal lift with cell sizes and exclusions,generated,tables/tableF_per_responder_lift_text.csv,,
+Appendix F.1,table,"Text: bundle coupling, scene versus scene+responder demeaned",generated,tables/tableF_bundle_coupling_twoway_text.csv,,
+Appendix F.2,table,MCQ: per-edge and joint within-scene lifts,generated,tables/tableF_within_scene_lift_mcq345.csv,,"answer_set column: all (pooled, as in F.2), 3CQ, 4CQ, 5CQ"
+Appendix F.2,table,MCQ: joint relation integrity per responder,generated,tables/tableF_joint_integrity_mcq345.csv,,
+Appendix F.2,table,"MCQ: edge integrity, chain edge-pass and perfect-chain rates",generated,tables/tableF_edge_pass_mcq345.csv,,"raw proportions, not chance-adjusted"
+Appendix F.2,table,MCQ: bundle-to-Object-Counting within-scene coupling,generated,tables/tableF_bundle_coupling_mcq345.csv,,"answer_set column: all (pooled, as in F.2), 3CQ, 4CQ, 5CQ"
+Appendix F.3,table,Image: per-edge and joint within-scene lifts,generated,tables/tableF_within_scene_lift_image.csv,,
+Appendix F.3,table,Image: joint relation integrity per responder,generated,tables/tableF_joint_integrity_image.csv,,
+Appendix F.3,table,"Image: edge integrity, chain edge-pass and perfect-chain rates",generated,tables/tableF_edge_pass_image.csv,,
+Appendix F.3,table,Image: bundle-to-Object-Counting within-scene coupling,generated,tables/tableF_bundle_coupling_image.csv,,
 Table 6,table,All-pairs McNemar significance on Object Counting,generated,tables/table6_mcnemar_object_counting_text.csv,,
-Figure 18,table,Within-structure paired camera effects per task,generated,tables/figF18_camera_within_structure_text.csv,,paired within-structure test with BH-FDR; supersedes the unpaired camera_effect_table variant

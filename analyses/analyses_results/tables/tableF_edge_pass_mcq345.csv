@@ -1,0 +1,261 @@
+modality,answer_set,model,measure,relation,group,value,n
+mcq345,all,claude3CQ,edge_integrity,task2->task6,Internal Referential Chain,0.4669446098868374,1679
+mcq345,all,claude3CQ,edge_integrity,task6->task7,Internal Referential Chain,0.6003325942350333,1804
+mcq345,all,claude3CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.36945031712473575,1892
+mcq345,all,claude3CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.5132135306553911,1892
+mcq345,all,claude3CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.3413793103448276,1160
+mcq345,all,claude3CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.5956896551724138,1160
+mcq345,all,claude3CQ,edge_integrity,task5->main,Summation Mechanism,0.6277966101694915,1475
+mcq345,all,claude3CQ,edge_integrity,task8->main,Summation Mechanism,0.4074576271186441,1475
+mcq345,all,claude3CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.536032156187195,3483
+mcq345,all,claude3CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.32666666666666666,2400
+mcq345,all,claude4CQ,edge_integrity,task2->task6,Internal Referential Chain,0.42220598977355733,1369
+mcq345,all,claude4CQ,edge_integrity,task6->task7,Internal Referential Chain,0.49525101763907736,1474
+mcq345,all,claude4CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.3558636626227614,1731
+mcq345,all,claude4CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.43269786250722125,1731
+mcq345,all,claude4CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.34006054490413723,991
+mcq345,all,claude4CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.5166498486377397,991
+mcq345,all,claude4CQ,edge_integrity,task5->main,Summation Mechanism,0.5947826086956521,1150
+mcq345,all,claude4CQ,edge_integrity,task8->main,Summation Mechanism,0.3765217391304348,1150
+mcq345,all,claude4CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.46007738304607804,2843
+mcq345,all,claude4CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.2735447231424515,2113
+mcq345,all,claude,edge_integrity,task2->task6,Internal Referential Chain,0.38425925925925924,1080
+mcq345,all,claude,edge_integrity,task6->task7,Internal Referential Chain,0.38054607508532423,1172
+mcq345,all,claude,edge_integrity,task3->task5,Visible Count Hierarchy,0.3151553582752061,1577
+mcq345,all,claude,edge_integrity,task4->task5,Visible Count Hierarchy,0.37476220672162336,1577
+mcq345,all,claude,edge_integrity,task3->task8,Hidden Count Hierarchy,0.31065759637188206,882
+mcq345,all,claude,edge_integrity,task7->task8,Hidden Count Hierarchy,0.41609977324263037,882
+mcq345,all,claude,edge_integrity,task5->main,Summation Mechanism,0.5466666666666666,600
+mcq345,all,claude,edge_integrity,task8->main,Summation Mechanism,0.25,600
+mcq345,all,claude,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.38232682060390766,2252
+mcq345,all,claude,perfect_chain,task2->task6->task7,Internal Referential Chain,0.22978959025470652,1806
+mcq345,all,gemini3CQ,edge_integrity,task2->task6,Internal Referential Chain,0.4548088064889919,1726
+mcq345,all,gemini3CQ,edge_integrity,task6->task7,Internal Referential Chain,0.6009362200117028,1709
+mcq345,all,gemini3CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.4444444444444444,1917
+mcq345,all,gemini3CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.6531038080333855,1917
+mcq345,all,gemini3CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.43671766342141866,1438
+mcq345,all,gemini3CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.5799721835883171,1438
+mcq345,all,gemini3CQ,edge_integrity,task5->main,Summation Mechanism,0.671875,1280
+mcq345,all,gemini3CQ,edge_integrity,task8->main,Summation Mechanism,0.50625,1280
+mcq345,all,gemini3CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.5275109170305676,3435
+mcq345,all,gemini3CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.32599667774086377,2408
+mcq345,all,gemini4CQ,edge_integrity,task2->task6,Internal Referential Chain,0.3613251155624037,1298
+mcq345,all,gemini4CQ,edge_integrity,task6->task7,Internal Referential Chain,0.4579517069109076,1201
+mcq345,all,gemini4CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.34,1550
+mcq345,all,gemini4CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.4864516129032258,1550
+mcq345,all,gemini4CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.35365853658536583,1148
+mcq345,all,gemini4CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.3980836236933798,1148
+mcq345,all,gemini4CQ,edge_integrity,task5->main,Summation Mechanism,0.5240847784200385,1038
+mcq345,all,gemini4CQ,edge_integrity,task8->main,Summation Mechanism,0.42678227360308285,1038
+mcq345,all,gemini4CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.4077631052420968,2499
+mcq345,all,gemini4CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.24063622370446383,1949
+mcq345,all,gemini,edge_integrity,task2->task6,Internal Referential Chain,0.32025547445255476,1096
+mcq345,all,gemini,edge_integrity,task6->task7,Internal Referential Chain,0.3997995991983968,998
+mcq345,all,gemini,edge_integrity,task3->task5,Visible Count Hierarchy,0.32176428054953,1383
+mcq345,all,gemini,edge_integrity,task4->task5,Visible Count Hierarchy,0.49746926970354305,1383
+mcq345,all,gemini,edge_integrity,task3->task8,Hidden Count Hierarchy,0.31236673773987206,938
+mcq345,all,gemini,edge_integrity,task7->task8,Hidden Count Hierarchy,0.34541577825159914,938
+mcq345,all,gemini,edge_integrity,task5->main,Summation Mechanism,0.4709897610921502,586
+mcq345,all,gemini,edge_integrity,task8->main,Summation Mechanism,0.2713310580204778,586
+mcq345,all,gemini,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.3581661891117478,2094
+mcq345,all,gemini,perfect_chain,task2->task6->task7,Internal Referential Chain,0.20707964601769913,1695
+mcq345,all,gpt3CQ,edge_integrity,task2->task6,Internal Referential Chain,0.3202492211838006,1605
+mcq345,all,gpt3CQ,edge_integrity,task6->task7,Internal Referential Chain,0.5727163461538461,1664
+mcq345,all,gpt3CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.3474484256243214,1842
+mcq345,all,gpt3CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.4826275787187839,1842
+mcq345,all,gpt3CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.3374327440430438,1301
+mcq345,all,gpt3CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.5511145272867025,1301
+mcq345,all,gpt3CQ,edge_integrity,task5->main,Summation Mechanism,0.6508210890233362,1157
+mcq345,all,gpt3CQ,edge_integrity,task8->main,Summation Mechanism,0.45635263612791704,1157
+mcq345,all,gpt3CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.44876108901804834,3269
+mcq345,all,gpt3CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.2219343696027634,2316
+mcq345,all,gpt4CQ,edge_integrity,task2->task6,Internal Referential Chain,0.27959331880900506,1377
+mcq345,all,gpt4CQ,edge_integrity,task6->task7,Internal Referential Chain,0.5136842105263157,1425
+mcq345,all,gpt4CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.2916666666666667,1296
+mcq345,all,gpt4CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.32330246913580246,1296
+mcq345,all,gpt4CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.28280773143438453,983
+mcq345,all,gpt4CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.5025432349949135,983
+mcq345,all,gpt4CQ,edge_integrity,task5->main,Summation Mechanism,0.46319365798414497,883
+mcq345,all,gpt4CQ,edge_integrity,task8->main,Summation Mechanism,0.3737259343148358,883
+mcq345,all,gpt4CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.3986438258386866,2802
+mcq345,all,gpt4CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.1859903381642512,2070
+mcq345,all,gpt,edge_integrity,task2->task6,Internal Referential Chain,0.23990498812351543,1263
+mcq345,all,gpt,edge_integrity,task6->task7,Internal Referential Chain,0.4923780487804878,1312
+mcq345,all,gpt,edge_integrity,task3->task5,Visible Count Hierarchy,0.2412914188615123,1177
+mcq345,all,gpt,edge_integrity,task4->task5,Visible Count Hierarchy,0.3058623619371283,1177
+mcq345,all,gpt,edge_integrity,task3->task8,Hidden Count Hierarchy,0.22505543237250555,902
+mcq345,all,gpt,edge_integrity,task7->task8,Hidden Count Hierarchy,0.45454545454545453,902
+mcq345,all,gpt,edge_integrity,task5->main,Summation Mechanism,0.394524959742351,621
+mcq345,all,gpt,edge_integrity,task8->main,Summation Mechanism,0.33494363929146537,621
+mcq345,all,gpt,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.3685436893203884,2575
+mcq345,all,gpt,perfect_chain,task2->task6->task7,Internal Referential Chain,0.15707620528771385,1929
+mcq345,all,human,edge_integrity,task2->task6,Internal Referential Chain,0.9955601092896175,2928
+mcq345,all,human,edge_integrity,task6->task7,Internal Referential Chain,0.9757679180887372,2930
+mcq345,all,human,edge_integrity,task3->task5,Visible Count Hierarchy,0.9359704994971505,2983
+mcq345,all,human,edge_integrity,task4->task5,Visible Count Hierarchy,0.9939658062353336,2983
+mcq345,all,human,edge_integrity,task3->task8,Hidden Count Hierarchy,0.939868804664723,2744
+mcq345,all,human,edge_integrity,task7->task8,Hidden Count Hierarchy,0.9766763848396501,2744
+mcq345,all,human,edge_integrity,task5->main,Summation Mechanism,0.9938104448742746,2585
+mcq345,all,human,edge_integrity,task8->main,Summation Mechanism,0.9230174081237911,2585
+mcq345,all,human,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.9856606350290201,5858
+mcq345,all,human,perfect_chain,task2->task6->task7,Internal Referential Chain,0.9719906635545181,2999
+mcq345,all,qwen3CQ,edge_integrity,task2->task6,Internal Referential Chain,0.40474741326841146,1643
+mcq345,all,qwen3CQ,edge_integrity,task6->task7,Internal Referential Chain,0.5859323158593231,1507
+mcq345,all,qwen3CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.35181975736568455,1731
+mcq345,all,qwen3CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.3350664355863663,1731
+mcq345,all,qwen3CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.3745704467353952,582
+mcq345,all,qwen3CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.4896907216494845,582
+mcq345,all,qwen3CQ,edge_integrity,task5->main,Summation Mechanism,0.5613040396881644,1411
+mcq345,all,qwen3CQ,edge_integrity,task8->main,Summation Mechanism,0.1686746987951807,1411
+mcq345,all,qwen3CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.49142857142857144,3150
+mcq345,all,qwen3CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.2933392148213498,2267
+mcq345,all,qwen4CQ,edge_integrity,task2->task6,Internal Referential Chain,0.3144758735440932,1202
+mcq345,all,qwen4CQ,edge_integrity,task6->task7,Internal Referential Chain,0.4324097397145256,1191
+mcq345,all,qwen4CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.2412280701754386,1140
+mcq345,all,qwen4CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.22105263157894736,1140
+mcq345,all,qwen4CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.27896995708154504,466
+mcq345,all,qwen4CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.351931330472103,466
+mcq345,all,qwen4CQ,edge_integrity,task5->main,Summation Mechanism,0.39058171745152354,1083
+mcq345,all,qwen4CQ,edge_integrity,task8->main,Summation Mechanism,0.12465373961218837,1083
+mcq345,all,qwen4CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.37317175094024235,2393
+mcq345,all,qwen4CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.2012779552715655,1878
+mcq345,all,qwen,edge_integrity,task2->task6,Internal Referential Chain,0.27376861397479957,873
+mcq345,all,qwen,edge_integrity,task6->task7,Internal Referential Chain,0.30467762326169406,791
+mcq345,all,qwen,edge_integrity,task3->task5,Visible Count Hierarchy,0.2225031605562579,791
+mcq345,all,qwen,edge_integrity,task4->task5,Visible Count Hierarchy,0.15423514538558786,791
+mcq345,all,qwen,edge_integrity,task3->task8,Hidden Count Hierarchy,0.2210144927536232,552
+mcq345,all,qwen,edge_integrity,task7->task8,Hidden Count Hierarchy,0.2807971014492754,552
+mcq345,all,qwen,edge_integrity,task5->main,Summation Mechanism,0.2628099173553719,605
+mcq345,all,qwen,edge_integrity,task8->main,Summation Mechanism,0.17851239669421487,605
+mcq345,all,qwen,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.28846153846153844,1664
+mcq345,all,qwen,perfect_chain,task2->task6->task7,Internal Referential Chain,0.1679550245959241,1423
+mcq345,3CQ,claude3CQ,edge_integrity,task2->task6,Internal Referential Chain,0.4669446098868374,1679
+mcq345,3CQ,claude3CQ,edge_integrity,task6->task7,Internal Referential Chain,0.6003325942350333,1804
+mcq345,3CQ,claude3CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.36945031712473575,1892
+mcq345,3CQ,claude3CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.5132135306553911,1892
+mcq345,3CQ,claude3CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.3413793103448276,1160
+mcq345,3CQ,claude3CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.5956896551724138,1160
+mcq345,3CQ,claude3CQ,edge_integrity,task5->main,Summation Mechanism,0.6277966101694915,1475
+mcq345,3CQ,claude3CQ,edge_integrity,task8->main,Summation Mechanism,0.4074576271186441,1475
+mcq345,3CQ,claude3CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.536032156187195,3483
+mcq345,3CQ,claude3CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.32666666666666666,2400
+mcq345,3CQ,gemini3CQ,edge_integrity,task2->task6,Internal Referential Chain,0.4548088064889919,1726
+mcq345,3CQ,gemini3CQ,edge_integrity,task6->task7,Internal Referential Chain,0.6009362200117028,1709
+mcq345,3CQ,gemini3CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.4444444444444444,1917
+mcq345,3CQ,gemini3CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.6531038080333855,1917
+mcq345,3CQ,gemini3CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.43671766342141866,1438
+mcq345,3CQ,gemini3CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.5799721835883171,1438
+mcq345,3CQ,gemini3CQ,edge_integrity,task5->main,Summation Mechanism,0.671875,1280
+mcq345,3CQ,gemini3CQ,edge_integrity,task8->main,Summation Mechanism,0.50625,1280
+mcq345,3CQ,gemini3CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.5275109170305676,3435
+mcq345,3CQ,gemini3CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.32599667774086377,2408
+mcq345,3CQ,gpt3CQ,edge_integrity,task2->task6,Internal Referential Chain,0.3202492211838006,1605
+mcq345,3CQ,gpt3CQ,edge_integrity,task6->task7,Internal Referential Chain,0.5727163461538461,1664
+mcq345,3CQ,gpt3CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.3474484256243214,1842
+mcq345,3CQ,gpt3CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.4826275787187839,1842
+mcq345,3CQ,gpt3CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.3374327440430438,1301
+mcq345,3CQ,gpt3CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.5511145272867025,1301
+mcq345,3CQ,gpt3CQ,edge_integrity,task5->main,Summation Mechanism,0.6508210890233362,1157
+mcq345,3CQ,gpt3CQ,edge_integrity,task8->main,Summation Mechanism,0.45635263612791704,1157
+mcq345,3CQ,gpt3CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.44876108901804834,3269
+mcq345,3CQ,gpt3CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.2219343696027634,2316
+mcq345,3CQ,qwen3CQ,edge_integrity,task2->task6,Internal Referential Chain,0.40474741326841146,1643
+mcq345,3CQ,qwen3CQ,edge_integrity,task6->task7,Internal Referential Chain,0.5859323158593231,1507
+mcq345,3CQ,qwen3CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.35181975736568455,1731
+mcq345,3CQ,qwen3CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.3350664355863663,1731
+mcq345,3CQ,qwen3CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.3745704467353952,582
+mcq345,3CQ,qwen3CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.4896907216494845,582
+mcq345,3CQ,qwen3CQ,edge_integrity,task5->main,Summation Mechanism,0.5613040396881644,1411
+mcq345,3CQ,qwen3CQ,edge_integrity,task8->main,Summation Mechanism,0.1686746987951807,1411
+mcq345,3CQ,qwen3CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.49142857142857144,3150
+mcq345,3CQ,qwen3CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.2933392148213498,2267
+mcq345,4CQ,claude4CQ,edge_integrity,task2->task6,Internal Referential Chain,0.42220598977355733,1369
+mcq345,4CQ,claude4CQ,edge_integrity,task6->task7,Internal Referential Chain,0.49525101763907736,1474
+mcq345,4CQ,claude4CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.3558636626227614,1731
+mcq345,4CQ,claude4CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.43269786250722125,1731
+mcq345,4CQ,claude4CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.34006054490413723,991
+mcq345,4CQ,claude4CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.5166498486377397,991
+mcq345,4CQ,claude4CQ,edge_integrity,task5->main,Summation Mechanism,0.5947826086956521,1150
+mcq345,4CQ,claude4CQ,edge_integrity,task8->main,Summation Mechanism,0.3765217391304348,1150
+mcq345,4CQ,claude4CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.46007738304607804,2843
+mcq345,4CQ,claude4CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.2735447231424515,2113
+mcq345,4CQ,gemini4CQ,edge_integrity,task2->task6,Internal Referential Chain,0.3613251155624037,1298
+mcq345,4CQ,gemini4CQ,edge_integrity,task6->task7,Internal Referential Chain,0.4579517069109076,1201
+mcq345,4CQ,gemini4CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.34,1550
+mcq345,4CQ,gemini4CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.4864516129032258,1550
+mcq345,4CQ,gemini4CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.35365853658536583,1148
+mcq345,4CQ,gemini4CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.3980836236933798,1148
+mcq345,4CQ,gemini4CQ,edge_integrity,task5->main,Summation Mechanism,0.5240847784200385,1038
+mcq345,4CQ,gemini4CQ,edge_integrity,task8->main,Summation Mechanism,0.42678227360308285,1038
+mcq345,4CQ,gemini4CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.4077631052420968,2499
+mcq345,4CQ,gemini4CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.24063622370446383,1949
+mcq345,4CQ,gpt4CQ,edge_integrity,task2->task6,Internal Referential Chain,0.27959331880900506,1377
+mcq345,4CQ,gpt4CQ,edge_integrity,task6->task7,Internal Referential Chain,0.5136842105263157,1425
+mcq345,4CQ,gpt4CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.2916666666666667,1296
+mcq345,4CQ,gpt4CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.32330246913580246,1296
+mcq345,4CQ,gpt4CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.28280773143438453,983
+mcq345,4CQ,gpt4CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.5025432349949135,983
+mcq345,4CQ,gpt4CQ,edge_integrity,task5->main,Summation Mechanism,0.46319365798414497,883
+mcq345,4CQ,gpt4CQ,edge_integrity,task8->main,Summation Mechanism,0.3737259343148358,883
+mcq345,4CQ,gpt4CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.3986438258386866,2802
+mcq345,4CQ,gpt4CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.1859903381642512,2070
+mcq345,4CQ,qwen4CQ,edge_integrity,task2->task6,Internal Referential Chain,0.3144758735440932,1202
+mcq345,4CQ,qwen4CQ,edge_integrity,task6->task7,Internal Referential Chain,0.4324097397145256,1191
+mcq345,4CQ,qwen4CQ,edge_integrity,task3->task5,Visible Count Hierarchy,0.2412280701754386,1140
+mcq345,4CQ,qwen4CQ,edge_integrity,task4->task5,Visible Count Hierarchy,0.22105263157894736,1140
+mcq345,4CQ,qwen4CQ,edge_integrity,task3->task8,Hidden Count Hierarchy,0.27896995708154504,466
+mcq345,4CQ,qwen4CQ,edge_integrity,task7->task8,Hidden Count Hierarchy,0.351931330472103,466
+mcq345,4CQ,qwen4CQ,edge_integrity,task5->main,Summation Mechanism,0.39058171745152354,1083
+mcq345,4CQ,qwen4CQ,edge_integrity,task8->main,Summation Mechanism,0.12465373961218837,1083
+mcq345,4CQ,qwen4CQ,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.37317175094024235,2393
+mcq345,4CQ,qwen4CQ,perfect_chain,task2->task6->task7,Internal Referential Chain,0.2012779552715655,1878
+mcq345,5CQ,claude,edge_integrity,task2->task6,Internal Referential Chain,0.38425925925925924,1080
+mcq345,5CQ,claude,edge_integrity,task6->task7,Internal Referential Chain,0.38054607508532423,1172
+mcq345,5CQ,claude,edge_integrity,task3->task5,Visible Count Hierarchy,0.3151553582752061,1577
+mcq345,5CQ,claude,edge_integrity,task4->task5,Visible Count Hierarchy,0.37476220672162336,1577
+mcq345,5CQ,claude,edge_integrity,task3->task8,Hidden Count Hierarchy,0.31065759637188206,882
+mcq345,5CQ,claude,edge_integrity,task7->task8,Hidden Count Hierarchy,0.41609977324263037,882
+mcq345,5CQ,claude,edge_integrity,task5->main,Summation Mechanism,0.5466666666666666,600
+mcq345,5CQ,claude,edge_integrity,task8->main,Summation Mechanism,0.25,600
+mcq345,5CQ,claude,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.38232682060390766,2252
+mcq345,5CQ,claude,perfect_chain,task2->task6->task7,Internal Referential Chain,0.22978959025470652,1806
+mcq345,5CQ,gemini,edge_integrity,task2->task6,Internal Referential Chain,0.32025547445255476,1096
+mcq345,5CQ,gemini,edge_integrity,task6->task7,Internal Referential Chain,0.3997995991983968,998
+mcq345,5CQ,gemini,edge_integrity,task3->task5,Visible Count Hierarchy,0.32176428054953,1383
+mcq345,5CQ,gemini,edge_integrity,task4->task5,Visible Count Hierarchy,0.49746926970354305,1383
+mcq345,5CQ,gemini,edge_integrity,task3->task8,Hidden Count Hierarchy,0.31236673773987206,938
+mcq345,5CQ,gemini,edge_integrity,task7->task8,Hidden Count Hierarchy,0.34541577825159914,938
+mcq345,5CQ,gemini,edge_integrity,task5->main,Summation Mechanism,0.4709897610921502,586
+mcq345,5CQ,gemini,edge_integrity,task8->main,Summation Mechanism,0.2713310580204778,586
+mcq345,5CQ,gemini,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.3581661891117478,2094
+mcq345,5CQ,gemini,perfect_chain,task2->task6->task7,Internal Referential Chain,0.20707964601769913,1695
+mcq345,5CQ,gpt,edge_integrity,task2->task6,Internal Referential Chain,0.23990498812351543,1263
+mcq345,5CQ,gpt,edge_integrity,task6->task7,Internal Referential Chain,0.4923780487804878,1312
+mcq345,5CQ,gpt,edge_integrity,task3->task5,Visible Count Hierarchy,0.2412914188615123,1177
+mcq345,5CQ,gpt,edge_integrity,task4->task5,Visible Count Hierarchy,0.3058623619371283,1177
+mcq345,5CQ,gpt,edge_integrity,task3->task8,Hidden Count Hierarchy,0.22505543237250555,902
+mcq345,5CQ,gpt,edge_integrity,task7->task8,Hidden Count Hierarchy,0.45454545454545453,902
+mcq345,5CQ,gpt,edge_integrity,task5->main,Summation Mechanism,0.394524959742351,621
+mcq345,5CQ,gpt,edge_integrity,task8->main,Summation Mechanism,0.33494363929146537,621
+mcq345,5CQ,gpt,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.3685436893203884,2575
+mcq345,5CQ,gpt,perfect_chain,task2->task6->task7,Internal Referential Chain,0.15707620528771385,1929
+mcq345,5CQ,human,edge_integrity,task2->task6,Internal Referential Chain,0.9955601092896175,2928
+mcq345,5CQ,human,edge_integrity,task6->task7,Internal Referential Chain,0.9757679180887372,2930
+mcq345,5CQ,human,edge_integrity,task3->task5,Visible Count Hierarchy,0.9359704994971505,2983
+mcq345,5CQ,human,edge_integrity,task4->task5,Visible Count Hierarchy,0.9939658062353336,2983
+mcq345,5CQ,human,edge_integrity,task3->task8,Hidden Count Hierarchy,0.939868804664723,2744
+mcq345,5CQ,human,edge_integrity,task7->task8,Hidden Count Hierarchy,0.9766763848396501,2744
+mcq345,5CQ,human,edge_integrity,task5->main,Summation Mechanism,0.9938104448742746,2585
+mcq345,5CQ,human,edge_integrity,task8->main,Summation Mechanism,0.9230174081237911,2585
+mcq345,5CQ,human,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.9856606350290201,5858
+mcq345,5CQ,human,perfect_chain,task2->task6->task7,Internal Referential Chain,0.9719906635545181,2999
+mcq345,5CQ,qwen,edge_integrity,task2->task6,Internal Referential Chain,0.27376861397479957,873
+mcq345,5CQ,qwen,edge_integrity,task6->task7,Internal Referential Chain,0.30467762326169406,791
+mcq345,5CQ,qwen,edge_integrity,task3->task5,Visible Count Hierarchy,0.2225031605562579,791
+mcq345,5CQ,qwen,edge_integrity,task4->task5,Visible Count Hierarchy,0.15423514538558786,791
+mcq345,5CQ,qwen,edge_integrity,task3->task8,Hidden Count Hierarchy,0.2210144927536232,552
+mcq345,5CQ,qwen,edge_integrity,task7->task8,Hidden Count Hierarchy,0.2807971014492754,552
+mcq345,5CQ,qwen,edge_integrity,task5->main,Summation Mechanism,0.2628099173553719,605
+mcq345,5CQ,qwen,edge_integrity,task8->main,Summation Mechanism,0.17851239669421487,605
+mcq345,5CQ,qwen,chain_edge_pass,task2->task6->task7,Internal Referential Chain,0.28846153846153844,1664
+mcq345,5CQ,qwen,perfect_chain,task2->task6->task7,Internal Referential Chain,0.1679550245959241,1423
