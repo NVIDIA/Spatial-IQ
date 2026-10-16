@@ -655,10 +655,12 @@ def camera_within_structure_table(data: dict[str, pd.DataFrame], modality: str =
                 "modality": modality, "model": name, "task": tcol,
                 "task_display": TASK_DISPLAY.get(tcol, tcol),
                 "perspective_delta": float(np.mean(dp)) if len(dp) else np.nan,
+                "se_perspective": float(np.std(dp, ddof=1) / np.sqrt(len(dp))) if len(dp) > 1 else np.nan,
                 "t_perspective": float(tp) if not np.isnan(tp) else np.nan,
                 "p_perspective": float(pp) if not np.isnan(pp) else np.nan,
                 "n_struct_perspective": len(dp),
                 "offset_delta": float(np.mean(do)) if len(do) else np.nan,
+                "se_offset": float(np.std(do, ddof=1) / np.sqrt(len(do))) if len(do) > 1 else np.nan,
                 "t_offset": float(to) if not np.isnan(to) else np.nan,
                 "p_offset": float(po) if not np.isnan(po) else np.nan,
                 "n_struct_offset": len(do),
@@ -714,7 +716,8 @@ def main() -> None:
     per_resp.to_csv(args.output_dir / f"tableF_per_responder_lift_{args.group}.csv", index=False)
     coup2.to_csv(args.output_dir / f"tableF_bundle_coupling_twoway_{args.group}.csv", index=False)
     mcnemar.to_csv(args.output_dir / f"table6_mcnemar_object_counting_{args.group}.csv", index=False)
-    camera.to_csv(args.output_dir / f"figF18_camera_within_structure_{args.group}.csv", index=False)
+    # The camera effects behind Figure 18 are written by spatial-IQ_analyses.py
+    # (figure_18_text_camera_effects.csv); they are only summarised here.
     print(f"Wrote tables to {args.output_dir}")
 
     if args.validate:

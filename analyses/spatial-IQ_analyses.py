@@ -141,7 +141,8 @@ PAPER_OUTPUTS: list[PaperOutput] = [
     PaperOutput("Figure 15", "figure", "Mixed-CQ chance-adjusted task accuracy", "generated", "tables/figure_15_mcq345_task_accuracy.csv", "figures/figure_15_mcq345_task_accuracy.png"),
     PaperOutput("Figure 16", "figure", "Mixed-CQ wrong-answer preferences", "generated", "tables/figure_16_mcq345_wrong_answer_preferences.csv", "figures/figure_16_mcq345_wrong_answer_preferences.png"),
     PaperOutput("Figure 17", "figure", "Image-output per-task accuracy", "generated", "tables/table_08_image_task_accuracy.csv", "figures/figure_17_image_task_accuracy.png"),
-    PaperOutput("Figure 18", "figure", "Text camera-parameter effects", "generated", "tables/figure_18_text_camera_effects.csv", "figures/figure_18_text_camera_effects.png"),
+    PaperOutput("Figure 18", "figure", "Text camera-parameter effects", "generated", "tables/figure_18_text_camera_effects.csv", "figures/figure_18_text_camera_effects.png",
+                notes="within-structure paired test; stars use BH-FDR across tasks within each model and factor"),
     PaperOutput("Figure 19", "figure", "Image-output difficulty controls", "generated", "tables/figure_19_image_difficulty_bins.csv", "figures/figure_19_image_difficulty_controls.png"),
     PaperOutput("Figure 20", "figure", "Text object-conditioned accuracy", "generated", "tables/figure_20_text_object_accuracy.csv", "figures/figure_20_text_object_accuracy.png"),
     PaperOutput("Figure 21", "figure", "Text object and difficulty slices", "generated", "tables/figure_21_text_object_difficulty_slices.csv", "figures/figure_21_text_object_difficulty_slices.png"),
@@ -173,8 +174,6 @@ PAPER_OUTPUTS: list[PaperOutput] = [
     PaperOutput("Appendix F", "table", "Per-responder marginal lift with cell sizes and exclusions", "generated", "tables/tableF_per_responder_lift_text.csv"),
     PaperOutput("Appendix F", "table", "Bundle coupling, scene versus scene+responder demeaned", "generated", "tables/tableF_bundle_coupling_twoway_text.csv"),
     PaperOutput("Table 6", "table", "All-pairs McNemar significance on Object Counting", "generated", "tables/table6_mcnemar_object_counting_text.csv"),
-    PaperOutput("Figure 18", "table", "Within-structure paired camera effects per task", "generated", "tables/figF18_camera_within_structure_text.csv",
-                notes="paired within-structure test with BH-FDR; supersedes the unpaired camera_effect_table variant"),
 ]
 
 
@@ -1480,51 +1479,49 @@ def camera_effect_table(data: ModelResults, group: str) -> pd.DataFrame:
     ``data`` maps model identifiers to normalized raw result tables with camera
     metadata derived from the ``view`` filename field.
 
-    For each binary camera factor, the reported delta is high-level accuracy
-    minus low-level accuracy, with a Welch t-test and normal-approximation CI.
+    Each delta is a within-structure paired contrast: for every 3D structure,
+    high-level minus low-level accuracy with the other camera factor held fixed
+    and then averaged over it. A one-sample t-test over structures tests the
+    mean delta against zero, and p-values are BH-FDR corrected across tasks
+    within each model and factor (``hierarchy_dependency.camera_within_structure_table``).
+    ``p_value_fdr`` drives the significance stars in Figure 18.
     """
 
+    paired = hdep.camera_within_structure_table(data, group)
+    if paired.empty:
+        return pd.DataFrame()
     rows = []
-    for model, df in data.items():
-        for task in TASK_ORDER:
-            if task not in df.columns:
-                continue
-            for factor in CAMERA_FACTORS:
-                if factor not in df.columns:
-                    continue
-                levels = sorted(df[factor].dropna().unique().tolist())
-                if len(levels) != 2:
-                    continue
-                lo_level, hi_level = levels[0], levels[-1]
-                lo_vals = df.loc[df[factor] == lo_level, task].dropna().astype(float)
-                hi_vals = df.loc[df[factor] == hi_level, task].dropna().astype(float)
-                if len(lo_vals) == 0 or len(hi_vals) == 0:
-                    continue
-                delta = hi_vals.mean() - lo_vals.mean()
-                se = np.sqrt(lo_vals.var(ddof=1) / len(lo_vals) + hi_vals.var(ddof=1) / len(hi_vals))
-                try:
-                    p_val = float(stats.ttest_ind(hi_vals, lo_vals, equal_var=False, nan_policy="omit").pvalue)
-                except Exception:
-                    p_val = np.nan
-                rows.append({
-                    "group": group,
-                    "model": model,
-                    "display_name": display_model(model),
-                    "task": paper_task_id(task),
-                    "source_task": task,
-                    "task_name": TASK_LONG_NAME[task],
-                    "factor": factor,
-                    "low_level": lo_level,
-                    "high_level": hi_level,
-                    "delta_high_minus_low": delta,
-                    "se": se,
-                    "p_value": p_val,
-                    "ci_low": delta - 1.96 * se if not pd.isna(se) else np.nan,
-                    "ci_high": delta + 1.96 * se if not pd.isna(se) else np.nan,
-                    "n_low": len(lo_vals),
-                    "n_high": len(hi_vals),
-                })
-    return pd.DataFrame(rows)
+    for _, r in paired.iterrows():
+        task, model = r["task"], r["model"]
+        if task not in TASK_LONG_NAME:
+            continue
+        df = data[model]
+        for factor in CAMERA_FACTORS:
+            levels = sorted(df[factor].dropna().unique().tolist()) if factor in df.columns else []
+            delta, se = r[f"{factor}_delta"], r[f"se_{factor}"]
+            n_struct = int(r[f"n_struct_{factor}"])
+            half_width = stats.t.ppf(0.975, n_struct - 1) * se if n_struct > 1 and pd.notna(se) else np.nan
+            rows.append({
+                "group": group,
+                "model": model,
+                "display_name": display_model(model),
+                "task": paper_task_id(task),
+                "source_task": task,
+                "task_name": TASK_LONG_NAME[task],
+                "factor": factor,
+                "low_level": levels[0] if levels else np.nan,
+                "high_level": levels[-1] if levels else np.nan,
+                "delta_high_minus_low": delta,
+                "se": se,
+                "ci_low": delta - half_width,
+                "ci_high": delta + half_width,
+                "p_value": r[f"p_{factor}"],
+                "p_value_fdr": r[f"p_{factor}_fdr"],
+                "n_structures": n_struct,
+            })
+    out = pd.DataFrame(rows)
+    out["_task_order"] = out["source_task"].map(TASK_ORDER.index)
+    return out.sort_values(["model", "factor", "_task_order"]).drop(columns="_task_order").reset_index(drop=True)
 
 
 def export_hierarchy_dependency_tables(data: ModelResults, table_dir: Path, group: str) -> None:
@@ -1545,7 +1542,6 @@ def export_hierarchy_dependency_tables(data: ModelResults, table_dir: Path, grou
         f"tableF_per_responder_lift_{group}.csv": hdep.per_responder_lift_table,
         f"tableF_bundle_coupling_twoway_{group}.csv": hdep.bundle_coupling_twoway_table,
         f"table6_mcnemar_object_counting_{group}.csv": hdep.mcnemar_main_table,
-        f"figF18_camera_within_structure_{group}.csv": hdep.camera_within_structure_table,
     }
     for filename, exporter in exporters.items():
         exporter(data, group).to_csv(table_dir / filename, index=False)
@@ -2338,11 +2334,16 @@ def render_bundle_bars(csv_path: Path, out_path: Path) -> None:
 
 
 def render_camera_effects(csv_path: Path, out_path: Path) -> None:
-    """Render Figure 18 perspective and offset effect bars."""
+    """Render Figure 18 perspective and offset effect bars.
+
+    Stars mark BH-FDR-corrected significance of the within-structure paired test
+    (``p_value_fdr``), matching the figure caption.
+    """
 
     df = read_csv_if_exists(csv_path)
     if df.empty:
         return
+    p_col = "p_value_fdr" if "p_value_fdr" in df.columns else "p_value"
     task_col = source_task_col(df)
     tasks = [t for t in TASK_ORDER if t in set(df[task_col])]
     models = sorted(df["model"].drop_duplicates(), key=lambda m: model_sort_key(m, None))
@@ -2356,7 +2357,7 @@ def render_camera_effects(csv_path: Path, out_path: Path) -> None:
         for i, model in enumerate(models):
             sub = fdf[fdf["model"] == model].set_index(task_col)
             vals = [sub.loc[t, "delta_high_minus_low"] if t in sub.index else np.nan for t in tasks]
-            pvals = [sub.loc[t, "p_value"] if t in sub.index and "p_value" in sub.columns else np.nan for t in tasks]
+            pvals = [sub.loc[t, p_col] if t in sub.index else np.nan for t in tasks]
             offset = (i - (len(models) - 1) / 2) * bar_w
             ax.bar(x + offset, vals, width=bar_w * 0.94, color=model_color(model), edgecolor="white", linewidth=0.7, label=display_model(model), zorder=2)
             for xi, val, p_val in zip(x + offset, vals, pvals):
