@@ -956,7 +956,55 @@ def summary_table(data: ModelResults, task_acc: pd.DataFrame, group: str) -> pd.
             "mental_rotation_mean": mean_ignore_nan([row.get("task10", np.nan), row.get("task11", np.nan)]),
         })
     out = pd.DataFrame(rows)
+    if group == "trained_text":
+        out = add_backbone_gains(out)
     return out.sort_values("object_count", ascending=False)
+
+
+SUMMARY_VALUE_COLUMNS = [
+    "object_count", "referential_chain", "visible_count", "visible_support",
+    "hidden_count", "hidden_support", "summation_mechanism",
+]
+
+
+def zero_shot_backbone(model: str) -> str | None:
+    """Zero-shot Qwen2.5-VL backbone a trained checkpoint was fine-tuned from."""
+
+    m = model.lower()
+    if not (m.startswith("dapo") or m.startswith("sft-")):
+        return None
+    if "-7b-" in m:
+        return "Qwen2.5-VL-7B-Instruct"
+    if "-32b-" in m:
+        return "Qwen2.5-VL-32B-Instruct"
+    return None
+
+
+def add_backbone_gains(summary: pd.DataFrame) -> pd.DataFrame:
+    """Add Table 4's parenthesised gains over the matching zero-shot backbone.
+
+    Gains are in percentage points and are the difference of the two values as
+    printed (each rounded to one decimal), so every printed gain equals the
+    difference of the printed numbers beside it. A gain is undefined when either
+    value is. Human and zero-shot rows have no gain.
+    """
+
+    out = summary.copy()
+    by_model = out.set_index("model")
+    for col in SUMMARY_VALUE_COLUMNS:
+        gains = []
+        for model in out["model"]:
+            backbone = zero_shot_backbone(model)
+            if backbone is None or backbone not in by_model.index:
+                gains.append(np.nan)
+                continue
+            value, base = by_model.loc[model, col], by_model.loc[backbone, col]
+            if pd.isna(value) or pd.isna(base):
+                gains.append(np.nan)
+                continue
+            gains.append(round(round(100 * value, 1) - round(100 * base, 1), 1))
+        out[f"{col}_gain_pp"] = gains
+    return out
 
 
 def difficulty_bin_table(data: ModelResults, group: str) -> pd.DataFrame:
