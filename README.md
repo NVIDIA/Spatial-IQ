@@ -292,11 +292,15 @@ with paper-aligned filenames (e.g. `figure_04_text_task_accuracy.png`);
 `analyses/analyses_results/paper_output_manifest.csv` is the machine-readable
 map from every paper figure/table to its generating CSV.
 
-Appendix F hierarchy-dependency statistics (per-edge and joint within-scene lifts, joint relation integrity, bundle-to-Object-Counting couplings, the responder-controlled robustness checks, and their significance) are written by the same `--stage all` run as `tables/tableF_*.csv`, and are listed in the manifest under `Appendix F`. The module can also be run on its own — it writes the identical CSVs and adds a stdout summary of the headline numbers:
+Appendix F hierarchy-dependency statistics (per-edge and joint within-scene lifts, joint relation integrity, per-edge integrity with chain edge-pass and perfect-chain rates, bundle-to-Object-Counting couplings, the responder-controlled robustness checks, and their significance) are written by the same `--stage all` run as `tables/tableF_*_<group>.csv` for the text (`text`), multiple-choice (`mcq345`) and image-editing (`image`) modalities, and are listed in the manifest under `Appendix F.1`–`F.3`. The MCQ tables carry an `answer_set` column (`all` pools the 3/4/5-choice conditions as in Appendix F.2; `3CQ`, `4CQ` and `5CQ` give each condition separately). For the text modality the module can also be run on its own from `analyses/` — it writes the same text tables and adds a stdout summary of the headline numbers:
 
 ```bash
-python analyses/hierarchy_dependency.py --validate
+python hierarchy_dependency.py --validate
 ```
+
+All hierarchy-relation columns use the conditional defined in Section 5 and Appendix F, I(P → C) = P(P correct | C correct); a relation is reported as undefined (empty cell, n/a in the paper) when its dependent task is never answered correctly. The Hidden-Count Hierarchy uses Support Column (S8), as pre-specified in Figure 3.
+
+**Paper versions.** `main` reproduces the camera-ready paper. The state that reproduces the originally submitted manuscript is tagged [`neurips26-submission`](../../tree/neurips26-submission); it differs in the conditional direction used for the Table 2 and Table 4 relation columns and in the Hidden-Count Hierarchy input used in the submitted Appendix F.
 
 ### 5. Generate a new dataset
 
