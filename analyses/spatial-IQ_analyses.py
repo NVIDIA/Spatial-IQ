@@ -166,7 +166,7 @@ PAPER_OUTPUTS: list[PaperOutput] = [
     # hierarchy_dependency.py, which the analysis stage calls directly.
     PaperOutput("Appendix F", "table", "Per-edge and joint within-scene lifts", "generated", "tables/tableF_within_scene_lift_text.csv"),
     PaperOutput("Appendix F", "table", "Joint relation integrity per responder", "generated", "tables/tableF_joint_integrity_text.csv",
-                notes="variant column: prespecified_s8 (Fig. 3) and submitted_s7 (as computed for the submitted appendix)"),
+                notes="Hidden-Count Hierarchy uses Support Column (S8), as pre-specified in Fig. 3"),
     PaperOutput("Appendix F", "table", "Bundle-to-Object-Counting within-scene coupling", "generated", "tables/tableF_bundle_coupling_text.csv"),
     PaperOutput("Appendix F", "table", "Responder-controlled lift (two-way scene + responder FE)", "generated", "tables/tableF_responder_controlled_lift_text.csv",
                 notes="subset column: all responders and models-only (human baseline dropped)"),

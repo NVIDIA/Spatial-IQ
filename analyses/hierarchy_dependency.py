@@ -28,12 +28,9 @@ Method (matches the reference analysis):
     slope, the marginal lift inside each responder, and both statistics with the
     human baseline dropped.
 
-Hidden-Count Hierarchy input: the Support Column (task7 = S8), consistent with
-Figure 3 and the Table 1 conditional-accuracy columns. The submitted Appendix F
-prose instead instantiated this relation with Direct Support (task6 = S7), and
-its Hidden-relation statistics were computed accordingly; the S7 variant is
-retained in ``LEGACY_JOINT_EDGES`` so both the submitted and the corrected values
-are reproducible from this module. Depends only on pandas, numpy, and scipy.
+Hidden-Count Hierarchy input: the Support Column (task7 = S8), as pre-specified in
+Figure 3 and used by the Table 1 conditional-accuracy columns. Depends only on
+pandas, numpy, and scipy.
 
 Internal task columns map to paper sub-tasks as:
   task2=S6 Top Layer, task3=S3 Column Count, task4=S4 Layer Count,
@@ -73,13 +70,6 @@ UNARY_EDGES = [
 JOINT_EDGES = [
     ("task3", "task4", "task5", "Visible Count Hierarchy"),   # Column & Layer -> Visible
     ("task3", "task7", "task8", "Hidden Count Hierarchy"),    # Column & Support Column (S8) -> Hidden
-]
-
-# Variant kept only to reproduce the submitted Appendix F numbers, which
-# instantiated the Hidden-Count Hierarchy with Direct Support (task6 = S7)
-# instead of the pre-specified Support Column (task7 = S8) shown in Figure 3.
-LEGACY_JOINT_EDGES = [
-    ("task3", "task6", "task8", "Hidden Count Hierarchy (submitted S7 variant)"),
 ]
 
 # Bundles for bundle-to-Main coupling (Hidden = Support Column, task7 = S8).
@@ -201,8 +191,10 @@ def _bootstrap_ci(ws_full: pd.DataFrame, pcol: str, ccol: str, varying: list,
 
     Resamples scenes (``view``) with replacement and pools their rows, matching a
     cluster bootstrap. Vectorized via per-view sufficient statistics so cost is
-    O(n_boot * n_views) rather than concatenating frames each iteration."""
-    varying = list(varying)
+    O(n_boot * n_views) rather than concatenating frames each iteration. Scene
+    ids are sorted so the resampled indices map to the same scenes on every run
+    (iterating a set would follow the interpreter's string-hash seed)."""
+    varying = sorted(varying)
     if len(varying) < 4:
         return np.nan, np.nan
     d = ws_full[ws_full["view"].isin(varying)].dropna(subset=[pcol, ccol])
@@ -266,7 +258,7 @@ def _lift_stats(sub, pcol, ccol, varying, n_perm, n_boot, seed):
     if len(sub) < 10:
         return None
     naive_lift = float(sub[sub[pcol] == 1][ccol].mean() - sub[sub[pcol] == 0][ccol].mean())
-    varying = list(varying)
+    varying = sorted(varying)
     ws = sub[sub["view"].isin(varying)]
     met = ws[ws[pcol] == 1][ccol].dropna()
     unmet = ws[ws[pcol] == 0][ccol].dropna()
@@ -381,21 +373,16 @@ def bundle_coupling_table(data: dict[str, pd.DataFrame], modality: str = "text",
 # ---------------------------------------------------------------------------
 
 
-def joint_integrity_table(data: dict[str, pd.DataFrame], modality: str = "text",
-                          include_legacy: bool = True) -> pd.DataFrame:
+def joint_integrity_table(data: dict[str, pd.DataFrame], modality: str = "text") -> pd.DataFrame:
     """Joint relation integrity I(P1 & P2 -> C) = P(P1=1 & P2=1 | C=1) per responder.
 
     This is the stricter conjunction variant reported in the Appendix F prose. It
     is *not* the Table 1 quantity: Table 1 averages the two per-edge integrities
-    I(P -> C), so the two differ for the same relation and responder. Rows tagged
-    ``variant='submitted_s7'`` reproduce the Hidden values as computed for the
-    submitted appendix; ``variant='prespecified_s8'`` is the corrected one.
+    I(P -> C), so the two differ for the same relation and responder. Responders
+    that never answer the dependent task correctly have no row (undefined).
     """
-    edges = [(*e, "prespecified_s8") for e in JOINT_EDGES]
-    if include_legacy:
-        edges += [(*e, "submitted_s7") for e in LEGACY_JOINT_EDGES]
     rows = []
-    for p1, p2, nc, grp, variant in edges:
+    for p1, p2, nc, grp in JOINT_EDGES:
         for name, df in data.items():
             if any(c not in df.columns for c in (p1, p2, nc)):
                 continue
@@ -404,7 +391,7 @@ def joint_integrity_table(data: dict[str, pd.DataFrame], modality: str = "text",
             if sub.empty:
                 continue
             rows.append({
-                "modality": modality, "variant": variant, "group": grp,
+                "modality": modality, "group": grp,
                 "relation": f"{p1}&{p2}->{nc}", "model": name,
                 "joint_integrity": float(((sub[p1] == 1) & (sub[p2] == 1)).mean()),
                 "n_child_correct": int(len(sub)),
@@ -738,9 +725,9 @@ def main() -> None:
         print("\n== bundle-to-Main coupling (aggregate, Hidden = S8) ==")
         for _, r in bundle[bundle["model"] == "aggregate"].iterrows():
             print(f"  {r['bundle']:28s} r_ws={r['r_ws']:+.4f}  p_fdr={r['p_ws_fdr']:.2e}  n_var={r['n_varying']}")
-        print("\n== joint relation integrity, human row (S8 pre-specified vs submitted S7) ==")
+        print("\n== joint relation integrity, human row ==")
         for _, r in integrity[integrity["model"] == "human"].iterrows():
-            print(f"  {r['relation']:24s} [{r['variant']:16s}] {100*r['joint_integrity']:.1f}%"
+            print(f"  {r['relation']:24s} {100*r['joint_integrity']:.1f}%"
                   f"  n={int(r['n_child_correct'])}")
         print("\n== responder-controlled robustness (scene-only vs two-way FE) ==")
         for _, r in resp.iterrows():
