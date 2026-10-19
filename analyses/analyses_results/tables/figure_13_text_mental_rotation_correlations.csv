@@ -379,51 +379,51 @@ text,qwen,Qwen,naive,T2-180,task11,Mental Rotation 180,T2-90,task10,Mental Rotat
 text,qwen,Qwen,within_scene,T2-180,task11,Mental Rotation 180,T2-90,task10,Mental Rotation 90,0.2090627327066025,1.3548575866349774e-28,2756
 text,qwen,Qwen,naive,T2-180,task11,Mental Rotation 180,T2-180,task11,Mental Rotation 180,,,3000
 text,qwen,Qwen,within_scene,T2-180,task11,Mental Rotation 180,T2-180,task11,Mental Rotation 180,,,2385
-text,vla0,vla0,naive,T2-90,task10,Mental Rotation 90,S1,task1,Object Categorization,,,0
-text,vla0,vla0,within_scene,T2-90,task10,Mental Rotation 90,S1,task1,Object Categorization,,,0
-text,vla0,vla0,naive,T2-90,task10,Mental Rotation 90,S2,task9,Cluster Count,0.02522037856296063,0.16727250594699736,3000
-text,vla0,vla0,within_scene,T2-90,task10,Mental Rotation 90,S2,task9,Cluster Count,0.020105123794399708,0.275237865005204,2947
-text,vla0,vla0,naive,T2-90,task10,Mental Rotation 90,S3,task3,Column Count,-0.013730450993760903,0.4521895094135245,3000
-text,vla0,vla0,within_scene,T2-90,task10,Mental Rotation 90,S3,task3,Column Count,-0.015207364883024219,0.4257770432073687,2745
-text,vla0,vla0,naive,T2-90,task10,Mental Rotation 90,S4,task4,Layer Count,-0.02182813948112094,0.23200085965048017,3000
-text,vla0,vla0,within_scene,T2-90,task10,Mental Rotation 90,S4,task4,Layer Count,-0.021179356617188703,0.2464124543747927,2997
-text,vla0,vla0,naive,T2-90,task10,Mental Rotation 90,S5,task5,Visible Object Count,-0.01281971104268362,0.482741087431032,3000
-text,vla0,vla0,within_scene,T2-90,task10,Mental Rotation 90,S5,task5,Visible Object Count,-0.01634425960481345,0.38442816491993675,2834
-text,vla0,vla0,naive,T2-90,task10,Mental Rotation 90,S6,task2,Top Layer,0.02292372499267929,0.20939680148488815,3000
-text,vla0,vla0,within_scene,T2-90,task10,Mental Rotation 90,S6,task2,Top Layer,0.02255192455544087,0.21726562321630583,2995
-text,vla0,vla0,naive,T2-90,task10,Mental Rotation 90,S7,task6,Direct Support,0.002773301812101379,0.879315511067755,3000
-text,vla0,vla0,within_scene,T2-90,task10,Mental Rotation 90,S7,task6,Direct Support,-0.0005803501545121334,0.9747667859761138,2973
-text,vla0,vla0,naive,T2-90,task10,Mental Rotation 90,S8,task7,Support Column,0.04150428927076465,0.023007162697609742,3000
-text,vla0,vla0,within_scene,T2-90,task10,Mental Rotation 90,S8,task7,Support Column,0.03791255956792654,0.039456333361587666,2951
-text,vla0,vla0,naive,T2-90,task10,Mental Rotation 90,S9,task8,Hidden Object Count,0.1335526048105224,2.0598516744248729e-13,3000
-text,vla0,vla0,within_scene,T2-90,task10,Mental Rotation 90,S9,task8,Hidden Object Count,0.1282665192133588,3.1687398974226296e-12,2931
-text,vla0,vla0,naive,T2-90,task10,Mental Rotation 90,T1,main,Object Counting,-0.0424268474541098,0.02013128047921437,3000
-text,vla0,vla0,within_scene,T2-90,task10,Mental Rotation 90,T1,main,Object Counting,-0.047454273078151823,0.010893161318045977,2878
-text,vla0,vla0,naive,T2-90,task10,Mental Rotation 90,T2-90,task10,Mental Rotation 90,,,3000
-text,vla0,vla0,within_scene,T2-90,task10,Mental Rotation 90,T2-90,task10,Mental Rotation 90,,,2509
-text,vla0,vla0,naive,T2-90,task10,Mental Rotation 90,T2-180,task11,Mental Rotation 180,0.22910262839371917,5.027668353562022e-37,3000
-text,vla0,vla0,within_scene,T2-90,task10,Mental Rotation 90,T2-180,task11,Mental Rotation 180,0.20971511035656162,9.113592362777377e-29,2756
-text,vla0,vla0,naive,T2-180,task11,Mental Rotation 180,S1,task1,Object Categorization,,,0
-text,vla0,vla0,within_scene,T2-180,task11,Mental Rotation 180,S1,task1,Object Categorization,,,0
-text,vla0,vla0,naive,T2-180,task11,Mental Rotation 180,S2,task9,Cluster Count,0.007315290121997525,0.6887784747542668,3000
-text,vla0,vla0,within_scene,T2-180,task11,Mental Rotation 180,S2,task9,Cluster Count,0.0005188819740314082,0.9776024723813126,2930
-text,vla0,vla0,naive,T2-180,task11,Mental Rotation 180,S3,task3,Column Count,0.018042610019650705,0.32320014803540215,3000
-text,vla0,vla0,within_scene,T2-180,task11,Mental Rotation 180,S3,task3,Column Count,0.016737291628226948,0.38589026085385375,2686
-text,vla0,vla0,naive,T2-180,task11,Mental Rotation 180,S4,task4,Layer Count,0.011070113353569163,0.5444477122628175,3000
-text,vla0,vla0,within_scene,T2-180,task11,Mental Rotation 180,S4,task4,Layer Count,0.011376292732571514,0.5335093785564559,2998
-text,vla0,vla0,naive,T2-180,task11,Mental Rotation 180,S5,task5,Visible Object Count,-0.01876902084444044,0.30409863564910916,3000
-text,vla0,vla0,within_scene,T2-180,task11,Mental Rotation 180,S5,task5,Visible Object Count,-0.023258086358615954,0.2193199356324309,2791
-text,vla0,vla0,naive,T2-180,task11,Mental Rotation 180,S6,task2,Top Layer,-0.016992269392956016,0.3521721840215192,3000
-text,vla0,vla0,within_scene,T2-180,task11,Mental Rotation 180,S6,task2,Top Layer,-0.017448210605882114,0.3398833969232918,2994
-text,vla0,vla0,naive,T2-180,task11,Mental Rotation 180,S7,task6,Direct Support,0.01197617722719041,0.512009198174655,3000
-text,vla0,vla0,within_scene,T2-180,task11,Mental Rotation 180,S7,task6,Direct Support,0.006310353192201107,0.731551306228017,2958
-text,vla0,vla0,naive,T2-180,task11,Mental Rotation 180,S8,task7,Support Column,0.008081875211185805,0.6581380771666099,3000
-text,vla0,vla0,within_scene,T2-180,task11,Mental Rotation 180,S8,task7,Support Column,0.003977019954621703,0.8291954338052276,2945
-text,vla0,vla0,naive,T2-180,task11,Mental Rotation 180,S9,task8,Hidden Object Count,0.0579959429149952,0.0014833580112869988,3000
-text,vla0,vla0,within_scene,T2-180,task11,Mental Rotation 180,S9,task8,Hidden Object Count,0.049628828899463254,0.007525967793883586,2899
-text,vla0,vla0,naive,T2-180,task11,Mental Rotation 180,T1,main,Object Counting,-0.04357889561975003,0.01698401194902544,3000
-text,vla0,vla0,within_scene,T2-180,task11,Mental Rotation 180,T1,main,Object Counting,-0.05006128312169526,0.007601241562492773,2842
-text,vla0,vla0,naive,T2-180,task11,Mental Rotation 180,T2-90,task10,Mental Rotation 90,0.22910262839371925,5.027668353562022e-37,3000
-text,vla0,vla0,within_scene,T2-180,task11,Mental Rotation 180,T2-90,task10,Mental Rotation 90,0.20971511035656165,9.113592362776142e-29,2756
-text,vla0,vla0,naive,T2-180,task11,Mental Rotation 180,T2-180,task11,Mental Rotation 180,,,3000
-text,vla0,vla0,within_scene,T2-180,task11,Mental Rotation 180,T2-180,task11,Mental Rotation 180,,,2385
+text,vla0,VLA-0,naive,T2-90,task10,Mental Rotation 90,S1,task1,Object Categorization,,,0
+text,vla0,VLA-0,within_scene,T2-90,task10,Mental Rotation 90,S1,task1,Object Categorization,,,0
+text,vla0,VLA-0,naive,T2-90,task10,Mental Rotation 90,S2,task9,Cluster Count,0.02522037856296063,0.16727250594699736,3000
+text,vla0,VLA-0,within_scene,T2-90,task10,Mental Rotation 90,S2,task9,Cluster Count,0.020105123794399708,0.275237865005204,2947
+text,vla0,VLA-0,naive,T2-90,task10,Mental Rotation 90,S3,task3,Column Count,-0.013730450993760903,0.4521895094135245,3000
+text,vla0,VLA-0,within_scene,T2-90,task10,Mental Rotation 90,S3,task3,Column Count,-0.015207364883024219,0.4257770432073687,2745
+text,vla0,VLA-0,naive,T2-90,task10,Mental Rotation 90,S4,task4,Layer Count,-0.02182813948112094,0.23200085965048017,3000
+text,vla0,VLA-0,within_scene,T2-90,task10,Mental Rotation 90,S4,task4,Layer Count,-0.021179356617188703,0.2464124543747927,2997
+text,vla0,VLA-0,naive,T2-90,task10,Mental Rotation 90,S5,task5,Visible Object Count,-0.01281971104268362,0.482741087431032,3000
+text,vla0,VLA-0,within_scene,T2-90,task10,Mental Rotation 90,S5,task5,Visible Object Count,-0.01634425960481345,0.38442816491993675,2834
+text,vla0,VLA-0,naive,T2-90,task10,Mental Rotation 90,S6,task2,Top Layer,0.02292372499267929,0.20939680148488815,3000
+text,vla0,VLA-0,within_scene,T2-90,task10,Mental Rotation 90,S6,task2,Top Layer,0.02255192455544087,0.21726562321630583,2995
+text,vla0,VLA-0,naive,T2-90,task10,Mental Rotation 90,S7,task6,Direct Support,0.002773301812101379,0.879315511067755,3000
+text,vla0,VLA-0,within_scene,T2-90,task10,Mental Rotation 90,S7,task6,Direct Support,-0.0005803501545121334,0.9747667859761138,2973
+text,vla0,VLA-0,naive,T2-90,task10,Mental Rotation 90,S8,task7,Support Column,0.04150428927076465,0.023007162697609742,3000
+text,vla0,VLA-0,within_scene,T2-90,task10,Mental Rotation 90,S8,task7,Support Column,0.03791255956792654,0.039456333361587666,2951
+text,vla0,VLA-0,naive,T2-90,task10,Mental Rotation 90,S9,task8,Hidden Object Count,0.1335526048105224,2.0598516744248729e-13,3000
+text,vla0,VLA-0,within_scene,T2-90,task10,Mental Rotation 90,S9,task8,Hidden Object Count,0.1282665192133588,3.1687398974226296e-12,2931
+text,vla0,VLA-0,naive,T2-90,task10,Mental Rotation 90,T1,main,Object Counting,-0.0424268474541098,0.02013128047921437,3000
+text,vla0,VLA-0,within_scene,T2-90,task10,Mental Rotation 90,T1,main,Object Counting,-0.047454273078151823,0.010893161318045977,2878
+text,vla0,VLA-0,naive,T2-90,task10,Mental Rotation 90,T2-90,task10,Mental Rotation 90,,,3000
+text,vla0,VLA-0,within_scene,T2-90,task10,Mental Rotation 90,T2-90,task10,Mental Rotation 90,,,2509
+text,vla0,VLA-0,naive,T2-90,task10,Mental Rotation 90,T2-180,task11,Mental Rotation 180,0.22910262839371917,5.027668353562022e-37,3000
+text,vla0,VLA-0,within_scene,T2-90,task10,Mental Rotation 90,T2-180,task11,Mental Rotation 180,0.20971511035656162,9.113592362777377e-29,2756
+text,vla0,VLA-0,naive,T2-180,task11,Mental Rotation 180,S1,task1,Object Categorization,,,0
+text,vla0,VLA-0,within_scene,T2-180,task11,Mental Rotation 180,S1,task1,Object Categorization,,,0
+text,vla0,VLA-0,naive,T2-180,task11,Mental Rotation 180,S2,task9,Cluster Count,0.007315290121997525,0.6887784747542668,3000
+text,vla0,VLA-0,within_scene,T2-180,task11,Mental Rotation 180,S2,task9,Cluster Count,0.0005188819740314082,0.9776024723813126,2930
+text,vla0,VLA-0,naive,T2-180,task11,Mental Rotation 180,S3,task3,Column Count,0.018042610019650705,0.32320014803540215,3000
+text,vla0,VLA-0,within_scene,T2-180,task11,Mental Rotation 180,S3,task3,Column Count,0.016737291628226948,0.38589026085385375,2686
+text,vla0,VLA-0,naive,T2-180,task11,Mental Rotation 180,S4,task4,Layer Count,0.011070113353569163,0.5444477122628175,3000
+text,vla0,VLA-0,within_scene,T2-180,task11,Mental Rotation 180,S4,task4,Layer Count,0.011376292732571514,0.5335093785564559,2998
+text,vla0,VLA-0,naive,T2-180,task11,Mental Rotation 180,S5,task5,Visible Object Count,-0.01876902084444044,0.30409863564910916,3000
+text,vla0,VLA-0,within_scene,T2-180,task11,Mental Rotation 180,S5,task5,Visible Object Count,-0.023258086358615954,0.2193199356324309,2791
+text,vla0,VLA-0,naive,T2-180,task11,Mental Rotation 180,S6,task2,Top Layer,-0.016992269392956016,0.3521721840215192,3000
+text,vla0,VLA-0,within_scene,T2-180,task11,Mental Rotation 180,S6,task2,Top Layer,-0.017448210605882114,0.3398833969232918,2994
+text,vla0,VLA-0,naive,T2-180,task11,Mental Rotation 180,S7,task6,Direct Support,0.01197617722719041,0.512009198174655,3000
+text,vla0,VLA-0,within_scene,T2-180,task11,Mental Rotation 180,S7,task6,Direct Support,0.006310353192201107,0.731551306228017,2958
+text,vla0,VLA-0,naive,T2-180,task11,Mental Rotation 180,S8,task7,Support Column,0.008081875211185805,0.6581380771666099,3000
+text,vla0,VLA-0,within_scene,T2-180,task11,Mental Rotation 180,S8,task7,Support Column,0.003977019954621703,0.8291954338052276,2945
+text,vla0,VLA-0,naive,T2-180,task11,Mental Rotation 180,S9,task8,Hidden Object Count,0.0579959429149952,0.0014833580112869988,3000
+text,vla0,VLA-0,within_scene,T2-180,task11,Mental Rotation 180,S9,task8,Hidden Object Count,0.049628828899463254,0.007525967793883586,2899
+text,vla0,VLA-0,naive,T2-180,task11,Mental Rotation 180,T1,main,Object Counting,-0.04357889561975003,0.01698401194902544,3000
+text,vla0,VLA-0,within_scene,T2-180,task11,Mental Rotation 180,T1,main,Object Counting,-0.05006128312169526,0.007601241562492773,2842
+text,vla0,VLA-0,naive,T2-180,task11,Mental Rotation 180,T2-90,task10,Mental Rotation 90,0.22910262839371925,5.027668353562022e-37,3000
+text,vla0,VLA-0,within_scene,T2-180,task11,Mental Rotation 180,T2-90,task10,Mental Rotation 90,0.20971511035656165,9.113592362776142e-29,2756
+text,vla0,VLA-0,naive,T2-180,task11,Mental Rotation 180,T2-180,task11,Mental Rotation 180,,,3000
+text,vla0,VLA-0,within_scene,T2-180,task11,Mental Rotation 180,T2-180,task11,Mental Rotation 180,,,2385

@@ -299,9 +299,10 @@ DIFFICULTY_FACTORS = ["total_blocks", "num_hidden_blocks", "num_layers", "num_co
 CAMERA_FACTORS = ["perspective", "offset"]
 MODEL_FAMILY_ORDER = ["human", "claude", "qwen", "gemini", "gpt", "glm", "qwen3b", "vla-0", "kimi"]
 
-# Color families are shared across figures so readers can track the same model
-# across modalities. MCQ choice-count variants and 7B checkpoints are lightened
-# from their base family color in ``model_color``.
+# One palette for every figure, matching the paper's figure code, so a model has
+# the same color in every modality. MCQ answer-set variants (3CQ/4CQ/5CQ) keep
+# their family color; Figure 15 alone shades bars by answer-set size, as its
+# caption describes. Trained 7B checkpoints use a 50% shade of the family color.
 MODEL_COLOR_MAP = {
     "human": "#212121",
     "claude": "#1d6fbb",
@@ -321,17 +322,27 @@ MODEL_COLOR_MAP = {
     "qwen2.5-vl": "#f28e2b",
 }
 
-PAPER_MODEL_COLOR_MAP = {
-    "human": "#333333",
-    "claude": "#2F7AC0",
-    "qwen": "#E88834",
-    "gemini": "#38B46C",
-    "gpt": "#C5493C",
-    "glm": "#9753B3",
-    "qwen3b": "#29A78E",
-    "vla-0": "#DB2D6C",
-    "kimi": "#836256",
+# Legend / axis labels used in the paper's figures, keyed by ``family_name``.
+# Trained checkpoints keep their identifiers (e.g. dapo-32b-tight), as in the paper.
+FAMILY_DISPLAY_NAME = {
+    "human": "Human",
+    "claude": "Claude",
+    "qwen": "Qwen",
+    "gemini": "Gemini",
+    "gpt": "GPT",
+    "glm": "GLM",
+    "qwen3b": "Qwen3B",
+    "vla-0": "VLA-0",
+    "kimi": "Kimi",
+    "gemini-image": "Gemini Image",
+    "qwen-image-edit": "Qwen Image Edit",
+    "hunyuan": "Hunyuan",
 }
+
+# Responders drawn in the wrong-answer figures (Figures 5 and 16), as in the paper.
+# Kimi and VLA-0 were evaluated in the MCQ format after those figures were made;
+# their wrong-answer rows stay in the exported CSVs but are not drawn.
+WRONG_ANSWER_FIGURE_FAMILIES = {"human", "claude", "gemini", "gpt", "qwen", "glm", "qwen3b"}
 
 ROTATION_HIGHLIGHT_COLOR = "#B8860B"
 ROTATION_HIGHLIGHT_ALPHA = 0.10
@@ -583,6 +594,13 @@ def object_display_name(obj: str) -> str:
 
 
 def family_name(model: str) -> str:
+    """Model family used for colors, labels and ordering.
+
+    More specific prefixes are checked first: ``qwen3b`` and the image editors
+    must not fall into the ``qwen``/``gemini`` families, and the VLA-0 files are
+    named ``vla0``.
+    """
+
     m = model.lower()
     if m == "human":
         return "human"
@@ -594,40 +612,38 @@ def family_name(model: str) -> str:
         return "sft-plain"
     if m.startswith("dapo"):
         return "dapo"
-    for family in MODEL_FAMILY_ORDER:
-        if m.startswith(family):
-            return family
     if "image" in m and "qwen" in m:
         return "qwen-image-edit"
     if "image" in m and "gemini" in m:
         return "gemini-image"
+    if m.startswith("hunyuan"):
+        return "hunyuan"
+    if m.startswith("qwen3b"):
+        return "qwen3b"
+    if m.startswith("vla0") or m.startswith("vla-0"):
+        return "vla-0"
+    for family in MODEL_FAMILY_ORDER:
+        if m.startswith(family):
+            return family
     return m
 
 
-def model_color(model: str) -> str:
-    """Return the stable plotting color for a model or model variant."""
+def model_color(model: str, shade_answer_set: bool = False) -> str:
+    """Return the plotting color for a model or model variant.
+
+    Every figure uses the family color. ``shade_answer_set`` lightens 3CQ and
+    4CQ variants (palest = 3CQ, darkest = 5CQ) for Figure 15, whose caption
+    encodes answer-set size by shading. Trained 7B checkpoints use a 50% shade.
+    """
 
     family = family_name(model)
     base = MODEL_COLOR_MAP.get(family, "#6b7280")
-    if re.search(r"3cq\b", model.lower()):
+    m = model.lower()
+    if shade_answer_set and re.search(r"3cq\b", m):
         return blend_color(base, "#ffffff", 0.60)
-    if re.search(r"4cq\b", model.lower()):
+    if shade_answer_set and re.search(r"4cq\b", m):
         return blend_color(base, "#ffffff", 0.38)
-    if "7b" in model.lower():
-        return blend_color(base, "#ffffff", 0.50)
-    return base
-
-
-def paper_model_color(model: str) -> str:
-    """Return the notebook-style model color for paper-specific replacement figures."""
-
-    family = family_name(model)
-    base = PAPER_MODEL_COLOR_MAP.get(family, model_color(model))
-    if re.search(r"3cq\b", model.lower()):
-        return blend_color(base, "#ffffff", 0.60)
-    if re.search(r"4cq\b", model.lower()):
-        return blend_color(base, "#ffffff", 0.38)
-    if "7b" in model.lower():
+    if family in {"dapo", "sft-cot", "sft-plain", "qwen2.5-vl"} and "7b" in m:
         return blend_color(base, "#ffffff", 0.50)
     return base
 
@@ -639,33 +655,26 @@ def blend_color(color: str, target: str, amount: float) -> str:
     return matplotlib.colors.to_hex(mixed)
 
 
-def display_model(model: str) -> str:
-    """Convert raw file/model identifiers into compact figure labels."""
+def display_model(model: str, answer_set_suffix: bool = False) -> str:
+    """Convert raw file/model identifiers into the paper's figure labels.
 
-    m = model.lower()
-    if m == "human":
-        return "Human"
-    if m.startswith("gpt"):
-        return "GPT" + model[3:].upper().replace("CQ", "CQ")
-    if m.startswith("glm"):
-        return "GLM" + model[3:].upper().replace("CQ", "CQ")
-    if m.startswith("qwen3b"):
-        return "Qwen3B"
-    if m.startswith("qwen") and "cq" in m:
-        return "Qwen " + re.search(r"([345])cq", m).group(1) + "CQ"
-    if m.startswith("claude") and "cq" in m:
-        return "Claude " + re.search(r"([345])cq", m).group(1) + "CQ"
-    if m.startswith("gemini") and "cq" in m:
-        return "Gemini " + re.search(r"([345])cq", m).group(1) + "CQ"
-    if m in {"claude", "qwen", "gemini", "kimi"}:
-        return m.capitalize()
-    if m == "vla-0":
-        return "VLA-0"
-    if m == "qwen-image-edit":
-        return "Qwen Image Edit"
-    if m == "gemini-image":
-        return "Gemini Image"
-    return model
+    MCQ variants read "Claude 3CQ"; with ``answer_set_suffix`` the five-choice
+    files (named without a suffix) read "Claude 5CQ" too, for figures that mix
+    answer-set sizes. Trained checkpoints keep their identifiers.
+    """
+
+    family = family_name(model)
+    base = FAMILY_DISPLAY_NAME.get(family)
+    if base is None:
+        return model
+    if family == "human":
+        return base
+    cq = re.search(r"([345])cq\b", model.lower())
+    if cq:
+        return f"{base} {cq.group(1)}CQ"
+    if answer_set_suffix:
+        return f"{base} 5CQ"
+    return base
 
 
 def model_sort_key(model: str, score: float | None = None) -> tuple:
@@ -1383,12 +1392,16 @@ def wrong_answer_table(data: ModelResults, group: str) -> pd.DataFrame:
     ``*_choice_type`` columns that record the selected wrong-answer category.
 
     Figures 5 and 16 display only wrong-answer categories with raw p < 0.05
-    against the relevant MCQ chance level. The full table keeps every category
-    so appendix readers can inspect non-displayed errors as well.
+    against the relevant MCQ chance level, for the responders in
+    ``WRONG_ANSWER_FIGURE_FAMILIES``. The full table keeps every category and
+    responder so appendix readers can inspect non-displayed errors as well.
+    ``object_counting_accuracy`` (chance-adjusted) orders the figure rows.
     """
 
     rows = []
     for model, df in data.items():
+        main_acc = float(df["main"].dropna().mean()) if "main" in df.columns and df["main"].notna().any() else np.nan
+        in_figure = family_name(model) in WRONG_ANSWER_FIGURE_FAMILIES
         for task in TASK_ORDER:
             choice_col = f"{task}_choice_type"
             if choice_col not in df.columns:
@@ -1418,7 +1431,9 @@ def wrong_answer_table(data: ModelResults, group: str) -> pd.DataFrame:
                     "chance_level": baseline,
                     "chance_adjusted_preference": chance_adjust(p_raw, group, model),
                     "above_chance_p": p_val,
-                    "displayed_in_figure": bool(p_val < 0.05) if not pd.isna(p_val) else False,
+                    "significant": bool(p_val < 0.05) if not pd.isna(p_val) else False,
+                    "displayed_in_figure": in_figure and (bool(p_val < 0.05) if not pd.isna(p_val) else False),
+                    "object_counting_accuracy": chance_adjust(main_acc, group, model),
                 })
     out = pd.DataFrame(rows)
     if out.empty:
@@ -1679,7 +1694,16 @@ def run_analysis(input_dir: Path, output_dir: Path, groups: list[str]) -> None:
         mcq345_acc = task_accuracy_table(loaded["mcq345"], "mcq345")
         mcq345_acc.to_csv(table_dir / "figure_15_mcq345_task_accuracy.csv", index=False)
         summary_table(loaded["mcq345"], mcq345_acc, "mcq345").to_csv(table_dir / "table_02_mcq_summary.csv", index=False)
-        wrong_answer_table(loaded["mcq345"], "mcq345").to_csv(table_dir / "figure_16_mcq345_wrong_answer_preferences.csv", index=False)
+        # Figure 16 covers every responder evaluated in the MCQ format, as in the
+        # paper: the mixed-CQ families plus five-choice-only responders (GLM,
+        # Qwen3B), which come from the mcq5 group. Table 2 / Figures 15 and 23 keep
+        # the mixed-CQ families only.
+        wrong_data = dict(loaded["mcq345"])
+        if "mcq5" in loaded:
+            for model, frame in loaded["mcq5"].items():
+                if family_name(model) not in {family_name(m) for m in wrong_data}:
+                    wrong_data[model] = frame
+        wrong_answer_table(wrong_data, "mcq345").to_csv(table_dir / "figure_16_mcq345_wrong_answer_preferences.csv", index=False)
         e1a_table(loaded["mcq345"], "mcq345").to_csv(table_dir / "figure_23_mcq345_summation_mechanism.csv", index=False)
         export_hierarchy_dependency_tables(loaded["mcq345"], table_dir, "mcq345")
 
@@ -1803,7 +1827,13 @@ def render_all_figures(output_dir: Path) -> None:
     render_correlation_heatmap(table_dir / "figure_13_text_mental_rotation_correlations.csv", figure_dir / "figure_13_text_mental_rotation_correlations.png")
     render_bundle_bars(table_dir / "figure_14_text_bundle_correlations.csv", figure_dir / "figure_14_text_bundle_correlations.png")
     render_task_accuracy(table_dir / "figure_15_mcq345_task_accuracy.csv", figure_dir / "figure_15_mcq345_task_accuracy.png", value_col="chance_adjusted_accuracy", ylabel="Chance-adjusted accuracy")
-    render_wrong_answer_heatmap(table_dir / "figure_16_mcq345_wrong_answer_preferences.csv", figure_dir / "figure_16_mcq345_wrong_answer_preferences.png", value_col="chance_adjusted_preference")
+    render_wrong_answer_heatmap(
+        table_dir / "figure_16_mcq345_wrong_answer_preferences.csv",
+        figure_dir / "figure_16_mcq345_wrong_answer_preferences.png",
+        value_col="chance_adjusted_preference",
+        include_human=False,
+        answer_set_suffix=True,
+    )
     render_task_accuracy(table_dir / "table_08_image_task_accuracy.csv", figure_dir / "figure_17_image_task_accuracy.png", value_col="accuracy", ylabel="Accuracy")
     render_camera_effects(table_dir / "figure_18_text_camera_effects.csv", figure_dir / "figure_18_text_camera_effects.png")
     render_difficulty(table_dir / "figure_19_image_difficulty_bins.csv", figure_dir / "figure_19_image_difficulty_controls.png", value_col="accuracy", ylabel="Object Counting accuracy")
@@ -1883,7 +1913,7 @@ def render_paper_task_accuracy(csv_path: Path, out_path: Path, value_col: str = 
         sub = df[df["model"] == model].set_index(task_col)
         vals = [sub.loc[task, value_col] if task in sub.index else np.nan for task in tasks]
         offset = (-total_group_width / 2) + (i * (bar_width + bar_gap)) + (bar_width / 2)
-        ax.bar(x + offset, vals, bar_width, label=display_model(model), color=paper_model_color(model), zorder=2)
+        ax.bar(x + offset, vals, bar_width, label=display_model(model), color=model_color(model), zorder=2)
 
     ax.set_ylabel("Accuracy", fontsize=label_font_size, weight="bold")
     ax.set_xticks(x)
@@ -1939,7 +1969,7 @@ def render_paper_difficulty(csv_path: Path, out_path: Path, value_col: str = "ac
             ax.plot(
                 x_indices,
                 vals,
-                color=paper_model_color(model),
+                color=model_color(model),
                 label=display_model(model),
                 marker="o",
                 linestyle="-",
@@ -2043,9 +2073,9 @@ def render_paper_e1a(csv_path: Path, out_path: Path) -> None:
                         color=text_color,
                     )
 
-        ax.text(0.5, 1.12, display_model(model), transform=ax.transAxes, ha="center", va="bottom", color=paper_model_color(model), weight="bold", fontsize=title_font_size)
+        ax.text(0.5, 1.12, display_model(model), transform=ax.transAxes, ha="center", va="bottom", color=model_color(model), weight="bold", fontsize=title_font_size)
         if np.isfinite(overall_acc):
-            ax.text(0.5, 1.02, f"({overall_acc * 100:.1f}%)", transform=ax.transAxes, ha="center", va="bottom", color=paper_model_color(model), fontsize=acc_font_size)
+            ax.text(0.5, 1.02, f"({overall_acc * 100:.1f}%)", transform=ax.transAxes, ha="center", va="bottom", color=model_color(model), fontsize=acc_font_size)
         ax.set_xlim(0, 2)
         ax.set_ylim(0, 2)
         ax.set_aspect("equal")
@@ -2059,7 +2089,7 @@ def render_paper_e1a(csv_path: Path, out_path: Path) -> None:
         for spine_name, spine in ax.spines.items():
             if spine_name in {"left", "bottom"}:
                 spine.set_visible(True)
-                spine.set_color(paper_model_color(model))
+                spine.set_color(model_color(model))
                 spine.set_linewidth(axis_linewidth)
             else:
                 spine.set_visible(False)
@@ -2085,6 +2115,9 @@ def render_task_accuracy(csv_path: Path, out_path: Path, value_col: str, ylabel:
     task_col = source_task_col(df)
     tasks = [t for t in TASK_ORDER if t in set(df[task_col])]
     models = ordered_models_from_table(df, value_col)
+    # Figure 15 (mixed answer-set sizes) shades bars by answer-set size and labels
+    # every variant with its size.
+    mixed_cq = "group" in df.columns and (df["group"] == "mcq345").any()
     fig_w = max(12.8, 1.0 * len(tasks) + 3.2)
     fig, ax = plt.subplots(figsize=(fig_w, 3.9))
     x = np.arange(len(tasks))
@@ -2099,10 +2132,10 @@ def render_task_accuracy(csv_path: Path, out_path: Path, value_col: str, ylabel:
             x + (i - (len(models) - 1) / 2) * bar_w,
             vals,
             width=bar_w * 0.94,
-            color=model_color(model),
+            color=model_color(model, shade_answer_set=mixed_cq),
             edgecolor="white",
             linewidth=0.7,
-            label=display_model(model),
+            label=display_model(model, answer_set_suffix=mixed_cq),
             zorder=2,
         )
     ax.set_xticks(x)
@@ -2172,6 +2205,7 @@ def render_e1a(csv_path: Path, out_path: Path) -> None:
     models = ordered_models_from_table(df.rename(columns={"main_accuracy": "accuracy"}), "overall_main_accuracy")
     if not models:
         models = df["model"].drop_duplicates().tolist()
+    mixed_cq = "group" in df.columns and (df["group"] == "mcq345").any()
     fig_w = max(5.5, 1.08 * len(models) + 0.8)
     fig = plt.figure(figsize=(fig_w, 2.7))
     gs = fig.add_gridspec(1, len(models), wspace=0.16)
@@ -2200,7 +2234,7 @@ def render_e1a(csv_path: Path, out_path: Path) -> None:
         else:
             ax.set_yticklabels([])
         main_acc = sub["overall_main_accuracy"].dropna().iloc[0] if sub["overall_main_accuracy"].notna().any() else np.nan
-        ax.set_title(f"{display_model(model)}\nMain {main_acc:.1%}", fontsize=6.4, color=model_color(model), pad=7)
+        ax.set_title(f"{display_model(model, answer_set_suffix=mixed_cq)}\nMain {main_acc:.1%}", fontsize=6.4, color=model_color(model), pad=7)
         for r in range(2):
             for c in range(2):
                 if np.isfinite(mat[r, c]):
@@ -2224,21 +2258,49 @@ def render_e1a(csv_path: Path, out_path: Path) -> None:
     plt.close(fig)
 
 
-def render_wrong_answer_heatmap(csv_path: Path, out_path: Path, value_col: str = "raw_proportion") -> None:
-    """Render Figures 5 and 16 using the notebook-provided wrong-answer heatmap style."""
+WRONG_ANSWER_TASK_HEADERS = {"task1": "Objects", "task6": "Top Support"}
+
+
+def render_wrong_answer_heatmap(
+    csv_path: Path,
+    out_path: Path,
+    value_col: str = "raw_proportion",
+    include_human: bool = True,
+    answer_set_suffix: bool = False,
+) -> None:
+    """Render Figures 5 and 16 in the paper's wrong-answer heatmap style.
+
+    Rows are the responders in ``WRONG_ANSWER_FIGURE_FAMILIES`` (Human first when
+    ``include_human``), ordered by chance-adjusted Object Counting accuracy; a
+    row is kept even when none of its cells is significant. Raw labels that map
+    to the same wrong-answer reason are merged by taking the larger value.
+    """
 
     df = read_csv_if_exists(csv_path)
     if df.empty or value_col not in df.columns:
         return
+    df = df[df["model"].map(lambda m: family_name(m) in WRONG_ANSWER_FIGURE_FAMILIES)]
+    if not include_human:
+        df = df[df["model"].str.lower() != "human"]
     displayed = df["displayed_in_figure"].astype(bool) if "displayed_in_figure" in df.columns else pd.Series(False, index=df.index)
-    shown = df[displayed].copy()
-    if shown.empty:
-        shown = df.sort_values("above_chance_p").head(80).copy()
+    task_col = source_task_col(df)
+    shown = (
+        df[displayed]
+        .groupby(["model", task_col, "reason"], as_index=False)[value_col]
+        .max()
+    )
     if shown.empty:
         return
 
-    task_col = source_task_col(shown)
-    rows = sorted(shown["model"].drop_duplicates(), key=lambda model: model_sort_key(model, None))
+    accuracy = df.groupby("model")["object_counting_accuracy"].first() if "object_counting_accuracy" in df.columns else pd.Series(dtype=float)
+    rows = sorted(
+        df["model"].drop_duplicates(),
+        key=lambda m: (
+            0 if m.lower() == "human" else 1,
+            -float(accuracy.get(m, np.nan)) if pd.notna(accuracy.get(m, np.nan)) else np.inf,
+            model_sort_key(m, None),
+        ),
+    )
     grouped_cols: list[tuple[str, str]] = []
     spans: list[tuple[str, int, int]] = []
     x_ptr = 0
@@ -2265,7 +2327,7 @@ def render_wrong_answer_heatmap(csv_path: Path, out_path: Path, value_col: str =
     cell_font_size = 7 if len(grouped_cols) <= 22 else 5.8
     title_font_size = 8
     y_label_font_size = 8
-    x_label_font_size = 6.3
+    x_label_font_size = 6.3 if len(grouped_cols) <= 15 else 5.4
     fig, ax = plt.subplots(figsize=(max(12, 0.45 * len(grouped_cols) + 3.0), max(3.0, 0.34 * len(rows) + 1.3)))
     cmap = plt.get_cmap(WRONG_ANSWER_CMAP)
     rotation_bg = rotation_bg_rgba()
@@ -2294,7 +2356,7 @@ def render_wrong_answer_heatmap(csv_path: Path, out_path: Path, value_col: str =
 
     for idx, (task, start, end) in enumerate(spans):
         is_rotation = task in {"task10", "task11"}
-        display = paper_task_axis_label(task).replace("\n", " ")
+        display = WRONG_ANSWER_TASK_HEADERS.get(task, paper_task_axis_label(task).replace("\n", " "))
         if is_rotation:
             display = display.replace(" Rotation", "\nRotation")
         else:
@@ -2314,9 +2376,9 @@ def render_wrong_answer_heatmap(csv_path: Path, out_path: Path, value_col: str =
             ax.axvline(end + 0.5, color="black", lw=1.5, zorder=3)
 
     ax.set_yticks(range(len(rows)))
-    ax.set_yticklabels([display_model(model) for model in rows], weight="bold", fontsize=y_label_font_size)
+    ax.set_yticklabels([display_model(model, answer_set_suffix=answer_set_suffix) for model in rows], weight="bold", fontsize=y_label_font_size)
     for tick, model in zip(ax.get_yticklabels(), rows):
-        tick.set_color(paper_model_color(model))
+        tick.set_color(model_color(model))
     ax.set_xticks(range(len(grouped_cols)))
     ax.set_xticklabels([split_label_near_midpoint(reason) for _, reason in grouped_cols], rotation=0, ha="center", fontsize=x_label_font_size)
     ax.set(xlim=(-0.5, len(grouped_cols) - 0.5), ylim=(len(rows) - 0.5, -0.5), aspect=1 / cell_aspect)
