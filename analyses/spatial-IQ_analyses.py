@@ -2466,7 +2466,11 @@ def render_wrong_answer_heatmap(
         cax=cax,
         ticks=[0, 0.1, 0.2, 0.3, 0.4],
     )
-    cbar.set_label("P(wrong type)", weight="bold", fontsize=8)
+    cbar.set_label(
+        "Chance-adjusted preference" if value_col == "chance_adjusted_preference" else "P(wrong type)",
+        weight="bold",
+        fontsize=8,
+    )
     cbar.ax.tick_params(labelsize=7)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out_path, dpi=300, bbox_inches="tight")
