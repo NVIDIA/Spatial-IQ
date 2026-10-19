@@ -38,9 +38,10 @@ training/
   chain-of-thought target listing sub-task answers in the order required for
   additive composition, followed by the integer total. Trains the model to
   expose the intermediate reasoning steps before emitting the final count.
-- **DAPO-tight.** A brief SFT-CoT warmup on 10% of the training data followed
-  by RL with verifiable rewards under the [DAPO
-  recipe](https://arxiv.org/abs/2503.14476) on the remaining 90%. The reward
+- **DAPO-tight.** Initialized from the SFT-CoT checkpoint and continued with
+  RL with verifiable rewards under the [DAPO
+  recipe](https://arxiv.org/abs/2503.14476) on a 50% subset of the training
+  data. The reward
   gates on structured-answer tag presence + integer match — no per-sub-task
   rewards.
 

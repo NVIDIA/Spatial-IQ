@@ -119,21 +119,21 @@ Spatial-IQ therefore evaluates models on both the target task and its sub-capabi
 :class: siq-figure-img
 :align: center
 
-**Figure 2.** [Left] The nine sub-tasks (S1&ndash;S9) and two target tasks (T1, T2) of Spatial-IQ. S1&ndash;S4 probe primitive perceptual grouping (object individuation, clustering, columns, layers). S5 counts visible objects. S6&ndash;S8 test structural reasoning (top layer, direct support, support columns). S9 counts hidden objects. T1 is the total *Object Count*; T2 is *Mental Rotation*. [Right] An example scene with per-task ground-truth masks for the image-editing format.
+**Figure 2.** [Left] The nine sub-tasks (S1&ndash;S9) and two target tasks (T1, T2) of Spatial-IQ. S1&ndash;S4 probe primitive perceptual grouping (object individuation, clustering, columns, layers). S5 counts visible objects. S6&ndash;S8 test structural reasoning (top layer, direct support, support columns). S9 counts the visible objects that rest directly on a hidden object, from which hidden support must be inferred. T1 is the total *Object Count*; T2 is *Mental Rotation*. [Right] An example scene with per-task ground-truth masks for the image-editing format.
 ```
 
 ```{figure} _static/figures/chains.png
 :class: siq-figure-img
 :align: center
 
-**Figure 3.** We pre-specify four sub-task relations for hierarchy-dependency analysis: the **Internal Referential Chain** (top layer &rarr; direct support &rarr; support column), the **Visible Support Hierarchy**, the **Hidden Support Hierarchy**, and the **Summation Mechanism** (visible count + hidden count &rarr; total).
+**Figure 3.** We pre-specify four sub-task relations for hierarchy-dependency analysis: the **Internal Referential Chain** (top layer &rarr; direct support &rarr; support column), the **Visible Support Hierarchy**, the **Hidden Support Hierarchy**, and the **Summation Mechanism** (visible count + hidden count &rarr; total). The Summation Mechanism is an arithmetic composition and the Internal Referential Chain is built into the task wording; the two Support Hierarchies are pre-specified diagnostic hypotheses that we test empirically.
 ```
 
-**Dataset.** We procedurally generate scenes in NVIDIA Isaac Sim 5.1, each consisting of a foreground structure of multiple identical objects (textured cubes, factory boxes, soup cans, or potted meat) constrained to a 4×4×4 voxel grid. Hidden objects are identified through a pixel-level depth-buffer occlusion test that retains an object only if it is camera-visible *or* required to support a retained object above it — guaranteeing every hidden object in the scene is *logically required by physical support* and never merely concealed behind a visible neighbor at an unrecoverable depth. The full dataset comprises ~80,000 scenes; our primary benchmark uses a 3,000-sample evaluation set, with a disjoint 68,000-sample set reserved for training.
+**Dataset.** We procedurally generate scenes in NVIDIA Isaac Sim 5.1, each consisting of a foreground structure of multiple identical objects (textured cubes, factory boxes, soup cans, or potted meat) constrained to a 4×4×4 voxel grid. Hidden objects are identified through a pixel-level depth-buffer occlusion test that retains an object only if it is camera-visible *or* required to support a retained object above it — guaranteeing every hidden object in the scene is *logically required by physical support* and never merely concealed behind a visible neighbor at an unrecoverable depth. The full dataset comprises ~80,000 scenes; our primary benchmark uses a 3,000-sample evaluation set, with disjoint structures reserved for training.
 
 ## Validating the Benchmark
 
-We evaluate frontier proprietary text-output models (Gemini 3 Pro, GPT 5.4, Claude Opus 4.6), open-weight models (Qwen3.5-27B, Kimi K2.5, GLM 4.6), the small-model anchors Qwen3.5-3B and VLA-0, and three image-editing models (Gemini 3.1 Flash Image, Qwen-Image-Edit, HunyuanImage-Instruct).
+We evaluate frontier proprietary text-output models (Gemini 3 Pro, GPT 5.4, Claude Opus 4.6), open-weight models (Qwen3.5-27B, Kimi K2.5, GLM-4.6V-Flash), the small-model anchors Qwen2.5-VL-3B and VLA-0, and three image-editing models (Gemini 3.1 Flash Image, Qwen-Image-Edit, HunyuanImage-Instruct).
 
 ```{figure} _static/figures/fig_c1.png
 :class: siq-figure-img
@@ -142,7 +142,7 @@ We evaluate frontier proprietary text-output models (Gemini 3 Pro, GPT 5.4, Clau
 **Figure 4.** Per-task accuracy in the text free-response modality, ordered according to our task taxonomy. Humans (black) perform well above all current models on *Object Counting*, while model performance varies by an order of magnitude. Models are shown in order of *Object Counting* performance.
 ```
 
-**The target task is solvable by humans and meaningfully ranks models.** Humans reach **82.1%** on *Object Counting*, demonstrating that the task is solvable yet not at ceiling. The performance spread distinguishes humans from models without saturating: humans sit well above the best model (Qwen, **17.7%**), which in turn outperforms the worst model by an order of magnitude (Qwen2.5-3B, 2.1%). Paired McNemar tests with multiple-comparisons correction separate most adjacent models; near-tied models (Gemini, Claude and Kimi; VLA-0 and GLM) are not statistically distinguishable.
+**The target task is solvable by humans and meaningfully ranks models.** Humans reach **82.1%** on *Object Counting*, demonstrating that the task is solvable yet not at ceiling. The performance spread distinguishes humans from models without saturating: humans sit well above the best model (Qwen, **17.7%**), which in turn outperforms the worst model by an order of magnitude (Qwen2.5-VL-3B, 2.1%). Paired McNemar tests with multiple-comparisons correction separate most adjacent models; near-tied models (Gemini, Claude and Kimi; VLA-0 and GLM) are not statistically distinguishable.
 
 ```{figure} _static/figures/wrong_answer_mcp.png
 :class: siq-figure-img
@@ -160,7 +160,7 @@ We evaluate frontier proprietary text-output models (Gemini 3 Pro, GPT 5.4, Clau
 
 ## Decomposing Model Performance
 
-Three columns of the table below report raw task accuracies (*Obj. Count*, *Visible*, *Hidden*). The remaining four columns capture pre-specified hierarchy relations: the **Internal Referential Chain** asks whether models preserve object reference along *Top Layer* &rarr; *Direct Support* &rarr; *Support Column*; the **Visible** and **Hidden Support Hierarchies** ask whether models preserve higher-level support capability within each branch; the **Summation Mechanism** asks whether the model integrates correct visible and hidden counts into a correct total. The latter four columns are *conditional* accuracies of the lower-level task given correctness on the designated higher-level tasks.
+Three columns of the table below report raw task accuracies (*Obj. Count*, *Visible*, *Hidden*). The remaining four columns capture pre-specified hierarchy relations: the **Internal Referential Chain** asks whether models preserve object reference along *Top Layer* &rarr; *Direct Support* &rarr; *Support Column*; the **Visible** and **Hidden Support Hierarchies** ask whether models preserve higher-level support capability within each branch; the **Summation Mechanism** asks whether the model integrates correct visible and hidden counts into a correct total. The chain and the two support columns report *relation integrity*: given that the dependent (higher-level) sub-task is answered correctly, how often its prerequisite is also correct. The Summation Mechanism is, in text, the share of scenes on which the error of the reported total equals the sum of the errors of the reported visible and hidden counts; in MCQ and image editing, which return no integers, it is *Object Counting* accuracy given correct visible and hidden counts.
 
 ### Text modality
 
@@ -204,9 +204,9 @@ Three columns of the table below report raw task accuracies (*Obj. Count*, *Visi
 
 Three observations emerge:
 
-1. **The human baseline shows the empirical signature of the Summation Mechanism.** *Object Counting* accuracy is concentrated in the both-correct cell (90.6%) and decays monotonically as either component count is missed, with a Summation Mechanism exact-match rate of 69.1%.
+1. **The human baseline shows the empirical signature of the Summation Mechanism.** *Object Counting* accuracy is concentrated in the both-correct cell (90.6%) and drops sharply once the visible count is missed (to about 59% whether or not the hidden count is correct), with a Summation Mechanism exact-match rate of 69.1%.
 2. **Model recovery of the Summation Mechanism is uneven and partially independent of headline accuracy.** Qwen most closely approximates the human signature (88.9% in both-correct, 64.2% exact match). Gemini reaches comparable headline accuracy through a markedly weaker mechanism (48.0% / 18.6%). *Object Counting* accuracy and Summation Mechanism strength are not the same property.
-3. **The pre-specified hierarchy is largely preserved.** Model rows largely preserve the qualitative ordering observed in humans: the *Internal Referential Chain* is cleaner than the *Hidden Support Hierarchy* for every model, and cleaner than the *Visible Support Hierarchy* for most. VLA-0 outperforms its Qwen3B backbone across the support relations despite being trained only on robot trajectories — hinting that action-grounded training transfers positively to spatial reasoning.
+3. **The pre-specified hierarchy is largely preserved.** Model rows largely preserve the qualitative ordering observed in humans: the *Internal Referential Chain* is cleaner than the *Hidden Support Hierarchy* for every model, and cleaner than the *Visible Support Hierarchy* for most. VLA-0 outperforms its Qwen2.5-VL-3B backbone on *Object Counting* (4.2% vs 2.1%) and on the *Hidden Support Hierarchy* despite being trained only on robot trajectories — hinting that action-grounded training may transfer positively to spatial reasoning.
 
 ### Multiple-choice modality
 
@@ -323,7 +323,7 @@ The structure of the benchmark suggests a natural training signal: a model train
 
 - **SFT-plain** — supervised fine-tuning on the integer total alone, no decomposition.
 - **SFT-CoT** — SFT on a chain-of-thought target listing sub-task answers in the order required for additive composition.
-- **DAPO-tight** — brief SFT warmup on 10% of the training data, followed by RL with verifiable rewards (GRPO under the DAPO recipe) on the remaining 90%.
+- **DAPO-tight** — initialized from the SFT-CoT checkpoint and continued with RL with verifiable rewards (GRPO under the DAPO recipe) on a 50% subset of the training data.
 
 ```{raw} html
 <div class="siq-table-caption"><span class="siq-fig-label">Table 4.</span> Trained Qwen2.5-VL checkpoints, text modality (% accuracy). Values in parentheses are absolute point gains over the corresponding zero-shot backbone. n/a: undefined, because the relation's dependent sub-task is never answered correctly (SFT-plain never answers Direct Support, Support Column or Hidden Object Count correctly). Per-column rankings within each scale group (humans excluded; zero-shot baselines included): <span style="background:#8cb4ff;padding:0 4px;">first</span>, <span style="background:#bed7ff;padding:0 4px;">second</span>.</div>
@@ -404,25 +404,25 @@ The structure of the benchmark suggests a natural training signal: a model train
 </div>
 ```
 
-**Sub-task decomposition is a real training signal, and the gain compounds with scale.** At 7B, SFT-CoT and SFT-plain are nearly tied on *Object Counting* (1.1-pt gap), but at 32B the decomposition produces a 6.6-pt gap in its favor. More importantly, the two diverge sharply on the hierarchy columns: **SFT-plain never answers** *Layer Count*, *Direct Support*, *Support Column* or *Hidden Object Count* correctly, so its *Internal Referential Chain* and *Hidden Support Hierarchy* are undefined, its *Visible Support Hierarchy* stays at or below the zero-shot backbone (7.9 vs 8.3 at 7B, 9.8 vs 20.7 at 32B), and its *Summation Mechanism* is 0 — it has learned a route to the right total that *bypasses the decomposition entirely*. SFT-CoT preserves all four hierarchy relations.
+**Supervising the decomposition helps, and the gain compounds with scale.** At 7B, SFT-CoT and SFT-plain are nearly tied on *Object Counting* (1.1-pt gap), but at 32B the decomposition produces a 6.6-pt gap in its favor. More importantly, the two diverge sharply on the hierarchy columns: **SFT-plain never answers** *Layer Count*, *Direct Support*, *Support Column* or *Hidden Object Count* correctly, so its *Internal Referential Chain* and *Hidden Support Hierarchy* are undefined, its *Visible Support Hierarchy* stays at or below the zero-shot backbone (7.9 vs 8.3 at 7B, 9.8 vs 20.7 at 32B), and its *Summation Mechanism* is 0 — it has learned a route to the right total that *bypasses the decomposition entirely*. SFT-CoT preserves all four hierarchy relations.
 
 **RL with verifiable rewards adds substantial gain on top of SFT-CoT.** DAPO-tight beats SFT-CoT by 9.9 absolute points at 7B and 15.9 at 32B, with the 32B DAPO-tight model reaching **62.6%** *Object Counting* accuracy where the zero-shot backbone achieved 2.9%. The reward signal is on the integer total only, so these gains come from sharpening the policy onto chain-of-thought trajectories that lead to correct totals — not from new sub-task supervision.
 
 ## Mental Rotation as a Complementary Probe
 
-Our second target task addresses a distinct facet of spatial cognition: viewpoint transformation. Empirically, the proposed hierarchy aligns much more strongly with *Object Counting* than with *Mental Rotation*, while the two rotation tasks ($90^\circ$ and $180^\circ$) align primarily with each other. Humans perform worse on *Mental Rotation* (46.4% / 45.8%) than on *Object Counting*, which limits the headroom available for distinguishing models. The Spatial-IQ hierarchy is therefore a faithful decomposition of *Object Counting* but not of *Mental Rotation* — they probe largely separable competencies.
+Our second target task addresses a distinct facet of spatial cognition: viewpoint transformation. Empirically, the proposed hierarchy aligns much more strongly with *Object Counting* than with *Mental Rotation*, while the two rotation tasks ($90^\circ$ and $180^\circ$) align primarily with each other for humans and most models. Humans perform worse on *Mental Rotation* (46.4% / 45.8%) than on *Object Counting*, which limits the headroom available for distinguishing models. The Spatial-IQ hierarchy is therefore a faithful decomposition of *Object Counting* but not of *Mental Rotation* — they probe largely separable competencies.
 
 ## Putting It Together: Hierarchy as Both Diagnostic and Training Signal
 
-The motivation, benchmark design, evaluation results, and training results above converge on a single observation: **for the compositional spatial tasks Spatial-IQ probes, what distinguishes humans from current MLLMs is not better counting but the ability to *compose* the answer from prerequisite sub-capabilities** — and the same hierarchy that surfaces this gap is also the training signal that closes it.
+The motivation, benchmark design, evaluation results, and training results above converge on a single observation: **for the compositional spatial tasks Spatial-IQ probes, what distinguishes humans from current MLLMs is not better counting but the ability to *compose* the answer from prerequisite sub-capabilities** — and the same hierarchy that surfaces this gap is also a training signal that narrows it.
 
-1. **Humans show the empirical signature that the hierarchical view predicts.** *Object Counting* accuracy concentrates in the both-correct cell (90.6%) and decays monotonically as either component count is missed; the Summation Mechanism exact-match rate is 69.1%. Humans reach the right total because *visible count + hidden count → total* actually runs, exactly as the developmental hierarchy says it should.
+1. **Humans show the empirical signature that the hierarchical view predicts.** *Object Counting* accuracy concentrates in the both-correct cell (90.6%) and drops sharply once the visible count is missed; the Summation Mechanism exact-match rate is 69.1%. Humans reach the right total because *visible count + hidden count → total* actually runs, exactly as the developmental hierarchy says it should.
 
 2. **Current MLLMs do *not* automatically inherit this structure — target-task performance and hierarchy adherence dissociate.** Qwen and Gemini sit within a few points of each other on raw *Object Counting* (17.7% vs 14.8%), yet their Summation Mechanism exact-match rates differ by more than 3× (64.2% vs 18.6%). A model can hit the integer by shortcut.
 
-3. **Forcing the hierarchy during training installs the missing structure; bypassing it caps the gain.** At 32B, **SFT-plain** reaches 40.1% without ever answering *Hidden Object Count* correctly: its Internal Referential Chain and Hidden Support relations are undefined and its Summation Mechanism is **0%**. **SFT-CoT** preserves all four hierarchy relations and reaches 46.7%; **DAPO-tight** reaches **62.6%** with the chain intact (Internal Referential Chain 99.3%, Summation Mechanism 93.3%). The reward never names the sub-tasks — RL sharpens the policy onto chain-of-thought trajectories that lead to correct totals.
+3. **Supervising the hierarchy during training improves target and sub-task competence together; bypassing it yields a shortcut.** At 32B, **SFT-plain** reaches 40.1% without ever answering *Hidden Object Count* correctly: its Internal Referential Chain and Hidden Support relations are undefined and its Summation Mechanism is **0%**. **SFT-CoT** preserves all four hierarchy relations and reaches 46.7%; **DAPO-tight** reaches **62.6%** with the chain intact (Internal Referential Chain 99.3%, Summation Mechanism 93.3%). The reward never names the sub-tasks — RL sharpens the policy onto chain-of-thought trajectories that lead to correct totals.
 
-In humans, headline accuracy *implies* hierarchy adherence; in current MLLMs by default, it does not. The diagnostic dissociation (#2) and the causal training result (#3) tell the same story: teach a model the composition and the final integer follows; let it skip the composition and target-task accuracy caps at the level of a shortcut.
+In humans, headline accuracy *implies* hierarchy adherence; in current MLLMs by default, it does not. The diagnostic dissociation (#2) and the training result (#3) point the same way: supervising the composition improves the final integer and the sub-tasks together, while skipping it reaches a similar range of target-task accuracy through a shortcut that leaves no recoverable decomposition.
 
 ## Discussion
 
