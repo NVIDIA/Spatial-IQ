@@ -365,11 +365,12 @@ CROSSVIEW_BUNDLE_VARIANTS = {
     "Visible + hidden mechanism": ["task5", "task8"],
 }
 
+# Object names as printed in the paper's figures.
 OBJECT_DISPLAY = {
-    "cube": "Cube",
-    "factory_box": "Factory box",
-    "soup_can": "Soup can",
-    "spam": "Ham can",
+    "cube": "cube",
+    "factory_box": "factory box",
+    "soup_can": "soup can",
+    "spam": "ham can",
 }
 
 OBJECT_COLORS = {
@@ -590,7 +591,7 @@ def summation_mechanism(df: pd.DataFrame, group: str, model: str) -> float:
 
 
 def object_display_name(obj: str) -> str:
-    return OBJECT_DISPLAY.get(str(obj), str(obj).replace("_", " ").title())
+    return OBJECT_DISPLAY.get(str(obj), str(obj).replace("_", " "))
 
 
 def family_name(model: str) -> str:
@@ -1820,6 +1821,7 @@ def render_all_figures(output_dir: Path) -> None:
     """Render every generated paper figure from the exported table CSVs."""
 
     table_dir, figure_dir = ensure_dirs(output_dir)
+    load_object_counting_scores(table_dir)
     render_paper_task_accuracy(table_dir / "table_06_text_task_accuracy.csv", figure_dir / "figure_04_text_task_accuracy.png", value_col="accuracy")
     render_wrong_answer_heatmap(table_dir / "figure_05_mcq5_wrong_answer_preferences.csv", figure_dir / "figure_05_mcq5_wrong_answer_preferences.png")
     render_paper_difficulty(table_dir / "figure_06_text_difficulty_bins.csv", figure_dir / "figure_06_text_difficulty_controls.png", value_col="accuracy")
@@ -1862,11 +1864,80 @@ def source_task_col(df: pd.DataFrame) -> str:
     return "source_task" if "source_task" in df.columns else "task"
 
 
+# Responder order shared by every figure, as in the paper: Human first, then
+# models by Object Counting accuracy in that modality (chance-adjusted for MCQ);
+# trained checkpoints in the paper's fixed order.
+TRAINED_PLOT_ORDER = [
+    "human", "dapo-32b-tight", "dapo-7b-tight", "sft-32b-cot-100pct", "sft-7b-cot-100pct",
+    "sft-32b-plain-100pct", "sft-7b-plain-100pct", "qwen2.5-vl-7b-instruct", "qwen2.5-vl-32b-instruct",
+]
+GROUP_ACCURACY_TABLES = {
+    "text": "table_06_text_task_accuracy.csv",
+    "mcq5": "table_07_mcq5_task_accuracy.csv",
+    "mcq345": "figure_15_mcq345_task_accuracy.csv",
+    "image": "table_08_image_task_accuracy.csv",
+    "trained_text": "figure_25_trained_text_task_accuracy.csv",
+}
+OBJECT_COUNTING_SCORES: dict[tuple[str, str], float] = {}
+
+
+def load_object_counting_scores(table_dir: Path) -> None:
+    """Cache each responder's Object Counting accuracy per group for figure ordering."""
+
+    OBJECT_COUNTING_SCORES.clear()
+    for group, filename in GROUP_ACCURACY_TABLES.items():
+        acc = read_csv_if_exists(table_dir / filename)
+        if acc.empty:
+            continue
+        main = acc[acc[source_task_col(acc)] == "main"]
+        for _, row in main.iterrows():
+            OBJECT_COUNTING_SCORES[(group, row["model"])] = float(row["chance_adjusted_accuracy"])
+
+
+def responder_order(models: Iterable[str], group: str | None) -> list[str] | None:
+    """Paper ordering of ``models`` for ``group``, or None if no scores are cached."""
+
+    models = list(dict.fromkeys(models))
+    if group == "trained_text":
+        rank = {name: i for i, name in enumerate(TRAINED_PLOT_ORDER)}
+        return sorted(models, key=lambda m: (rank.get(m.lower(), len(rank)), m.lower()))
+    if not any((group, m) in OBJECT_COUNTING_SCORES for m in models):
+        return None
+
+    def key(m: str) -> tuple:
+        score = OBJECT_COUNTING_SCORES.get((group, m), np.nan)
+        return (0 if m.lower() == "human" else 1, -score if np.isfinite(score) else np.inf, model_sort_key(m, None))
+
+    return sorted(models, key=key)
+
+
+def wrap_long_label(label: str, max_chars: int = 15) -> str:
+    """Break a long checkpoint name at its last hyphen that keeps line 1 short."""
+
+    if len(label) <= max_chars or "-" not in label:
+        return label
+    cut = label.rfind("-", 0, max_chars + 1)
+    if cut <= 0:
+        cut = label.find("-")
+    return label[: cut + 1] + "\n" + label[cut + 1 :]
+
+
+def table_group(df: pd.DataFrame) -> str | None:
+    return str(df["group"].iloc[0]) if "group" in df.columns and not df.empty else None
+
+
 def ordered_models_from_table(df: pd.DataFrame, value_col: str) -> list[str]:
-    """Order models by Main score when available, then by stable family order."""
+    """Order a figure's responders as in the paper (see ``responder_order``).
+
+    Falls back to ordering by the table's own Main score when no cached
+    Object Counting scores are available (e.g. a renderer called on its own).
+    """
 
     if df.empty:
         return []
+    ordered = responder_order(df["model"], table_group(df))
+    if ordered is not None:
+        return ordered
     task_col = source_task_col(df) if "task" in df.columns or "source_task" in df.columns else None
     if task_col is not None and "main" in set(df[task_col]):
         scores = df[df[task_col] == "main"].set_index("model")[value_col].to_dict()
@@ -1994,11 +2065,11 @@ def render_paper_difficulty(csv_path: Path, out_path: Path, value_col: str = "ac
         labels,
         fontsize=legend_font_size,
         loc="upper center",
-        bbox_to_anchor=(0.5, 1.03),
+        bbox_to_anchor=(0.5, 0.99),
         ncol=max(1, len(models)),
         frameon=False,
     )
-    fig.subplots_adjust(top=0.78, bottom=0.24, wspace=0.24)
+    fig.subplots_adjust(top=0.84, bottom=0.24, wspace=0.24)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out_path, dpi=300, bbox_inches="tight")
     plt.close(fig)
@@ -2181,12 +2252,13 @@ def render_difficulty(csv_path: Path, out_path: Path, value_col: str, ylabel: st
         ax.set_title(factor_display(factor), fontsize=10)
         ax.set_xticks(x)
         ax.set_xticklabels(bins, fontsize=8.5)
+        ax.set_ylim(0, 1.0)
         put_grid_behind(ax, axis="y")
         ax.yaxis.set_major_formatter(mticker.PercentFormatter(1.0))
     axes.flatten()[0].set_ylabel(ylabel)
     handles, labels = axes.flatten()[0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc="center left", bbox_to_anchor=(0.995, 0.5), frameon=False, fontsize=8.5)
-    fig.tight_layout(rect=[0, 0, 0.88, 1])
+    fig.legend(handles, labels, loc="upper center", bbox_to_anchor=(0.5, 1.0), ncol=max(1, len(models)), frameon=False, fontsize=9)
+    fig.tight_layout(rect=[0, 0, 1, 0.9])
     out_path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out_path, dpi=300, bbox_inches="tight")
     plt.close(fig)
@@ -2227,14 +2299,15 @@ def render_e1a(csv_path: Path, out_path: Path) -> None:
             nmat[r, c] = int(row["n"])
         heat = ax.imshow(mat, vmin=0, vmax=1, cmap=E1A_CMAP, aspect="equal")
         ax.set_xticks([0, 1])
-        ax.set_xticklabels(["H+", "H-"], fontsize=7)
+        ax.set_xticklabels(["H✓", "H✗"], fontsize=7)
         ax.set_yticks([0, 1])
-        if i == 0:
-            ax.set_yticklabels(["V+", "V-"], fontsize=7)
-        else:
-            ax.set_yticklabels([])
+        ax.set_yticklabels(["V✓", "V✗"], fontsize=7)
+        # Panels share the y axis, so hide (rather than clear) the labels after
+        # the first panel; clearing them would remove the first panel's too.
+        ax.tick_params(axis="y", labelleft=(i == 0))
         main_acc = sub["overall_main_accuracy"].dropna().iloc[0] if sub["overall_main_accuracy"].notna().any() else np.nan
-        ax.set_title(f"{display_model(model, answer_set_suffix=mixed_cq)}\nMain {main_acc:.1%}", fontsize=6.4, color=model_color(model), pad=7)
+        title = wrap_long_label(display_model(model, answer_set_suffix=mixed_cq))
+        ax.set_title(f"{title}\nMain {main_acc:.1%}", fontsize=6.4, color=model_color(model), pad=7)
         for r in range(2):
             for c in range(2):
                 if np.isfinite(mat[r, c]):
@@ -2521,11 +2594,11 @@ def render_camera_effects(csv_path: Path, out_path: Path) -> None:
     p_col = "p_value_fdr" if "p_value_fdr" in df.columns else "p_value"
     task_col = source_task_col(df)
     tasks = [t for t in TASK_ORDER if t in set(df[task_col])]
-    models = sorted(df["model"].drop_duplicates(), key=lambda m: model_sort_key(m, None))
+    models = ordered_models_from_table(df, "delta_high_minus_low")
     fig, axes = plt.subplots(2, 1, figsize=(max(15.5, len(tasks) * 1.18 + 2.2), 6.2), sharex=True)
     x = np.arange(len(tasks))
     bar_w = 0.84 / max(1, len(models))
-    max_abs = max(0.08, float(np.nanmax(np.abs(df["delta_high_minus_low"]))) * 1.18) if df["delta_high_minus_low"].notna().any() else 0.08
+    max_abs = max(0.08, float(np.nanmax(np.abs(df["delta_high_minus_low"]))) * 1.40) if df["delta_high_minus_low"].notna().any() else 0.08
     for ax, factor in zip(axes, CAMERA_FACTORS):
         shade_task_regions(ax, tasks)
         fdf = df[df["factor"] == factor]
@@ -2534,10 +2607,18 @@ def render_camera_effects(csv_path: Path, out_path: Path) -> None:
             vals = [sub.loc[t, "delta_high_minus_low"] if t in sub.index else np.nan for t in tasks]
             pvals = [sub.loc[t, p_col] if t in sub.index else np.nan for t in tasks]
             offset = (i - (len(models) - 1) / 2) * bar_w
-            ax.bar(x + offset, vals, width=bar_w * 0.94, color=model_color(model), edgecolor="white", linewidth=0.7, label=display_model(model), zorder=2)
+            base = model_color(model)
+            # As in the paper, non-significant effects are drawn faded.
+            colors = [base if sig_stars(p) else blend_color(base, "#ffffff", 0.60) for p in pvals]
+            ax.bar(x + offset, vals, width=bar_w * 0.94, color=colors, edgecolor="white", linewidth=0.7, zorder=2)
+            ax.bar([np.nan], [np.nan], color=base, label=display_model(model))  # legend handle in full color
+            # Alternate the star height between neighbouring bars so adjacent
+            # "***" labels do not overlap.
+            step = 0.012 * (i % 2)
             for xi, val, p_val in zip(x + offset, vals, pvals):
                 if np.isfinite(val) and sig_stars(p_val):
-                    ax.text(xi, val + (0.004 if val >= 0 else -0.010), sig_stars(p_val), ha="center", va="bottom" if val >= 0 else "top", fontsize=6.8, color=model_color(model))
+                    y = val + (0.004 + step if val >= 0 else -0.008 - step)
+                    ax.text(xi, y, sig_stars(p_val), ha="center", va="bottom" if val >= 0 else "top", fontsize=6.0, color=base)
         ax.axhline(0, color="black", linewidth=0.8, linestyle="--", zorder=1)
         ax.set_ylim(-max_abs, max_abs)
         ax.set_ylabel("Accuracy")
@@ -2566,12 +2647,18 @@ def render_object_accuracy(csv_path: Path, out_path: Path) -> None:
     fig, ax = plt.subplots(figsize=(max(8, len(objects) * 1.45 + 4), 3.8))
     x = np.arange(len(objects))
     bar_w = 0.82 / max(1, len(models))
+    has_ci = {"ci_low_wilson", "ci_high_wilson"}.issubset(df.columns) and value_col == "accuracy"
     for i, model in enumerate(models):
         sub = df[df["model"] == model].set_index("object_type")
-        vals = [sub.loc[o, value_col] if o in sub.index else np.nan for o in objects]
-        ax.bar(x + (i - (len(models) - 1) / 2) * bar_w, vals, width=bar_w * 0.94, color=model_color(model), label=display_model(model), zorder=2)
+        vals = np.asarray([sub.loc[o, value_col] if o in sub.index else np.nan for o in objects], dtype=float)
+        xs = x + (i - (len(models) - 1) / 2) * bar_w
+        ax.bar(xs, vals, width=bar_w * 0.94, color=model_color(model), label=display_model(model), zorder=2)
+        if has_ci:
+            lo = np.asarray([sub.loc[o, "ci_low_wilson"] if o in sub.index else np.nan for o in objects], dtype=float)
+            hi = np.asarray([sub.loc[o, "ci_high_wilson"] if o in sub.index else np.nan for o in objects], dtype=float)
+            ax.errorbar(xs, vals, yerr=[vals - lo, hi - vals], fmt="none", ecolor="#333333", elinewidth=0.6, capsize=1.6, capthick=0.6, zorder=3)
     ax.set_xticks(x)
-    ax.set_xticklabels(objects, fontsize=9)
+    ax.set_xticklabels([object_display_name(o).replace(" ", "\n") for o in objects], fontsize=9)
     ax.set_ylabel("Object Counting accuracy")
     ax.yaxis.set_major_formatter(mticker.PercentFormatter(1.0))
     put_grid_behind(ax, axis="y")
@@ -2694,9 +2781,7 @@ def render_composition(csv_path: Path, out_path: Path) -> None:
         ("mean_absolute_residual", "MAD", "positive"),
         ("residual_bias", "Bias", "signed"),
     ]
-    sort_col = "prediction_correlation_r" if "prediction_correlation_r" in df.columns else metrics[0][0]
-    model_scores = df.set_index("model")[sort_col].to_dict()
-    models = sorted(df["model"].drop_duplicates(), key=lambda m: (-float(model_scores.get(m, -np.inf)) if np.isfinite(model_scores.get(m, np.nan)) else np.inf, model_sort_key(m, model_scores.get(m))))
+    models = ordered_models_from_table(df, metrics[0][0])
     fig, axes = plt.subplots(1, len(metrics), figsize=(4.05 * len(metrics), max(3.2, 0.34 * len(models) + 1.0)), sharey=True)
     y = np.arange(len(models))
     sub = df.set_index("model")
@@ -2712,12 +2797,15 @@ def render_composition(csv_path: Path, out_path: Path) -> None:
             ax.set_xlim(-limit, limit)
             ax.axvline(0, color="gray", linewidth=0.9, linestyle="--", zorder=1)
         elif kind == "positive":
-            xmax = max(1.0, float(np.nanmax(vals_arr)) * 1.15) if valid.any() else 1.0
+            xmax = max(1.0, float(np.nanmax(vals_arr)) * 1.3) if valid.any() else 1.0
             ax.set_xlim(0, xmax)
             ax.axvline(0, color="black", linewidth=0.8, zorder=1)
         else:
-            ax.set_xlim(0, 1.0)
-            ax.xaxis.set_major_formatter(mticker.PercentFormatter(1.0))
+            # Leave room right of 1.0 so the value labels stay inside the panel.
+            ax.set_xlim(0, 1.25)
+            ax.set_xticks([0, 0.5, 1.0])
+            if kind == "rate":
+                ax.xaxis.set_major_formatter(mticker.PercentFormatter(1.0))
             ax.axvline(0, color="black", linewidth=0.8, zorder=1)
         for yi, val in zip(y, vals_arr):
             if not np.isfinite(val):
